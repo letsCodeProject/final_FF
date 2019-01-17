@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back"
+    android:orientation="horizontal"
+    tools:context=".welcome_2">
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="39dp"
+        android:layout_marginEnd="48dp"
+        android:fontFamily="sans-serif-condensed"
+        android:text="@string/Hi2"
+        android:textColor="@android:color/background_light"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="31dp"
+        android:layout_alignBottom="@+id/textView8"
+        android:layout_toStartOf="@+id/textView8"
+        android:text="@string/nameL" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="97dp"
+        android:layout_marginEnd="23dp"
+        android:gravity="center_horizontal"
+
+        android:text="@string/choose"
+        android:textColor="@android:color/background_light"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="136dp"
+        android:layout_toStartOf="@+id/textView8"
+        android:text="@string/num"
+        android:textColor="@color/yellow1"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textView14"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="-100dp"
+        android:fontFamily="@font/wellfleet"
+        android:gravity="center_horizontal"
+        android:text="@string/welcome2"
+        android:textColor="@android:color/background_light"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="76dp"
+        android:layout_marginBottom="100dp"
+        android:text="@string/adventure"
+        android:textColor="@android:color/background_light"
+        android:textSize="30sp" />
+
+    <ImageView
+        android:id="@+id/imageView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textView13"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="57dp"
+        android:layout_marginBottom="-83dp"
+        android:contentDescription="@string/desc"
+        app:srcCompat="@drawable/line" />
+
+    <TextView
+        android:id="@+id/textView18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textView8"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="45dp"
+        android:layout_marginBottom="-93dp"
+        android:text="@string/labeb"
+        android:textColor="@color/yellow1"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="135dp"
+        android:layout_height="36dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="196dp"
+        android:layout_marginBottom="38dp"
+        android:background="@drawable/mybutton"
+        android:fontFamily="@font/jalal_lt_light"
+        android:text="@string/go"
+        android:textColor="@android:color/background_light"
+        android:textSize="25sp"
+
+
+        />
+
+    <ImageView
+        android:id="@+id/imageView36"
+        android:layout_width="232dp"
+        android:layout_height="351dp"
+        android:layout_alignBottom="@+id/textView15"
+        android:layout_marginStart="-111dp"
+        android:layout_marginBottom="-169dp"
+        android:layout_toEndOf="@+id/imageView12"
+        app:srcCompat="@drawable/robot_welcome2" />
+</RelativeLayout>

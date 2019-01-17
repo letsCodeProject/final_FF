@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/plotoback"
+    android:layout_height="match_parent"
+    tools:context=".firstlevel_2">
+
+    <ImageView
+        android:id="@+id/imageView40"
+        android:layout_width="85dp"
+        android:layout_height="38dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="582dp"
+        android:layout_marginBottom="13dp"
+        app:srcCompat="@drawable/newpre"
+
+
+        />
+
+    <ImageView
+        android:id="@+id/imageView41"
+        android:layout_width="85dp"
+        android:layout_height="38dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="6dp"
+        android:layout_marginBottom="10dp"
+        android:contentDescription="@string/desc"
+        app:srcCompat="@drawable/newnext"  />
+
+    <TextView
+        android:id="@+id/textView34"
+        android:layout_width="367dp"
+        android:layout_height="165dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="232dp"
+        android:layout_marginTop="86dp"
+        android:text="@string/fist_level_2"
+        android:textColor="@color/yellow1"
+        android:textSize="24sp" />
+
+    <ImageView
+        android:id="@+id/imageView43"
+        android:layout_width="280dp"
+        android:layout_height="269dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="61dp"
+        app:srcCompat="@drawable/lelel1_2robot" />
+
+    <fragment
+        android:id="@+id/fragment"
+        android:name="com.example.a96653.practice.up_fragment"
+        android:layout_width="677dp"
+        android:layout_height="43dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="0dp"
+        tools:layout="@layout/fragment_up_fragment" />
+
+
+</RelativeLayout>

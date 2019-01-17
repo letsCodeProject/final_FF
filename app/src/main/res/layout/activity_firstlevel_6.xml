@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/plotoback"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".firstlevel_6">
+
+    <ImageView
+
+        android:layout_width="43dp"
+        android:layout_height="40dp"
+        android:layout_alignTop="@+id/imageView37"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="336dp"
+        android:src="@drawable/h" />
+
+    <TextView
+
+        android:layout_width="43dp"
+        android:layout_height="31dp"
+        android:layout_alignBottom="@+id/imageView14"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="616dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="1dp"
+        android:background="@drawable/textviewborder"
+        android:gravity="center"
+
+        android:text="@string/zero"
+        android:textColor="@android:color/background_light" />
+
+    <ImageView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/imageView37"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="-2dp"
+        android:layout_marginEnd="80dp"
+        android:layout_marginBottom="336dp"
+        android:src="@drawable/diamond" />
+
+    <ImageView
+        android:id="@+id/imageView48"
+        android:layout_width="235dp"
+        android:layout_height="226dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginBottom="0dp"
+        app:srcCompat="@drawable/quiz1_1robot" />
+
+    <ImageView
+        android:id="@+id/imageView49"
+        android:layout_width="146dp"
+        android:layout_height="88dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="69dp"
+        app:srcCompat="@drawable/helpask" />
+
+    <ImageView
+        android:id="@+id/imageView51"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="81dp"
+        android:layout_marginTop="88dp"
+        android:layout_marginBottom="272dp"
+        app:srcCompat="@drawable/bulb" />
+
+    <ImageView
+        android:id="@+id/imageView52"
+        android:layout_width="235dp"
+        android:layout_height="101dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="73dp"
+        android:layout_marginBottom="127dp"
+        app:srcCompat="@drawable/choiceshape" />
+
+    <ImageView
+
+        android:layout_width="235dp"
+        android:layout_height="101dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="72dp"
+        android:layout_marginBottom="70dp"
+        app:srcCompat="@drawable/choiceshape" />
+
+    <TextView
+        android:id="@+id/textView50"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/imageView51"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="32dp"
+        android:text="@string/mission1"
+        android:textColor="@color/colorPrimary"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/textView51"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="137dp"
+        android:layout_marginBottom="164dp"
+        android:text="@string/answer1"
+        android:textColor="@android:color/black"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/textView52"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/textView51"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="255dp"
+        android:layout_marginEnd="0dp"
+        android:text="@string/answer2"
+        android:textColor="@android:color/black"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/textView53"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="109dp"
+        android:layout_marginTop="106dp"
+        android:text="@string/help" />
+
+    <ImageView
+
+        android:id="@+id/next2"
+        android:layout_width="85dp"
+        android:layout_height="38dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="6dp"
+        android:layout_marginBottom="10dp"
+        android:contentDescription="@string/desc"
+        app:srcCompat="@drawable/newnext" />
+
+    <RadioGroup
+        android:layout_width="35dp"
+        android:layout_height="136dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="620dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginBottom="54dp">
+
+        <RadioButton
+            android:id="@+id/radio_one"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+
+            android:layout_marginEnd="0dp"
+            android:layout_marginBottom="0dp"
+            android:backgroundTint="@color/white"
+            android:buttonTint="@color/white"
+            android:shadowColor="@color/white" />
+
+        <RadioButton
+            android:id="@+id/radio_two"
+            android:layout_width="match_parent"
+            android:layout_height="66dp"
+            android:backgroundTint="@color/white"
+            android:buttonTint="@color/white"
+
+            android:shadowColor="@color/white"
+            android:textColorHint="@color/light_font" />
+
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/textView54"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/textView51"
+        android:layout_alignBottom="@+id/imageView51"
+        android:layout_marginEnd="-18dp"
+        android:layout_marginBottom="-2dp"
+        android:text="@string/quiz1_1"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+</RelativeLayout>

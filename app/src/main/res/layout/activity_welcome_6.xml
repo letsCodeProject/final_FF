@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+   android:background="@drawable/back"
+    android:layout_height="match_parent"
+    tools:context=".welcome_6">
+
+    <TextView
+        android:id="@+id/textView26"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="39dp"
+        android:layout_marginEnd="57dp"
+        android:text="@string/welcome5_4text"
+        android:textColor="@color/light_font"
+        android:textSize="50sp" />
+
+    <TextView
+        android:id="@+id/textView27"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="121dp"
+        android:layout_marginEnd="35dp"
+        android:text="@string/welcome6_1text"
+        android:textColor="@color/light_font"
+        android:textSize="20sp" />
+
+    <ImageView
+        android:id="@+id/imageView29"
+        android:layout_width="108dp"
+        android:layout_height="54dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="567dp"
+        android:layout_marginBottom="7dp"
+        app:srcCompat="@drawable/newpre"
+
+
+        />
+
+    <ImageView
+        android:id="@+id/imageView30"
+        android:layout_width="122dp"
+        android:layout_height="46dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="13dp"
+        android:contentDescription="@string/desc"
+        app:srcCompat="@drawable/newnext"
+
+        />
+
+    <ImageView
+        android:id="@+id/imageView27"
+        android:layout_width="349dp"
+        android:layout_height="254dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="43dp"
+        app:srcCompat="@drawable/welcome_robot6" />
+</RelativeLayout>

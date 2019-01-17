@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/plotoback"
+    android:layout_height="match_parent"
+    tools:context=".firstlevel_4">
+
+    <TextView
+        android:id="@+id/textView39"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        tools:layout_editor_absoluteX="541dp"
+        tools:layout_editor_absoluteY="52dp" />
+
+    <TextView
+        android:id="@+id/textView42"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="63dp"
+        android:layout_marginEnd="19dp"
+        android:text="@string/fist_level_4"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/textView45"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/textView42"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="308dp"
+        android:layout_marginBottom="0dp"
+        android:text="@string/print"
+        android:textColor="@color/yellow1"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/textView46"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="103dp"
+        android:layout_marginEnd="21dp"
+        android:text="@string/fist_level_4_1"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+
+    <fragment
+        android:id="@+id/fragment"
+        android:name="com.example.a96653.practice.up_fragment"
+        android:layout_width="677dp"
+        android:layout_height="43dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="0dp"
+        tools:layout="@layout/fragment_up_fragment" />
+
+    <ImageView
+        android:id="@+id/imageView47"
+        android:layout_width="483dp"
+        android:layout_height="136dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="117dp"
+        android:layout_marginBottom="138dp"
+        app:srcCompat="@drawable/printcmd" />
+
+    <Button
+
+
+        android:id="@+id/button4"
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="130dp"
+        android:layout_toStartOf="@+id/textView42"
+
+        android:background="@drawable/mybutton"
+        android:text="أرني النتيجة"
+        android:textColor="@color/white" />
+
+    <TextView
+        android:id="@+id/textView47"
+        android:layout_width="75dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="98dp"
+        android:text="النتيجة:"
+        android:textColor="@color/white"
+        android:textSize="18sp" />
+
+    <TextView
+
+        android:layout_width="464dp"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="132dp"
+        android:layout_marginBottom="54dp"
+        android:background="@color/white"
+        android:gravity="center" />
+
+    <ImageView
+
+        android:id="@+id/previous"
+        android:layout_width="85dp"
+        android:layout_height="38dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="582dp"
+        android:layout_marginBottom="13dp"
+
+
+        app:srcCompat="@drawable/newpre" />
+
+    <ImageView
+
+        android:id="@+id/next"
+        android:layout_width="85dp"
+        android:layout_height="38dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="6dp"
+        android:layout_marginBottom="10dp"
+        android:contentDescription="@string/desc"
+        app:srcCompat="@drawable/newnext" />
+
+
+</RelativeLayout>

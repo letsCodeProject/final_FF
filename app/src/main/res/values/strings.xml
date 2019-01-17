@@ -1,0 +1,77 @@
+<resources>
+    <string name="app_name">Practice</string>
+    <string name="action_settings">Settings</string>
+    <string name="desc">Image discreption</string>
+    <string name="ploto">بلوتو</string>
+    <string name="nepton">نبتون</string>
+    <string name="dimond">عدد ألماساتك</string>
+    <string name="zero">0</string>
+    <string name="zohal">زحل</string>
+    <string name="moshtari">المشتري</string>
+    <string name="earth">الأرض</string>
+    <string name="Hi">أهلاً بك!</string>
+    <string name="nametext">دعنا نتعرف إليك , أدخل اسمك من فضلك :</string>
+    <string name="namelabel">الاسم</string>
+    <string name="nameval">   </string>
+    <string name="buttonstarttext"> ابدأ</string>
+    <string name="Hi2">أهلاً بك يا</string>
+    <string name="nameL"> -------------------</string>
+    <string name="choose">لقد تم اختيارك أنت ولبيب لإتمام المهمة رقم</string>
+    <string name="num">1793</string>
+    <string name="welcome2">لجمع الألماسات المكتشفة مؤخراً في\n درب التبانه</string>
+    <string name="adventure">فلنبدأ المغامرة!</string>
+    <string name="labeb">لبيب</string>
+    <string name="beforestart">قبل البدء بالمهمة, يجب عليك التعرف أولا ماذا تعني </string>
+    <string name="programming">البرمجة؟</string>
+    <string name="welcome_4text"> حسناً, انفترض أن لديك روبوت وتريد منه تنفيذ أوامرك ! \n  كالتقدم خطوة للأمام, أو التوقف عن الحركة ؛ليقوم بذلك, عليك تزويده\n ببعض الأوامر والتعليمات</string>
+    <string name="welcome5_1text">أليس من الرائع لو كان بإمكان الجهاز الذي بين يديك تنفيذ أوامرك ؟</string>
+    <string name="welcome5_2text">الأمر ليس مستحيلاً !</string>
+
+    <string name="welcome5_3text"> كل ماعليك فعله هو كتابة الأوامر والتعليمات باختصار هذه هي : </string>
+    <string name="welcome5_4text">البرمجة</string>
+
+
+    <string name="welcome6_1text">هي كتابة مجموعة من الأوامر و\n التعليمات التي تريد من\n الحاسوب تنفيذها .</string>
+    <string name="welcome7_1text">وللحاسوب لغات بإمكانك مخاطبته بها لينفذ ما تريد..</string>
+    <string name="welcome7_2text">في هذه المهمة سنعلمك إحدى هذه اللغات، وهي لغة</string>
+    <string name="welcome7_3text">بايثون</string>
+    <string name="go">انطلق</string>
+    <color name="white">#ffffff</color>
+    <string name="fist_level_1">   أنت الآن في كوكب بلوتو، عليك  \n معرفة بعض الأمور المتعلقة</string>
+
+    <string name="fist_level_2">   تستخدم لغة بايثون لبرمجة الروبوتات \nأمثال لبيب! وأيضاً تستخدم في صناعة\n التطبيقات و الألعاب التي تستخدمها\n في جهازك..</string>
+
+    <string name="fist_level_3">   تستطيع أن  تفعل الكثير من الأمور الأخرى باستخدام لغة بايثون،  </string>
+    <string name="fist_level_3_1"> مثلاً:بإمكانك أن تطبع جملة    </string>
+
+    <string name="fist_level_3_2">  \"أهلاً بدرب التبانة!\"</string>
+    <string name="result"> النتيحة</string>
+
+    <string name="fist_level_3_3">  جرّب سحب مربع  </string>
+
+    <string name="fist_level_3_4"> في الفراغ، وراقب النتيجة </string>
+
+    <string name="fist_level_4">لقد كتبت برنامجك الأول باستخدام الأمر  </string>
+    <string name="print"> :print( )  </string>
+
+    <string name="fist_level_4_1"> بإمكانك كتابة ما تشاء باستخدام هذا الأمر، جرب بنفسك:</string>
+
+    <string name="fist_level_5_1"> الآن وبعد أن تعرفت على مكونات كوكب بلوتو </string>
+    <string name="fist_level_5_2"> أنت جاهز لجمع الالماسات!  \n,فلنجمعها معاً! </string>
+    <string name="mission1">مهمة رقم 1: </string>
+    <string name="mission2">مهمة رقم 2: </string>
+    <string name="quiz1_1">  اختر الإجابة الصحيحة : نستخدم لغة بايثون في : </string>
+    <string name="answer1">  صناعة التطبيقات </string>
+    <string name="answer2">  التواصل مع البشر </string>
+    <string name="help"> اطلب مساعدتي </string>
+
+    <string name="name_box_text"> أدخل اسمك من فضلك </string>
+
+    <string name="quiz1_2"> حاول ترتيب المربعات التالية لكي تحصل على  \nالشكل الصحيح لجملة الطباعة:</string>
+
+
+
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>
