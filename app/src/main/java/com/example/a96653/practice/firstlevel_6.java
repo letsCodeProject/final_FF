@@ -6,6 +6,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
+
+
+// i hate git hub
 public class firstlevel_6 extends AppCompatActivity {
 
     @Override
