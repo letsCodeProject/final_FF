@@ -5,7 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
-
+// i hate it too -shyom
 public class firstlevel_5 extends AppCompatActivity {
 
     @Override
