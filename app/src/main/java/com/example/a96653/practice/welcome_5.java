@@ -27,7 +27,7 @@ public class welcome_5 extends AppCompatActivity {
         );
 
 
-        ImageView previous = (ImageView)findViewById(R.id.imageView31);
+        ImageView previous = (ImageView)findViewById(R.id.imageView24);
 
         previous .setOnClickListener(
                 new ImageView.OnClickListener(){

@@ -10,7 +10,7 @@
     <string name="moshtari">المشتري</string>
     <string name="earth">الأرض</string>
     <string name="Hi">أهلاً بك!</string>
-    <string name="nametext">دعنا نتعرف إليك , أدخل اسمك من فضلك :</string>
+    <string name="nametext">دعنا نتعرف إليك ، أدخل اسمك من فضلك :</string>
     <string name="namelabel">الاسم</string>
     <string name="nameval">   </string>
     <string name="buttonstarttext"> ابدأ</string>
@@ -18,16 +18,16 @@
     <string name="nameL"> -------------------</string>
     <string name="choose">لقد تم اختيارك أنت ولبيب لإتمام المهمة رقم</string>
     <string name="num">1793</string>
-    <string name="welcome2">لجمع الألماسات المكتشفة مؤخراً في\n درب التبانه</string>
+    <string name="welcome2">لجمع الألماسات المكتشفة مؤخراً في\n درب التبانة</string>
     <string name="adventure">فلنبدأ المغامرة!</string>
     <string name="labeb">لبيب</string>
-    <string name="beforestart">قبل البدء بالمهمة, يجب عليك التعرف أولا ماذا تعني </string>
+    <string name="beforestart">قبل البدء بالمهمة، يجب عليك التعرف أولاً على ماذا تعني </string>
     <string name="programming">البرمجة؟</string>
-    <string name="welcome_4text"> حسناً, انفترض أن لديك روبوت وتريد منه تنفيذ أوامرك ! \n  كالتقدم خطوة للأمام, أو التوقف عن الحركة ؛ليقوم بذلك, عليك تزويده\n ببعض الأوامر والتعليمات</string>
+    <string name="welcome_4text"> حسناً, لنفترض أن لديك روبوت وتريد منه تنفيذ أوامرك ! \n  كالتقدم خطوة للأمام، أو التوقف عن الحركة ؛ليقوم بذلك، عليك تزويده\n ببعض الأوامر والتعليمات</string>
     <string name="welcome5_1text">أليس من الرائع لو كان بإمكان الجهاز الذي بين يديك تنفيذ أوامرك ؟</string>
     <string name="welcome5_2text">الأمر ليس مستحيلاً !</string>
 
-    <string name="welcome5_3text"> كل ماعليك فعله هو كتابة الأوامر والتعليمات باختصار هذه هي : </string>
+    <string name="welcome5_3text"> كل ماعليك فعله هو كتابة بعض \nالأوامر والتعليمات باختصار هذه هي : </string>
     <string name="welcome5_4text">البرمجة</string>
 
 
@@ -73,5 +73,6 @@
 
 
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
 
 </resources>

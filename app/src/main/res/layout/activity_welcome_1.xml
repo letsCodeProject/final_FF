@@ -3,19 +3,23 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="@drawable/back"
     android:layout_height="match_parent"
+    android:background="@drawable/back"
     android:orientation="horizontal"
     tools:context=".welcome_1">
 
     <ImageView
         android:id="@+id/imageView7"
-        android:layout_width="267dp"
-        android:layout_height="359dp"
+        android:layout_width="250dp"
+        android:layout_height="344dp"
+        android:layout_alignBottom="@+id/button"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_marginStart="0dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="9dp"
+        android:layout_marginEnd="84dp"
+        android:layout_marginBottom="-38dp"
+        android:layout_toStartOf="@+id/button"
         app:srcCompat="@drawable/newlabeb" />
 
     <TextView
@@ -37,9 +41,9 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginTop="121dp"
-        android:layout_marginEnd="40dp"
-        android:fontFamily="@font/lemon"
+        android:layout_marginTop="97dp"
+        android:layout_marginEnd="48dp"
+        android:fontFamily="@font/jannalt_regular"
         android:text="@string/nametext"
         android:textColor="@android:color/background_light"
         android:textSize="20sp" />
@@ -48,8 +52,10 @@
         android:id="@+id/textView7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/editText"
         android:layout_alignParentEnd="true"
         android:layout_centerVertical="true"
+        android:layout_marginStart="316dp"
         android:layout_marginEnd="27dp"
         android:fontFamily="@font/jannalt_regular"
         android:text="@string/namelabel"
@@ -58,13 +64,13 @@
 
     <EditText
         android:id="@+id/editText"
-        android:layout_width="296dp"
-        android:layout_height="37dp"
-        android:layout_alignBottom="@+id/textView7"
+        android:layout_width="285dp"
+        android:layout_height="32dp"
+        android:layout_above="@+id/button"
         android:layout_alignParentEnd="true"
-        android:layout_marginEnd="99dp"
-        android:layout_marginBottom="1dp"
-        android:background="@android:color/background_light"
+        android:layout_marginEnd="112dp"
+        android:layout_marginBottom="40dp"
+        android:background="@drawable/custom_edittext"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="@string/nameval" />
@@ -72,18 +78,18 @@
     <Button
         android:id="@+id/button"
         android:layout_width="135dp"
-        android:layout_height="36dp"
+        android:layout_height="38dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="158dp"
-        android:layout_marginBottom="78dp"
-        android:background="@drawable/mybutton"
-        android:fontFamily="@font/jalal_lt_light"
-        android:text="@string/buttonstarttext"
-        android:textColor="@android:color/background_light"
-        android:textSize="25sp"
+        android:layout_marginEnd="186dp"
+        android:layout_marginBottom="71dp"
+        android:background="@drawable/custom_button"
+        android:fontFamily="@font/jannalt_regular"
+        android:text="ابدأ"
+        android:textAlignment="center"
+        android:textColor="@color/white"
 
-        />
+        android:textSize="20sp"
+        android:textStyle="bold" />
 
 </RelativeLayout>
-<!-- test number 3 --> 

@@ -13,7 +13,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="54dp"
+        android:layout_marginTop="21dp"
+        android:fontFamily="@font/jannalt_regular"
         android:text="@string/beforestart"
         android:textColor="@android:color/background_light"
         android:textSize="20sp" />
@@ -22,22 +23,23 @@
         android:id="@+id/textView20"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
+        android:layout_below="@+id/textView19"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="98dp"
+        android:layout_marginTop="-18dp"
+        android:fontFamily="@font/jannalt_regular"
         android:text="@string/programming"
-        android:textColor="@android:color/background_light"
+        android:textColor="@color/yellow1"
         android:textSize="30sp" />
 
     <ImageView
         android:id="@+id/imageView15"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/textView20"
         android:layout_alignParentStart="true"
-        android:layout_marginStart="271dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="226dp"
+        android:layout_marginTop="90dp"
         android:contentDescription="@string/desc"
-        android:layout_marginTop="9dp"
         app:srcCompat="@drawable/bulb" />
 
     <ImageView
@@ -53,11 +55,11 @@
 
     <ImageView
         android:id="@+id/imageView11"
-        android:layout_width="246dp"
-        android:layout_height="241dp"
+        android:layout_width="193dp"
+        android:layout_height="214dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="203dp"
-        android:layout_marginBottom="2dp"
+        android:layout_marginStart="196dp"
+        android:layout_marginBottom="11dp"
         app:srcCompat="@drawable/robot_welcome3" />
 </RelativeLayout>

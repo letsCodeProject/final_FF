@@ -13,10 +13,11 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginTop="39dp"
+        android:layout_marginTop="26dp"
         android:layout_marginEnd="57dp"
+        android:fontFamily="@font/jannalt_regular"
         android:text="@string/welcome5_4text"
-        android:textColor="@color/light_font"
+        android:textColor="@color/yellow1"
         android:textSize="50sp" />
 
     <TextView
@@ -25,33 +26,33 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginTop="121dp"
-        android:layout_marginEnd="35dp"
+        android:layout_marginTop="119dp"
+        android:layout_marginEnd="32dp"
+        android:fontFamily="@font/jannalt_regular"
         android:text="@string/welcome6_1text"
         android:textColor="@color/light_font"
         android:textSize="20sp" />
 
     <ImageView
-        android:id="@+id/imageView29"
-        android:layout_width="108dp"
-        android:layout_height="54dp"
+        android:id="@+id/imageView24"
+        android:layout_width="81dp"
+        android:layout_height="53dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="567dp"
-        android:layout_marginBottom="7dp"
+        android:layout_marginEnd="497dp"
+        android:layout_marginBottom="5dp"
         app:srcCompat="@drawable/newpre"
-
 
         />
 
     <ImageView
         android:id="@+id/imageView30"
-        android:layout_width="122dp"
-        android:layout_height="46dp"
+        android:layout_width="113dp"
+        android:layout_height="40dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_marginEnd="0dp"
-        android:layout_marginBottom="13dp"
+        android:layout_marginBottom="8dp"
         android:contentDescription="@string/desc"
         app:srcCompat="@drawable/newnext"
 
@@ -63,7 +64,9 @@
         android:layout_height="254dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="23dp"
-        android:layout_marginTop="43dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="17dp"
+        android:layout_marginBottom="64dp"
         app:srcCompat="@drawable/welcome_robot6" />
 </RelativeLayout>

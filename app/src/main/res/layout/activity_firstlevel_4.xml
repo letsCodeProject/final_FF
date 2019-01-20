@@ -81,7 +81,7 @@
         android:layout_marginBottom="130dp"
         android:layout_toStartOf="@+id/textView42"
 
-        android:background="@drawable/mybutton"
+        android:background="@drawable/custom_button"
         android:text="أرني النتيجة"
         android:textColor="@color/white" />
 

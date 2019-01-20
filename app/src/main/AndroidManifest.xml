@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
         <activity
-            android:name=".welcome_1"
+            android:name=".MainActivity_Loading"
             android:screenOrientation="landscape">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -31,7 +31,9 @@
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
 
-
+        <activity
+            android:name=".welcome_1"
+            android:screenOrientation="landscape" />
 
         <activity
             android:name=".welcome_2"

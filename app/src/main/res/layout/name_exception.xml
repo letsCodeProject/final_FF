@@ -25,6 +25,6 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="110dp"
-        android:background="@drawable/mybutton"
+        android:background="@drawable/custom_button"
         android:text="حسناً" />
 </RelativeLayout>

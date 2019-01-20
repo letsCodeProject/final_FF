@@ -1,4 +1,4 @@
-package com.example.a96653.practice;
+/*package com.example.a96653.practice;
 
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -29,7 +29,7 @@ public class welcome_1 extends AppCompatActivity {
                     public void onClick(View v){
 
                         if(txt.getText().toString().isEmpty()){
-                            AlertDialog.Builder mbuilder=new AlertDialog.Builder(welcome_1.this);
+                           /* AlertDialog.Builder mbuilder=new AlertDialog.Builder(welcome_1.this);
                             View mView=getLayoutInflater().inflate(R.layout.name_exception,null);
                             Button btn = (Button) mView.findViewById(R.id.button5);
 
@@ -40,22 +40,22 @@ public class welcome_1 extends AppCompatActivity {
 
                                 public void onClick(View view){
 
-                                      c.dismiss();
+                                      c.dismiss();*/
 
-                                }
-
-
-
-
-                            });
+//  }
 
 
 
 
-                        }
+//});
 
 
 
+
+//  }
+
+
+/*
 
                         else {openSecondActivity();};
 
@@ -76,4 +76,59 @@ public void openSecondActivity(){
 }
 
 
+}
+*/
+package com.example.a96653.practice;
+
+import android.content.Intent;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.text.Html;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+
+public class welcome_1 extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_welcome_1);
+        Button button= findViewById(R.id.button);
+
+        final Intent next=new Intent(getApplicationContext(),welcome_2.class);
+
+        button.setOnClickListener(new View.OnClickListener() {
+
+            EditText txt4 = (EditText) findViewById(R.id.editText);
+            public String nameContent = String.valueOf(txt4);
+
+            @Override
+            public void onClick(View v) {
+
+                if (txt4.getText().toString().isEmpty())
+                    txt4.setError(Html.fromHtml("<font color='white'>أدخل إسمك من فضلك</font>"));
+
+                else
+                {
+                    next.putExtra(" com.example.a96653.practice.Something", txt4.getText().toString()+"");
+                    startActivity(next);
+                }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            }//end of onClick method
+        });
+    }
 }
