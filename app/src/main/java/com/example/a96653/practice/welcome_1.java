@@ -111,7 +111,7 @@ public class welcome_1 extends AppCompatActivity {
 
                 else
                 {
-                    next.putExtra(" com.example.a96653.practice.Something", txt4.getText().toString()+"");
+                    next.putExtra("com.example.a96653.practice", txt4.getText().toString()+"");
                     startActivity(next);
                 }
 
@@ -131,4 +131,14 @@ public class welcome_1 extends AppCompatActivity {
             }//end of onClick method
         });
     }
+
+   /* public void ebdabtn(View view) {
+        EditText name=(EditText) findViewById(R.id.editText);
+        Intent myintent=new Intent(this,welcome_2.class);
+        Bundle b=new Bundle();
+        b.putString("name",name.getText().toString());
+       myintent.putExtras(b);
+        startActivity(myintent);
+
+    }*/
 }

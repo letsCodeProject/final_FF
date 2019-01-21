@@ -57,7 +57,10 @@ public class welcome_2 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_welcome_2);
-        TextView NameDisplaytextView=(TextView) findViewById(R.id.NameDisplaytextView);
+        TextView nameView=(TextView) findViewById(R.id.NameDisplaytextView);
+      //  Bundle b=getIntent().getExtras();
+      //  String name=b.getString("name");
+       // nameView.setText(name);
         Button intalqbtn=(Button) findViewById(R.id.button2);
         intalqbtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -68,9 +71,9 @@ public class welcome_2 extends AppCompatActivity {
         });
 
 
-        if (getIntent().hasExtra("com.example.a96653.practice.Something")){
-            String t=getIntent().getExtras().getString("com.example.a96653.practice.Something");
-            NameDisplaytextView.setText(t);
+       if (getIntent().hasExtra("com.example.a96653.practice")){
+            String t=getIntent().getExtras().getString("com.example.a96653.practice");
+            nameView.setText(t);
 
 
         }

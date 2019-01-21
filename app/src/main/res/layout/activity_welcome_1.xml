@@ -72,8 +72,9 @@
         android:layout_marginBottom="40dp"
         android:background="@drawable/custom_edittext"
         android:ems="10"
+        android:hint="ادخل اسمك"
         android:inputType="textPersonName"
-        android:text="@string/nameval" />
+       />
 
     <Button
         android:id="@+id/button"
@@ -88,8 +89,8 @@
         android:text="ابدأ"
         android:textAlignment="center"
         android:textColor="@color/white"
-
         android:textSize="20sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        />
 
 </RelativeLayout>
