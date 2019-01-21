@@ -23,7 +23,7 @@
     <string name="labeb">لبيب</string>
     <string name="beforestart">قبل البدء بالمهمة، يجب عليك التعرف أولاً على ماذا تعني </string>
     <string name="programming">البرمجة؟</string>
-    <string name="welcome_4text"> حسناً, لنفترض أن لديك روبوت وتريد منه تنفيذ أوامرك ! \n  كالتقدم خطوة للأمام، أو التوقف عن الحركة ؛ليقوم بذلك، عليك تزويده\n ببعض الأوامر والتعليمات</string>
+    <string name="welcome_4text"> حسناً, لنفترض أن لديك روبوت وتريد منه تنفيذ أوامرك ! \n  كالتقدم خطوة للأمام، أو التوقف عن الحركة ؛ليقوم بذلك، عليك تزويده ببعض\n </string>
     <string name="welcome5_1text">أليس من الرائع لو كان بإمكان الجهاز الذي بين يديك تنفيذ أوامرك ؟</string>
     <string name="welcome5_2text">الأمر ليس مستحيلاً !</string>
 

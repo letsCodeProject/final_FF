@@ -28,8 +28,12 @@
         android:layout_marginTop="-18dp"
         android:fontFamily="@font/jannalt_regular"
         android:text="@string/programming"
-        android:textColor="@color/yellow1"
-        android:textSize="30sp" />
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:shadowRadius="9"
+        android:shadowDy="1"
+        android:shadowDx="1"
+        android:shadowColor="@color/Shadwo_purple"/>
 
     <ImageView
         android:id="@+id/imageView15"

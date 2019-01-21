@@ -81,20 +81,53 @@ public void openSecondActivity(){
 package com.example.a96653.practice;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Html;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.content.ContentValues;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteOpenHelper;
+import android.widget.TextView;
 
 public class welcome_1 extends AppCompatActivity {
 
+    //for db
+    private MySQLliteHelper mySqliteOpenHelper ;
+
+    private SQLiteDatabase mDatabase ;//
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_welcome_1);
         Button button= findViewById(R.id.button);
+        //DB TRY
+        /*
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                // create the database with table here --
+
+                mySqliteOpenHelper = new  MySQLliteHelper(getApplicationContext());
+
+                mDatabase = mySqliteOpenHelper.getReadableDatabase();
+
+                Cursor cursor = mDatabase.rawQuery("select * from Child ;", null);
+
+                System.out.println("welcome_1.onClick:"+ cursor.getColumnCount());
+
+
+            }
+        });//DB TRY
+
+*/
 
         final Intent next=new Intent(getApplicationContext(),welcome_2.class);
 

@@ -84,7 +84,7 @@ public class MyDBHandler extends SQLiteOpenHelper {
 
             // null could happen if we used our empty constructor
 
-            if (recordSet.getString(recordSet.getColumnIndex("child name")) != null) {
+            if (recordSet.getString(recordSet.getColumnIndex("com.child name")) != null) {
 
                 dbString += recordSet.getString(recordSet.getColumnIndex("productname"));
 

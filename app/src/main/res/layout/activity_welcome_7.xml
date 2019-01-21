@@ -53,8 +53,12 @@
         android:layout_marginBottom="104dp"
         android:fontFamily="@font/jannalt_regular"
         android:text="@string/welcome7_3text"
-        android:textColor="@color/yellow1"
-        android:textSize="50sp" />
+        android:textColor="@color/white"
+        android:shadowColor="@color/Shadwo_purple"
+        android:textSize="50sp"
+        android:shadowDy="1"
+        android:shadowRadius="9"
+        android:shadowDx="1"/>
 
     <ImageView
         android:id="@+id/imageView34"

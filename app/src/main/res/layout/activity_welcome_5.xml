@@ -30,8 +30,12 @@
         android:layout_marginEnd="45dp"
         android:fontFamily="@font/jannalt_regular"
         android:text="@string/welcome5_2text"
-        android:textColor="@color/yellow1"
-        android:textSize="25sp" />
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:shadowDy="1"
+        android:shadowDx="1"
+        android:shadowColor="@color/Shadwo_purple"
+        android:shadowRadius="9"/>
 
     <TextView
         android:id="@+id/textView24"
@@ -56,8 +60,12 @@
         android:layout_marginBottom="78dp"
         android:fontFamily="@font/jannalt_regular"
         android:text="@string/welcome5_4text"
-        android:textColor="@color/yellow1"
-        android:textSize="30sp" />
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="9"
+        android:shadowColor="@color/Shadwo_purple"/>
 
     <ImageView
         android:id="@+id/imageView24"

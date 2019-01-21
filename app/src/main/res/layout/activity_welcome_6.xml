@@ -17,7 +17,11 @@
         android:layout_marginEnd="57dp"
         android:fontFamily="@font/jannalt_regular"
         android:text="@string/welcome5_4text"
-        android:textColor="@color/yellow1"
+        android:textColor="@color/white"
+        android:shadowRadius="9"
+        android:shadowDy="1"
+        android:shadowDx="1"
+        android:shadowColor="@color/Shadwo_purple"
         android:textSize="50sp" />
 
     <TextView
@@ -30,7 +34,7 @@
         android:layout_marginEnd="32dp"
         android:fontFamily="@font/jannalt_regular"
         android:text="@string/welcome6_1text"
-        android:textColor="@color/light_font"
+        android:textColor="@color/yellow1"
         android:textSize="20sp" />
 
     <ImageView
