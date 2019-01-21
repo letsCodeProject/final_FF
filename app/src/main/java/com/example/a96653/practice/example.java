@@ -9,6 +9,7 @@ import android.support.v7.app.AppCompatDialogFragment;
 public class example extends AppCompatDialogFragment {
 
 /// shatha can you see
+    ///
     public Dialog onCreateDialog(Bundle savedInstanceState){
 
         AlertDialog.Builder builder=new AlertDialog.Builder(getActivity());
