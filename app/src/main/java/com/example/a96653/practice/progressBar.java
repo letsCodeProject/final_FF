@@ -13,6 +13,8 @@ import android.widget.TextView;
         import android.widget.ProgressBar;
         import android.widget.TextView;
 
+        //just try
+
 public class progressBar extends Animation {
     private Context context;
     private TextView textView;
