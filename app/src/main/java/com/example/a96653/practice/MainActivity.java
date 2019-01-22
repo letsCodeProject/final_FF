@@ -13,7 +13,7 @@ import android.widget.ImageView;
 //svsvbs
 
 public class MainActivity extends AppCompatActivity {
-    MyDBHandler dbHandler;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
