@@ -11,5 +11,10 @@ public final class SchemClass {
         public static final String COLUMN_NAME_ID = "ID";
         public static final String COLUMN_NAME_Score = "Score";
 
+
+        public static final String SECOND_TABLE="LEVEL";
+        public static final String COLUMN_NAME_LevelName="LevelName";
+        public static final String COLUMN_NAME_LessonsPassed="NumOfLessonsPassed";
+        public static final String COLUMN_NAME_LEVELSTATUS="LevelStatus";
     }
 }
