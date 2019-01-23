@@ -8,7 +8,7 @@ public class MySQLliteHelper extends SQLiteOpenHelper {
 
     //DB COMPONENTS
     private static final String db_name = "LetsCode2.db";
-    private static final int db_version =4;
+    private static final int db_version =5;
     //CHILD TABLE
    private String table_name = "Child";
 
@@ -40,8 +40,8 @@ public class MySQLliteHelper extends SQLiteOpenHelper {
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        db.execSQL("DROP TABLE IF EXISTS " + SchemClass.LetsCode2.SECOND_TABLE);
-        db.execSQL(SQL_CREATE_TABLE_LEVEL);
+       db.execSQL("DROP TABLE IF EXISTS " + SchemClass.LetsCode2.SECOND_TABLE);
+       db.execSQL(SQL_CREATE_TABLE_LEVEL);
 
     }
 
@@ -52,8 +52,10 @@ public class MySQLliteHelper extends SQLiteOpenHelper {
         contentValues.put(SchemClass.LetsCode2.COLUMN_NAME_Score, Score);
 
         long result  = db.insert(SchemClass.LetsCode2.TABLE_NAME, null, contentValues);
-        addData();
+        //addData();
     }
+
+
     public void addData(){
 //i did not include بلوتو in the loop because it will be unclocked
         SQLiteDatabase db = this.getWritableDatabase();

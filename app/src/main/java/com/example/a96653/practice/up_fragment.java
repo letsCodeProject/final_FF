@@ -16,6 +16,7 @@ import android.view.ViewGroup;
  import android.app.Activity;
  import android.widget.Button;
  import android.widget.EditText;
+import android.widget.ImageButton;
 
 
 public class up_fragment extends Fragment {
@@ -26,6 +27,7 @@ public class up_fragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_up_fragment, container, false);
 
       return view;
+
     }
 
 }
