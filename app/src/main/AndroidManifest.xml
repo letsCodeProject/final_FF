@@ -9,6 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
+        <activity android:name=".jkhgjeehr"></activity>
         <activity
             android:name=".MainActivity_Loading"
             android:screenOrientation="landscape">
@@ -18,11 +19,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".MainActivity"
             android:screenOrientation="landscape" />
-
         <activity
             android:name=".firstlevel_1"
             android:screenOrientation="landscape" />
@@ -34,7 +33,6 @@
         <activity
             android:name=".welcome_1"
             android:screenOrientation="landscape" />
-
         <activity
             android:name=".welcome_2"
             android:screenOrientation="landscape" />
