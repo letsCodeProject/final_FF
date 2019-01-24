@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.a96653.practice">
+    package="com.example.a96653.LetsCode">
 
     <application
         android:allowBackup="true"
@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
         <activity
-            android:name=".MainActivity_Loading"
+            android:name="com.example.a96653.LetsCode.MainActivity_Loading"
             android:screenOrientation="landscape">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -19,10 +19,10 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name="com.example.a96653.LetsCode.MainActivity"
             android:screenOrientation="landscape" />
         <activity
-            android:name=".firstlevel_1"
+            android:name="com.example.a96653.LetsCode.firstlevel_1"
             android:screenOrientation="landscape" />
 
         <meta-data
@@ -30,43 +30,43 @@
             android:resource="@array/preloaded_fonts" />
 
         <activity
-            android:name=".welcome_1"
+            android:name="com.example.a96653.LetsCode.welcome_1"
             android:screenOrientation="landscape" />
         <activity
-            android:name=".welcome_2"
+            android:name="com.example.a96653.LetsCode.welcome_2"
             android:screenOrientation="landscape" />
         <activity
-            android:name=".welcome_3"
+            android:name="com.example.a96653.LetsCode.welcome_3"
             android:screenOrientation="landscape" />
         <activity
-            android:name=".welcome_4"
+            android:name="com.example.a96653.LetsCode.welcome_4"
             android:screenOrientation="landscape" />
         <activity
-            android:name=".welcome_5"
+            android:name="com.example.a96653.LetsCode.welcome_5"
             android:screenOrientation="landscape" />
         <activity
-            android:name=".welcome_6"
+            android:name="com.example.a96653.LetsCode.welcome_6"
             android:screenOrientation="landscape" />
         <activity
-            android:name=".welcome_7"
+            android:name="com.example.a96653.LetsCode.welcome_7"
             android:screenOrientation="landscape" />
         <activity
-            android:name=".firstlevel_2"
+            android:name="com.example.a96653.LetsCode.firstlevel_2"
             android:screenOrientation="landscape" />
         <activity
-            android:name=".firstlevel_3"
+            android:name="com.example.a96653.LetsCode.firstlevel_3"
             android:screenOrientation="landscape" />
         <activity
-            android:name=".firstlevel_4"
+            android:name="com.example.a96653.LetsCode.firstlevel_4"
             android:screenOrientation="landscape" />
         <activity
-            android:name=".firstlevel_5"
+            android:name="com.example.a96653.LetsCode.firstlevel_5"
             android:screenOrientation="landscape" />
         <activity
-            android:name=".firstlevel_6"
+            android:name="com.example.a96653.LetsCode.firstlevel_6"
             android:screenOrientation="landscape" />
         <activity
-            android:name=".firstlevel_7"
+            android:name="com.example.a96653.LetsCode.firstlevel_7"
             android:screenOrientation="landscape" />
     </application>
 

@@ -102,7 +102,7 @@
 
     <fragment
         android:id="@+id/fragment"
-        android:name="com.example.a96653.practice.up_fragment"
+        android:name="com.example.a96653.LetsCode.up_fragment"
         android:layout_width="677dp"
         android:layout_height="43dp"
         android:layout_alignParentTop="true"
