@@ -1,4 +1,4 @@
-package com.example.a96653.practice;
+package com.example.a96653.LetsCode;
 
 import android.content.Context;
 import android.content.Intent;
@@ -6,14 +6,8 @@ import android.view.animation.Animation;
 import android.view.animation.Transformation;
 import android.widget.ProgressBar;
 import android.widget.TextView;
-        import android.content.Context;
-        import android.content.Intent;
-        import android.view.animation.Animation;
-        import android.view.animation.Transformation;
-        import android.widget.ProgressBar;
-        import android.widget.TextView;
 
-        //just try
+//just try
 
 public class progressBar extends Animation {
     private Context context;
@@ -37,7 +31,7 @@ public class progressBar extends Animation {
         progressBar.setProgress((int)value);
         textView.setText((int)value+" %");
         if(value==to){
-            context.startActivity(new Intent(context,welcome_1.class));
+            context.startActivity(new Intent(context,MainActivity.class));
         }
     }
 }

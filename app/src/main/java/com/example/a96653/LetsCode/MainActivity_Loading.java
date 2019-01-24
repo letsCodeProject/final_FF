@@ -1,26 +1,10 @@
-package com.example.a96653.practice;
+package com.example.a96653.LetsCode;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.WindowManager;
 import android.widget.ProgressBar;
 import android.widget.TextView;
-
-        import android.graphics.Color;
-        import android.graphics.drawable.ColorDrawable;
-        import android.support.v7.app.AppCompatActivity;
-        import android.os.Bundle;
-        import android.graphics.Typeface;
-        import android.support.v7.app.AppCompatActivity;
-        import android.os.Bundle;
-        import android.view.WindowManager;
-        import android.view.animation.Animation;
-        import android.view.animation.AnimationUtils;
-        import android.widget.Button;
-        import android.widget.ImageView;
-        import android.widget.LinearLayout;
-        import android.widget.ProgressBar;
-        import android.widget.TextView;
 
 
 public class MainActivity_Loading extends AppCompatActivity {

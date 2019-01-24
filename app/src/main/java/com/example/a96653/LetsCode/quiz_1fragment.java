@@ -1,4 +1,4 @@
-package com.example.a96653.practice;
+package com.example.a96653.LetsCode;
 
 import android.content.Context;
 import android.net.Uri;

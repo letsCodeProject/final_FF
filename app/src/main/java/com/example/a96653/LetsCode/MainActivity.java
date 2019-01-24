@@ -1,18 +1,15 @@
-package com.example.a96653.practice;
-import android.content.DialogInterface;
+package com.example.a96653.LetsCode;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.app.AlertDialog;
-import android.util.Log;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
-//svsvbs
+
 
 public class MainActivity extends AppCompatActivity {
+
 
 
     @Override
@@ -51,7 +48,8 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void launchSecondActivity() {
-
+       MySQLliteHelper mySqliteOpenHelper=new MySQLliteHelper(this);
+        mySqliteOpenHelper.addData();
         startActivity(new Intent(MainActivity.this,welcome_1.class));
         SharedPreferences prefs = getSharedPreferences("prefs", MODE_PRIVATE);
         SharedPreferences.Editor editor = prefs.edit();

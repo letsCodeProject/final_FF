@@ -1,4 +1,4 @@
-package com.example.a96653.practice;
+package com.example.a96653.LetsCode;
 public final class SchemClass {
     // To prevent someone from accidentally instantiating the contract class,
     // make the constructor private
