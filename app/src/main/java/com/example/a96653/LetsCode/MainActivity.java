@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
                 );
     }
 
-
+////
 
     public void openPlotoActivity() {
         Intent intent = new Intent(this, firstlevel_1.class);
