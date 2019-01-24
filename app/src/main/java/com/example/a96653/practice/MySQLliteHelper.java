@@ -40,8 +40,8 @@ public class MySQLliteHelper extends SQLiteOpenHelper {
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-       db.execSQL("DROP TABLE IF EXISTS " + SchemClass.LetsCode2.SECOND_TABLE);
-       db.execSQL(SQL_CREATE_TABLE_LEVEL);
+      // db.execSQL("DROP TABLE IF EXISTS " + SchemClass.LetsCode2.SECOND_TABLE);
+      // db.execSQL(SQL_CREATE_TABLE_LEVEL);
 
     }
 
@@ -71,8 +71,8 @@ public class MySQLliteHelper extends SQLiteOpenHelper {
         Planet_Name[2]="المشتري";
         Planet_Name[3]="الارض";
         long res=0;
+        ContentValues contentValues2 = new ContentValues();
         for ( int i=0;i<=3;i++){
-            ContentValues contentValues2 = new ContentValues();
             contentValues2.put(SchemClass.LetsCode2.COLUMN_NAME_LevelName, Planet_Name[i]);
             contentValues2.put(SchemClass.LetsCode2.COLUMN_NAME_LessonsPassed,0);
             contentValues2.put(SchemClass.LetsCode2.COLUMN_NAME_LEVELSTATUS,0);

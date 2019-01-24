@@ -19,15 +19,15 @@ public class firstlevel_1 extends AppCompatActivity {
 
         Button goButton = (Button)findViewById(R.id.button3);
         //home button
-        ImageButton homebtn=(ImageButton)findViewById(R.id.Homebtn);
+       // ImageButton homebtn=(ImageButton)findViewById(R.id.Homebtn);
 
-        homebtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent HomePage=new Intent(getApplicationContext(),MainActivity.class);
-                startActivity(HomePage);
-            }
-        });
+       // homebtn.setOnClickListener(new View.OnClickListener() {
+         //   @Override
+          //  public void onClick(View v) {
+            //    Intent HomePage=new Intent(getApplicationContext(),MainActivity.class);
+             //   startActivity(HomePage);
+           // }
+       // });
 
         goButton.setOnClickListener(
                 new Button.OnClickListener(){
