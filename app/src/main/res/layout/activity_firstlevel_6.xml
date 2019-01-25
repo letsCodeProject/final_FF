@@ -93,19 +93,18 @@
         android:layout_marginBottom="175dp"
         android:background="@drawable/back" />
 
-    <ImageButton
+    <ImageView
 
         android:layout_width="236dp"
         android:layout_height="44dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_marginEnd="82dp"
-        android:layout_marginBottom="105dp"
-        android:background="@drawable/back"
-        android:scaleType="fitCenter"
-        tools:src="@drawable/choiceshapee" />
+        android:layout_marginBottom="96dp"
+        android:background="@drawable/choiceshapee"
+        android:scaleType="fitCenter" />
 
-    <ImageButton
+    <ImageView
 
         android:id="@+id/imageButton"
         android:layout_width="236dp"
@@ -114,9 +113,8 @@
         android:layout_alignParentBottom="true"
         android:layout_marginEnd="86dp"
         android:layout_marginBottom="154dp"
-        android:background="@drawable/back"
-        android:scaleType="fitCenter"
-        tools:src="@drawable/choiceshapee" />
+        android:background="@drawable/choiceshapee"
+        android:scaleType="fitCenter" />
 
     <TextView
         android:id="@+id/textView50"
@@ -147,7 +145,7 @@
         android:layout_height="wrap_content"
         android:layout_alignEnd="@+id/textView51"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="245dp"
+        android:layout_marginTop="255dp"
         android:layout_marginEnd="-6dp"
         android:text="@string/answer2"
         android:textColor="@android:color/black"
