@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 public class firstlevel_1 extends AppCompatActivity {
 
@@ -17,15 +18,15 @@ public class firstlevel_1 extends AppCompatActivity {
 
         Button goButton = (Button)findViewById(R.id.button3);
         //home button
-       // ImageButton homebtn=(ImageButton)findViewById(R.id.Homebtn);
+      ImageButton homebtn=(ImageButton)findViewById(R.id.homebtn);
 
-       // homebtn.setOnClickListener(new View.OnClickListener() {
-         //   @Override
-          //  public void onClick(View v) {
-            //    Intent HomePage=new Intent(getApplicationContext(),MainActivity.class);
-             //   startActivity(HomePage);
-           // }
-       // });
+       homebtn.setOnClickListener(new View.OnClickListener() {
+           @Override
+            public void onClick(View v) {
+               Intent HomePage=new Intent(getApplicationContext(),MainActivity.class);
+               startActivity(HomePage);
+            }
+        });
 
         goButton.setOnClickListener(
                 new Button.OnClickListener(){
@@ -56,7 +57,7 @@ public class firstlevel_1 extends AppCompatActivity {
 
 
 
-
+//android:layout_alignBottom="@+id/imageView40"
 
 
 

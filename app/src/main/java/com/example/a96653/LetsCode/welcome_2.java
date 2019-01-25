@@ -71,8 +71,8 @@ public class welcome_2 extends AppCompatActivity {
         });
 
 
-       if (getIntent().hasExtra("com.example.a96653.practice")){
-            String t=getIntent().getExtras().getString("com.example.a96653.practice");
+       if (getIntent().hasExtra("com.example.a96653.letsCode")){
+            String t=getIntent().getExtras().getString("com.example.a96653.LetsCode");
             nameView.setText(t);
 
 

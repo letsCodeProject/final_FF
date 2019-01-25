@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 
 public class firstlevel_3 extends AppCompatActivity {
@@ -13,6 +14,15 @@ public class firstlevel_3 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_firstlevel_3);
 
+        ImageButton homebtn2=(ImageButton)findViewById(R.id.homebtn2);
+
+        homebtn2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent HomePage=new Intent(getApplicationContext(),MainActivity.class);
+                startActivity(HomePage);
+            }
+        });
 
 
 
