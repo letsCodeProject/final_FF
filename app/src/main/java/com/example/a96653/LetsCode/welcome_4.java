@@ -12,14 +12,14 @@ public class welcome_4 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_welcome_4);
-
+        final MySQLliteHelper mySqliteOpenHelper=new MySQLliteHelper(this);
 
         ImageView next = (ImageView)findViewById(R.id.imageView25);
 
         next.setOnClickListener(
                 new ImageView.OnClickListener(){
                     public void onClick(View v){
-
+                        mySqliteOpenHelper.UpdateWelcomingTable("welcome5",1);
                         openSecondActivity();
                     }
 

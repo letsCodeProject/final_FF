@@ -16,6 +16,9 @@ public class welcome_1 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
     final   MySQLliteHelper mySqliteOpenHelper=new MySQLliteHelper(this);
 
+       mySqliteOpenHelper.addData();
+       mySqliteOpenHelper.Fill_Welcoming_Table();
+       mySqliteOpenHelper.addQuiz();
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_welcome_1);
@@ -43,6 +46,7 @@ public class welcome_1 extends AppCompatActivity {
                     mySqliteOpenHelper.addData(txt4.getText().toString(),0);
                     next.putExtra("com.example.a96653.LetsCode", txt4.getText().toString()+"");
                     startActivity(next);
+                    mySqliteOpenHelper.UpdateWelcomingTable("welcome2",1);
                 }
 
             }

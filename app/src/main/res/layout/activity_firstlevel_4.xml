@@ -74,10 +74,10 @@
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.69"
+        app:layout_constraintHorizontal_bias="0.718"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.798" />
+        app:layout_constraintVertical_bias="0.845" />
 
     <TextView
         android:id="@+id/textView57"
@@ -95,25 +95,10 @@
         app:layout_constraintHorizontal_bias="0.463"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.972" />
-
-    <ImageView
-        android:id="@+id/imageView31"
-        android:layout_width="387dp"
-        android:layout_height="46dp"
-        android:layout_alignBottom="@+id/imageView45"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.45"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.575"
-        app:srcCompat="@drawable/printcmd" />
+        app:layout_constraintVertical_bias="0.972"
+        android:textColor="@color/black"
+        android:textAlignment="center"
+        android:textSize="18dp"/>
 
     <TextView
         android:id="@+id/textView42"
@@ -244,6 +229,22 @@
         app:layout_constraintVertical_bias="0.975"
         app:srcCompat="@drawable/newnext" />
 
+
+
+    <ImageView
+        android:id="@+id/imageView31"
+        android:layout_width="340dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/button4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.448"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView46"
+        app:layout_constraintVertical_bias="0.666"
+        app:srcCompat="@drawable/printwithquote" />
+
     <EditText
         android:id="@+id/editText3"
         android:layout_width="173dp"
@@ -258,10 +259,10 @@
         android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.582"
+        app:layout_constraintHorizontal_bias="0.506"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.572" />
+        app:layout_constraintVertical_bias="0.597" />
 
 
 </android.support.constraint.ConstraintLayout>

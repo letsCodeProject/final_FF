@@ -10,6 +10,7 @@ public class welcome_7 extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        final MySQLliteHelper mySqliteOpenHelper=new MySQLliteHelper(this);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_welcome_7);
         ImageView next = (ImageView)findViewById(R.id.imageView34);
@@ -17,7 +18,7 @@ public class welcome_7 extends AppCompatActivity {
         next.setOnClickListener(
                 new ImageView.OnClickListener(){
                     public void onClick(View v){
-
+                        mySqliteOpenHelper.UpdateWelcomingTable("main",1);
                         openSecondActivity();
                     }
 

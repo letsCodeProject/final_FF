@@ -6,7 +6,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
-
+import android.widget.TextView;
+import java.lang.Class;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -14,35 +15,60 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        final MySQLliteHelper m=new MySQLliteHelper(this);
+        int lnum=0;
+      //lnum=m.getNumOfLessonPassed("بلوتو");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        SharedPreferences prefs = getSharedPreferences("prefs", MODE_PRIVATE);
-        boolean firstStart = prefs.getBoolean("firstStart", true);
+        //SharedPreferences prefs = getSharedPreferences("prefs", MODE_PRIVATE);
+       // boolean firstStart = prefs.getBoolean("firstStart", true);
 
-        if (firstStart) {
-            launchSecondActivity();
-        }
+        //if (firstStart) {
+           // launchSecondActivity();
+       // }
 
         ImageView ploto = (ImageView)findViewById(R.id.imageView3);
 
+        final int finalLnum = lnum;
         ploto.setOnClickListener(
+
                 new Button.OnClickListener(){
+
+
                     public void onClick(View v){
 
-                        openPlotoActivity();
+                        try {
+                            openPlotoActivity(m, finalLnum);
+                        } catch (ClassNotFoundException e) {
+                            e.printStackTrace();
+                        }
                     }
 
                 }
                 );
+
     }
 
 ////
 
-    public void openPlotoActivity() {
-        Intent intent = new Intent(this, firstlevel_1.class);
-        startActivity(intent);
 
+    public void openPlotoActivity(MySQLliteHelper M,int lnum2) throws ClassNotFoundException {
+       lnum2=M.getNumOfLessonPassed("Ploto");
+        TextView t=(TextView)findViewById(R.id.textView47);
+        //NEXT SESSION STARTS HERE .
+        Lesson l=new Lesson();
+        String name=l.getName(M.getNumOfLessonPassed("Ploto"));
+        t.setText(name);
+        Class c;
+        try{
+        c = Class.forName("com.example.a96653.LetsCode."+name);
+
+         Intent  intent = new Intent(this,c);
+
+
+        startActivity(intent);}
+        catch (Exception e){e.printStackTrace();}
 
     }
 

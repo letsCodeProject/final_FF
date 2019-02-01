@@ -58,6 +58,7 @@ public class welcome_2 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_welcome_2);
         TextView nameView=(TextView) findViewById(R.id.NameDisplaytextView);
+        final MySQLliteHelper mySqliteOpenHelper=new MySQLliteHelper(this);
       //  Bundle b=getIntent().getExtras();
       //  String name=b.getString("name");
        // nameView.setText(name);
@@ -67,10 +68,11 @@ public class welcome_2 extends AppCompatActivity {
             public void onClick(View v) {
                 Intent next2=new Intent(getApplicationContext(),welcome_3.class);
                 startActivity(next2);
+                mySqliteOpenHelper.UpdateWelcomingTable("welcome3",1);
             }
         });
 
-
+        nameView.setText(  mySqliteOpenHelper. getChildName());
        if (getIntent().hasExtra("com.example.a96653.LetsCode")){
             String t=getIntent().getExtras().getString("com.example.a96653.LetsCode");
             nameView.setText(t);

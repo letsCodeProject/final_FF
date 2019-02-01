@@ -9,19 +9,27 @@
 
     <ImageButton
 
-        android:id="@+id/homebtn6"
+        android:id="@+id/homebtn7"
         android:layout_width="36dp"
         android:layout_height="36dp"
         android:layout_alignTop="@+id/imageView37"
         android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="624dp"
-        android:layout_marginBottom="336dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="299dp"
+        android:layout_toStartOf="@drawable/h"
         android:background="@drawable/back"
+        android:scaleType="fitCenter"
         android:src="@drawable/h"
-        android:scaleType="fitCenter"/>
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imageView63"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        />
 
     <TextView
 
@@ -59,7 +67,8 @@
         android:layout_alignParentBottom="true"
         android:layout_marginStart="0dp"
         android:layout_marginBottom="0dp"
-        app:srcCompat="@drawable/quiz1_1robot" />
+        app:srcCompat="@drawable/quiz1_1robot"
+        android:onClick="ShowPopup"/>
 
     <ImageView
         android:id="@+id/imageView49"
@@ -67,8 +76,9 @@
         android:layout_height="88dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="72dp"
-        android:layout_marginTop="69dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="50dp"
+        android:onClick="ShowPopup"
         app:srcCompat="@drawable/helpask" />
 
     <ImageView
@@ -145,21 +155,11 @@
         android:layout_height="wrap_content"
         android:layout_alignEnd="@+id/textView51"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="255dp"
-        android:layout_marginEnd="-6dp"
+        android:layout_marginTop="204dp"
+        android:layout_marginEnd="-5dp"
         android:text="@string/answer2"
         android:textColor="@android:color/black"
         android:textSize="20sp" />
-
-    <TextView
-        android:id="@+id/textView53"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="109dp"
-        android:layout_marginTop="106dp"
-        android:text="@string/help" />
 
     <ImageView
 
