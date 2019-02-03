@@ -9,30 +9,9 @@
     tools:context=".MainActivity" android:screenOrientation="landscape" >
 
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="118dp"
-        android:layout_marginEnd="10dp"
-        android:contentDescription="@string/desc"
 
-        app:srcCompat="@drawable/newearth" />
 
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="95dp"
-        android:layout_height="92dp"
-        android:layout_alignBottom="@+id/imageView"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="30dp"
-        android:layout_marginBottom="19dp"
-        android:contentDescription="@string/desc"
-        app:srcCompat="@drawable/newploto"
 
-        />
 
     <ImageView
         android:id="@+id/imageView8"
@@ -51,48 +30,29 @@
         android:layout_height="34dp"
         android:layout_below="@+id/imageView"
         android:layout_alignStart="@+id/imageView8"
-        android:layout_marginStart="-22dp"
-        android:layout_marginTop="-38dp"
-        android:fontFamily="sans-serif-thin"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="-36dp"
+        android:fontFamily="@font/jannalt_regular"
         android:text="@string/ploto"
         android:textColor="@android:color/background_light"
         android:textColorLink="@android:color/background_light"
-        android:textSize="20sp"
-        />
+        android:textSize="20sp" />
 
-    <ImageView
-        android:id="@+id/imageView9"
-        android:layout_width="105dp"
-        android:layout_height="83dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="120dp"
-        android:layout_marginBottom="76dp"
-        android:contentDescription="@string/desc"
-        app:srcCompat="@drawable/newnepton" />
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="63dp"
-        android:layout_height="26dp"
+        android:layout_width="76dp"
+        android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="33dp"
-        android:layout_marginBottom="59dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginBottom="51dp"
         android:layout_toEndOf="@+id/imageView3"
+        android:fontFamily="@font/jannalt_regular"
         android:text="@string/nepton"
-        android:textSize="20sp"
-        android:textColor="@android:color/background_light" />
+        android:textColor="@android:color/background_light"
+        android:textSize="20sp" />
 
-    <ImageView
-        android:id="@+id/imageView13"
-        android:layout_width="83dp"
-        android:layout_height="105dp"
-        android:layout_alignBottom="@+id/textView"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="311dp"
-        android:layout_marginBottom="-12dp"
-        android:contentDescription="@string/desc"
-        app:srcCompat="@drawable/newzohal" />
+
 
     <ImageView
         android:id="@+id/imageView14"
@@ -105,27 +65,30 @@
         android:contentDescription="@string/desc"
         app:srcCompat="@drawable/diamond" />
 
-    <ImageView
-        android:id="@+id/imageView17"
-        android:layout_width="175dp"
-        android:layout_height="92dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="113dp"
-        android:layout_marginBottom="72dp"
-        android:contentDescription="@string/desc"
-        app:srcCompat="@drawable/newmerek" />
 
     <ImageView
         android:id="@+id/imageView19"
-        android:layout_width="106dp"
-        android:layout_height="wrap_content"
+        android:layout_width="85dp"
+        android:layout_height="231dp"
         android:layout_alignBottom="@+id/textView2"
         android:layout_alignParentEnd="true"
-        android:layout_marginEnd="68dp"
+        android:layout_marginEnd="80dp"
         android:layout_marginBottom="-8dp"
         android:contentDescription="@string/desc"
         app:srcCompat="@drawable/mr" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="93dp"
+        android:layout_marginEnd="21dp"
+        android:contentDescription="@string/desc"
+
+        app:srcCompat="@drawable/newearth"
+        android:alpha="0.4" />
 
     <ImageView
         android:id="@+id/imageView20"
@@ -140,23 +103,72 @@
 
     <ImageView
         android:id="@+id/imageView21"
-        android:layout_width="330dp"
-        android:layout_height="119dp"
+        android:layout_width="86dp"
+        android:layout_height="54dp"
         android:layout_below="@+id/imageView"
-        android:layout_marginTop="-22dp"
-        android:layout_marginEnd="-174dp"
+        android:layout_marginTop="-7dp"
+        android:layout_marginEnd="-114dp"
         android:layout_toStartOf="@+id/imageView14"
         android:contentDescription="@string/desc"
         app:srcCompat="@drawable/nz" />
 
     <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="105dp"
+        android:layout_height="83dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="120dp"
+        android:layout_marginBottom="87dp"
+        android:contentDescription="@string/desc"
+        app:srcCompat="@drawable/newnepton"
+        android:alpha="0.4"
+       />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="42dp"
+        android:layout_height="31dp"
+        android:layout_above="@+id/imageView13"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="245dp"
+        android:layout_marginBottom="47dp"
+        android:src="@drawable/scorebox" />
+
+    <ImageView
+        android:id="@+id/imageView29"
+        android:layout_width="34dp"
+        android:layout_height="34dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="251dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="8dp"
+        android:layout_toStartOf="@+id/imageView5"
+        android:src="@drawable/diamond22" />
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="95dp"
+        android:layout_height="92dp"
+        android:layout_alignBottom="@+id/imageView"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="24dp"
+        android:layout_marginBottom="25dp"
+        android:contentDescription="@string/desc"
+        app:srcCompat="@drawable/newploto"
+
+        />
+
+    <ImageView
         android:id="@+id/imageView22"
-        android:layout_width="94dp"
-        android:layout_height="121dp"
+        android:layout_width="63dp"
+        android:layout_height="106dp"
         android:layout_below="@+id/imageView"
         android:layout_alignStart="@+id/imageView17"
-        android:layout_marginStart="-23dp"
-        android:layout_marginTop="-44dp"
+        android:layout_marginStart="-5dp"
+        android:layout_marginTop="-40dp"
         android:contentDescription="@string/desc"
         app:srcCompat="@drawable/zm" />
 
@@ -182,8 +194,8 @@
         android:layout_height="68dp"
         android:layout_below="@+id/imageView19"
         android:layout_alignStart="@+id/imageView9"
-        android:layout_marginStart="3dp"
-        android:layout_marginTop="-36dp"
+        android:layout_marginStart="-92dp"
+        android:layout_marginTop="-41dp"
         android:contentDescription="@string/desc"
         app:srcCompat="@drawable/n2" />
 
@@ -205,12 +217,15 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@+id/imageView9"
-        android:layout_marginEnd="15dp"
-        android:layout_marginBottom="26dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginEnd="9dp"
+        android:layout_marginBottom="-47dp"
         android:layout_toStartOf="@+id/imageView22"
+        android:layout_toEndOf="@+id/textView2"
+        android:fontFamily="@font/jannalt_regular"
         android:text="@string/zohal"
-        android:textSize="20sp"
-        android:textColor="@android:color/background_light" />
+        android:textColor="@android:color/background_light"
+        android:textSize="20sp" />
 
     <TextView
         android:id="@+id/textView4"
@@ -218,35 +233,30 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/imageView"
         android:layout_marginStart="-68dp"
+        android:layout_marginTop="0dp"
         android:layout_toEndOf="@+id/imageView19"
+        android:fontFamily="@font/jannalt_regular"
         android:text="@string/earth"
-        android:textSize="20sp"
-        android:textColor="@android:color/background_light"
 
-        />
+        android:textColor="@android:color/background_light"
+        android:textSize="20sp" />
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/imageView17"
         android:layout_alignBottom="@+id/textView2"
-        android:layout_marginStart="17dp"
-        android:layout_marginBottom="1dp"
+        android:layout_marginStart="-6dp"
+        android:layout_marginEnd="59dp"
+        android:layout_marginBottom="-20dp"
         android:layout_toEndOf="@+id/textView11"
+        android:fontFamily="@font/jannalt_regular"
         android:text="@string/moshtari"
-        android:textSize="20sp"
-        android:textColor="@android:color/background_light" />
+        android:textColor="@android:color/background_light"
+        android:textSize="20sp" />
 
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="125dp"
-        android:layout_height="103dp"
-        android:layout_below="@+id/imageView3"
-        android:layout_alignEnd="@+id/textView2"
-        android:layout_marginTop="39dp"
-        android:layout_marginEnd="-289dp"
-        android:contentDescription="@string/desc"
-        app:srcCompat="@drawable/n3" />
+
 
     <ImageView
         android:id="@+id/imageView6"
@@ -264,10 +274,33 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/imageView9"
-        android:layout_marginStart="-113dp"
-        android:contentDescription="@string/desc"
+        android:layout_marginStart="0dp"
+        android:layout_marginBottom="-72dp"
         android:layout_toEndOf="@+id/imageView17"
+        android:contentDescription="@string/desc"
         app:srcCompat="@drawable/n3" />
+    <ImageView
+        android:id="@+id/imageView17"
+        android:layout_width="175dp"
+        android:layout_height="92dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="113dp"
+        android:layout_marginBottom="72dp"
+        android:contentDescription="@string/desc"
+        app:srcCompat="@drawable/newmerek"
+        android:alpha="0.4" />
+    <ImageView
+        android:id="@+id/imageView13"
+        android:layout_width="83dp"
+        android:layout_height="105dp"
+        android:layout_alignBottom="@+id/textView"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="225dp"
+        android:layout_marginBottom="-33dp"
+        android:contentDescription="@string/desc"
+        app:srcCompat="@drawable/newzohal"
+        android:alpha="0.4" />
 
     <TextView
         android:id="@+id/textView47"
@@ -275,10 +308,23 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="192dp"
-        android:layout_marginTop="50dp"
-        android:text="TextView"
-        android:textColor="@color/white"/>
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="358dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginEnd="157dp"
+        android:fontFamily="@font/jannalt_regular"
+        android:text="عدد ألماساتك"
+        android:textColor="@color/white" />
+
+    <ImageView
+        android:id="@+id/imageView53"
+        android:layout_width="35dp"
+        android:layout_height="133dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="46dp"
+        android:layout_marginTop="29dp"
+        app:srcCompat="@drawable/welcome_robot" />
 
 
 </RelativeLayout>

@@ -61,6 +61,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
+        android:fontFamily="@font/jannalt_regular"
         android:text="@string/mission2"
         android:textColor="@color/colorPrimary"
         android:textSize="18sp"
@@ -82,6 +83,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
+        android:fontFamily="@font/jannalt_regular"
         android:text="@string/quiz1_2"
         android:textColor="@color/white"
         android:textSize="20sp"
@@ -401,16 +403,15 @@
         android:layout_marginBottom="299dp"
         android:layout_toStartOf="@drawable/h"
         android:background="@drawable/back"
+        android:onClick="btnHome"
         android:scaleType="fitCenter"
         android:src="@drawable/h"
-        android:onClick="btnHome"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/imageView63"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.011"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        />
+        app:layout_constraintVertical_bias="0.0" />
 
 
 </android.support.constraint.ConstraintLayout>
