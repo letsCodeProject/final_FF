@@ -135,7 +135,7 @@ public class firstlevel_3 extends AppCompatActivity {
 
 
         final MySQLliteHelper m=new MySQLliteHelper(this);
-        SharedPreferences prefs = getSharedPreferences("pref6", MODE_PRIVATE);
+       SharedPreferences prefs = getSharedPreferences("pref6", MODE_PRIVATE);
         boolean firstStart = prefs.getBoolean("firstStart", true);
         if (firstStart){
            // m.addLesson(l3);

@@ -15,7 +15,7 @@ MySQLliteHelper mySqliteOpenHelper;
     protected void onCreate(Bundle savedInstanceState) {
         //FOR ADDING Q TO DB TO SEND THE QUIZE NUM
         mySqliteOpenHelper=new MySQLliteHelper(this);
-        SharedPreferences prefs = getSharedPreferences("prefs9", MODE_PRIVATE);
+     SharedPreferences prefs = getSharedPreferences("prefs9", MODE_PRIVATE);
         boolean firstStart = prefs.getBoolean("firstStart", true);
         if (firstStart){
             //m.addLesson(l2);

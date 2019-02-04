@@ -56,7 +56,9 @@ public class MainActivity extends AppCompatActivity {
     public void openPlotoActivity(MySQLliteHelper M,int lnum2) throws ClassNotFoundException {
        lnum2=M.getNumOfLessonPassed("Ploto");
         TextView t=(TextView)findViewById(R.id.textView47);
-        //NEXT SESSION STARTS HERE .
+      /* if (){
+           M.UpdateNumOfLesson(1,"Ploto");
+       }*/
         Lesson l=new Lesson();
         String name=l.getName(M.getNumOfLessonPassed("Ploto"));
         t.setText(name);
