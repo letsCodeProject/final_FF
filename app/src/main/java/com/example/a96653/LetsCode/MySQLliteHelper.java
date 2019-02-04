@@ -296,4 +296,38 @@ public class MySQLliteHelper extends SQLiteOpenHelper {
         Cursor recordSet=db.rawQuery(query,null);
         return recordSet ;
     }
-}//END OF CLASS
+    public int getChildScore() {
+
+        int  score = 0;
+        SQLiteDatabase db = getWritableDatabase();
+        String query = "SELECT Score FROM Child;";
+        Cursor recordSet = db.rawQuery(query, null);
+        recordSet.moveToFirst();
+        score = recordSet.getInt(recordSet.getColumnIndex("Score"));
+
+        return score ; }
+    public boolean getLevelStatus(String levelName) {
+        SQLiteDatabase DB = this.getReadableDatabase();
+        //specify the columns to be fetched
+        String[] columns = {SchemClass.LetsCode2.COLUMN_NAME_LEVELSTATUS};
+        //Select condition
+        String selection = SchemClass.LetsCode2.COLUMN_NAME_LevelName + " = ?";
+        //Arguments for selection
+        String[] selectionArgs = {levelName};
+        Cursor cursor = DB.query(SchemClass.LetsCode2.SECOND_TABLE, columns, selection, selectionArgs, null, null, null);
+        int columIndex;
+        boolean b=false;
+        if (null != cursor) {
+            cursor.moveToFirst();
+            columIndex = cursor.getColumnIndexOrThrow(SchemClass.LetsCode2.COLUMN_NAME_LEVELSTATUS);
+            if (cursor.isNull( columIndex) || cursor.getShort( columIndex) == 0) {
+                b= false;
+            } else {
+               b= true;
+            }
+        }
+        return b;
+    }
+
+
+    }//END OF CLASS

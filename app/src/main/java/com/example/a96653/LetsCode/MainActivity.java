@@ -16,17 +16,29 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         final MySQLliteHelper m=new MySQLliteHelper(this);
+
         int lnum=0;
-      //lnum=m.getNumOfLessonPassed("بلوتو");
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        //SharedPreferences prefs = getSharedPreferences("prefs", MODE_PRIVATE);
-       // boolean firstStart = prefs.getBoolean("firstStart", true);
-
-        //if (firstStart) {
-           // launchSecondActivity();
-       // }
+        //To SET UP THE LEVELS TRANCPERRENCY .
+        boolean levelStatus;
+        ImageView nepton=(ImageView)findViewById(R.id.imageView9);
+        ImageView Saturn=(ImageView)findViewById(R.id.imageView13);
+        ImageView Jupiter=(ImageView)findViewById(R.id.imageView17);
+        ImageView Earth=(ImageView)findViewById(R.id.imageView);
+     if( levelStatus=m.getLevelStatus("Nepton")==true)
+         nepton.setAlpha(1000);
+     else nepton.setAlpha(100);
+        if( levelStatus=m.getLevelStatus("Saturn")==true)
+            Saturn.setAlpha(1000);
+        else Saturn.setAlpha(100);
+        if( levelStatus=m.getLevelStatus("Jupiter")==true)
+            Jupiter.setAlpha(1000);
+        else  Jupiter.setAlpha(100);
+        if( levelStatus=m.getLevelStatus("Earth")==true)
+            Earth.setAlpha(1000);
+        else  Earth.setAlpha(100);
 
         ImageView ploto = (ImageView)findViewById(R.id.imageView3);
 
@@ -55,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void openPlotoActivity(MySQLliteHelper M,int lnum2) throws ClassNotFoundException {
        lnum2=M.getNumOfLessonPassed("Ploto");
-        TextView t=(TextView)findViewById(R.id.textView47);
+       TextView t=(TextView)findViewById(R.id.textView47);
       /* if (){
            M.UpdateNumOfLesson(1,"Ploto");
        }*/

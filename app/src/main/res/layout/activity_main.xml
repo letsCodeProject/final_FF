@@ -88,7 +88,7 @@
         android:contentDescription="@string/desc"
 
         app:srcCompat="@drawable/newearth"
-        android:alpha="0.4" />
+       />
 
     <ImageView
         android:id="@+id/imageView20"
@@ -122,7 +122,6 @@
         android:layout_marginBottom="87dp"
         android:contentDescription="@string/desc"
         app:srcCompat="@drawable/newnepton"
-        android:alpha="0.4"
        />
 
     <ImageView
@@ -289,7 +288,7 @@
         android:layout_marginBottom="72dp"
         android:contentDescription="@string/desc"
         app:srcCompat="@drawable/newmerek"
-        android:alpha="0.4" />
+        />
     <ImageView
         android:id="@+id/imageView13"
         android:layout_width="83dp"
@@ -300,7 +299,7 @@
         android:layout_marginBottom="-33dp"
         android:contentDescription="@string/desc"
         app:srcCompat="@drawable/newzohal"
-        android:alpha="0.4" />
+         />
 
     <TextView
         android:id="@+id/textView47"
