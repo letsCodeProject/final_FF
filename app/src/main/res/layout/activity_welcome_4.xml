@@ -74,5 +74,15 @@
         android:textSize="18sp"
         android:textStyle="bold" />
 
+    <ImageView
+        android:id="@+id/soundOn"
+        android:layout_width="30dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="7dp"
+        app:srcCompat="@drawable/soundon"
+        android:onClick="play"
+        />
+
 
 </RelativeLayout>

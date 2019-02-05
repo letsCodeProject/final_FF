@@ -25,8 +25,8 @@
 
     <TextView
         android:id="@+id/NameDisplaytextView"
-        android:layout_width="149dp"
-        android:layout_height="wrap_content"
+        android:layout_width="275dp"
+        android:layout_height="72dp"
         android:layout_alignBaseline="@+id/textView8"
         android:layout_alignParentEnd="true"
         android:layout_marginStart="8dp"
@@ -37,10 +37,11 @@
         android:textSize="40sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/textView8"
-        app:layout_constraintHorizontal_bias="0.793"
-        app:layout_constraintStart_toStartOf="@+id/textView13"
+        app:layout_constraintLeft_toLeftOf="@id/textView8"
+        app:layout_constraintHorizontal_bias="0.663"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.018" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/textView13"

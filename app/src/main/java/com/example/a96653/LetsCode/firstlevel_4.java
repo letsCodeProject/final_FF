@@ -2,6 +2,7 @@ package com.example.a96653.LetsCode;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -12,11 +13,18 @@ import android.widget.Button;
 import android.widget.TextView;
 
 public class firstlevel_4 extends AppCompatActivity {
+    MediaPlayer firstlevel4Voice;
+    voice voicepluto4;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_firstlevel_4);
+
+        //create MediaPLayer to play the voice
+        firstlevel4Voice=MediaPlayer.create(firstlevel_4.this,R.raw.firstlevel4);
+        voicepluto4=new voice(firstlevel4Voice);
+        voicepluto4.play();
 
 
         //HOME BUTTON
@@ -87,9 +95,19 @@ public class firstlevel_4 extends AppCompatActivity {
 
     public void openPreviousActivity(){
 
-        Intent intent=new Intent(this,firstlevel_3.class);
+        Intent intent=new Intent(this,feedback3.class);
         startActivity(intent);
 
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        voicepluto4.pause();
+    }
+
+    public void play(View view) {
+        voicepluto4.play();
     }
 
 

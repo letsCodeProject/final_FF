@@ -1,6 +1,7 @@
 package com.example.a96653.LetsCode;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -8,11 +9,21 @@ import android.widget.ImageView;
 
 public class welcome_5 extends AppCompatActivity {
 
+    MediaPlayer welcome5Voice;
+    voice voice5;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         final MySQLliteHelper mySqliteOpenHelper=new MySQLliteHelper(this);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_welcome_5);
+
+        //create MediaPLayer to play the voice
+        welcome5Voice=MediaPlayer.create(welcome_5.this,R.raw.welcom5voice);
+        voice5=new voice(welcome5Voice);
+        voice5.play();
+
+
 
         ImageView next = (ImageView)findViewById(R.id.imageView32);
 
@@ -55,8 +66,17 @@ public class welcome_5 extends AppCompatActivity {
         startActivity(intent);
 
     }
+    @Override
+    protected void onPause() {
+        super.onPause();
+        voice5.pause();
+    }
 
-
-
-
+    public void play(View view) {
+        voice5.play();
+    }
 }
+
+
+
+

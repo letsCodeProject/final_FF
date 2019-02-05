@@ -10,9 +10,6 @@ import android.widget.TextView;
 import java.lang.Class;
 
 public class MainActivity extends AppCompatActivity {
-
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         final MySQLliteHelper m=new MySQLliteHelper(this);

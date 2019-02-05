@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back"
+    tools:context=".feedback3">
+
+    <ImageView
+        android:id="@+id/labeebfeedback1"
+        android:layout_width="205dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="435dp"
+        android:layout_marginBottom="0dp"
+        app:srcCompat="@drawable/labeebfeedback" />
+
+    <ImageView
+        android:id="@+id/imageView57"
+        android:layout_width="34dp"
+        android:layout_height="34dp"
+
+        android:src="@drawable/diamond22"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="510dp"/>
+
+
+    <TextView
+
+        android:layout_width="464dp"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="158dp"
+        android:layout_marginBottom="55dp" />
+
+
+    <TextView
+        android:id="@+id/textViewاحسنت"
+        android:layout_width="wrap_content"
+        android:layout_height="109dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="71dp"
+        android:layout_marginEnd="227dp"
+        android:fontFamily="@font/jannalt_regular"
+        android:shadowColor="#3ED3C3"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="9"
+        android:text="أحسنت !"
+        android:textColor="@android:color/background_light"
+        android:textSize="50sp" />
+
+    <ImageButton
+        android:id="@+id/homebtn2"
+        android:layout_width="48dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/back"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.079"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.024"
+        app:srcCompat="@drawable/h" />
+
+    <ImageView
+
+        android:id="@+id/imageView"
+        android:layout_width="299dp"
+        android:layout_height="29dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="170dp"
+        android:layout_marginBottom="290dp"
+        app:srcCompat="@drawable/excfeedbackprograssbar" />
+
+
+    <TextView
+
+        android:layout_width="330dp"
+        android:layout_height="29dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="151dp"
+        android:layout_marginBottom="60dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:text="أهلاً بدرب التبانة"
+        android:textSize="25dp"
+
+        />
+
+
+    <TextView
+        android:id="@+id/textView40"
+        android:layout_width="67dp"
+        android:layout_height="29dp"
+        android:layout_below="@+id/imageView46"
+        android:layout_alignEnd="@+id/imageView46"
+
+        android:layout_marginStart="360dp"
+        android:layout_marginTop="213dp"
+
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="@font/jannalt_regular"
+        android:text="@string/result"
+        android:textColor="@color/light_font"
+        android:textSize="16sp"
+
+        tools:text="النتيجة :" />
+
+
+
+
+    <ImageView
+        android:id="@+id/imageView41"
+        android:layout_width="98dp"
+        android:layout_height="45dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="10dp"
+        android:contentDescription="@string/desc"
+        app:srcCompat="@drawable/newnext" />
+
+    <ImageView
+
+        android:id="@+id/imageView40"
+        android:layout_width="124dp"
+        android:layout_height="41dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="485dp"
+        android:layout_marginBottom="11dp"
+        app:srcCompat="@drawable/newpre" />
+
+
+    <TextView
+        android:layout_width="324dp"
+        android:layout_height="33dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="154dp"
+        android:layout_marginBottom="119dp"
+        android:background="@drawable/printwithquote"
+        android:text="        أهلاً بدرب التبانة"
+        android:textColor="#F5CA0A"
+        android:textSize="25dp" />
+
+    <ImageView
+        android:id="@+id/soundOn"
+        android:layout_width="30dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="16dp"
+        app:srcCompat="@drawable/soundon"
+        android:onClick="play"
+        />
+
+
+</RelativeLayout>

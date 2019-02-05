@@ -2,6 +2,7 @@ package com.example.a96653.LetsCode;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -10,12 +11,23 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 // i hate it too -shyom
 public class firstlevel_5 extends AppCompatActivity {
-MySQLliteHelper mySqliteOpenHelper;
+    MySQLliteHelper mySqliteOpenHelper;
+    MediaPlayer firstlevel5Voice;
+    voice voicepluto5;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+        //create MediaPLayer to play the voice
+        firstlevel5Voice=MediaPlayer.create(firstlevel_5.this,R.raw.firstlevel5voice);
+        voicepluto5=new voice(firstlevel5Voice);
+        voicepluto5.play();
+
+
+
         //FOR ADDING Q TO DB TO SEND THE QUIZE NUM
         mySqliteOpenHelper=new MySQLliteHelper(this);
-     SharedPreferences prefs = getSharedPreferences("prefs9", MODE_PRIVATE);
+        SharedPreferences prefs = getSharedPreferences("prefs9", MODE_PRIVATE);
         boolean firstStart = prefs.getBoolean("firstStart", true);
         if (firstStart){
             //m.addLesson(l2);
@@ -64,6 +76,18 @@ MySQLliteHelper mySqliteOpenHelper;
         );
 
 
+        previous .setOnClickListener(
+                new ImageView.OnClickListener(){
+                    public void onClick(View v){
+
+                        openPreviousActivity();
+                    }
+
+                }
+
+        );
+
+
 
     }
 
@@ -85,6 +109,18 @@ MySQLliteHelper mySqliteOpenHelper;
         startActivity(intent);
 
     }
+
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        voicepluto5.pause();
+    }
+
+    public void play(View view) {
+        voicepluto5.play();
+    }
+
 
 
 

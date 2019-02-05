@@ -3,6 +3,7 @@ package com.example.a96653.LetsCode;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -13,16 +14,28 @@ import android.widget.TextView;
 import java.util.List;
 
 public class firstlevel_1 extends AppCompatActivity  {
- //Lesson l1=new Lesson(1);
+    //Lesson l1=new Lesson(1);
+
+    MediaPlayer firstlevel1Voice;
+    voice voicepluto1;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_firstlevel_1);
+
+        //create MediaPLayer to play the voice
+        firstlevel1Voice=MediaPlayer.create(firstlevel_1.this,R.raw.firstlevel1voice);
+        voicepluto1=new voice(firstlevel1Voice);
+        voicepluto1.play();
+
+
+
         final MySQLliteHelper m=new MySQLliteHelper(this);
         SharedPreferences prefs = getSharedPreferences("prefs1", MODE_PRIVATE);
         boolean firstStart = prefs.getBoolean("firstStart", true);
         if (firstStart){
-           // m.addLesson(l1);
+            // m.addLesson(l1);
             SharedPreferences pref = getSharedPreferences("prefs1", MODE_PRIVATE);
             SharedPreferences.Editor editor = prefs.edit();
             editor.putBoolean("firstStart", false);
@@ -30,20 +43,20 @@ public class firstlevel_1 extends AppCompatActivity  {
         }
 
         TextView t=(TextView)findViewById(R.id.textView17);
-       // access a=access.getinstance(this);
+        // access a=access.getinstance(this);
         //List<String> name=a.getChildName();
         //a.close();
-     //  t.setText((name.get(0)));
+        //  t.setText((name.get(0)));
 
         Button goButton = (Button)findViewById(R.id.button3);
         //home button
-      ImageButton homebtn=(ImageButton)findViewById(R.id.homebtn);
+        ImageButton homebtn=(ImageButton)findViewById(R.id.homebtn);
 
-       homebtn.setOnClickListener(new View.OnClickListener() {
-           @Override
+        homebtn.setOnClickListener(new View.OnClickListener() {
+            @Override
             public void onClick(View v) {
-               Intent HomePage=new Intent(getApplicationContext(),MainActivity.class);
-               startActivity(HomePage);
+                Intent HomePage=new Intent(getApplicationContext(),MainActivity.class);
+                startActivity(HomePage);
             }
         });
 
@@ -76,6 +89,17 @@ public class firstlevel_1 extends AppCompatActivity  {
         startActivity(intent);
 
     }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        voicepluto1.pause();
+    }
+
+    public void play(View view) {
+        voicepluto1.play();
+    }
+
 
 
 

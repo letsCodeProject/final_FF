@@ -3,6 +3,7 @@ package com.example.a96653.LetsCode;
 import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.Color;
+import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -23,9 +24,17 @@ public class firstlevel_resultsheet extends AppCompatActivity {
     int q1score,q2score,totalscore;
     String text1,text2;
     MySQLliteHelper mySqliteOpenHelper23;
+    MediaPlayer rightAnswerVoice;
+    MediaPlayer wrongAnswerVoice;
+    voice resultsheet;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //create MediaPLayer to play the voice
+        rightAnswerVoice=MediaPlayer.create(firstlevel_resultsheet.this,R.raw.rightanswerfeedbackvoice);
+        wrongAnswerVoice=MediaPlayer.create(firstlevel_resultsheet.this,R.raw.wronganswerfeedbackvoice);
+
+
         setContentView(R.layout.activity_firstlevel_resultsheet);
         TextView t1=(TextView)findViewById(R.id.resultq1);
         TextView t2=(TextView)findViewById(R.id.resultq2);
@@ -117,15 +126,33 @@ public class firstlevel_resultsheet extends AppCompatActivity {
     }
 
     public void setbuttontext(int total , Button btn7){
-        if (total>5)
+        if (total>5) {
             btn7.setText(btntextcorrect);
+        //play the voice for right answer
+        resultsheet=new voice(rightAnswerVoice);
+        resultsheet.play();}
+
 
 
         else
-            btn7.setText(btntextwrong);
+        {btn7.setText(btntextwrong);
+
+            //play the voice for wrong answer
+            resultsheet=new voice(wrongAnswerVoice);
+            resultsheet.play();
 
 
-    }//end of method buttong
+
+        }}//end of method buttong
+    @Override
+    protected void onPause() {
+        super.onPause();
+        resultsheet.pause();
+    }
+
+    public void play(View view) {
+        resultsheet.play();
+    }
 
 
 }

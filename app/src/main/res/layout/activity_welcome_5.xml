@@ -100,5 +100,15 @@
         android:layout_marginTop="32dp"
         app:srcCompat="@drawable/welcome_5robot" />
 
+    <ImageView
+        android:id="@+id/soundOn"
+        android:layout_width="30dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="7dp"
+        app:srcCompat="@drawable/soundon"
+        android:onClick="play"
+        />
+
 
 </RelativeLayout>

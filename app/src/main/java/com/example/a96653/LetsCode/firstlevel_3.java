@@ -19,12 +19,15 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.Timer;
+import java.util.TimerTask;
 
 
 public class firstlevel_3 extends AppCompatActivity {
     ImageView iv_answer;
     LinearLayout inputLayout;
     TextView tv_output;
+    Timer timer;
 
     // Lesson l3=new Lesson(3);
     @Override
@@ -115,6 +118,20 @@ public class firstlevel_3 extends AppCompatActivity {
                         if (event.getResult()){
                             Toast.makeText(firstlevel_3.this, "The drop was handled.", Toast.LENGTH_SHORT).show();
                             tv_output.setText("أهلاً بدرب التبانة");
+                            tv_output.setText("أهلاً بدرب التبانة");
+                            tv_output.setTextSize(25);
+
+                            timer=new Timer();
+                            timer.schedule(new TimerTask() {
+                                @Override
+                                public void run() {
+                                    Intent inrent=new Intent(firstlevel_3.this,feedback3.class);
+                                    startActivity(inrent);
+                                    finish();
+
+                                }
+                            },5000);
+
                         }
                         else
                             Toast.makeText(firstlevel_3.this, "The drop didn't work.", Toast.LENGTH_SHORT).show();
@@ -135,10 +152,10 @@ public class firstlevel_3 extends AppCompatActivity {
 
 
         final MySQLliteHelper m=new MySQLliteHelper(this);
-       SharedPreferences prefs = getSharedPreferences("pref6", MODE_PRIVATE);
+        SharedPreferences prefs = getSharedPreferences("pref6", MODE_PRIVATE);
         boolean firstStart = prefs.getBoolean("firstStart", true);
         if (firstStart){
-           // m.addLesson(l3);
+            // m.addLesson(l3);
 
             SharedPreferences pref = getSharedPreferences("prefs6", MODE_PRIVATE);
             SharedPreferences.Editor editor = prefs.edit();
@@ -170,27 +187,8 @@ public class firstlevel_3 extends AppCompatActivity {
         );
 
 
-      //  nextbtn
-        ImageView next = (ImageView)findViewById(R.id.nextbtn);
+        //  nextbtn
 
-        next.setOnClickListener(
-                new ImageView.OnClickListener(){
-                    public void onClick(View v){
-                        SharedPreferences prefs = getSharedPreferences("pref7", MODE_PRIVATE);
-                        boolean firstStart = prefs.getBoolean("firstStart", true);
-                        if (firstStart){
-                            m.UpdateNumOfLesson(4,"Ploto");
-                            SharedPreferences pref = getSharedPreferences("prefs7", MODE_PRIVATE);
-                            SharedPreferences.Editor editor = prefs.edit();
-                            editor.putBoolean("firstStart", false);
-                            editor.apply();}
-
-                        openSecondActivity();
-                    }
-
-                }
-
-        );
 
     }
 
@@ -206,7 +204,7 @@ public class firstlevel_3 extends AppCompatActivity {
 
 
     public void openSecondActivity(){
-        Intent intent=new Intent(this,firstlevel_4.class);
+        Intent intent=new Intent(this,feedback3.class);
         startActivity(intent);
     }
 
@@ -219,4 +217,4 @@ public class firstlevel_3 extends AppCompatActivity {
 
 
 
-}
+}//end of class
