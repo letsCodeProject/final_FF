@@ -9,8 +9,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
-
+import android.widget.Toast;
 public class firstlevel_resultsheet extends AppCompatActivity {
     String correct="تم إتمام المهمة بنجاح";
     String wrong ="لقد حدث أمر خاطئ";
@@ -18,6 +19,10 @@ public class firstlevel_resultsheet extends AppCompatActivity {
     String btntextcorrect="انطلق للكوكب التالي";
 
     String btntextwrong="الرجوع إلى المهمة";
+
+    public String feedbackcorrect=" أحسنت ";
+
+    public   String feedbackwrong="جيد جداً";
 
 
     int result ,result2;
@@ -27,9 +32,11 @@ public class firstlevel_resultsheet extends AppCompatActivity {
     MediaPlayer rightAnswerVoice;
     MediaPlayer wrongAnswerVoice;
     voice resultsheet;
+    int minimum=5;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         //create MediaPLayer to play the voice
         rightAnswerVoice=MediaPlayer.create(firstlevel_resultsheet.this,R.raw.rightanswerfeedbackvoice);
         wrongAnswerVoice=MediaPlayer.create(firstlevel_resultsheet.this,R.raw.wronganswerfeedbackvoice);
@@ -39,7 +46,19 @@ public class firstlevel_resultsheet extends AppCompatActivity {
         TextView t1=(TextView)findViewById(R.id.resultq1);
         TextView t2=(TextView)findViewById(R.id.resultq2);
         TextView t3=(TextView)findViewById(R.id.totalquizresult);
+        TextView resnum1=(TextView) findViewById(R.id.resnum1);
+        TextView resnum2=(TextView) findViewById(R.id.resnum2);
+
+        TextView resfeedback=(TextView) findViewById(R.id.feedback);
         Button button7=(Button) findViewById(R.id.button7);
+        ImageButton homebtnres=(ImageButton) findViewById(R.id.homebtnres);
+        homebtnres.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent HomePage=new Intent(getApplicationContext(),MainActivity.class);
+                startActivity(HomePage);
+            }
+        });
 
         // homebtn811.setOnClickListener(new View.OnClickListener() {
         // @Override
@@ -58,7 +77,7 @@ public class firstlevel_resultsheet extends AppCompatActivity {
 
                     Intent gohime=new Intent (getApplicationContext(),MainActivity.class);
                     mySqliteOpenHelper23.updateChildScore(totalscore);
-                    mySqliteOpenHelper23.UnlockNextLevel("nepton" ,1);
+                    mySqliteOpenHelper23.UnlockNextLevel("nepton" );
 
                 }
 
@@ -72,13 +91,22 @@ public class firstlevel_resultsheet extends AppCompatActivity {
         resreturned.moveToFirst();
         int index=resreturned.getColumnIndexOrThrow("Q_ANSWER");
         int answer=resreturned.getInt(index);
-        result=answer;
+        result=answer; if(answer==0){mySqliteOpenHelper23.addIndexData("firstlevel_6");}
+
 
         Cursor cursor=mySqliteOpenHelper23.returnQuestionAnswer(2);
         cursor.moveToFirst();
         int index2=cursor.getColumnIndexOrThrow("Q_ANSWER");
         int answer2=cursor.getInt(index2);
         result2=answer2;
+        if(answer2==0){mySqliteOpenHelper23.addIndexData("firstlevel_7");}
+
+
+        Cursor cur1=mySqliteOpenHelper23.returnLevelStatus("Nepton");
+        cur1.moveToFirst();
+        int status=cur1.getColumnIndexOrThrow("LevelStatus");
+
+
 
 
 
@@ -118,15 +146,30 @@ public class firstlevel_resultsheet extends AppCompatActivity {
 
         totalscore=q1score+q2score;
         t3.setText(""+totalscore);
-        setbuttontext(totalscore , button7);
+
+
+
+        resnum1.setText(String.valueOf(q1score));
+        resnum2.setText(String.valueOf(q2score));
+
+
+        setbuttontext(totalscore , button7 ,minimum,status);
+        setFeedbackForResultSheet(totalscore ,resfeedback , minimum);
+
+
+        setbuttontext(totalscore , button7 ,minimum,status);
+        setFeedbackForResultSheet(totalscore ,resfeedback , minimum);
+        //updateScore(totalscore);
 
 
 
 
     }
 
-    public void setbuttontext(int total , Button btn7){
-        if (total>5) {
+    public void setbuttontext(int total , Button btn7,int min,int status){
+        if (total>5 && status==0) {
+            CallUnlockMethod();
+            updateScore(total);
             btn7.setText(btntextcorrect);
         //play the voice for right answer
         resultsheet=new voice(rightAnswerVoice);
@@ -140,10 +183,25 @@ public class firstlevel_resultsheet extends AppCompatActivity {
             //play the voice for wrong answer
             resultsheet=new voice(wrongAnswerVoice);
             resultsheet.play();
+            //FOR DATABASE
+            btn7.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    try {
+                        openPlotoActivity(mySqliteOpenHelper23);
+                    } catch (ClassNotFoundException e) {
+                        e.printStackTrace();
+                    }
 
+                }
 
+            });
 
-        }}//end of method buttong
+        }
+
+        //Call method changelabebstatus
+        Changelabebstatus(total ,minimum);
+    }//end of method buttong
     @Override
     protected void onPause() {
         super.onPause();
@@ -153,6 +211,64 @@ public class firstlevel_resultsheet extends AppCompatActivity {
     public void play(View view) {
         resultsheet.play();
     }
+    public void takeMeBack(View view) {
+        Toast.makeText(firstlevel_resultsheet.this,  "hi",
+                Toast.LENGTH_LONG).show();
 
 
-}
+    }
+
+
+    public void openPlotoActivity(MySQLliteHelper M) throws ClassNotFoundException {
+        Cursor cursor=M.returnWrongQuestionIndex();
+        cursor.moveToFirst();
+        if(cursor.getCount()>=0){
+            int index=cursor.getColumnIndexOrThrow("Question");
+            String name =cursor.getString(index);
+            Class c;
+            try{
+                c = Class.forName("com.example.a96653.LetsCode."+name);
+
+                Intent  intent = new Intent(this,c);
+
+
+                startActivity(intent);}
+            catch (Exception e){e.printStackTrace();}}
+
+    }
+
+
+    public void Changelabebstatus( int total ,int minimum){
+        ImageView labebhappy ,labebsad;
+
+        labebhappy=(ImageView) findViewById(R.id.labebholdingsheet);
+        labebsad=(ImageView) findViewById(R.id.sadlabeb);
+        labebhappy.setVisibility(View.INVISIBLE);
+        labebsad.setVisibility(View.INVISIBLE);
+
+        if (totalscore>minimum)
+            labebhappy.setVisibility(View.VISIBLE);
+        else
+            labebsad.setVisibility(View.VISIBLE); }
+
+
+    //تسوي ابديت ل سكور الطفل
+    public void updateScore(int totalscore){
+        mySqliteOpenHelper23.updateChildScore(totalscore);
+    }
+    //تسوي انلوك بالميثود الي بعدها ما اناديها الا اذا كان ال سكور فوق ال ٥
+    public void CallUnlockMethod () {
+        mySqliteOpenHelper23.UnlockNextLevel("Nepton");
+    }
+
+    //Change to eather احسنت  or جيد جداً
+    public void setFeedbackForResultSheet(int total ,TextView resfeedback ,int minimum) {
+        if (total > minimum) {
+            resfeedback.setText(feedbackcorrect);
+            resfeedback.setTextColor(Color.parseColor("#0E932E"));
+        } else {
+            resfeedback.setText(feedbackwrong);
+            resfeedback.setTextColor(Color.parseColor("#2340B7"));
+        }
+    }//تسوي انلوك بالميثود الي بعدها ما اناديها الا اذا كان ال سكور فوق ال ٥
+    }//end class

@@ -166,8 +166,23 @@ public class firstlevel_7 extends AppCompatActivity {
                        /* Toast.makeText(firstlevel_7.this, Integer.toString(result)  ,
                                 Toast.LENGTH_LONG).show();*/
                             updatedata();
-                            Intent intent = new Intent(getApplicationContext(), firstlevel_resultsheet.class);
-                            startActivity(intent);
+                            //Intent intent = new Intent(getApplicationContext(), firstlevel_resultsheet.class);
+                          //  startActivity(intent);
+                            Cursor cursor=sqLiteHelper.returnWrongQuestionIndex();
+                            if(cursor.getCount()>0) {
+                                Toast.makeText(firstlevel_7.this, "deleted!",
+                                        Toast.LENGTH_LONG).show();
+
+                                cursor.moveToFirst();
+
+                                check();Intent intent= new Intent(getApplicationContext(),firstlevel_resultsheet.class);
+                                startActivity(intent);
+                            }else{    Toast.makeText(firstlevel_7.this, "hi!",
+                                    Toast.LENGTH_LONG).show();
+
+                                Intent intent= new Intent(getApplicationContext(),firstlevel_resultsheet.class);
+                                startActivity(intent);}
+
                         }
                         else{
 
@@ -511,7 +526,7 @@ public class firstlevel_7 extends AppCompatActivity {
 
     public void updatedata() {
         result = res1 + res2 + res3 + res4;
-        sqLiteHelper.UpdateQuestionAnswer(1,1);
+       // sqLiteHelper.UpdateQuestionAnswer(1,1);
         if (result == 4) {
             sqLiteHelper.UpdateQuestionAnswer(2,1);
         }
@@ -553,6 +568,67 @@ public class firstlevel_7 extends AppCompatActivity {
         });
         myDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
         myDialog.show();
+    }
+    public void check(){
+
+        Cursor cursor=sqLiteHelper.returnWrongQuestionIndex();
+
+        if(cursor.getCount()>0){
+
+
+            cursor.moveToFirst();
+
+            int index=cursor.getColumnIndexOrThrow("Question");
+            String name =cursor.getString(index);
+            Toast.makeText(firstlevel_7.this, name,
+                    Toast.LENGTH_LONG).show();
+            if(name.equals("firstlevel_7")){sqLiteHelper.deleteIndexData(name);}
+            cursor=sqLiteHelper.returnWrongQuestionIndex();
+            if(cursor.getCount()>0){
+                try { openPlotoActivity(sqLiteHelper );
+                } catch (ClassNotFoundException e) {
+                    e.printStackTrace();
+                }
+            }else {  Intent intent= new Intent(getApplicationContext(),firstlevel_resultsheet.class);
+                startActivity(intent);}
+
+
+
+        }else {  Intent intent= new Intent(getApplicationContext(),firstlevel_resultsheet.class);
+            startActivity(intent);}
+
+
+
+
+
+
+
+
+
+
+
+
+    }
+
+
+
+    public void openPlotoActivity(MySQLliteHelper M ) throws ClassNotFoundException {
+
+        Cursor cursor=sqLiteHelper.returnWrongQuestionIndex();
+
+        if(cursor.getCount()>0){ cursor.moveToFirst();
+            int index=cursor.getColumnIndexOrThrow("Question");
+            String name =cursor.getString(index);
+            Class c;
+            try{
+                c = Class.forName("com.example.a96653.LetsCode."+name);
+
+                Intent  intent = new Intent(this,c);
+
+
+                startActivity(intent);}
+            catch (Exception e){e.printStackTrace();}}
+
     }
 
 

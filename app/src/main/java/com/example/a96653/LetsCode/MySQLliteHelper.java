@@ -51,6 +51,10 @@ public class MySQLliteHelper extends SQLiteOpenHelper {
                     SchemClass.LetsCode2.WELCOME_INTERFACE_NAME + " TEXT primary key," +
                     SchemClass.LetsCode2.WELCOME_INTERFACE_STATUS + " TEXT)";
 
+    private static final String SQL_CREATE_TABLE_INDEX =
+            "CREATE TABLE IF NOT EXISTS "+ SchemClass.LetsCode2.INDEX_TABLE2+ "(" +
+                    SchemClass.LetsCode2.COLUMN_NAME_QUESTION+" TEXT )";
+
 
     public MySQLliteHelper(Context context) {
         super(context, db_name, null, db_version);
@@ -271,7 +275,8 @@ public class MySQLliteHelper extends SQLiteOpenHelper {
         db.update(SchemClass.LetsCode2.TABLE_AUESTION,cv,SchemClass.LetsCode2.COLUMN_NAME_QNUM +"="+questionid, null);
     }
     //
-    public void UnlockNextLevel(String lvlname ,int num){
+    public void UnlockNextLevel(String lvlname){
+        int num=1;
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues cv = new ContentValues();
         cv.put(SchemClass.LetsCode2.COLUMN_NAME_LEVELSTATUS,num);
@@ -329,5 +334,40 @@ public class MySQLliteHelper extends SQLiteOpenHelper {
         return b;
     }
 
+    public void queryIndexData( ){
+        SQLiteDatabase database=getWritableDatabase();
+        database.execSQL(SQL_CREATE_TABLE_INDEX);}
 
-    }//END OF CLASS
+    public void addIndexData( String ActivityName) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put(SchemClass.LetsCode2.COLUMN_NAME_QUESTION, ActivityName);
+        long result = db.insert(SchemClass.LetsCode2.INDEX_TABLE2, null, contentValues);
+
+
+    }
+
+    public Cursor returnWrongQuestionIndex ( ){
+
+        SQLiteDatabase db = this.getReadableDatabase();
+        String query = "SELECT "+SchemClass.LetsCode2.COLUMN_NAME_QUESTION +" FROM "+SchemClass.LetsCode2.INDEX_TABLE2 ;
+        Cursor recordSet=db.rawQuery(query,null);
+        return recordSet ;
+    }
+
+    public Integer deleteIndexData (String name) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        return db.delete(SchemClass.LetsCode2.INDEX_TABLE2, " Question = '"+name+"'",null);
+    }
+    public Cursor returnLevelStatus(String levlname){
+        SQLiteDatabase db = this.getReadableDatabase();
+        String Query=" SELECT "+SchemClass.LetsCode2.COLUMN_NAME_LEVELSTATUS +" FROM "+SchemClass.LetsCode2.SECOND_TABLE +" WHERE "+SchemClass.LetsCode2.COLUMN_NAME_LevelName+" = '"+levlname+"'";
+        Cursor recordSet=db.rawQuery(Query,null);
+        return recordSet;
+    }
+
+
+
+
+
+}//END OF CLASS

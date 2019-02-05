@@ -19,7 +19,7 @@ public final class SchemClass {
 
         public static final String THIRD_TABLE="LESSON";
         public static final String COLUMN_NAME_LESSON_NUM="LESSON_NUM";
-       // public static final String COLUMN_NAME_CONTENT="CONTENT";
+        // public static final String COLUMN_NAME_CONTENT="CONTENT";
 
 
         public static final String WELCOME_TABLE="Welcome_Progress";
@@ -36,6 +36,8 @@ public final class SchemClass {
         public static final String COLUMN_NAME_QANSWER="Q_ANSWER";
 
 
+        public static final String INDEX_TABLE2="QUESINDEX2";
+        public static final String COLUMN_NAME_QUESTION="Question";
 
 
     }
