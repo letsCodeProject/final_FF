@@ -93,7 +93,7 @@ public class firstlevel_3 extends AppCompatActivity {
 
                         String dragData = item.getText().toString();
 
-                        Toast.makeText(firstlevel_3.this, "Dragged data is " + dragData, Toast.LENGTH_SHORT).show();
+                        //Toast.makeText(firstlevel_3.this, "Dragged data is " + dragData, Toast.LENGTH_SHORT).show();
 
                         view.getBackground().clearColorFilter();
 
@@ -116,7 +116,7 @@ public class firstlevel_3 extends AppCompatActivity {
 
                         // Does a getResult(), and displays what happened.
                         if (event.getResult()){
-                            Toast.makeText(firstlevel_3.this, "The drop was handled.", Toast.LENGTH_SHORT).show();
+                           // Toast.makeText(firstlevel_3.this, "The drop was handled.", Toast.LENGTH_SHORT).show();
                             tv_output.setText("أهلاً بدرب التبانة");
                             tv_output.setText("أهلاً بدرب التبانة");
                             tv_output.setTextSize(25);
@@ -138,10 +138,10 @@ public class firstlevel_3 extends AppCompatActivity {
                         // returns true; the value is ignored.
                         return true;
 
-                    // An unknown action type was received.
+                    /*// An unknown action type was received.
                     default:
                         Log.e("DragDrop Example", "Unknown action type received by OnDragListener.");
-                        break;
+                        break;*/
                 }
                 return false;
             }

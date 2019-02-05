@@ -111,7 +111,7 @@ public class firstlevel_7 extends AppCompatActivity {
 
                         CHECK=tt1+tt2+tt3+tt4;
                         if(CHECK==4) {
-                            SharedPreferences prefs = getSharedPreferences("pref12", MODE_PRIVATE);
+                           /* SharedPreferences prefs = getSharedPreferences("pref12", MODE_PRIVATE);
                             boolean firstStart = prefs.getBoolean("firstStart", true);
                             if (firstStart) {
                                 sqLiteHelper.UpdateNumOfLesson(1, "Ploto");
@@ -162,7 +162,7 @@ public class firstlevel_7 extends AppCompatActivity {
                             editor7.clear();
                             editor7.commit();
                             finish();
-
+*/
                        /* Toast.makeText(firstlevel_7.this, Integer.toString(result)  ,
                                 Toast.LENGTH_LONG).show();*/
                             updatedata();
@@ -183,11 +183,63 @@ public class firstlevel_7 extends AppCompatActivity {
                                 Intent intent= new Intent(getApplicationContext(),firstlevel_resultsheet.class);
                                 startActivity(intent);}
 
-                        }
+                        }//end if check==4
                         else{
 
                             ShowPopupSolve();
                         }
+                        SharedPreferences prefs = getSharedPreferences("pref12", MODE_PRIVATE);
+                        boolean firstStart = prefs.getBoolean("firstStart", true);
+                        if (firstStart) {
+                            sqLiteHelper.UpdateNumOfLesson(1, "Ploto");
+                            SharedPreferences pref = getSharedPreferences("prefs12", MODE_PRIVATE);
+                            SharedPreferences.Editor editor = prefs.edit();
+                            editor.putBoolean("firstStart", false);
+                            editor.apply();
+                        }
+                        ///CLEARING PREFRENCES
+                        SharedPreferences preferences = getSharedPreferences("pref2", MODE_PRIVATE);
+                        SharedPreferences.Editor editor = preferences.edit();
+                        editor.clear();
+                        editor.commit();
+                        finish();
+                        //////
+                        SharedPreferences preferences2 = getSharedPreferences("pref4", MODE_PRIVATE);
+                        SharedPreferences.Editor editor2 = preferences2.edit();
+                        editor2.clear();
+                        editor2.commit();
+                        finish();
+                        //////////
+                        SharedPreferences preferences3 = getSharedPreferences("pref7", MODE_PRIVATE);
+                        SharedPreferences.Editor editor3 = preferences3.edit();
+                        editor3.clear();
+                        editor3.commit();
+                        finish();
+                        ////////
+                        SharedPreferences preferences4 = getSharedPreferences("pref8", MODE_PRIVATE);
+                        SharedPreferences.Editor editor4 = preferences4.edit();
+                        editor4.clear();
+                        editor4.commit();
+                        finish();
+                        /////
+                        SharedPreferences preferences5 = getSharedPreferences("pref10", MODE_PRIVATE);
+                        SharedPreferences.Editor editor5 = preferences5.edit();
+                        editor5.clear();
+                        editor5.commit();
+                        finish();
+                        //////
+                        SharedPreferences preferences6 = getSharedPreferences("pref11", MODE_PRIVATE);
+                        SharedPreferences.Editor editor6 = preferences6.edit();
+                        editor6.clear();
+                        editor6.commit();
+                        finish();
+                        //////
+                        SharedPreferences preferences7 = getSharedPreferences("pref12", MODE_PRIVATE);
+                        SharedPreferences.Editor editor7 = preferences7.edit();
+                        editor7.clear();
+                        editor7.commit();
+                        finish();
+
 
                     }
 
