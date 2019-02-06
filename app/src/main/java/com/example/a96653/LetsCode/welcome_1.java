@@ -2,6 +2,7 @@
 package com.example.a96653.LetsCode;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Html;
@@ -18,9 +19,18 @@ public class welcome_1 extends AppCompatActivity {
         setContentView(R.layout.activity_welcome_1);
         Button button= findViewById(R.id.button);
         final   MySQLliteHelper mySqliteOpenHelper=new MySQLliteHelper(this);
-        mySqliteOpenHelper.addData();
-        mySqliteOpenHelper.Fill_Welcoming_Table();
-        mySqliteOpenHelper.addQuiz();
+
+        SharedPreferences prefs = getSharedPreferences("prefforDB", MODE_PRIVATE);
+        boolean firstStart = prefs.getBoolean("firstStart", true);
+        if (firstStart) {
+            mySqliteOpenHelper.addData();
+            mySqliteOpenHelper.Fill_Welcoming_Table();
+            mySqliteOpenHelper.addQuiz();
+            SharedPreferences pref = getSharedPreferences("prefforDB", MODE_PRIVATE);
+            SharedPreferences.Editor editor = prefs.edit();
+            editor.putBoolean("firstStart", false);
+            editor.apply();}
+
 
         final Intent next=new Intent(getApplicationContext(),welcome_2.class);
 
