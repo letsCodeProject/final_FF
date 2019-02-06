@@ -27,13 +27,13 @@ public class firstlevel_6 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_firstlevel_6);
-        //FOR HINT
+       //inititing INDEX TABLE.
         mySqliteOpenHelper=new MySQLliteHelper(this);
-
         mySqliteOpenHelper.queryIndexData();
         myDialog = new Dialog(this);
-        ImageButton homebtn6=(ImageButton)findViewById(R.id.homebtn7);
 
+        //HOME BUTTON
+        ImageButton homebtn6=(ImageButton)findViewById(R.id.homebtn7);
         homebtn6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -42,8 +42,6 @@ public class firstlevel_6 extends AppCompatActivity {
             }
         });
 
-        //  next2
-        mySqliteOpenHelper=new MySQLliteHelper(this);
         //for taking the answer of quesion 1 .
         TextView textView = (TextView)findViewById(R.id.quiz_score1_1);
         textView.setText(mySqliteOpenHelper.getChildScore()+"" );
@@ -82,13 +80,12 @@ public class firstlevel_6 extends AppCompatActivity {
 /////end of taking the answer of question 1.
 
 
-
+//NEXT BUTTON METHODS
         ImageView next = (ImageView)findViewById(R.id.next2);
-
         next.setOnClickListener(
                 new ImageView.OnClickListener(){
                     public void onClick(View v){
-                        if(res!=2){
+                        //if(res!=2){
                             SharedPreferences prefs = getSharedPreferences("pref11", MODE_PRIVATE);
                             boolean firstStart = prefs.getBoolean("firstStart", true);
                             if (firstStart){
@@ -97,29 +94,22 @@ public class firstlevel_6 extends AppCompatActivity {
                                 SharedPreferences.Editor editor = prefs.edit();
                                 editor.putBoolean("firstStart", false);
                                 editor.apply();}
-                            updatedata();
-                            check();
-                        }// else ShowPopupSolve();
+                           // updatedata();
+
+                       // }// else ShowPopupSolve();
                         // openSecondActivity();
                         int radioId = radioGroup.getCheckedRadioButtonId();
 
                         if(radioId==R.id.radio_one){
-
-
-
                             mySqliteOpenHelper.UpdateQuestionAnswer(1,1);
                             // mySqliteOpenHelper.updateChildScore(5);
                             openSecondActivity();}
                         if(radioId==R.id.radio_two){
-
-
                             mySqliteOpenHelper.UpdateQuestionAnswer(1,0);
-
                             openSecondActivity();}
-
                         if(radioId==-1)  {
-
                             ShowPopupSolve(); }
+                            check();
 
                     }
 
@@ -214,7 +204,6 @@ public class firstlevel_6 extends AppCompatActivity {
 
     public void updatedata() {
 
-
         if (res == 0) {
             mySqliteOpenHelper.UpdateQuestionAnswer(1,0);
         }
@@ -230,7 +219,6 @@ public class firstlevel_6 extends AppCompatActivity {
         Button btnClose;
         myDialog.setContentView(R.layout.solve_it);
         btnClose =(Button) myDialog.findViewById(R.id.okaybtn);
-
 
         btnClose.setOnClickListener(new View.OnClickListener() {
             @Override

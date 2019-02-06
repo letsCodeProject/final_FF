@@ -258,6 +258,7 @@ public class firstlevel_resultsheet extends AppCompatActivity {
         mySqliteOpenHelper23.updateChildScore(totalscore);
         TextView textView = (TextView)findViewById(R.id.quiz1Score);
         textView.setText(mySqliteOpenHelper23.getChildScore()+"" );
+
     }
     //تسوي انلوك بالميثود الي بعدها ما اناديها الا اذا كان ال سكور فوق ال ٥
     public void CallUnlockMethod () {

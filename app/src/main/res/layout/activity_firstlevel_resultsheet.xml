@@ -65,19 +65,6 @@
 
 
 
-    <TextView
-        android:id="@+id/quiz1Score"
-        android:layout_width="35dp"
-        android:layout_height="29dp"
-        android:layout_marginStart="632dp"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/textviewborder"
-
-        android:textColor="@color/light_font"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-
     <ImageView
         android:id="@+id/imageView65"
         android:layout_width="579dp"
@@ -349,6 +336,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.661" />
+    <TextView
+        android:id="@+id/quiz1Score"
+        android:layout_width="35dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="632dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/textviewborder"
+        android:textColor="@color/light_font"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.033" />
 
 
 </android.support.constraint.ConstraintLayout>

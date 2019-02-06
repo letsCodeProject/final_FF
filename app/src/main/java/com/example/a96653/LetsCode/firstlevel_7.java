@@ -39,8 +39,7 @@ public class firstlevel_7 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         //TO UPDATE RESULT BOX .
-        TextView textView = (TextView)findViewById(R.id.quiz_score1_2);
-        textView.setText(sqLiteHelper.getChildScore()+"" );
+
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_firstlevel_7  );
@@ -50,6 +49,8 @@ public class firstlevel_7 extends AppCompatActivity {
         voicepluto7.play();
         sqLiteHelper = new MySQLliteHelper(this);
 
+        TextView textView = (TextView)findViewById(R.id.quiz_score1_2);
+        textView.setText(sqLiteHelper.getChildScore()+"" );
 
         myDialog = new Dialog(this);
 
