@@ -13,7 +13,11 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         final MySQLliteHelper m=new MySQLliteHelper(this);
-
+        ImageView labeb_ploto=(ImageView)findViewById(R.id.labeb_on_ploto);
+        ImageView labeb_nepton= findViewById(R.id.labebOnnepton);
+        ImageView labeb_zuhal=(ImageView)findViewById(R.id.labebOnZuhal);
+        ImageView labeb_almushtari=(ImageView)findViewById(R.id.labebOnALmushtari);
+        ImageView labeb_Earth=(ImageView)findViewById(R.id.labebOnEarth);
         int lnum=0;
 
         super.onCreate(savedInstanceState);
@@ -26,16 +30,57 @@ public class MainActivity extends AppCompatActivity {
         ImageView Earth=(ImageView)findViewById(R.id.imageView);
      if( levelStatus=m.getLevelStatus("Nepton")==true)
          nepton.setAlpha(1000);
-     else nepton.setAlpha(100);
+     else {
+         nepton.setAlpha(100);
+         labeb_nepton.setVisibility(View.INVISIBLE);
+         labeb_zuhal.setVisibility(View.INVISIBLE);
+         labeb_almushtari.setVisibility(View.INVISIBLE);
+         labeb_Earth.setVisibility(View.INVISIBLE);
+     }
+
         if( levelStatus=m.getLevelStatus("Saturn")==true)
             Saturn.setAlpha(1000);
-        else Saturn.setAlpha(100);
+        else {
+            Saturn.setAlpha(100);
+        }
         if( levelStatus=m.getLevelStatus("Jupiter")==true)
             Jupiter.setAlpha(1000);
         else  Jupiter.setAlpha(100);
-        if( levelStatus=m.getLevelStatus("Earth")==true)
+        if( levelStatus=m.getLevelStatus("Earth")==true) {
             Earth.setAlpha(1000);
+            labeb_nepton.setVisibility(View.INVISIBLE);
+            labeb_zuhal.setVisibility(View.INVISIBLE);
+            labeb_almushtari.setVisibility(View.INVISIBLE);
+            labeb_Earth.setVisibility(View.VISIBLE);
+            labeb_ploto.setVisibility(View.INVISIBLE);
+        }
         else  Earth.setAlpha(100);
+        //////WHEN NEPTON
+        if(levelStatus=m.getLevelStatus("Nepton")==true  ){
+            if (levelStatus=m.getLevelStatus("Saturn")==false) {
+                labeb_nepton.setVisibility(View.VISIBLE);
+            labeb_zuhal.setVisibility(View.INVISIBLE);
+            labeb_almushtari.setVisibility(View.INVISIBLE);
+            labeb_Earth.setVisibility(View.INVISIBLE);
+            labeb_ploto.setVisibility(View.INVISIBLE); }
+        }
+//WHEN ZUHAL
+        if(levelStatus=m.getLevelStatus("Saturn")==true  ){
+            if (levelStatus=m.getLevelStatus("Jupiter")==false) {
+                labeb_nepton.setVisibility(View.INVISIBLE);
+                labeb_zuhal.setVisibility(View.VISIBLE);
+                labeb_almushtari.setVisibility(View.INVISIBLE);
+                labeb_Earth.setVisibility(View.INVISIBLE);
+                labeb_ploto.setVisibility(View.INVISIBLE); } }
+                //WHEN ALMUSHTARI
+            if(levelStatus=m.getLevelStatus("Jupiter")==true  ){
+                if (levelStatus=m.getLevelStatus("Earth")==false) {
+                    labeb_nepton.setVisibility(View.INVISIBLE);
+                    labeb_zuhal.setVisibility(View.INVISIBLE);
+                    labeb_almushtari.setVisibility(View.VISIBLE);
+                    labeb_Earth.setVisibility(View.INVISIBLE);
+                    labeb_ploto.setVisibility(View.INVISIBLE); } }
+
 
         ImageView ploto = (ImageView)findViewById(R.id.imageView3);
 

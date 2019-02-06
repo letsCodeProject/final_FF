@@ -316,13 +316,13 @@
         android:textColor="@color/white" />
 
     <ImageView
-        android:id="@+id/imageView53"
+        android:id="@+id/labeb_on_ploto"
         android:layout_width="35dp"
         android:layout_height="133dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="151dp"
-        android:layout_marginTop="142dp"
+        android:layout_marginStart="54dp"
+        android:layout_marginTop="34dp"
         app:srcCompat="@drawable/welcome_robot" />
 
     <ImageView
@@ -331,8 +331,8 @@
         android:layout_height="133dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="46dp"
-        android:layout_marginTop="29dp"
+        android:layout_marginStart="155dp"
+        android:layout_marginTop="141dp"
         app:srcCompat="@drawable/welcome_robot" />
 
     <ImageView
@@ -341,17 +341,18 @@
         android:layout_height="133dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="372dp"
-        android:layout_marginTop="155dp"
+        android:layout_marginStart="251dp"
+        android:layout_marginTop="77dp"
         app:srcCompat="@drawable/welcome_robot" />
+
     <ImageView
         android:id="@+id/labebOnALmushtari"
         android:layout_width="35dp"
         android:layout_height="133dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="247dp"
-        android:layout_marginTop="76dp"
+        android:layout_marginStart="374dp"
+        android:layout_marginTop="157dp"
         app:srcCompat="@drawable/welcome_robot" />
 
     <ImageView
