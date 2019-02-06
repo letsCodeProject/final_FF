@@ -25,25 +25,35 @@
 
     <TextView
 
-        android:id="@+id/textView53"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="568dp"
+        android:id="@+id/quiz_score1_1"
+        android:layout_width="43dp"
+        android:layout_height="31dp"
+        android:layout_alignBottom="@+id/imageView14"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="8dp"
 
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="8dp"
         android:background="@drawable/textviewborder"
         android:gravity="center"
-        android:text="@string/zero"
+
         android:textColor="@android:color/background_light"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/imageView63"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.017" />
+
 
     <ImageView
 
         android:id="@+id/imageView55"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="404dp"
+        android:layout_marginStart="372dp"
         android:layout_marginTop="8dp"
         android:src="@drawable/diamond"
         app:layout_constraintStart_toEndOf="@+id/homebtn7"
@@ -93,7 +103,6 @@
         android:layout_marginStart="218dp"
         android:layout_marginTop="224dp"
         android:background="@drawable/choiceshapee"
-        android:onClick="btn2"
         android:scaleType="fitCenter"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -108,7 +117,6 @@
         android:layout_marginStart="232dp"
         android:layout_marginBottom="144dp"
         android:background="@drawable/choiceshapee"
-        android:onClick="btn1"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -167,34 +175,53 @@
 
 
 
+
+
+
+    <RadioGroup
+        android:id="@+id/group"
+        android:layout_width="125dp"
+        android:layout_height="138dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="550dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="48dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
         <RadioButton
             android:id="@+id/radio_one"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-
-            android:layout_marginStart="518dp"
-            android:layout_marginTop="154dp"
+            android:layout_width="match_parent"
+            android:layout_height="71dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
             android:backgroundTint="@color/white"
             android:buttonTint="@color/white"
+
             android:shadowColor="@color/white"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:textColorHint="@color/light_font" />
+
 
         <RadioButton
             android:id="@+id/radio_two"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="518dp"
-            android:layout_marginTop="222dp"
 
-            android:layout_marginBottom="81dp"
+            android:layout_width="match_parent"
+            android:layout_height="71dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
             android:backgroundTint="@color/white"
+
+
             android:buttonTint="@color/white"
             android:shadowColor="@color/white"
-            android:textColorHint="@color/light_font"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+    </RadioGroup>
 
 
 

@@ -26,21 +26,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.975"
         app:srcCompat="@drawable/newpre" />
-    <ImageView
-
-        android:layout_width="330dp"
-        android:layout_height="80dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="256dp"
-        android:src="@drawable/progress3_lvl1"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
 
 
 
@@ -195,7 +180,10 @@
         app:layout_constraintVertical_bias="0.735"
         app:srcCompat="@drawable/arrow" />
 
+    <!--The changes are in this linearLayout-->
     <LinearLayout
+        android:gravity="center"
+        android:paddingLeft="35dp"
         android:id="@+id/imageView46"
         android:layout_width="285dp"
         android:layout_height="35dp"
@@ -206,16 +194,12 @@
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:background="@drawable/printwithquote"
-        android:paddingLeft="200dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.382"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.61"
-        android:orientation="horizontal">
-
-    </LinearLayout>
+        app:layout_constraintVertical_bias="0.61"/>
 
 
     <TextView
@@ -298,5 +282,19 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.637"
         app:srcCompat="@drawable/hellosentence" />
+    <ImageView
+        android:layout_width="330dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="256dp"
+        android:src="@drawable/progress3_lvl1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
 
 </android.support.constraint.ConstraintLayout>

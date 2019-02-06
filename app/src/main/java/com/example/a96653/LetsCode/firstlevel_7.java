@@ -38,6 +38,10 @@ public class firstlevel_7 extends AppCompatActivity {
     voice voicepluto7;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        //TO UPDATE RESULT BOX .
+        TextView textView = (TextView)findViewById(R.id.quiz_score1_2);
+        textView.setText(sqLiteHelper.getChildScore()+"" );
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_firstlevel_7  );
         //create MediaPLayer to play the voice

@@ -14,12 +14,13 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.Toast;
-
-
+import android.widget.RadioGroup;
+import android.widget.TextView;
 
 // i hate git hub
 public class firstlevel_6 extends AppCompatActivity {
     Dialog myDialog;
+    RadioGroup radioGroup;
     static int res=2;
     MySQLliteHelper mySqliteOpenHelper;
     @Override
@@ -43,6 +44,9 @@ public class firstlevel_6 extends AppCompatActivity {
 
         //  next2
         mySqliteOpenHelper=new MySQLliteHelper(this);
+        //for taking the answer of quesion 1 .
+        TextView textView = (TextView)findViewById(R.id.quiz_score1_1);
+        textView.setText(mySqliteOpenHelper.getChildScore()+"" );
 
         final RadioButton radio1 = ( RadioButton) findViewById(R.id.radio_one);
         final   RadioButton radio2 = ( RadioButton) findViewById(R.id.radio_two);
@@ -50,6 +54,32 @@ public class firstlevel_6 extends AppCompatActivity {
         ImageView choice1=(ImageView)findViewById(R.id.choiceOne);
         ImageView choice2=(ImageView)findViewById(R.id.choiceTwo);
 
+      radioGroup = (RadioGroup) findViewById(R.id.group);
+
+
+        choice1.setOnClickListener( new ImageView.OnClickListener(){
+
+            @Override
+            public void onClick(View v) {
+                radio1.setChecked(true);
+
+            }
+        });
+
+
+        choice2.setOnClickListener( new ImageView.OnClickListener(){
+
+            @Override
+            public void onClick(View v) {
+                radio2.setChecked(true);
+
+
+
+
+            }
+        });
+
+/////end of taking the answer of question 1.
 
 
 
@@ -68,10 +98,29 @@ public class firstlevel_6 extends AppCompatActivity {
                                 editor.putBoolean("firstStart", false);
                                 editor.apply();}
                             updatedata();
-
                             check();
-                        } else ShowPopupSolve();
+                        }// else ShowPopupSolve();
                         // openSecondActivity();
+                        int radioId = radioGroup.getCheckedRadioButtonId();
+
+                        if(radioId==R.id.radio_one){
+
+
+
+                            mySqliteOpenHelper.UpdateQuestionAnswer(1,1);
+                            // mySqliteOpenHelper.updateChildScore(5);
+                            openSecondActivity();}
+                        if(radioId==R.id.radio_two){
+
+
+                            mySqliteOpenHelper.UpdateQuestionAnswer(1,0);
+
+                            openSecondActivity();}
+
+                        if(radioId==-1)  {
+
+                            ShowPopupSolve(); }
+
                     }
 
                 }
@@ -130,17 +179,6 @@ public class firstlevel_6 extends AppCompatActivity {
 
         }else {  Intent intent= new Intent(getApplicationContext(),firstlevel_7.class);
             startActivity(intent);}
-
-
-
-
-
-
-
-
-
-
-
 
     }
 

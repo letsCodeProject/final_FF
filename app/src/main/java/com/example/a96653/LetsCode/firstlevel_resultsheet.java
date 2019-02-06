@@ -76,8 +76,9 @@ public class firstlevel_resultsheet extends AppCompatActivity {
                 if (totalscore>5 ){
 
                     Intent gohime=new Intent (getApplicationContext(),MainActivity.class);
-                    mySqliteOpenHelper23.updateChildScore(totalscore);
-                    mySqliteOpenHelper23.UnlockNextLevel("nepton" );
+                    //mySqliteOpenHelper23.updateChildScore(totalscore);
+                    //mySqliteOpenHelper23.UnlockNextLevel("nepton" );
+                    startActivity(gohime);
 
                 }
 
@@ -255,6 +256,8 @@ public class firstlevel_resultsheet extends AppCompatActivity {
     //تسوي ابديت ل سكور الطفل
     public void updateScore(int totalscore){
         mySqliteOpenHelper23.updateChildScore(totalscore);
+        TextView textView = (TextView)findViewById(R.id.quiz1Score);
+        textView.setText(mySqliteOpenHelper23.getChildScore()+"" );
     }
     //تسوي انلوك بالميثود الي بعدها ما اناديها الا اذا كان ال سكور فوق ال ٥
     public void CallUnlockMethod () {
@@ -271,4 +274,7 @@ public class firstlevel_resultsheet extends AppCompatActivity {
             resfeedback.setTextColor(Color.parseColor("#2340B7"));
         }
     }//تسوي انلوك بالميثود الي بعدها ما اناديها الا اذا كان ال سكور فوق ال ٥
-    }//end class
+
+
+
+}//end class

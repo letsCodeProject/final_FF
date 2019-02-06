@@ -65,21 +65,18 @@
 
 
 
-    <ImageView
-        android:id="@+id/imageView64"
-        android:layout_width="42dp"
-        android:layout_height="31dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:src="@drawable/scorebox"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.987"
+    <TextView
+        android:id="@+id/quiz1Score"
+        android:layout_width="35dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="632dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/textviewborder"
+
+        android:textColor="@color/light_font"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.029" />
+        app:layout_constraintTop_toTopOf="parent" />
+
 
     <ImageView
         android:id="@+id/imageView65"
