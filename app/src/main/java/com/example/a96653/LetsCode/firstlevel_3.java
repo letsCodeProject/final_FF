@@ -35,6 +35,8 @@ public class firstlevel_3 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         //FOR DRAG AND DROP
         setContentView(R.layout.activity_firstlevel_3);
+
+
         tv_output = (TextView) findViewById(R.id.textView41);
         iv_answer = (ImageView) findViewById(R.id.imageView56);
         iv_answer.setTag("Answer");
@@ -152,6 +154,11 @@ public class firstlevel_3 extends AppCompatActivity {
 
 
         final MySQLliteHelper m=new MySQLliteHelper(this);
+        //TO VIEW SCORE ON BOX
+        TextView textView = (TextView)findViewById(R.id.ScoreBox_firstlevel3);
+        textView.setText(m.getChildScore()+"" );
+
+
         SharedPreferences prefs = getSharedPreferences("pref6", MODE_PRIVATE);
         boolean firstStart = prefs.getBoolean("firstStart", true);
         if (firstStart){

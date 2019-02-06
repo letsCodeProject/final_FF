@@ -14,16 +14,13 @@ public class welcome_1 extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-    final   MySQLliteHelper mySqliteOpenHelper=new MySQLliteHelper(this);
-
-       mySqliteOpenHelper.addData();
-       mySqliteOpenHelper.Fill_Welcoming_Table();
-       mySqliteOpenHelper.addQuiz();
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_welcome_1);
         Button button= findViewById(R.id.button);
-
+        final   MySQLliteHelper mySqliteOpenHelper=new MySQLliteHelper(this);
+        mySqliteOpenHelper.addData();
+        mySqliteOpenHelper.Fill_Welcoming_Table();
+        mySqliteOpenHelper.addQuiz();
 
         final Intent next=new Intent(getApplicationContext(),welcome_2.class);
 

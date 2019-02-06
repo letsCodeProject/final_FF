@@ -41,6 +41,9 @@ public class firstlevel_4 extends AppCompatActivity {
 //NEXT INTERFACE BUTTON
         ImageView next = (ImageView)findViewById(R.id.next);
         final MySQLliteHelper m=new MySQLliteHelper(this);
+        //TO VIEW SCORE ON BOX
+        TextView textView = (TextView)findViewById(R.id.ScoreBox_firstlevel4);
+        textView.setText(m.getChildScore()+"" );
         next.setOnClickListener(
                 new ImageView.OnClickListener(){
                     public void onClick(View v){

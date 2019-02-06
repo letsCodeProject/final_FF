@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 public class firstlevel_2 extends AppCompatActivity {
 
@@ -16,6 +17,9 @@ public class firstlevel_2 extends AppCompatActivity {
         setContentView(R.layout.activity_firstlevel_2);
 
         final MySQLliteHelper m=new MySQLliteHelper(this);
+        //TO VIEW SCORE ON BOX
+        TextView textView = (TextView)findViewById(R.id.ScoreBox_firstlevel2);
+        textView.setText(m.getChildScore()+"" );
         SharedPreferences prefs = getSharedPreferences("prefs3", MODE_PRIVATE);
         boolean firstStart = prefs.getBoolean("firstStart", true);
         if (firstStart){

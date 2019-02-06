@@ -32,6 +32,10 @@ public class firstlevel_1 extends AppCompatActivity  {
 
 
         final MySQLliteHelper m=new MySQLliteHelper(this);
+        //TO VIEW SCORE ON BOX
+        TextView textView = (TextView)findViewById(R.id.ScoreBox_firstlevel1);
+        textView.setText(m.getChildScore()+"" );
+        ///
         SharedPreferences prefs = getSharedPreferences("prefs1", MODE_PRIVATE);
         boolean firstStart = prefs.getBoolean("firstStart", true);
         if (firstStart){

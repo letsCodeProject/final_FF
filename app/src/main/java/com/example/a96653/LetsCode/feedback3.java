@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 public class feedback3 extends AppCompatActivity {
     MediaPlayer plutofeedback3;
@@ -22,7 +23,8 @@ public class feedback3 extends AppCompatActivity {
         final MySQLliteHelper m=new MySQLliteHelper(this);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_feedback3);
-
+        TextView textView2 = (TextView)findViewById(R.id.ScoreBox_feedback);
+        textView2.setText(m.getChildScore()+"" );
         //create MediaPLayer to play the voice
         plutofeedback3=MediaPlayer.create(feedback3.this,R.raw.firstlevelfeedback3voice);
         voiceplutofeedback3=new voice(plutofeedback3);

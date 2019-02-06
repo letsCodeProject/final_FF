@@ -47,21 +47,26 @@
         app:layout_constraintVertical_bias="0.024"
         app:srcCompat="@drawable/h" />
 
-    <ImageView
-        android:id="@+id/imageView44"
-        android:layout_width="42dp"
+    <TextView
+        android:id="@+id/ScoreBox_firstlevel3"
+        android:layout_width="43dp"
         android:layout_height="31dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="298dp"
+
+        android:layout_marginTop="14dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:src="@drawable/scorebox"
+        android:background="@drawable/textviewborder"
+        android:gravity="center"
+
+        android:textColor="@android:color/background_light"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.987"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.029" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <ImageView
         android:id="@+id/imageView57"
@@ -132,14 +137,14 @@
         android:layout_marginBottom="8dp"
         android:fontFamily="@font/jannalt_regular"
         android:text="@string/fist_level_3_2"
-        android:textColor="@color/light_font"
+        android:textColor="@color/yellow1"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.43"
+        app:layout_constraintHorizontal_bias="0.36"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.329" />
+        app:layout_constraintVertical_bias="0.333" />
 
     <TextView
         android:id="@+id/textView38"
@@ -157,10 +162,10 @@
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.125"
+        app:layout_constraintHorizontal_bias="0.053"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.332" />
+        app:layout_constraintVertical_bias="0.333" />
 
     <ImageView
         android:id="@+id/imageView45"
@@ -227,8 +232,8 @@
 
     <TextView
         android:id="@+id/textView41"
-        android:layout_width="352dp"
-        android:layout_height="40dp"
+        android:layout_width="320dp"
+        android:layout_height="39dp"
         android:layout_alignParentBottom="true"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"

@@ -14,7 +14,7 @@ public class MainActivity_Loading extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        MySQLliteHelper mySqliteOpenHelper=new MySQLliteHelper(this);
+       // MySQLliteHelper mySqliteOpenHelper=new MySQLliteHelper(this);
 
 
         super.onCreate(savedInstanceState);

@@ -86,14 +86,7 @@ public class firstlevel_6 extends AppCompatActivity {
                 new ImageView.OnClickListener(){
                     public void onClick(View v){
                         //if(res!=2){
-                            SharedPreferences prefs = getSharedPreferences("pref11", MODE_PRIVATE);
-                            boolean firstStart = prefs.getBoolean("firstStart", true);
-                            if (firstStart){
-                                mySqliteOpenHelper.UpdateNumOfLesson(7,"Ploto");
-                                SharedPreferences pref = getSharedPreferences("prefs11", MODE_PRIVATE);
-                                SharedPreferences.Editor editor = prefs.edit();
-                                editor.putBoolean("firstStart", false);
-                                editor.apply();}
+
                            // updatedata();
 
                        // }// else ShowPopupSolve();
@@ -102,14 +95,30 @@ public class firstlevel_6 extends AppCompatActivity {
 
                         if(radioId==R.id.radio_one){
                             mySqliteOpenHelper.UpdateQuestionAnswer(1,1);
+                            SharedPreferences prefs = getSharedPreferences("pref11", MODE_PRIVATE);
+                            boolean firstStart = prefs.getBoolean("firstStart", true);
+                            if (firstStart){
+                                mySqliteOpenHelper.UpdateNumOfLesson(7,"Ploto");
+                                SharedPreferences pref = getSharedPreferences("prefs11", MODE_PRIVATE);
+                                SharedPreferences.Editor editor = prefs.edit();
+                                editor.putBoolean("firstStart", false);
+                                editor.apply();}
                             // mySqliteOpenHelper.updateChildScore(5);
                             openSecondActivity();}
                         if(radioId==R.id.radio_two){
                             mySqliteOpenHelper.UpdateQuestionAnswer(1,0);
+                            SharedPreferences prefs = getSharedPreferences("pref11", MODE_PRIVATE);
+                            boolean firstStart = prefs.getBoolean("firstStart", true);
+                            if (firstStart){
+                                mySqliteOpenHelper.UpdateNumOfLesson(7,"Ploto");
+                                SharedPreferences pref = getSharedPreferences("prefs11", MODE_PRIVATE);
+                                SharedPreferences.Editor editor = prefs.edit();
+                                editor.putBoolean("firstStart", false);
+                                editor.apply();}
                             openSecondActivity();}
                         if(radioId==-1)  {
                             ShowPopupSolve(); }
-                            check();
+                            //check();
 
                     }
 

@@ -1,6 +1,7 @@
 package com.example.a96653.LetsCode;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.graphics.Color;
 import android.media.MediaPlayer;
@@ -36,13 +37,15 @@ public class firstlevel_resultsheet extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+        mySqliteOpenHelper23=new MySQLliteHelper(this);
         //create MediaPLayer to play the voice
         rightAnswerVoice=MediaPlayer.create(firstlevel_resultsheet.this,R.raw.rightanswerfeedbackvoice);
         wrongAnswerVoice=MediaPlayer.create(firstlevel_resultsheet.this,R.raw.wronganswerfeedbackvoice);
 
-
         setContentView(R.layout.activity_firstlevel_resultsheet);
+        TextView textView = (TextView)findViewById(R.id.quiz1Score);
+        textView.setText(mySqliteOpenHelper23.getChildScore()+"" );
+
         TextView t1=(TextView)findViewById(R.id.resultq1);
         TextView t2=(TextView)findViewById(R.id.resultq2);
         TextView t3=(TextView)findViewById(R.id.totalquizresult);
@@ -68,7 +71,7 @@ public class firstlevel_resultsheet extends AppCompatActivity {
         //  }
         // });
 
-        mySqliteOpenHelper23=new MySQLliteHelper(this);
+
 
         button7.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -92,7 +95,7 @@ public class firstlevel_resultsheet extends AppCompatActivity {
         resreturned.moveToFirst();
         int index=resreturned.getColumnIndexOrThrow("Q_ANSWER");
         int answer=resreturned.getInt(index);
-        result=answer; if(answer==0){mySqliteOpenHelper23.addIndexData("firstlevel_6");}
+        result=answer; //if(answer==0){mySqliteOpenHelper23.addIndexData("firstlevel_6");}
 
 
         Cursor cursor=mySqliteOpenHelper23.returnQuestionAnswer(2);
@@ -100,7 +103,7 @@ public class firstlevel_resultsheet extends AppCompatActivity {
         int index2=cursor.getColumnIndexOrThrow("Q_ANSWER");
         int answer2=cursor.getInt(index2);
         result2=answer2;
-        if(answer2==0){mySqliteOpenHelper23.addIndexData("firstlevel_7");}
+       // if(answer2==0){mySqliteOpenHelper23.addIndexData("firstlevel_7");}
 
 
         Cursor cur1=mySqliteOpenHelper23.returnLevelStatus("Nepton");
@@ -185,15 +188,22 @@ public class firstlevel_resultsheet extends AppCompatActivity {
             resultsheet=new voice(wrongAnswerVoice);
             resultsheet.play();
             //FOR DATABASE
-            btn7.setOnClickListener(new View.OnClickListener() {
+           btn7.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    try {
-                        openPlotoActivity(mySqliteOpenHelper23);
-                    } catch (ClassNotFoundException e) {
-                        e.printStackTrace();
-                    }
-
+                    Intent intent=new Intent (getApplicationContext(),firstlevel_6.class);
+                    //mySqliteOpenHelper23.updateChildScore(totalscore);
+                    //mySqliteOpenHelper23.UnlockNextLevel("nepton" );
+                    startActivity(intent);
+                    //I AM IN DOOUGT OF THIS CODE
+                    SharedPreferences prefs = getSharedPreferences("pref200", MODE_PRIVATE);
+                    boolean firstStart = prefs.getBoolean("firstStart", true);
+                    if (firstStart){
+                        mySqliteOpenHelper23.UpdateNumOfLesson(6,"Ploto");
+                        SharedPreferences pref = getSharedPreferences("prefs200", MODE_PRIVATE);
+                        SharedPreferences.Editor editor = prefs.edit();
+                        editor.putBoolean("firstStart", false);
+                        editor.apply();}//////DOUGHT
                 }
 
             });

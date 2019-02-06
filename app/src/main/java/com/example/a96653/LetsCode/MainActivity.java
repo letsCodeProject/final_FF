@@ -10,19 +10,25 @@ import android.widget.TextView;
 import java.lang.Class;
 
 public class MainActivity extends AppCompatActivity {
+    ImageView labeb_nepton;
+    ImageView labeb_zuhal;
+    ImageView labeb_ploto;
+    ImageView labeb_almushtari;
+    ImageView labeb_Earth;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         final MySQLliteHelper m=new MySQLliteHelper(this);
-        ImageView labeb_ploto=(ImageView)findViewById(R.id.labeb_on_ploto);
-        ImageView labeb_nepton= findViewById(R.id.labebOnnepton);
-        ImageView labeb_zuhal=(ImageView)findViewById(R.id.labebOnZuhal);
-        ImageView labeb_almushtari=(ImageView)findViewById(R.id.labebOnALmushtari);
-        ImageView labeb_Earth=(ImageView)findViewById(R.id.labebOnEarth);
+
         int lnum=0;
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        //To SET UP THE LEVELS TRANCPERRENCY .
+        //For moving labeb over the planet and change TRANCPERRENCY
+        labeb_ploto=(ImageView)findViewById(R.id.labeb_on_ploto);
+        labeb_nepton= findViewById(R.id.labebOnnepton);
+        labeb_zuhal=(ImageView)findViewById(R.id.labebOnZuhal);
+        labeb_almushtari=(ImageView)findViewById(R.id.labebOnALmushtari);
+        labeb_Earth=(ImageView)findViewById(R.id.labebOnEarth);
         boolean levelStatus;
         ImageView nepton=(ImageView)findViewById(R.id.imageView9);
         ImageView Saturn=(ImageView)findViewById(R.id.imageView13);
@@ -80,6 +86,10 @@ public class MainActivity extends AppCompatActivity {
                     labeb_almushtari.setVisibility(View.VISIBLE);
                     labeb_Earth.setVisibility(View.INVISIBLE);
                     labeb_ploto.setVisibility(View.INVISIBLE); } }
+        //TO VIEW SCORE IN SCORE BOX
+        TextView textView = (TextView)findViewById(R.id.ScoreBox_main);
+        textView.setText(m.getChildScore()+"" );
+          /////
 
 
         ImageView ploto = (ImageView)findViewById(R.id.imageView3);

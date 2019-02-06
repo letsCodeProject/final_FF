@@ -9,6 +9,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.TextView;
+
 // i hate it too -shyom
 public class firstlevel_5 extends AppCompatActivity {
     MySQLliteHelper mySqliteOpenHelper;
@@ -27,6 +29,8 @@ public class firstlevel_5 extends AppCompatActivity {
 
         //FOR ADDING Q TO DB TO SEND THE QUIZE NUM
         mySqliteOpenHelper=new MySQLliteHelper(this);
+
+        ////
         SharedPreferences prefs = getSharedPreferences("prefs9", MODE_PRIVATE);
         boolean firstStart = prefs.getBoolean("firstStart", true);
         if (firstStart){
@@ -42,6 +46,9 @@ public class firstlevel_5 extends AppCompatActivity {
         ////
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_firstlevel_5);
+        //TO VIEW SCORE ON BOX
+        TextView textView = (TextView)findViewById(R.id.ScoreBox_firstlevel5);
+        textView.setText(mySqliteOpenHelper.getChildScore()+"" );
 
         //homebtn5
         ImageButton homebtn5=(ImageButton)findViewById(R.id.homebtn5);
