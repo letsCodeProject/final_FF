@@ -208,33 +208,8 @@
 
 
 
-    <ImageView
-        android:id="@+id/print_secondlevel_5"
-        android:layout_width="326dp"
-        android:layout_height="38dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.488"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.619"
-        app:srcCompat="/Users/shorog/AndroidStudioProjects/letscodeLeve2/app/src/main/res/drawable/level2/secondlevel_5_print.png" />
 
 
-    <ImageView
-        android:layout_width="330dp"
-        android:layout_height="80dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="256dp"
-        android:src="/Users/shorog/AndroidStudioProjects/letscodeLeve2/app/src/main/res/drawable/level2/progress_secondlevel/progress_secondlevel_5.png"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.569"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.888" />
 
 
 
