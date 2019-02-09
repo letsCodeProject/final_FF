@@ -16,6 +16,14 @@ public class Lesson {
         Lesson l5 = new Lesson(5, "firstlevel_5");
         Lesson l6 = new Lesson(6, "firstlevel_6");
         Lesson l7 = new Lesson(7, "firstlevel_7");
+        Lesson l8 = new Lesson(8, "firstlevel_resultsheet");
+        Lesson l9 = new Lesson(9, "secondlevel_1");
+        Lesson l10= new Lesson(10, "secondlevel_2");
+        Lesson l11 = new Lesson(11, "secondlevel_3");
+        Lesson l12 = new Lesson(12, "secondlevel_4");
+        Lesson l13 = new Lesson(13, "secondlevel_5");
+        Lesson l14 = new Lesson(14, "secondlevel_6");
+
       l=new  ArrayList<Lesson>();
       l.add(l0);
         l.add(l1);
@@ -25,7 +33,13 @@ public class Lesson {
         l.add(l5);
         l.add(l6);
         l.add(l7);
-
+        l.add(l8);
+        l.add(l9);
+        l.add(l10);
+        l.add(l11);
+        l.add(l12);
+        l.add(l13);
+        l.add(l14);
     }
 
 

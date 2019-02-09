@@ -5,7 +5,7 @@
     android:background="@drawable/back"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".secondlevel_5">
+    tools:context=".secondlevel_6">
     <ImageView
         android:id="@+id/imageView38"
         android:layout_width="407dp"
@@ -38,7 +38,7 @@
         app:srcCompat="@drawable/h" />
 
     <TextView
-        android:id="@+id/ScoreBox_secondlevel_5"
+        android:id="@+id/ScoreBox_secondlevel_6"
         android:layout_width="43dp"
         android:layout_height="31dp"
         android:layout_alignParentStart="true"
@@ -91,7 +91,7 @@
         app:layout_constraintVertical_bias="0.834" />
 
     <TextView
-        android:id="@+id/ResultBox_secondlevel_5"
+        android:id="@+id/ResultBox_secondlevel_6"
         android:layout_width="313dp"
         android:layout_height="40dp"
         android:layout_alignParentBottom="true"
@@ -185,24 +185,6 @@
         app:srcCompat="@drawable/newpre" />
 
     <ImageView
-
-        android:id="@+id/next"
-        android:layout_width="85dp"
-        android:layout_height="38dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:contentDescription="@string/desc"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.986"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.975"
-        app:srcCompat="@drawable/newnext"
-        tools:layout_editor_absoluteX="147dp"
-        tools:layout_editor_absoluteY="167dp" />
-
-    <ImageView
         android:id="@+id/imageView44"
         android:layout_width="348dp"
         android:layout_height="35dp"
@@ -214,7 +196,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView1_secondlevel_5"
-        app:srcCompat="@drawable/secondlevel_5_print" />
+        app:srcCompat="@drawable/secondlevel_6_printpicture" />
 
     <ImageView
         android:layout_width="330dp"
@@ -223,7 +205,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="256dp"
-        android:src="@drawable/secondlevel_5_progress"
+        android:src="@drawable/secondlevel_6_progress"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
