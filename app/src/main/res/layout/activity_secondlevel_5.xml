@@ -10,10 +10,10 @@
         android:id="@+id/imageView38"
         android:layout_width="407dp"
         android:layout_height="292dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="28dp"
         android:alpha="0.2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintHorizontal_bias="0.535"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/newnepton" />
@@ -111,8 +111,8 @@
 
     <TextView
         android:id="@+id/textView1_secondlevel_5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="600dp"
+        android:layout_height="115dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_marginStart="8dp"
@@ -120,50 +120,29 @@
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:fontFamily="@font/jannalt_regular"
-        android:text="@string/fist_level_4"
+        android:text="@string/secondlevel_5"
         android:textColor="@color/white"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.973"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.192" />
+        app:layout_constraintVertical_bias="0.263" />
 
     <TextView
         android:id="@+id/textView2_secondlevel_5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
-        android:layout_marginStart="160dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginStart="336dp"
+        android:layout_marginTop="132dp"
         android:fontFamily="@font/jannalt_regular"
-        android:text="@string/print"
+        android:text="@string/try_it_yourself"
         android:textColor="@color/yellow1"
-        android:textSize="30sp"
+        android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/textView3_secondlevel_5"
-        android:layout_width="533dp"
-        android:layout_height="34dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:fontFamily="@font/jannalt_regular"
-        android:text="@string/fist_level_4_1"
-        android:textColor="@color/white"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.837"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.34" />
 
     <Button
         android:id="@+id/ShowMeResultButton_secondlevel_5"
@@ -182,10 +161,9 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.499"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.758" />
+        app:layout_constraintVertical_bias="0.793" />
 
     <ImageView
 
@@ -239,26 +217,10 @@
         app:layout_constraintHorizontal_bias="0.488"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.565"
+        app:layout_constraintVertical_bias="0.619"
         app:srcCompat="/Users/shorog/AndroidStudioProjects/letscodeLeve2/app/src/main/res/drawable/level2/secondlevel_5_print.png" />
 
 
-    <ImageView
-        android:id="@+id/soundOn"
-        android:layout_width="30dp"
-        android:layout_height="28dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:onClick="play"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.153"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.068"
-        app:srcCompat="@drawable/soundon" />
     <ImageView
         android:layout_width="330dp"
         android:layout_height="80dp"
