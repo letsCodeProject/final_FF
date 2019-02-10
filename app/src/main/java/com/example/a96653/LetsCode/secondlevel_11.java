@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class secondlevel_11 extends AppCompatActivity {
@@ -28,6 +29,29 @@ public class secondlevel_11 extends AppCompatActivity {
                 startActivity(HomePage);
             }
         });
+        //PREVIOUS BUTTON
+        ImageView previous = (ImageView)findViewById(R.id. previous_seconlevel_11);
+        previous .setOnClickListener(
+                new ImageView.OnClickListener(){
+                    public void onClick(View v){
+
+                        openPreviousActivity();
+                    }
+
+                }
+
+        );
+
+
+    }//END onCREATE
+
+    public void openPreviousActivity(){
+
+        Intent intent=new Intent(this,secondlevel_10_feedback.class);
+        startActivity(intent);
 
     }
+
+
 }
+
