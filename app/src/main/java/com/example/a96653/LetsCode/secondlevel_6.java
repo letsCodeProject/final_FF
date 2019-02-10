@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class secondlevel_6 extends AppCompatActivity {
@@ -17,7 +18,7 @@ public class secondlevel_6 extends AppCompatActivity {
         setContentView(R.layout.activity_secondlevel_6);
         final MySQLliteHelper m=new MySQLliteHelper(this);
         ////showing result button
-        Button showResult=(Button)findViewById(R.id.ShowMeResultButton_secondlevel_5);
+        Button showResult=(Button)findViewById(R.id.ShowMeResultButton_secondlevel_6);
         final TextView ResultBox=(TextView)findViewById(R.id.ResultBox_secondlevel_6);
         showResult.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -43,7 +44,7 @@ public class secondlevel_6 extends AppCompatActivity {
         TextView textView = (TextView)findViewById(R.id.ScoreBox_secondlevel_6);
         textView.setText(m.getChildScore()+"" );
         //HOME BUTTON
-        ImageButton homebtn3=(ImageButton)findViewById(R.id.homebtn_secondlevel5);
+        ImageButton homebtn3=(ImageButton)findViewById(R.id.homebtn_secondlevel6);
         homebtn3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -51,5 +52,27 @@ public class secondlevel_6 extends AppCompatActivity {
                 startActivity(HomePage);
             }
         });
+
+        //PREVIOUS BUTTON
+        ImageView previous = (ImageView)findViewById(R.id. previous_seconlevel_6);
+        previous .setOnClickListener(
+                new ImageView.OnClickListener(){
+                    public void onClick(View v){
+
+                        openPreviousActivity();
+                    }
+
+                }
+
+        );
+
+
+    }//END onCREATE
+
+    public void openPreviousActivity(){
+
+        Intent intent=new Intent(this,secondlevel_5.class);
+        startActivity(intent);
+
     }
 }//end class

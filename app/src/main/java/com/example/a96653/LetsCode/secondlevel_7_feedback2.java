@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class secondlevel_7_feedback2 extends AppCompatActivity {
@@ -26,7 +27,7 @@ public class secondlevel_7_feedback2 extends AppCompatActivity {
 
 
         //HOME BUTTON
-        ImageButton homebtn3=(ImageButton)findViewById(R.id.homebtn_secondlevel5);
+        ImageButton homebtn3=(ImageButton)findViewById(R.id.homebtn_secondlevel7);
         homebtn3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -34,7 +35,29 @@ public class secondlevel_7_feedback2 extends AppCompatActivity {
                 startActivity(HomePage);
             }
         });
+        //PREVIOUS BUTTON
+        ImageView previous = (ImageView)findViewById(R.id. previous_seconlevel_7);
+        previous .setOnClickListener(
+                new ImageView.OnClickListener(){
+                    public void onClick(View v){
+
+                        openPreviousActivity();
+                    }
+
+                }
+
+        );
+
+
+    }//END onCREATE
+
+    public void openPreviousActivity(){
+
+        Intent intent=new Intent(this,secondlevel_6.class);
+        startActivity(intent);
+
+    }
 
 
     }
-}
+
