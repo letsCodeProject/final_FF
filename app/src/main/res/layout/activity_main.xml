@@ -121,8 +121,7 @@
         android:layout_marginStart="120dp"
         android:layout_marginBottom="87dp"
         android:contentDescription="@string/desc"
-        app:srcCompat="@drawable/newnepton"
-       />
+        app:srcCompat="@drawable/newnepton" />
 
     <TextView
         android:id="@+id/ScoreBox_main"
@@ -154,7 +153,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="8dp"
-        android:layout_toStartOf="@+id/imageView5"
+        android:layout_toStartOf="@+id/imageView9"
         android:src="@drawable/diamond22" />
     <ImageView
         android:id="@+id/imageView3"

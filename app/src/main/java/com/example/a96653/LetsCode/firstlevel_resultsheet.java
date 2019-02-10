@@ -119,8 +119,8 @@ public class firstlevel_resultsheet extends AppCompatActivity {
             t1.setTextColor(Color.parseColor("#0E932E"));
             t2.setText(correct);
             t2.setTextColor(Color.parseColor("#0E932E"));
-            q1score =5;
-            q2score=5;}
+            q1score =10;
+            q2score=10;}
 
         else if ((result==0) && (result2==1)){
             t1.setText(wrong);
@@ -128,14 +128,14 @@ public class firstlevel_resultsheet extends AppCompatActivity {
             t2.setText(correct);
             t2.setTextColor(Color.parseColor("#0E932E"));
             q1score =0;
-            q2score=5;
+            q2score=10;
         }
         else if ((result==1) && (result2==0)){
             t1.setText(correct);
             t1.setTextColor(Color.parseColor("#0E932E"));
             t2.setText(wrong);
             t2.setTextColor(Color.parseColor("#FF6B6B"));
-            q1score =5;
+            q1score =10;
             q2score=0;
 
         }
@@ -151,7 +151,7 @@ public class firstlevel_resultsheet extends AppCompatActivity {
         totalscore=q1score+q2score;
         t3.setText(""+totalscore);
 
-
+        mySqliteOpenHelper23.SubmitResultToQuizTable(1,totalscore);
 
         resnum1.setText(String.valueOf(q1score));
         resnum2.setText(String.valueOf(q2score));
@@ -171,7 +171,7 @@ public class firstlevel_resultsheet extends AppCompatActivity {
     }
 
     public void setbuttontext(int total , Button btn7,int min,int status){
-        if (total>5 && status==0) {
+        if (total>10 && status==0) {
             CallUnlockMethod();
             updateScore(total);
             btn7.setText(btntextcorrect);

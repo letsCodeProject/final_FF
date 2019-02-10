@@ -78,6 +78,7 @@
         android:ems="10"
         android:hint="ادخل اسمك"
         android:inputType="textPersonName"
+        android:maxLength="25"
        />
 
     <Button
