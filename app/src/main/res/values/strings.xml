@@ -93,5 +93,28 @@
     <string name="secondlevel_8_3">  على سبيل المثال: </string>
     <string name="secondlevel_9_1"> لإنشاء وطباعة متغير يحتوي على إسم لبيب ، نكتب الأمر التالي : </string>
 
+    <string name="secondlevel_22_1">مهمة رقم 3:</string>
+    <string name="secondlevel_24_1">مهمة رقم 4:</string>
+    <string name="secondlevel_22_2">   ماهو ناتج السطر البرمجي التالي           </string>
+    <string name="secondlevel_12_1">ولكن عندما      </string>
+    <string name="secondlevel_12_2">    نضع علامتي التنصيص  </string>
+    <string name="qots">(\"\")</string>
+    <string name="secondlevel_12_3"> في أمر  الطباعة  فإنه يطبع القيمة المخزنة في المتغير        </string>
+    <string name="tryit">  )جرب بنفسك (   </string>
+    <string name="secondlevel_15_1">      بإمكاننا أن نجري عمليات الجمع و الطرح التي تعرفها  على المتغيرات  فمثلاً : \nإذا كان المتغير    </string>
+    <string name="x">    X=5</string>
+    <string name="var">و المتغير </string>
+    <string name="y"> Y=1   </string>
+    <string name="secondlevel_15_2">    فإن ناتج جمعهما</string>
+    <string name="six">    يساوي 6 !</string>
+    <string name="secondlevel_16_1"> تتميز عملية الجمع بأننا نستطيع استعمالها مع النصوص أيضاً </string>
+
+    <string name="secondlevel_16_5"> فمثلاً   إذا كان المتغير</string>
+    <string name="secondlevel_16_2">X=“هيّا”</string>
+    <string name="var2">و المتغير </string>
+    <string name="secondlevel_16_3">Y=“نُبرمج”</string>
+    <string name="secondlevel_16_4">سيكون جملة </string>
+    <string name="lets">هيّا نبرمج.</string>
+
 
 </resources>
