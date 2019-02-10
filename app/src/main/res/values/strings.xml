@@ -98,6 +98,8 @@
     <string name="secondlevel_22_2">   ماهو ناتج السطر البرمجي التالي           </string>
     <string name="secondlevel_12_1">ولكن عندما      </string>
     <string name="secondlevel_12_2">    نضع علامتي التنصيص  </string>
+    <string name="secondlevel_11_1">   لابد أنك تستغرب لماذا تمت طباعة X ولم يتم طباعة “لبيب” وذلك لأنه عندما نضع \n علامتي التنصيص\     \        \       \      \في أمر الطباعة فإننا نقوم\n بطباعة مابين القوسين .  </string>
+
     <string name="qots">(\"\")</string>
     <string name="secondlevel_12_3"> في أمر  الطباعة  فإنه يطبع القيمة المخزنة في المتغير        </string>
     <string name="tryit">  )جرب بنفسك (   </string>
@@ -108,7 +110,6 @@
     <string name="secondlevel_15_2">    فإن ناتج جمعهما</string>
     <string name="six">    يساوي 6 !</string>
     <string name="secondlevel_16_1"> تتميز عملية الجمع بأننا نستطيع استعمالها مع النصوص أيضاً </string>
-
     <string name="secondlevel_16_5"> فمثلاً   إذا كان المتغير</string>
     <string name="secondlevel_16_2">X=“هيّا”</string>
     <string name="var2">و المتغير </string>
