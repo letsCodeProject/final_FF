@@ -18,9 +18,13 @@ public class secondlevel_7_feedback2 extends AppCompatActivity {
         ///to show result
         TextView ResultBox=(TextView)findViewById(R.id.ResultBox_secondlevel_7);
         ResultBox.setText("5");
+
+
         //TO VIEW SCORE ON BOX
         TextView textView = (TextView)findViewById(R.id.ScoreBox_secondlevel_7);
         textView.setText(m.getChildScore()+"" );
+
+
         //HOME BUTTON
         ImageButton homebtn3=(ImageButton)findViewById(R.id.homebtn_secondlevel5);
         homebtn3.setOnClickListener(new View.OnClickListener() {
