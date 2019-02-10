@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
-        <activity android:name=".secondlevel_9"></activity>
+        <activity android:name=".secondlevel_14"></activity>
+        <activity android:name=".secondlevel_9" />
         <activity android:name=".seconlevel_8" />
         <activity
             android:name=".MainActivity_Loading"
@@ -78,7 +79,7 @@
             android:screenOrientation="landscape" />
         <activity
             android:name=".secondlevel_5"
-            android:screenOrientation="landscape"></activity>
+            android:screenOrientation="landscape" />
         <activity
             android:name=".secondlevel_4"
             android:screenOrientation="landscape" />

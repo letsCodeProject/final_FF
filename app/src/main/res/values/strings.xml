@@ -115,6 +115,10 @@
     <string name="secondlevel_16_3">Y=“نُبرمج”</string>
     <string name="secondlevel_16_4">سيكون جملة </string>
     <string name="lets">هيّا نبرمج.</string>
+    <string name="secondlevel_14_1">لقد تعلمت للتو مفهوم</string>
+    <string name="secondlevel_14_2">المتغيرات\  </string>
+    <string name="secondlevel_14_3">،في لغة بايثون بإمكانك استخدام هذه </string>
+    <string name="secondlevel_14_4">المتغيرات لتطبيق عمليتي الجمع والطرح !</string>
 
 
 </resources>
