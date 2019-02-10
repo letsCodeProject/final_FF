@@ -69,13 +69,9 @@
     <string name="name_box_text"> أدخل اسمك من فضلك </string>
 
     <string name="quiz1_2"> حاول ترتيب المربعات التالية لكي تحصل على  \nالشكل الصحيح لجملة الطباعة:</string>
-    <string name="secondlevel_5"> لإنشاء متغير من نوع  int  ،كل ماعلينا فعله هو وضع الاسم الذي نود\n إطلاقه  على المتغير في اليسار ومن ثم علامة = وبعد ذلك القيمة التي\n نود تخزينها.</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="try_it_yourself"> (جرّب بنفسك)</string>
-    <string name="secondlevel_8_1"> لإنشاء متغير من نوع String ، الأمر سهل جداً و شبيه بطريقة\n إنشاء متغير من نوع int ،</string>
-    <string name="qutetionMarks"> (&quot;&quot;) </string>
-    <string name="secondlevel_8_2"> ولكن فقط علينا زيادة علامة التنصيص\     \        \       \      \قبل و بعد الكلمة المراد تخزينها . </string>
-    <string name="secondlevel_8_3">  على سبيل المثال: </string>
+
     <string name="labeb_withQoutes">&quot;لبيب&quot;</string>
     <string name="neptonentry">أهلاً بك في كوكب نيبتون .</string>
     <string name="neptonentry1">تتميز ألماسات هذا الكوكب  بإنها ذات أنواع مختلفة , ولكي تتمكن من جمعها عليك اولاً معرفة بعض الأساسيات المتعلقه بالمتغيرات و العمليات الحسابية .</string>
@@ -90,8 +86,12 @@
     <string name="secondlevel_5_2"> String و int </string>
     <string name="secondlevel_5_3">مخصص لتخزين الأرقام</string>
     <string name="secondlevel_5_4">مخصص لتخزين النصوص </string>
-
-
+    <string name="secondlevel_6"> لإنشاء متغير من نوع  int  ،كل ماعلينا فعله هو وضع الاسم الذي نود\n إطلاقه  على المتغير في اليسار ومن ثم علامة = وبعد ذلك القيمة التي\n نود تخزينها.</string>
+    <string name="secondlevel_8_1"> لإنشاء متغير من نوع String ، الأمر سهل جداً و شبيه بطريقة\n إنشاء متغير من نوع int ،</string>
+    <string name="qutetionMarks"> (&quot;&quot;) </string>
+    <string name="secondlevel_8_2"> ولكن فقط علينا زيادة علامة التنصيص\     \        \       \      \قبل و بعد الكلمة المراد تخزينها . </string>
+    <string name="secondlevel_8_3">  على سبيل المثال: </string>
+    <string name="secondlevel_9_1"> لإنشاء وطباعة متغير يحتوي على إسم لبيب ، نكتب الأمر التالي : </string>
 
 
 </resources>

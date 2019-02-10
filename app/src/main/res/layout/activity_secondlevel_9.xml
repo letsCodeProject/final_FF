@@ -2,10 +2,10 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="@drawable/back"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".secondlevel_6">
+    android:background="@drawable/back"
+    tools:context=".secondlevel_9">
     <ImageView
         android:id="@+id/imageView38"
         android:layout_width="407dp"
@@ -20,7 +20,7 @@
         tools:layout_editor_absoluteY="167dp" />
 
     <ImageButton
-        android:id="@+id/homebtn_secondlevel5"
+        android:id="@+id/homebtn_secondlevel9"
         android:layout_width="54dp"
         android:layout_height="40dp"
         android:layout_marginStart="8dp"
@@ -38,7 +38,7 @@
         app:srcCompat="@drawable/h" />
 
     <TextView
-        android:id="@+id/ScoreBox_secondlevel_6"
+        android:id="@+id/ScoreBox_secondlevel_9"
         android:layout_width="43dp"
         android:layout_height="31dp"
         android:layout_alignParentStart="true"
@@ -56,7 +56,7 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <ImageView
-        android:id="@+id/secondlevel_5_dimond"
+        android:id="@+id/secondlevel_9_dimond"
         android:layout_width="34dp"
         android:layout_height="34dp"
         android:layout_marginStart="8dp"
@@ -72,7 +72,7 @@
         app:layout_constraintVertical_bias="0.023" />
 
     <TextView
-        android:id="@+id/showMeResultTextView_secondlevel_5"
+        android:id="@+id/showMeResultTextView_secondlevel_9"
         android:layout_width="67dp"
         android:layout_height="29dp"
         android:layout_marginStart="8dp"
@@ -91,7 +91,7 @@
         app:layout_constraintVertical_bias="0.834" />
 
     <TextView
-        android:id="@+id/ResultBox_secondlevel_6"
+        android:id="@+id/ResultBox_secondlevel_9"
         android:layout_width="313dp"
         android:layout_height="40dp"
         android:layout_alignParentBottom="true"
@@ -111,30 +111,29 @@
         app:layout_constraintVertical_bias="0.972" />
 
     <TextView
-        android:id="@+id/textView1_secondlevel_5"
-        android:layout_width="600dp"
-        android:layout_height="115dp"
+        android:id="@+id/textView1_secondlevel_9"
+        android:layout_width="556dp"
+        android:layout_height="104dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:fontFamily="@font/jannalt_regular"
-        android:text="@string/secondlevel_6"
+        android:text="@string/secondlevel_9_1"
         android:textColor="@color/white"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.263"
-        tools:layout_editor_absoluteX="116dp" />
+        app:layout_constraintVertical_bias="0.346" />
 
     <TextView
-        android:id="@+id/textView2_secondlevel_5"
+        android:id="@+id/textView2_secondlevel_9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
-        android:layout_marginStart="336dp"
-        android:layout_marginTop="132dp"
+        android:layout_marginStart="228dp"
+        android:layout_marginTop="120dp"
         android:fontFamily="@font/jannalt_regular"
         android:text="@string/try_it_yourself"
         android:textColor="@color/yellow1"
@@ -143,7 +142,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/ShowMeResultButton_secondlevel_5"
+        android:id="@+id/ShowMeResultButton_secondlevel_9"
         android:layout_width="82dp"
         android:layout_height="33dp"
         android:layout_alignParentBottom="true"
@@ -165,7 +164,7 @@
 
     <ImageView
 
-        android:id="@+id/previous_seconlevel_5"
+        android:id="@+id/previous_seconlevel_9"
         android:layout_width="85dp"
         android:layout_height="38dp"
         android:layout_alignParentEnd="true"
@@ -192,11 +191,12 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/ShowMeResultButton_secondlevel_5"
+        app:layout_constraintBottom_toTopOf="@+id/ShowMeResultButton_secondlevel_9"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView1_secondlevel_5"
-        app:srcCompat="@drawable/secondlevel_6_printpicture" />
+        app:layout_constraintTop_toBottomOf="@+id/textView1_secondlevel_9"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/secondlevel_9_print" />
 
     <ImageView
         android:layout_width="330dp"
@@ -205,10 +205,11 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="256dp"
-        android:src="@drawable/secondlevel_6_progress"
+        android:src="@drawable/secondlevel_9_progressbar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0" />
+
 </android.support.constraint.ConstraintLayout>
