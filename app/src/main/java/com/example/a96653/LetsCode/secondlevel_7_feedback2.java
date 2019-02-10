@@ -20,7 +20,6 @@ public class secondlevel_7_feedback2 extends AppCompatActivity {
         TextView ResultBox=(TextView)findViewById(R.id.ResultBox_secondlevel_7);
         ResultBox.setText("5");
 
-
         //TO VIEW SCORE ON BOX
         TextView textView = (TextView)findViewById(R.id.ScoreBox_secondlevel_7);
         textView.setText(m.getChildScore()+"" );
