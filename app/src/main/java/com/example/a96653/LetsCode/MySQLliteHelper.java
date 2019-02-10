@@ -366,7 +366,12 @@ public class MySQLliteHelper extends SQLiteOpenHelper {
         return recordSet;
     }
 
-
+    public void SubmitResultToQuizTable (int id, int total){
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues cv = new ContentValues();
+        cv.put(SchemClass.LetsCode2.COLUMN_NAME_QUIZRESULT, total);
+        db.update(SchemClass.LetsCode2.Table_Quiz,cv,SchemClass.LetsCode2.COLUMN_NAME_QUIZID +"="+id,null);
+    }
 
 
 

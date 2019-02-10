@@ -71,6 +71,19 @@
 
 
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="neptonentry">أهلاً بك في كوكب نيبتون .</string>
+    <string name="neptonentry1">تتميز ألماسات هذا الكوكب  بإنها ذات أنواع مختلفة , ولكي تتمكن من جمعها عليك اولاً معرفة بعض الأساسيات المتعلقه بالمتغيرات و العمليات الحسابية .</string>
+    <string name="talibutton">التالي</string>
+    <string name="secondlevel_interface2">في البرمجة ، المتغيرات هي كالصناديق لحفظ الأشياء</string>
+    <string name="secondlevel_interface3">بالإمكان أن نصنف هذه الصناديق لحفظ أشياء معينة ، فمثلاً الصندوق الأحمر لحفظ الألعاب و الأزرق لحفظ الكتب </string>
+    <string name="secondlevel_interface4_1">ولكي نميز كل صندوق ،لابد أن نطلق عليه اسماً مميزاً .</string>
+    <string name="secondlevel_interface4_2">ببساطة هذه هي المتغيرات بالنسبة للحاسوب ! هي منطقة لتخزين قيمة معينة نقوم بتخزين القيمة فيها بحيث إذا ما احتجنا لهذه القيمة نقوم فوراً بمناداتها باسمها و استخدامها </string>
+    <string name="secondlevel_interface4_3">الألعاب</string>
+    <string name="secondlevel_interface4_4">الكتب</string>
+    <string name="secondlevel_5_1">سوف نتعرف على أشهر أنواع المتغيرات  ، ألا وهي :  </string>
+    <string name="secondlevel_5_2"> String و int </string>
+    <string name="secondlevel_5_3">مخصص لتخزين الأرقام</string>
+    <string name="secondlevel_5_4">مخصص لتخزين النصوص </string>
 
 
 </resources>
