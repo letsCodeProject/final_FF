@@ -3,11 +3,8 @@ package com.example.a96653.LetsCode;
 import android.app.Dialog;
 import android.content.ClipData;
 import android.content.Intent;
-import android.content.SharedPreferences;
-import android.database.Cursor;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
-import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.DragEvent;
@@ -18,9 +15,11 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class secondlevel_21 extends AppCompatActivity {
+public class secondlevel_26 extends AppCompatActivity {
+
+
     public static MySQLliteHelper sqLiteHelper;
-    TextView target1,target2,target3,textviewX,textview18,textviewEqual,pinX,pin18,pinEqual;
+    TextView target1,target2,target3,textviewX,textviewY,textviewSum,pinX,pinY,pinSum;
     int  res1=0,res2=0,res3=0 ,result, CHECK=0,tt1,tt2,tt3;
     static int questionResult,tg1=0,tg2=0,tg3=0;
     static TextView x1,x2,x3;
@@ -32,7 +31,7 @@ public class secondlevel_21 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_secondlevel_21);
+        setContentView(R.layout.activity_secondlevel_26);
 
         tt1=0;tt2=0;tt3=0;
         myDialog = new Dialog(this);
@@ -42,18 +41,21 @@ public class secondlevel_21 extends AppCompatActivity {
         target3=(TextView)findViewById(R.id.target3);
 
         textviewX=(TextView)findViewById(R.id.textviewX);
-        textviewEqual=(TextView)findViewById(R.id.textviewEqual);
-        textview18=(TextView)findViewById(R.id.textview18);
+        textviewY=(TextView)findViewById(R.id.textviewY);
+        textviewSum=(TextView)findViewById(R.id.textviewSum);
+
 
         pinX=(TextView)findViewById(R.id.pinX);
-        pinEqual=(TextView)findViewById(R.id.pinEqual);
-        pin18=(TextView)findViewById(R.id.pin18);
+        pinY=(TextView)findViewById(R.id.pinY);
+        pinSum=(TextView)findViewById(R.id.pinSum);
+
 
 
 
         textviewX.setOnLongClickListener(longClickListener);
-        textviewEqual.setOnLongClickListener(longClickListener);
-        textview18.setOnLongClickListener(longClickListener);
+        textviewY.setOnLongClickListener(longClickListener);
+        textviewSum.setOnLongClickListener(longClickListener);
+
 
 
         target1.setOnDragListener(dragListener);
@@ -75,14 +77,14 @@ public class secondlevel_21 extends AppCompatActivity {
                         if(textviewX.getX()==target3.getX())  tt1=1;
 
 
-                        if(textview18.getX()==target1.getX())  tt3=1;
-                        if(textview18.getX()==target2.getX())  tt3=1;
-                        if(textview18.getX()==target3.getX())  tt3=1;
+                        if(textviewY.getX()==target1.getX())  tt3=1;
+                        if(textviewY.getX()==target2.getX())  tt3=1;
+                        if(textviewY.getX()==target3.getX())  tt3=1;
 
 
-                        if(textviewEqual.getX()==target1.getX())  tt2=1;
-                        if(textviewEqual.getX()==target2.getX())  tt2=1;
-                        if(textviewEqual.getX()==target3.getX())  tt2=1;
+                        if(textviewSum.getX()==target1.getX())  tt2=1;
+                        if(textviewSum.getX()==target2.getX())  tt2=1;
+                        if(textviewSum.getX()==target3.getX())  tt2=1;
 
 
                         result=res1+res2+res3;
@@ -164,21 +166,21 @@ public class secondlevel_21 extends AppCompatActivity {
                             res1++;
 
                         }
-                        if (view.getId() == R.id.textview18 && v.getId() == R.id.target1 && tg1 == 0) {
+                        if (view.getId() == R.id.textviewY && v.getId() == R.id.target1 && tg1 == 0) {
                             view.animate().x(target1.getX()).y(target1.getY()).setDuration(80).start();
                             vt1 = view;
                             tg1=1;
-                            x1 = pin18;
+                            x1 = pinY;
                             res1=0;
 
 
 
                         }
-                        if (view.getId() == R.id.textviewEqual && v.getId() == R.id.target1 && tg1 == 0) {
+                        if (view.getId() == R.id.textviewSum && v.getId() == R.id.target1 && tg1 == 0) {
                             view.animate().x(target1.getX()).y(target1.getY()).setDuration(80).start();
                             vt1 = view;
                             tg1=1;
-                            x1 = pinEqual;
+                            x1 = pinSum;
                             res1=0;
 
                         }
@@ -208,11 +210,11 @@ public class secondlevel_21 extends AppCompatActivity {
 
                         }
 
-                        if (view.getId() == R.id.textview18 && v.getId() == R.id.target2 && tg2 == 0) {
+                        if (view.getId() == R.id.textviewY && v.getId() == R.id.target2 && tg2 == 0) {
                             view.animate().x(target2.getX()).y(target2.getY()).setDuration(80).start();
                             vt2 = view;
                             tg2=1;
-                            x2 = pin18;
+                            x2 = pinY;
                             res2=0;
 
 
@@ -220,11 +222,11 @@ public class secondlevel_21 extends AppCompatActivity {
 
                         }
 
-                        if (view.getId() == R.id.textviewEqual && v.getId() == R.id.target2 && tg2 == 0) {
+                        if (view.getId() == R.id.textviewSum && v.getId() == R.id.target2 && tg2 == 0) {
                             view.animate().x(target2.getX()).y(target2.getY()).setDuration(80).start();
                             vt2 = view;
                             tg2=1;
-                            x2 = pinEqual;
+                            x2 = pinSum;
                             res2++;
 
                         }
@@ -253,19 +255,19 @@ public class secondlevel_21 extends AppCompatActivity {
 
                         }
 
-                        if (view.getId() == R.id.textview18 && v.getId() == R.id.target3 && tg3 == 0) {
+                        if (view.getId() == R.id.textviewY&& v.getId() == R.id.target3 && tg3 == 0) {
                             view.animate().x(target3.getX()).y(target3.getY()).setDuration(80).start();
                             vt3 = view;
                             tg3=1;
-                            x3 = pin18;
+                            x3 = pinY;
                             res3++;
                         }
 
-                        if (view.getId() == R.id.textviewEqual && v.getId() == R.id.target3 && tg3 == 0) {
+                        if (view.getId() == R.id.textviewSum && v.getId() == R.id.target3 && tg3 == 0) {
                             view.animate().x(target3.getX()).y(target3.getY()).setDuration(80).start();
                             vt3 = view;
                             tg3=1;
-                            x3 = pinEqual;
+                            x3 = pinSum;
                             res3=0;
 
                         }
@@ -298,8 +300,8 @@ public class secondlevel_21 extends AppCompatActivity {
 
     public void reOrder(View view) {
         textviewX.animate().x(pinX.getX()).y(pinX.getY()).setDuration(100).start();tt1=0;
-        textview18.animate().x(pin18.getX()).y(pin18.getY()).setDuration(100).start();tt2=0;
-        textviewEqual.animate().x(pinEqual.getX()).y(pinEqual.getY()).setDuration(100).start();tt3=0;
+        textviewY.animate().x(pinY.getX()).y(pinY.getY()).setDuration(100).start();tt2=0;
+        textviewSum.animate().x(pinSum.getX()).y(pinSum.getY()).setDuration(100).start();tt3=0;
         res1=0;res2=0;res3=0;
 
 
@@ -310,7 +312,7 @@ public class secondlevel_21 extends AppCompatActivity {
     public void ShowPopup(View v) {
 
         Button btnClose;
-        myDialog.setContentView(R.layout.hint2_2);
+        myDialog.setContentView(R.layout.hint2_5);
         btnClose =(Button) myDialog.findViewById(R.id.okaybtn);
 
 

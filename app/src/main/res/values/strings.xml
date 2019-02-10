@@ -60,6 +60,7 @@
     <string name="fist_level_5_2"> أنت جاهز لجمع الألماسات!  \nفلنجمعها معاً! </string>
     <string name="mission1">مهمة رقم 1: </string>
     <string name="mission2">مهمة رقم 2: </string>
+    <string name="mission5">مهمة رقم 5: </string>
     <string name="quiz1_1">  اختر الإجابة الصحيحة : نستخدم لغة بايثون في : </string>
     <string name="answer1">  صناعة التطبيقات </string>
     <string name="answer2">  التواصل مع البشر </string>
@@ -72,5 +73,6 @@
     <string name="secondlevel_5"> لإنشاء متغير من نوع  int  ،كل ماعلينا فعله هو وضع الاسم الذي نود\n إطلاقه  على المتغير في اليسار ومن ثم علامة = وبعد ذلك القيمة التي\n نود تخزينها.</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="try_it_yourself"> (جرّب بنفسك)</string>
+
 
 </resources>
