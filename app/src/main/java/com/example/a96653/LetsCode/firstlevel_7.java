@@ -119,13 +119,12 @@ public class firstlevel_7 extends AppCompatActivity {
                            SharedPreferences prefs = getSharedPreferences("pref12", MODE_PRIVATE);
                             boolean firstStart = prefs.getBoolean("firstStart", true);
                             if (firstStart) {
-                                sqLiteHelper.UpdateNumOfLesson(1, "Ploto");
+                                sqLiteHelper.UpdateNumOfLesson(8, "Ploto");
                                 SharedPreferences pref = getSharedPreferences("prefs12", MODE_PRIVATE);
                                 SharedPreferences.Editor editor = prefs.edit();
                                 editor.putBoolean("firstStart", false);
-                                editor.apply();
-                            }
-                            ///CLEARING PREFRENCES
+                                editor.apply(); }
+                           ////CLEARING PREFRENCES
                             SharedPreferences preferences = getSharedPreferences("pref2", MODE_PRIVATE);
                             SharedPreferences.Editor editor = preferences.edit();
                             editor.clear();
@@ -155,12 +154,12 @@ public class firstlevel_7 extends AppCompatActivity {
                             editor5.clear();
                             editor5.commit();
                             finish();
-                            //////
+                           /* //////
                             SharedPreferences preferences6 = getSharedPreferences("pref11", MODE_PRIVATE);
                             SharedPreferences.Editor editor6 = preferences6.edit();
                             editor6.clear();
                             editor6.commit();
-                            finish();
+                            finish();*/
                             //////
                             SharedPreferences preferences7 = getSharedPreferences("pref12", MODE_PRIVATE);
                             SharedPreferences.Editor editor7 = preferences7.edit();

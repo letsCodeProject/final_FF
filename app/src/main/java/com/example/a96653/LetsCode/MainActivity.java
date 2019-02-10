@@ -111,8 +111,27 @@ public class MainActivity extends AppCompatActivity {
 
                 }
                 );
+       //OPENING NEPTON LEVEL
+        //END IF
 
-    }
+        if( levelStatus=m.getLevelStatus("Nepton")==true) {
+
+            nepton.setOnClickListener(new Button.OnClickListener() {
+
+                public void onClick(View v) {
+
+
+                                               try {
+                                                   openNeptonActivity(m, finalLnum);
+                                               } catch (ClassNotFoundException e) {
+                                                   e.printStackTrace();
+                                               }
+                                          }
+
+                                      }
+            );
+        }
+    }//END ONcreate
 
 ////
 
@@ -134,6 +153,36 @@ public class MainActivity extends AppCompatActivity {
             //Intent  intent = new Intent(this,firstlevel_5.class);
 
         startActivity(intent);}
+        catch (Exception e){e.printStackTrace();}
+
+    }
+    //OPENING NEPTON ACTIVITY .
+    public void openNeptonActivity(MySQLliteHelper M,int lnum2) throws ClassNotFoundException {
+      /*  Intent  intent = new Intent(this,secondlevel_6.class);
+        startActivity(intent);*/
+        SharedPreferences prefs = getSharedPreferences("FIRSTSTARTOFNEPTON", MODE_PRIVATE);
+        boolean firstStart = prefs.getBoolean("firstStart", true);
+        if (firstStart){
+            M.UpdateNumOfLesson(14,"Nepton");
+            SharedPreferences pref = getSharedPreferences("FIRSTSTARTOFNEPTON", MODE_PRIVATE);
+            SharedPreferences.Editor editor = prefs.edit();
+            editor.putBoolean("firstStart", false);
+            editor.apply();}
+        lnum2=M.getNumOfLessonPassed("Nepton");
+        TextView t=(TextView)findViewById(R.id.textView47);
+      /* if (){
+           M.UpdateNumOfLesson(1,"Ploto");
+       }*/
+        Lesson l=new Lesson();
+        String name=l.getName(M.getNumOfLessonPassed("Nepton"));
+        t.setText(name);
+        Class c;
+        try{
+            c = Class.forName("com.example.a96653.LetsCode."+name);
+
+           Intent  intent = new Intent(this,c);
+            //Intent  intent = new Intent(this,secondlevel_26.class);
+            startActivity(intent);}
         catch (Exception e){e.printStackTrace();}
 
     }
