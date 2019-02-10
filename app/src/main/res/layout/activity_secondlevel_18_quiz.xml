@@ -31,11 +31,6 @@
         app:layout_constraintVertical_bias="0.125" />
 
 
-
-
-
-
-
     <ImageView
         android:id="@+id/neptonback"
         android:layout_width="223dp"
@@ -52,7 +47,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/neptonback" />
+        android:alpha="0.2"
+        app:srcCompat="@drawable/newnepton" />
 
     <ImageView
         android:id="@+id/imageView49"
@@ -183,7 +179,7 @@
         android:id="@+id/string1_button13"
         android:layout_width="62dp"
         android:layout_height="31dp"
-        android:background="@color/lightblue"
+        android:background="@color/light_blue"
         android:text="لبيب"
         android:textColor="@color/white"
         android:textSize="20dp"
@@ -198,7 +194,7 @@
         android:id="@+id/string2_button14"
         android:layout_width="61dp"
         android:layout_height="31dp"
-        android:background="@color/lightblue"
+        android:background="@color/light_blue"
         android:text="زحل 3"
         android:textColor="@color/white"
         android:textSize="20dp"
@@ -213,7 +209,7 @@
         android:id="@+id/integer1_button15"
         android:layout_width="65dp"
         android:layout_height="30dp"
-        android:background="@color/lightblue"
+        android:background="@color/light_blue"
         android:text="5"
         android:textColor="@color/white"
         android:textSize="20dp"
@@ -228,7 +224,7 @@
         android:id="@+id/integer2_button16"
         android:layout_width="64dp"
         android:layout_height="31dp"
-        android:background="@color/lightblue"
+        android:background="@color/light_blue"
         android:text="100"
         android:textColor="@color/white"
         android:textSize="20dp"
@@ -243,7 +239,7 @@
         android:id="@+id/string3_button17"
         android:layout_width="65dp"
         android:layout_height="31dp"
-        android:background="@color/lightblue"
+        android:background="@color/light_blue"
         android:text="''10''"
         android:textColor="@color/white"
         android:textSize="20dp"
@@ -273,15 +269,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/newnext" />
-
-
-
-
-
-
-
-
-
 
 
 </android.support.constraint.ConstraintLayout>
