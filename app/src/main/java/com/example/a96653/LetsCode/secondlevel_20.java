@@ -3,11 +3,8 @@ package com.example.a96653.LetsCode;
 import android.app.Dialog;
 import android.content.ClipData;
 import android.content.Intent;
-import android.content.SharedPreferences;
-import android.database.Cursor;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
-import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.DragEvent;
@@ -18,7 +15,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class secondlevel_21 extends AppCompatActivity {
+public class secondlevel_20 extends AppCompatActivity {
     public static MySQLliteHelper sqLiteHelper;
     TextView target1,target2,target3,textviewX,textview18,textviewEqual,pinX,pin18,pinEqual;
     int  res1=0,res2=0,res3=0 ,result, CHECK=0,tt1,tt2,tt3;
@@ -32,7 +29,13 @@ public class secondlevel_21 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_secondlevel_21);
+        setContentView(R.layout.activity_secondlevel_20);
+        MySQLliteHelper sqLiteHelper=new MySQLliteHelper(this);
+
+        //TO VIEW SCORE ON BOX
+        TextView textView = (TextView)findViewById(R.id.ScoreBox_secondlevel_21);
+        textView.setText(sqLiteHelper.getChildScore()+"" );
+
 
         tt1=0;tt2=0;tt3=0;
         myDialog = new Dialog(this);
@@ -332,3 +335,4 @@ public class secondlevel_21 extends AppCompatActivity {
     }
 
 }
+

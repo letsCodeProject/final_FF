@@ -9,13 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
-
-        <activity android:name=".secondlevel_11"></activity>
-=======
-
+         <activity android:name=".secondlevel_11" />
         <activity android:name=".secondlevel_14" />
-
->>>>>>> Stashed changes
         <activity
             android:name=".MainActivity_Loading"
             android:screenOrientation="landscape">
@@ -116,6 +111,9 @@
             android:screenOrientation="landscape" />
         <activity
             android:name=".secondlevel_17"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".secondlevel_20"
             android:screenOrientation="landscape" />
     </application>
 
