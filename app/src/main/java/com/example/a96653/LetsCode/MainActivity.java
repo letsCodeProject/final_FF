@@ -1,6 +1,7 @@
 package com.example.a96653.LetsCode;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.media.Image;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -131,6 +132,19 @@ public class MainActivity extends AppCompatActivity {
                                       }
             );
         }
+
+        if (m.getLevelStatus("Nepton")==true){
+
+            nepton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent gotoneptonlessons=new Intent (getApplicationContext(),secondlevel_1.class);
+                    startActivity(gotoneptonlessons);
+                }
+            });
+
+        }//end if
+
     }//END ONcreate
 
 ////
@@ -196,6 +210,9 @@ public class MainActivity extends AppCompatActivity {
         SharedPreferences.Editor editor = prefs.edit();
         editor.putBoolean("firstStart", false);
         editor.apply();
+
+
+
     }
 
 }
