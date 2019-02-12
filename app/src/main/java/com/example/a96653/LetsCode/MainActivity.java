@@ -163,7 +163,7 @@ public class MainActivity extends AppCompatActivity {
         SharedPreferences prefs = getSharedPreferences("FIRSTSTARTOFNEPTON", MODE_PRIVATE);
         boolean firstStart = prefs.getBoolean("firstStart", true);
         if (firstStart){
-            M.UpdateNumOfLesson(14,"Nepton");
+            M.UpdateNumOfLesson(9,"Nepton");
             SharedPreferences pref = getSharedPreferences("FIRSTSTARTOFNEPTON", MODE_PRIVATE);
             SharedPreferences.Editor editor = prefs.edit();
             editor.putBoolean("firstStart", false);
@@ -180,8 +180,8 @@ public class MainActivity extends AppCompatActivity {
         try{
             c = Class.forName("com.example.a96653.LetsCode."+name);
 
-           //Intent  intent = new Intent(this,c);
-            Intent  intent = new Intent(this,secondlevel_20.class);
+           Intent  intent = new Intent(this,c);
+           // Intent  intent = new Intent(this,secondlevel_1.class);
             startActivity(intent);}
         catch (Exception e){e.printStackTrace();}
 

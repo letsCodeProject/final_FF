@@ -1,6 +1,7 @@
 package com.example.a96653.LetsCode;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -46,9 +47,34 @@ public class secondlevel_7_feedback2 extends AppCompatActivity {
                 }
 
         );
+//NEXT BUTTON
+        ImageView goButton=(ImageView) findViewById(R.id.next);
 
+        goButton.setOnClickListener(
+                new Button.OnClickListener(){
+                    public void onClick(View v){
+                        openSecondActivity();
+                        SharedPreferences prefs = getSharedPreferences("pref_secondLevel_7", MODE_PRIVATE);
+                        boolean firstStart = prefs.getBoolean("firstStart", true);
+                        if (firstStart){
+                            m.UpdateNumOfLesson(15,"Nepton");
+                            SharedPreferences pref = getSharedPreferences("pref_secondLevel_7", MODE_PRIVATE);
+                            SharedPreferences.Editor editor = prefs.edit();
+                            editor.putBoolean("firstStart", false);
+                            editor.apply();}
+                    }//end onClick
+
+                }//end onClickListner
+
+        );
 
     }//END onCREATE
+    public void openSecondActivity() {
+
+        Intent intent = new Intent(this, seconlevel_8.class);
+        startActivity(intent);
+
+    }
 
     public void openPreviousActivity(){
 

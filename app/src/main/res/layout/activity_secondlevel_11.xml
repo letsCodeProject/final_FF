@@ -102,6 +102,7 @@
         app:srcCompat="@drawable/newpre" />
 
     <ImageView
+        android:id="@+id/imageView77"
         android:layout_width="330dp"
         android:layout_height="80dp"
         android:layout_marginStart="8dp"
@@ -139,13 +140,21 @@
         android:layout_height="179dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
         android:fontFamily="@font/jannalt_regular"
         android:text="@string/secondlevel_11_1"
         android:textAlignment="textStart"
         android:textColor="@color/white"
         android:textSize="20sp"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="64dp" />
+        app:layout_constraintBottom_toBottomOf="@+id/imageView38"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/imageView59"
+        app:layout_constraintTop_toBottomOf="@+id/imageView77"
+        app:layout_constraintVertical_bias="0.8" />
 
     <ImageView
         android:id="@+id/imageView59"

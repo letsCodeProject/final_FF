@@ -24,11 +24,11 @@ public class secondlevel_6 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //when the show result button clicked for first time we update the numOfLessonPassed in db .
-                SharedPreferences prefs = getSharedPreferences("pref_secondLevel_l6", MODE_PRIVATE);
+                SharedPreferences prefs = getSharedPreferences("pref_secondLevel_6", MODE_PRIVATE);
                 boolean firstStart = prefs.getBoolean("firstStart", true);
                 if (firstStart){
                     m.UpdateNumOfLesson(14,"Nepton");
-                    SharedPreferences pref = getSharedPreferences("pref_secondLevel_l6", MODE_PRIVATE);
+                    SharedPreferences pref = getSharedPreferences("pref_secondLevel_6", MODE_PRIVATE);
                     SharedPreferences.Editor editor = prefs.edit();
                     editor.putBoolean("firstStart", false);
                     editor.apply();}
