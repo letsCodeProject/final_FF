@@ -33,7 +33,7 @@ public class firstlevel_resultsheet extends AppCompatActivity {
     MediaPlayer rightAnswerVoice;
     MediaPlayer wrongAnswerVoice;
     voice resultsheet;
-    int minimum=5;
+    int minimum=10;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

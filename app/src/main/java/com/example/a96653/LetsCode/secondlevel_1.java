@@ -6,6 +6,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
+import android.widget.TextView;
 
 public class secondlevel_1 extends AppCompatActivity {
 
@@ -34,7 +36,21 @@ public class secondlevel_1 extends AppCompatActivity {
     }//end onClickListner
 
         );
+        //scoreBox display
+        TextView scoredisplay=(TextView) findViewById(R.id.scoreBox_firstlevel);
+        scoredisplay.setText(m.getChildScore()+"" );
 
+
+        //HOME BUTTON
+        ImageButton homebtn6=(ImageButton)findViewById(R.id.homebtn6);
+        homebtn6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent gohome=new Intent (getApplicationContext(),MainActivity.class);
+                startActivity(gohome);
+
+            }
+        });
 }//end onCreate
 
     public void openSecondActivity() {
@@ -43,4 +59,4 @@ public class secondlevel_1 extends AppCompatActivity {
         startActivity(intent);
 
     }
-}//end class
+}
