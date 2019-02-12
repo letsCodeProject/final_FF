@@ -133,7 +133,7 @@ public class MainActivity extends AppCompatActivity {
             );
         }
 
-        if (m.getLevelStatus("Nepton")==true){
+       /* if (m.getLevelStatus("Nepton")==true){
 
             nepton.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -143,7 +143,7 @@ public class MainActivity extends AppCompatActivity {
                 }
             });
 
-        }//end if
+        }//end if*/
 
     }//END ONcreate
 
