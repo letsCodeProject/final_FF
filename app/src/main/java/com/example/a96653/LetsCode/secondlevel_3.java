@@ -51,6 +51,7 @@ next4.setOnClickListener(new View.OnClickListener() {
 
     }
 });
+///////
 
 
     }//end of oncreate

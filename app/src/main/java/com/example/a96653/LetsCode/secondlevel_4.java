@@ -31,7 +31,7 @@ public class secondlevel_4 extends AppCompatActivity {
                 startActivity(gohome);
             }
         });
-
+///
 
         ImageView previous5=(ImageView)findViewById(R.id.previous5);
         previous5.setOnClickListener(new View.OnClickListener() {

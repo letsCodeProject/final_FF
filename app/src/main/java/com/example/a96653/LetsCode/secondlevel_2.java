@@ -46,7 +46,7 @@ public class secondlevel_2 extends AppCompatActivity {
               GoNext();
           }
       });
-
+  //// 
     }//Oncreate method closing
     //Previus button
     public void GoToprevious(){
