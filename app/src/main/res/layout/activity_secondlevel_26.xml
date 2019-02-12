@@ -28,6 +28,7 @@
         app:layout_constraintVertical_bias="0.0" />
     <TextView
 
+        android:id="@+id/ScoreBox_secondlevel_26"
         android:layout_width="43dp"
         android:layout_height="31dp"
         android:layout_alignBottom="@+id/imageView14"
@@ -82,7 +83,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
-        android:text="@string/quiz1_2"
+        android:text="@string/secondlevel_20_2"
         android:textColor="@color/white"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -91,7 +92,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.316"
-        tools:text="حاول وضع القيمة المناسبة في الفراغ   \n لتحصل على النتيجة : سأجمع ألماسات    كوكب نبتون !" />
+         />
 
     <ImageView
         android:id="@+id/homebtn77"

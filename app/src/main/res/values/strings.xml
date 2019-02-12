@@ -122,6 +122,9 @@
     <string name="secondlevel_14_4">المتغيرات لتطبيق عمليتي الجمع والطرح !</string>
     <string name="secondlevel_17_1">ّوالان، لكي تجمع ألماسات هذا الكوكب عليك ان تجتاز التحدي التالي:</string>
     <string name="secondlevel_18_boxes">حاول وضع المتغيرات التالية في الصندوق المناسب :</string>
+    <string name="secondlevel_20_1">إذا أردنا الاحتفاظ بالرقم 18  في المتغير X  \n  فهل بإمكانك ترتيب المربعات التالية \n  لفعل ذلك بالشكل الصحيح ؟</string>
+    <string name="secondlevel_20_2">حاول وضع القيمة المناسبة في الفراغ   \n لتحصل على النتيجة : سأجمع ألماسات    كوكب نبتون !</string>
+    <string name="answer_the_question">فضلاً:أكمل حل السؤال أولاً</string>
 
 
 </resources>

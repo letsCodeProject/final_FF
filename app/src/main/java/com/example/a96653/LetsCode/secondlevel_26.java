@@ -32,6 +32,11 @@ public class secondlevel_26 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_secondlevel_26);
+        MySQLliteHelper sqLiteHelper=new MySQLliteHelper(this);
+
+        //TO VIEW SCORE ON BOX
+        TextView textView = (TextView)findViewById(R.id.ScoreBox_secondlevel_21);
+        textView.setText(sqLiteHelper.getChildScore()+"" );
 
         tt1=0;tt2=0;tt3=0;
         myDialog = new Dialog(this);

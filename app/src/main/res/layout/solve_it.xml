@@ -35,7 +35,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
         android:fontFamily="@font/jannalt_regular"
-        android:text="فضلاً:أكمل حل السؤال أولاً"
+        android:text="@string/answer_the_question"
         android:textAlignment="textStart"
         android:textColor="#6100ED"
         android:textSize="16sp"
