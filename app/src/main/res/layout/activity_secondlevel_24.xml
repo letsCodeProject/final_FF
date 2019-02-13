@@ -15,7 +15,7 @@
         android:layout_width="64dp"
         android:layout_height="33dp"
         android:layout_marginStart="268dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="12dp"
         android:background="@drawable/choiceshapee"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -183,7 +183,7 @@
         android:id="@+id/radio1"
         android:layout_width="152dp"
         android:layout_height="0dp"
-        android:layout_marginStart="344dp"
+        android:layout_marginStart="340dp"
         android:layout_marginTop="240dp"
         android:layout_weight="0.5"
         android:backgroundTint="@color/white"
@@ -197,7 +197,7 @@
         android:layout_width="150dp"
         android:layout_height="23dp"
 
-        android:layout_marginStart="348dp"
+        android:layout_marginStart="344dp"
         android:layout_marginTop="314dp"
 
 
@@ -209,24 +209,25 @@
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
 
 
     <RadioButton
         android:id="@+id/radio3"
-        android:layout_width="150dp"
-        android:layout_height="26dp"
+        android:layout_width="148dp"
+        android:layout_height="28dp"
         android:layout_marginStart="168dp"
         android:layout_marginTop="32dp"
-        android:layout_marginBottom="32dp"
+        android:layout_marginBottom="8dp"
         android:layout_weight="0.5"
         android:backgroundTint="@color/white"
         android:buttonTint="@color/white"
         android:shadowColor="@color/white"
-        app:layout_constraintBottom_toTopOf="@+id/choiceTwo"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.779" />
 
     <RadioButton
         android:id="@+id/radio4"
@@ -236,7 +237,7 @@
         android:layout_marginStart="168dp"
 
 
-        android:layout_marginTop="296dp"
+        android:layout_marginTop="292dp"
         android:layout_weight="0.5"
         android:backgroundTint="@color/white"
         android:buttonTint="@color/white"
@@ -290,7 +291,8 @@
         android:id="@+id/textView53"
         android:layout_width="28dp"
         android:layout_height="36dp"
-        android:layout_marginEnd="284dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="272dp"
         android:text="X"
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
@@ -322,22 +324,23 @@
         android:id="@+id/textView63"
         android:layout_width="75dp"
         android:layout_height="27dp"
-        android:layout_marginStart="72dp"
+        android:layout_marginStart="68dp"
         android:layout_marginTop="312dp"
         android:layout_marginBottom="24dp"
         android:text="لا شيْ"
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.714" />
 
     <ImageView
 
         android:id="@+id/next"
-        android:layout_width="128dp"
-        android:layout_height="51dp"
-        android:layout_marginStart="460dp"
-        android:layout_marginTop="284dp"
+        android:layout_width="85dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="488dp"
+        android:layout_marginTop="276dp"
         android:contentDescription="@string/desc"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
