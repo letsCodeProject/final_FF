@@ -335,9 +335,9 @@
     <ImageView
 
         android:id="@+id/next"
-        android:layout_width="128dp"
-        android:layout_height="51dp"
-        android:layout_marginStart="460dp"
+        android:layout_width="85dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="488dp"
         android:layout_marginTop="284dp"
         android:contentDescription="@string/desc"
         app:layout_constraintStart_toStartOf="parent"
