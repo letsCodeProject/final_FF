@@ -10,10 +10,13 @@
     <ImageView
 
         android:id="@+id/next3"
-        android:layout_width="128dp"
-        android:layout_height="44dp"
-        android:layout_marginStart="456dp"
-        android:layout_marginTop="276dp"
+        android:layout_width="85dp"
+        android:layout_height="38dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="478dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="279dp"
         android:contentDescription="@string/desc"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -22,11 +25,13 @@
     <ImageView
 
         android:id="@+id/imageView71"
-        android:layout_width="124dp"
-        android:layout_height="41dp"
+        android:layout_width="85dp"
+        android:layout_height="38dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginTop="279dp"
+
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="280dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/newpre" />
@@ -134,12 +139,12 @@
 
     <TextView
         android:id="@+id/scoreBox"
-        android:layout_width="34dp"
-        android:layout_height="wrap_content"
+        android:layout_width="43dp"
+        android:layout_height="31dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
 
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="14dp"
         android:layout_marginEnd="8dp"
         android:background="@drawable/textviewborder"
         android:gravity="center"
@@ -153,8 +158,8 @@
 
     <ImageButton
         android:id="@+id/homebtn9"
-        android:layout_width="48dp"
-        android:layout_height="35dp"
+        android:layout_width="54dp"
+        android:layout_height="40dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
@@ -163,10 +168,10 @@
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.053"
+        app:layout_constraintHorizontal_bias="0.011"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintVertical_bias="0.025"
         app:srcCompat="@drawable/h" />
 
     <ImageView
@@ -192,8 +197,8 @@
 
     <TextView
         android:id="@+id/textView72"
-        android:layout_width="518dp"
-        android:layout_height="76dp"
+        android:layout_width="532dp"
+        android:layout_height="58dp"
         android:layout_marginStart="53dp"
         android:layout_marginTop="59dp"
         android:text="@string/secondlevel_15_1"
@@ -207,7 +212,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="420dp"
-        android:layout_marginTop="84dp"
+        android:layout_marginTop="88dp"
         android:text="@string/x"
         android:textColor="@color/yellow1"
         android:textSize="20sp"
@@ -216,25 +221,25 @@
 
     <TextView
         android:id="@+id/textView74"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="69dp"
+        android:layout_height="25dp"
         android:layout_marginStart="348dp"
         android:layout_marginTop="81dp"
-        android:layout_marginBottom="227dp"
+        android:layout_marginBottom="8dp"
         android:text="@string/var"
         android:textColor="@color/light_font"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.2" />
+        app:layout_constraintVertical_bias="0.031" />
 
     <TextView
         android:id="@+id/textView75"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="312dp"
-        android:layout_marginTop="84dp"
+        android:layout_marginTop="88dp"
         android:text="@string/y"
         android:textColor="@color/yellow1"
         android:textSize="20sp"
@@ -245,8 +250,8 @@
         android:id="@+id/textView76"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="184dp"
-        android:layout_marginTop="84dp"
+        android:layout_marginStart="196dp"
+        android:layout_marginTop="88dp"
         android:text="@string/secondlevel_15_2"
         android:textColor="@color/light_font"
         android:textSize="20sp"
@@ -257,8 +262,8 @@
         android:id="@+id/textView77"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="72dp"
-        android:layout_marginTop="81dp"
+        android:layout_marginStart="92dp"
+        android:layout_marginTop="84dp"
         android:text="@string/six"
         android:textColor="@color/yellow1"
         android:textSize="24sp"
@@ -286,4 +291,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/secondlevel_15_compiler" />
+
+    <TextView
+        android:id="@+id/textView93"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="476dp"
+        android:layout_marginBottom="220dp"
+        android:text="@string/secondlevel_15_3"
+        android:textColor="@color/light_font"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 </android.support.constraint.ConstraintLayout>
