@@ -275,7 +275,7 @@ public class firstlevel_7 extends AppCompatActivity {
                             vt1 = view;
                             tg1=1;CH2=1;
                             x1 = pinPrint;
-                            res1++;
+                            res1=1;
 
                             pg=v;
 
@@ -332,7 +332,7 @@ public class firstlevel_7 extends AppCompatActivity {
                             vt2 = view;
                             tg2=1;CH1=1;
                             x2 = pinRight;
-                            res2++;
+                            res2=1;
                             rg=v;
                         }
 
@@ -433,7 +433,7 @@ public class firstlevel_7 extends AppCompatActivity {
                             lg=v;
 
 
-                            res3++;
+                            res3=1;
 
                         }
                     }
@@ -485,7 +485,7 @@ public class firstlevel_7 extends AppCompatActivity {
 
                             gg=v;
                             g=1;
-                            res4++;
+                            res4=1;
 
 
                         }

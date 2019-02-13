@@ -164,7 +164,7 @@ public class secondlevel_20 extends AppCompatActivity {
                             vt1 = view;
                             x1 = pinX;
                             tg1=1;
-                            res1++;
+                            res1=1;
 
                         }
                         if (view.getId() == R.id.textview18 && v.getId() == R.id.target1 && tg1 == 0) {
@@ -228,7 +228,7 @@ public class secondlevel_20 extends AppCompatActivity {
                             vt2 = view;
                             tg2=1;
                             x2 = pinEqual;
-                            res2++;
+                            res2=1;
 
                         }
 
@@ -261,7 +261,7 @@ public class secondlevel_20 extends AppCompatActivity {
                             vt3 = view;
                             tg3=1;
                             x3 = pin18;
-                            res3++;
+                            res3=1;
                         }
 
                         if (view.getId() == R.id.textviewEqual && v.getId() == R.id.target3 && tg3 == 0) {
