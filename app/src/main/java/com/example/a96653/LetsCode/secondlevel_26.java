@@ -32,10 +32,10 @@ public class secondlevel_26 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_secondlevel_26);
-        MySQLliteHelper sqLiteHelper=new MySQLliteHelper(this);
+        sqLiteHelper=new MySQLliteHelper(this);
 
         //TO VIEW SCORE ON BOX
-        TextView textView = (TextView)findViewById(R.id.ScoreBox_secondlevel_21);
+        TextView textView = (TextView)findViewById(R.id.ScoreBox_secondlevel_26);
         textView.setText(sqLiteHelper.getChildScore()+"" );
 
         tt1=0;tt2=0;tt3=0;
@@ -168,7 +168,7 @@ public class secondlevel_26 extends AppCompatActivity {
                             vt1 = view;
                             x1 = pinX;
                             tg1=1;
-                            res1++;
+                            res1=1;
 
                         }
                         if (view.getId() == R.id.textviewY && v.getId() == R.id.target1 && tg1 == 0) {
@@ -232,7 +232,7 @@ public class secondlevel_26 extends AppCompatActivity {
                             vt2 = view;
                             tg2=1;
                             x2 = pinSum;
-                            res2++;
+                            res2=1;
 
                         }
 
@@ -265,7 +265,7 @@ public class secondlevel_26 extends AppCompatActivity {
                             vt3 = view;
                             tg3=1;
                             x3 = pinY;
-                            res3++;
+                            res3=1;
                         }
 
                         if (view.getId() == R.id.textviewSum && v.getId() == R.id.target3 && tg3 == 0) {
@@ -339,3 +339,10 @@ public class secondlevel_26 extends AppCompatActivity {
     }
 
 }
+
+
+
+
+
+
+

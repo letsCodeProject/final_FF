@@ -48,7 +48,7 @@ public class secondlevel_1 extends AppCompatActivity {
 
     //METHOD FOR TALI
     public void GoNext(){
-        Intent gonext=new Intent(getApplicationContext(),secondlevel_2.class);
+        Intent gonext=new Intent(getApplicationContext(),secondlevel_20.class);
         startActivity(gonext);
     }
 }

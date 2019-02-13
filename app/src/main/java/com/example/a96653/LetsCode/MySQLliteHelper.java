@@ -266,6 +266,8 @@ public class MySQLliteHelper extends SQLiteOpenHelper {
 
     }
 
+
+
     //update the value of answer
     public void UpdateQuestionAnswer(int questionid, int answer){
         SQLiteDatabase db = this.getWritableDatabase();
