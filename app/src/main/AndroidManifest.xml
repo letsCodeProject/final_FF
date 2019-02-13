@@ -112,20 +112,39 @@
             android:name=".secondlevel_12"
             android:screenOrientation="landscape" />
         <activity
-            android:name=".secondlevel_13"
+            android:name=".secondlevel_13_feedback"
             android:screenOrientation="landscape" />
         <activity
             android:name=".secondlevel_14"
             android:screenOrientation="landscape" />
         <activity
-            android:name=".secondlevel_26"
+            android:name=".secondlevel_15"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".secondlevel_16"
             android:screenOrientation="landscape" />
         <activity
             android:name=".secondlevel_17"
             android:screenOrientation="landscape" />
         <activity
+            android:name=".secondlevel_18_quiz"
+            android:screenOrientation="landscape" />
+        <activity
             android:name=".secondlevel_20"
             android:screenOrientation="landscape" />
+        <activity
+            android:name=".secondlevel_22"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".secondlevel_24"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".secondlevel_26"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".secondlevel_resultsheet"
+            android:screenOrientation="landscape" />
+
     </application>
 
 </manifest>

@@ -40,7 +40,7 @@ public class secondlevel_5 extends AppCompatActivity {
         //scoreBox display
         TextView scoredisplay=(TextView) findViewById(R.id.scoreBox_firstlevel5);
         scoredisplay.setText(m.getChildScore()+"" );
-
+//HOME BUTTON
         ImageButton homebtn12=(ImageButton)findViewById(R.id.homebtn12);
 
         homebtn12.setOnClickListener(new View.OnClickListener() {

@@ -21,7 +21,7 @@ public class secondlevel_10_feedback extends AppCompatActivity {
       final   MySQLliteHelper m=new MySQLliteHelper(this);
         ///to show result
         TextView ResultBox=(TextView)findViewById(R.id.ResultBox_secondlevel_10);
-        ResultBox.setText("لبيب");
+        ResultBox.setText("X");
         ResultBox.setTextColor(R.color.Shadwo_purple);
 
 

@@ -27,6 +27,13 @@ public class Lesson {
         Lesson l16 = new Lesson(16, "secondlevel_9");
         Lesson l17 = new Lesson(17, "secondlevel_11");
         Lesson l18 = new Lesson(18, "secondlevel_12");
+        Lesson l19 = new Lesson(19, "secondlevel_14");
+        Lesson l20 = new Lesson(20, "secondlevel_15");
+        Lesson l21 = new Lesson(21, "secondlevel_16");
+        Lesson l22 = new Lesson(22, "secondlevel_17");
+        Lesson l23 = new Lesson(23, "secondlevel_18_quiz");
+        Lesson l24 = new Lesson(24, "secondlevel_19");
+        Lesson l25 = new Lesson(25, "secondlevel_20");
 
       l=new  ArrayList<Lesson>();
       l.add(l0);
@@ -48,6 +55,13 @@ public class Lesson {
         l.add(l16);
         l.add(l17);
         l.add(l18);
+        l.add(l19);
+        l.add(l20);
+        l.add(l21);
+        l.add(l22);
+        l.add(l23);
+        l.add(l24);
+        l.add(l25);
     }
 
 

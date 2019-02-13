@@ -57,7 +57,8 @@ public class secondlevel_9 extends AppCompatActivity {
                     editor.putBoolean("firstStart", false);
                     editor.apply();}
                 //setting the  fixed result in resultBox
-                ResultBox.setText("لبيب");
+                ResultBox.setText("X");
+                ResultBox.setTextSize(18);
                 Intent feedback=new Intent(getApplicationContext(),secondlevel_10_feedback.class);
                 startActivity(feedback);
             }
