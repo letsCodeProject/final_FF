@@ -177,7 +177,7 @@
         android:layout_height="28dp"
         android:layout_marginStart="329dp"
         android:layout_marginTop="66dp"
-        android:text="TextView"
+        android:text="لا"
         android:textColor="@color/colorAccent"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
