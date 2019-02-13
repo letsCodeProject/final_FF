@@ -20,11 +20,12 @@
 
     <ImageView
         android:id="@+id/imageView64"
-        android:layout_width="98dp"
-        android:layout_height="45dp"
+        android:layout_width="85dp"
+        android:layout_height="38dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_marginStart="478dp"
+        android:layout_marginBottom="8dp"
         android:layout_marginTop="279dp"
         android:contentDescription="@string/desc"
         app:layout_constraintStart_toStartOf="parent"
@@ -109,6 +110,7 @@
         android:layout_marginBottom="8dp"
         android:layout_toStartOf="@+id/imageView45"
         android:background="@color/white"
+        android:text="لبيب"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="24sp"
@@ -117,8 +119,7 @@
         app:layout_constraintHorizontal_bias="0.463"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.972"
-        tools:text="لبيب" />
+        app:layout_constraintVertical_bias="0.972" />
 
     <TextView
         android:id="@+id/textView70"
@@ -195,10 +196,10 @@
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.011"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintVertical_bias="0.025"
         app:srcCompat="@drawable/h" />
 
     <TextView
