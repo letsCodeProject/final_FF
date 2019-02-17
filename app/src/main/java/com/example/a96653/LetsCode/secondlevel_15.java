@@ -2,6 +2,7 @@ package com.example.a96653.LetsCode;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -11,6 +12,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 public class secondlevel_15 extends AppCompatActivity {
+    MediaPlayer secondlevel_15;
+    voice voice15_secondlevel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +24,10 @@ public class secondlevel_15 extends AppCompatActivity {
         TextView textView = (TextView)findViewById(R.id.ScoreBox_secondlevel_15);
         textView.setText(m.getChildScore()+"" );
 
+        //create MediaPLayer to play the voice
+        secondlevel_15= MediaPlayer.create(secondlevel_15.this,R.raw.secondlevel_15_voice);
+        voice15_secondlevel=new voice( secondlevel_15);
+        voice15_secondlevel.play();
 
         //HOME BUTTON
         ImageButton homebtn3=(ImageButton)findViewById(R.id.homebtn_secondlevel15);
@@ -89,6 +96,15 @@ public class secondlevel_15 extends AppCompatActivity {
         startActivity(intent);
 
     }
+    @Override
+    protected void onPause() {
+        super.onPause();
+        voice15_secondlevel.pause();
+    }
+
+    public void play(View view) {
+        voice15_secondlevel.play();
+    }//end play method
 
 }
 
