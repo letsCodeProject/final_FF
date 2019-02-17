@@ -3,6 +3,7 @@ package com.example.a96653.LetsCode;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -12,7 +13,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 public class secondlevel_10_feedback extends AppCompatActivity {
-
+    MediaPlayer secondlevel_10;
+    voice voice10_secondlevel;
     @SuppressLint("ResourceAsColor")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,7 +25,10 @@ public class secondlevel_10_feedback extends AppCompatActivity {
         TextView ResultBox=(TextView)findViewById(R.id.ResultBox_secondlevel_10);
         ResultBox.setText("X");
         ResultBox.setTextColor(R.color.Shadwo_purple);
-
+//create MediaPLayer to play the voice
+        secondlevel_10= MediaPlayer.create(secondlevel_10_feedback.this,R.raw.secondlevel_feedback2);
+        voice10_secondlevel=new voice( secondlevel_10);
+        voice10_secondlevel.play();
 
         //TO VIEW SCORE ON BOX
         TextView textView = (TextView)findViewById(R.id.ScoreBox_secondlevel_10);
@@ -86,6 +91,15 @@ public class secondlevel_10_feedback extends AppCompatActivity {
         startActivity(intent);
 
     }
+    @Override
+    protected void onPause() {
+        super.onPause();
+        voice10_secondlevel.pause();
+    }
+
+    public void play(View view) {
+        voice10_secondlevel.play();
+    }//end play method
 
 
 }
