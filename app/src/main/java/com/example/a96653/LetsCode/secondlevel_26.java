@@ -70,7 +70,7 @@ public class secondlevel_26 extends AppCompatActivity {
 
 
 
-        next = (ImageButton)findViewById(R.id.nextBTN);
+        next = (ImageButton)findViewById(R.id.nextBTN_secondlevel_26);
 
         next.setOnClickListener(
                 new ImageView.OnClickListener(){
@@ -102,9 +102,13 @@ public class secondlevel_26 extends AppCompatActivity {
                             Toast.makeText(getApplicationContext(),
                                     Integer.toString(result),
                                     Toast.LENGTH_SHORT).show();
+                            updatedata();
+                            Intent  intent = new Intent(getApplicationContext(),secondlevel_resultsheet.class);
 
 
-                        }
+                            startActivity(intent);}
+
+
                         else{
 
                             ShowPopupSolve();
@@ -335,6 +339,17 @@ public class secondlevel_26 extends AppCompatActivity {
 
         Intent HomePage=new Intent(getApplicationContext(),MainActivity.class);
         startActivity(HomePage);
+
+    }
+    public void updatedata() {
+        result = res1 + res2 + res3 ;
+        // sqLiteHelper.UpdateQuestionAnswer(1,1);
+        if (result == 3) {
+            sqLiteHelper.UpdateQuestionAnswer(7,1);
+        }
+        else
+            sqLiteHelper.UpdateQuestionAnswer(7,0);
+
 
     }
 

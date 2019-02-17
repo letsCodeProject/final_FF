@@ -16,7 +16,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class secondlevel_20 extends AppCompatActivity {
-    public static MySQLliteHelper sqLiteHelper;
+    public  static  MySQLliteHelper sqLiteHelper;
     TextView target1,target2,target3,textviewX,textview18,textviewEqual,pinX,pin18,pinEqual;
     int  res1=0,res2=0,res3=0 ,result, CHECK=0,tt1,tt2,tt3;
     static int questionResult,tg1=0,tg2=0,tg3=0;
@@ -30,7 +30,7 @@ public class secondlevel_20 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_secondlevel_20);
-        MySQLliteHelper sqLiteHelper=new MySQLliteHelper(this);
+        sqLiteHelper=new MySQLliteHelper(this);
 
         //TO VIEW SCORE ON BOX
         TextView textView = (TextView)findViewById(R.id.ScoreBox_secondlevel_21);
@@ -66,7 +66,7 @@ public class secondlevel_20 extends AppCompatActivity {
 
 
 
-        next = (ImageButton)findViewById(R.id.nextBTN);
+        next = (ImageButton)findViewById(R.id.nextBTN_secondlevel_20);
 
         next.setOnClickListener(
                 new ImageView.OnClickListener(){
@@ -98,7 +98,11 @@ public class secondlevel_20 extends AppCompatActivity {
                             Toast.makeText(getApplicationContext(),
                                     Integer.toString(result),
                                     Toast.LENGTH_SHORT).show();
+                            updatedata();
+                            Intent  intent = new Intent(getApplicationContext(),secondlevel_22.class);
 
+
+                            startActivity(intent);
 
                         }
                         else{
@@ -331,6 +335,17 @@ public class secondlevel_20 extends AppCompatActivity {
 
         Intent HomePage=new Intent(getApplicationContext(),MainActivity.class);
         startActivity(HomePage);
+
+    }
+    public void updatedata() {
+        result = res1 + res2 + res3 ;
+        // sqLiteHelper.UpdateQuestionAnswer(1,1);
+        if (result == 3) {
+            sqLiteHelper.UpdateQuestionAnswer(4,1);
+        }
+        else
+            sqLiteHelper.UpdateQuestionAnswer(4,0);
+
 
     }
 

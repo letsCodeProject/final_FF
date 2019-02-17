@@ -62,7 +62,18 @@ public class secondlevel_12 extends AppCompatActivity {
                 startActivity(feedback);
             }
         });
-
+/*//TRYME YOURSELF BUTTON
+        final String text="لبيب";
+        Button Runbutton=(Button) findViewById(R.id.button8);
+        Runbutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                TextView t1=(TextView)findViewById(R.id.textView71);
+                t1.setText(text.toString());
+                Intent inrent=new Intent(secondlevel_12.this, secondlevel_13_feedback.class);
+                startActivity(inrent);
+            }
+        });*/
 
     }//END onCREATE
 

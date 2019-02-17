@@ -127,6 +127,14 @@
     <string name="secondlevel_20_1">إذا أردنا الاحتفاظ بالرقم 18  في المتغير X  \n  فهل بإمكانك ترتيب المربعات التالية \n  لفعل ذلك بالشكل الصحيح ؟</string>
     <string name="secondlevel_20_2">حاول وضع القيمة المناسبة في الفراغ   \n لتحصل على النتيجة : سأجمع ألماسات    كوكب نبتون !</string>
     <string name="answer_the_question">فضلاً:أكمل حل السؤال أولاً</string>
+    <string name="hint2_3">ناتج السطر البرمجي التالي هو 5 </string>
+    <string name="hint2_4">ناتج السطر البرمجي التالي هو : نبتون </string>
+    <string name="AnswerCorrect">تم إتمام المهمة بنجاح</string>
+    <string name="AnswerWrong">لقد حدث أمر خاطئ</string>
+    <string name="AboveMinimmum">أحسنت </string>
+    <string name="UnderMinimum">جيد جدا</string>
+    <string name="ButtonCorrect">انطلق للكوكب التالي</string>
+    <string name="ButtonWrong">الرجوع إلى المهمة</string>
 
 
 </resources>

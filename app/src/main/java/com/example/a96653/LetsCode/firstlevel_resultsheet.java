@@ -106,10 +106,10 @@ public class firstlevel_resultsheet extends AppCompatActivity {
        // if(answer2==0){mySqliteOpenHelper23.addIndexData("firstlevel_7");}
 
 
-        Cursor cur1=mySqliteOpenHelper23.returnLevelStatus("Nepton");
+    /*    Cursor cur1=mySqliteOpenHelper23.returnLevelStatus("Nepton");
         cur1.moveToFirst();
-        int status=cur1.getColumnIndexOrThrow("LevelStatus");
-
+        int status=cur1.getColumnIndexOrThrow("LevelStatus");*/
+        boolean status=mySqliteOpenHelper23.getLevelStatus("Nepton");
 
 
 
@@ -170,12 +170,13 @@ public class firstlevel_resultsheet extends AppCompatActivity {
 
     }
 
-    public void setbuttontext(int total , Button btn7,int min,int status){
-        if (total>10 && status==0) {
-            CallUnlockMethod();
-            updateScore(total);
-            btn7.setText(btntextcorrect);
-            mySqliteOpenHelper23.UpdateNumOfLesson(1, "Ploto");
+    public void setbuttontext(int total , Button btn7,int min,boolean status){
+        if (total>10 ) {
+            if (status == false) {
+                CallUnlockMethod();
+                updateScore(total);
+                btn7.setText(btntextcorrect);
+                mySqliteOpenHelper23.UpdateNumOfLesson(1, "Ploto");
                /* ///CLEARING PREFRENCES
                             SharedPreferences preferences = getSharedPreferences("pref2", MODE_PRIVATE);
                             SharedPreferences.Editor editor = preferences.edit();
@@ -221,12 +222,16 @@ public class firstlevel_resultsheet extends AppCompatActivity {
 */
 
 
-        //play the voice for right answer
-        resultsheet=new voice(rightAnswerVoice);
-        resultsheet.play();}
-
-
-
+                //play the voice for right answer
+                resultsheet = new voice(rightAnswerVoice);
+                resultsheet.play();
+            } else {
+                btn7.setText(btntextcorrect);
+                mySqliteOpenHelper23.UpdateNumOfLesson(1, "Ploto");
+                resultsheet = new voice(rightAnswerVoice);
+                resultsheet.play();
+            }
+        }
 
         else
         {btn7.setText(btntextwrong);

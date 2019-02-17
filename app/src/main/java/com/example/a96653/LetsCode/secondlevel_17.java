@@ -62,8 +62,21 @@ public class secondlevel_17 extends AppCompatActivity {
                 }//end onClickListner
 
         );
+        SharedPreferences prefs = getSharedPreferences("pre5fs_for_question_secondlevrl", MODE_PRIVATE);
+        boolean firstStart = prefs.getBoolean("firstStart", true);
+        if (firstStart){
+            m.addQuestion(2);
+            m.addQuestion(2);
+            m.addQuestion(2);
+            m.addQuestion(2);
+            m.addQuestion(2);
+            SharedPreferences pref = getSharedPreferences("pre5fs_for_question_secondlevrl", MODE_PRIVATE);
+            SharedPreferences.Editor editor = prefs.edit();
+            editor.putBoolean("firstStart", false);
+            editor.apply();
+        }
 
-    }
+    }//END OF ONcreate
     public void openPreviousActivity(){
 
         Intent intent=new Intent(this,secondlevel_16.class);

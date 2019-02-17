@@ -66,7 +66,6 @@ public class secondlevel_14 extends AppCompatActivity {
 
 
     }//END onCREATE
-
     public void openPreviousActivity(){
 
         Intent intent=new Intent(this,secondlevel_12.class);

@@ -63,6 +63,16 @@ public class secondlevel_15 extends AppCompatActivity {
                 }//end onClickListner
 
         );
+//TRY ME YOURSELF BUTTON .
+        final String text="6";
+        Button Runbutton=(Button) findViewById(R.id.button9);
+        Runbutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                TextView t1=(TextView)findViewById(R.id.textView81);
+                t1.setText(text.toString());
+            }
+        });
 
 
     }//END onCREATE

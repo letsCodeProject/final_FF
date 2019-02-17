@@ -7,24 +7,6 @@
     tools:context=".secondlevel_resultsheet"
     android:background="@drawable/back">
 
-    <TextView
-        android:id="@+id/feedback2"
-        android:layout_width="160dp"
-        android:layout_height="42dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:fontFamily="@font/jannalt_regular"
-        android:textAlignment="center"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.499"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.297" />
 
     <Button
         android:id="@+id/button11"
@@ -35,7 +17,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="6dp"
         android:background="@drawable/custom_button"
         android:fontFamily="@font/jannalt_regular"
         android:textSize="20sp"
@@ -49,7 +31,7 @@
     <ImageView
         android:id="@+id/imageView79"
         android:layout_width="581dp"
-        android:layout_height="234dp"
+        android:layout_height="233dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
@@ -88,7 +70,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="5dp"
         android:fontFamily="@font/jannalt_regular"
         android:text="TextView"
         android:textAlignment="center"
@@ -103,8 +85,8 @@
 
     <ImageView
         android:id="@+id/imageView82"
-        android:layout_width="31dp"
-        android:layout_height="27dp"
+        android:layout_width="29dp"
+        android:layout_height="26dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
@@ -112,10 +94,10 @@
         android:src="@drawable/diamond22"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.292"
+        app:layout_constraintHorizontal_bias="0.307"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.819" />
+        app:layout_constraintVertical_bias="0.82" />
 
     <TextView
         android:id="@+id/textView97"
@@ -138,8 +120,8 @@
 
     <ImageView
         android:id="@+id/imageView81"
-        android:layout_width="32dp"
-        android:layout_height="25dp"
+        android:layout_width="27dp"
+        android:layout_height="21dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
@@ -154,8 +136,8 @@
 
     <ImageView
         android:id="@+id/imageView84"
-        android:layout_width="32dp"
-        android:layout_height="25dp"
+        android:layout_width="27dp"
+        android:layout_height="21dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
@@ -170,8 +152,8 @@
 
     <ImageView
         android:id="@+id/imageView85"
-        android:layout_width="32dp"
-        android:layout_height="25dp"
+        android:layout_width="27dp"
+        android:layout_height="21dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
@@ -186,8 +168,8 @@
 
     <ImageView
         android:id="@+id/imageView83"
-        android:layout_width="32dp"
-        android:layout_height="25dp"
+        android:layout_width="27dp"
+        android:layout_height="21dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
@@ -201,8 +183,8 @@
 
     <ImageView
         android:id="@+id/imageView80"
-        android:layout_width="32dp"
-        android:layout_height="29dp"
+        android:layout_width="27dp"
+        android:layout_height="21dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
@@ -242,6 +224,8 @@
         android:layout_marginBottom="8dp"
         android:fontFamily="@font/jannalt_regular"
         android:text="TextView"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.307"
@@ -259,6 +243,8 @@
         android:layout_marginBottom="8dp"
         android:fontFamily="@font/jannalt_regular"
         android:text="TextView"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.307"
@@ -276,6 +262,8 @@
         android:layout_marginBottom="8dp"
         android:fontFamily="@font/jannalt_regular"
         android:text="TextView"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.307"
@@ -293,6 +281,8 @@
         android:layout_marginBottom="8dp"
         android:fontFamily="@font/jannalt_regular"
         android:text="TextView"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.307"
@@ -310,6 +300,8 @@
         android:layout_marginBottom="8dp"
         android:fontFamily="@font/jannalt_regular"
         android:text="TextView"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.307"
@@ -535,7 +527,7 @@
 
     <ImageView
         android:id="@+id/labebholdingsheet2"
-        android:layout_width="295dp"
+        android:layout_width="297dp"
         android:layout_height="82dp"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
@@ -543,9 +535,10 @@
         android:src="@drawable/labebholdingsheet"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.104" />
+        app:layout_constraintVertical_bias="0.003" />
 
     <ImageView
         android:id="@+id/sadlabeb2"
@@ -561,5 +554,25 @@
         app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.079" />
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/feedback2"
+        android:layout_width="160dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="@font/jannalt_regular"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.489"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.306" />
 </android.support.constraint.ConstraintLayout>

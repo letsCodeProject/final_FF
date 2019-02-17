@@ -11,7 +11,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 public class secondlevel_16 extends AppCompatActivity {
-
+    TextView  text;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -63,15 +63,21 @@ public class secondlevel_16 extends AppCompatActivity {
                 }//end onClickListner
 
         );
-
+//show me result button
+        Button showmMe=(Button)findViewById(R.id.button10);
+       text= (TextView) findViewById(R.id.textView91);
+        showmMe.setOnClickListener( new Button.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                text.setText("هيا نبرمج");
+            }
+        });
 
     }//END onCREATE
 
-    public void openPreviousActivity(){
-
+    public void openPreviousActivity() {
         Intent intent=new Intent(this,secondlevel_15.class);
         startActivity(intent);
-
     }
     public void openSecondActivity() {
 

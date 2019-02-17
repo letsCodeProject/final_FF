@@ -28,7 +28,7 @@ public class firstlevel_3 extends AppCompatActivity {
     LinearLayout inputLayout;
     TextView tv_output;
     Timer timer;
-
+     View shatha;
     // Lesson l3=new Lesson(3);
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,6 +60,7 @@ public class firstlevel_3 extends AppCompatActivity {
 
 
                 view.setVisibility(View.INVISIBLE);
+                shatha=view;
                 return true;
 
             }
@@ -132,11 +133,12 @@ public class firstlevel_3 extends AppCompatActivity {
                                     finish();
 
                                 }
-                            },5000);
+                            },2000);
 
                         }
                         else
-                            Toast.makeText(firstlevel_3.this, "The drop didn't work.", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(firstlevel_3.this, "The drop didn't work.", Toast.LENGTH_SHORT);
+                        shatha.setVisibility(view.VISIBLE);
                         // returns true; the value is ignored.
                         return true;
 
@@ -214,14 +216,5 @@ public class firstlevel_3 extends AppCompatActivity {
         Intent intent=new Intent(this,feedback3.class);
         startActivity(intent);
     }
-
-
-
-
-
-
-
-
-
 
 }//end of class
