@@ -1,6 +1,7 @@
 package com.example.a96653.LetsCode;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -77,6 +78,14 @@ public class secondlevel_18_quiz extends AppCompatActivity implements View.OnDra
             @Override
             public void onClick(View v) {
                 m.UpdateQuestionAnswer(3,1);
+                SharedPreferences prefs = getSharedPreferences("pref_secondLevel_18", MODE_PRIVATE);
+                boolean firstStart = prefs.getBoolean("firstStart", true);
+                if (firstStart){
+                    m.UpdateNumOfLesson(24,"Nepton");
+                    SharedPreferences pref = getSharedPreferences("pref_secondLevel_18", MODE_PRIVATE);
+                    SharedPreferences.Editor editor = prefs.edit();
+                    editor.putBoolean("firstStart", false);
+                    editor.apply();}
                 openSecondActivity();
             }
         });

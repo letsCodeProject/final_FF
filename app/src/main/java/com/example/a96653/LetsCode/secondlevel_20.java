@@ -3,6 +3,7 @@ package com.example.a96653.LetsCode;
 import android.app.Dialog;
 import android.content.ClipData;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.support.v7.app.AppCompatActivity;
@@ -92,9 +93,14 @@ public class secondlevel_20 extends AppCompatActivity {
 
                         CHECK=tt1+tt2+tt3;
                         if(CHECK==3){
-
-
-
+                            SharedPreferences prefs = getSharedPreferences("pref_secondlevel_20", MODE_PRIVATE);
+                            boolean firstStart = prefs.getBoolean("firstStart", true);
+                            if (firstStart) {
+                                sqLiteHelper.UpdateNumOfLesson(25, "Nepton");
+                                SharedPreferences pref = getSharedPreferences("pref_secondlevel_20", MODE_PRIVATE);
+                                SharedPreferences.Editor editor = prefs.edit();
+                                editor.putBoolean("firstStart", false);
+                                editor.apply(); }
                             Toast.makeText(getApplicationContext(),
                                     Integer.toString(result),
                                     Toast.LENGTH_SHORT).show();

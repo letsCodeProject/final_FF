@@ -1,6 +1,7 @@
 package com.example.a96653.LetsCode;
 import android.app.Dialog;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.support.v7.app.AppCompatActivity;
@@ -132,18 +133,50 @@ public class secondlevel_22 extends AppCompatActivity {
             public void onClick(View v) {
 // startActivity(new Intent(MainActivity.this,secondlevel_22.class));
                 if(radio1.isChecked()) {
+                    SharedPreferences prefs = getSharedPreferences("pref_secondlevel_22", MODE_PRIVATE);
+                    boolean firstStart = prefs.getBoolean("firstStart", true);
+                    if (firstStart) {
+                        mySqliteOpenHelper.UpdateNumOfLesson(26, "Nepton");
+                        SharedPreferences pref = getSharedPreferences("pref_secondlevel_22", MODE_PRIVATE);
+                        SharedPreferences.Editor editor = prefs.edit();
+                        editor.putBoolean("firstStart", false);
+                        editor.apply(); }
                     startActivity(new Intent(secondlevel_22.this, secondlevel_24.class));
                     mySqliteOpenHelper.UpdateQuestionAnswer(5, 1);
                 }
                 if(radio2.isChecked()){
+                    SharedPreferences prefs = getSharedPreferences("pref_secondlevel_22", MODE_PRIVATE);
+                    boolean firstStart = prefs.getBoolean("firstStart", true);
+                    if (firstStart) {
+                        mySqliteOpenHelper.UpdateNumOfLesson(26, "Nepton");
+                        SharedPreferences pref = getSharedPreferences("pref_secondlevel_22", MODE_PRIVATE);
+                        SharedPreferences.Editor editor = prefs.edit();
+                        editor.putBoolean("firstStart", false);
+                        editor.apply(); }
                     mySqliteOpenHelper.UpdateQuestionAnswer(5,0);
                     startActivity(new Intent(secondlevel_22.this, secondlevel_24.class));
                 }
                 if(radio3.isChecked()){
+                    SharedPreferences prefs = getSharedPreferences("pref_secondlevel_22", MODE_PRIVATE);
+                    boolean firstStart = prefs.getBoolean("firstStart", true);
+                    if (firstStart) {
+                        mySqliteOpenHelper.UpdateNumOfLesson(26, "Nepton");
+                        SharedPreferences pref = getSharedPreferences("pref_secondlevel_22", MODE_PRIVATE);
+                        SharedPreferences.Editor editor = prefs.edit();
+                        editor.putBoolean("firstStart", false);
+                        editor.apply(); }
                     mySqliteOpenHelper.UpdateQuestionAnswer(5,0);
                     startActivity(new Intent(secondlevel_22.this, secondlevel_24.class));
                 }
                 if(radio4.isChecked()){
+                    SharedPreferences prefs = getSharedPreferences("pref_secondlevel_22", MODE_PRIVATE);
+                    boolean firstStart = prefs.getBoolean("firstStart", true);
+                    if (firstStart) {
+                        mySqliteOpenHelper.UpdateNumOfLesson(26, "Nepton");
+                        SharedPreferences pref = getSharedPreferences("pref_secondlevel_22", MODE_PRIVATE);
+                        SharedPreferences.Editor editor = prefs.edit();
+                        editor.putBoolean("firstStart", false);
+                        editor.apply(); }
                     mySqliteOpenHelper.UpdateQuestionAnswer(5,0);
                     startActivity(new Intent(secondlevel_22.this, secondlevel_24.class));
                 }

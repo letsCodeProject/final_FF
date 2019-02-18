@@ -192,8 +192,10 @@ public class secondlevel_resultsheet extends AppCompatActivity {
             if(status==false){
                 CallUnlockMethod();
                 updateScore(total);
+                m.UpdateNumOfLesson(9, "Nepton");
 
             }
+            m.UpdateNumOfLesson(9, "Nepton");
             btn.setText(R.string.ButtonCorrect);
         }
         else {
