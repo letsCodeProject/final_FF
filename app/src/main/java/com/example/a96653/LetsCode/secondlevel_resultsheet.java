@@ -197,6 +197,13 @@ public class secondlevel_resultsheet extends AppCompatActivity {
             }
             m.UpdateNumOfLesson(9, "Nepton");
             btn.setText(R.string.ButtonCorrect);
+            btn.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent gobacktoMain=new Intent (getApplicationContext(),MainActivity.class);
+                    startActivity(gobacktoMain);
+                }
+            });
         }
         else {
             btn.setText(R.string.ButtonWrong);

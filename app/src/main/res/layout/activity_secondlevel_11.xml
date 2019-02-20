@@ -65,16 +65,17 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
-        android:layout_marginStart="364dp"
-        android:layout_marginTop="164dp"
-        android:layout_marginBottom="120dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="168dp"
+        android:layout_marginBottom="8dp"
         android:fontFamily="@font/jannalt_regular"
         android:text="(&quot;&quot;)"
         android:textColor="@color/yellow1"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="@+id/imageView38"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.455" />
 
     <ImageView
 
@@ -98,10 +99,10 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/ScoreBox_secondlevel_11"
-        app:layout_constraintHorizontal_bias="0.661"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.044" />
+        app:layout_constraintVertical_bias="0.022" />
     <ImageView
 
         android:id="@+id/next_11"
@@ -145,7 +146,7 @@
         android:layout_width="215dp"
         android:layout_height="227dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="272dp"
+        android:layout_marginEnd="312dp"
         app:layout_constraintBottom_toTopOf="@+id/previous_seconlevel_11"
         app:layout_constraintEnd_toStartOf="@+id/next_11"
         app:layout_constraintTop_toBottomOf="@+id/homebtn_secondlevel11"

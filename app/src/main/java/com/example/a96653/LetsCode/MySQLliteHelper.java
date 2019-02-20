@@ -54,7 +54,18 @@ public class MySQLliteHelper extends SQLiteOpenHelper {
     private static final String SQL_CREATE_TABLE_INDEX =
             "CREATE TABLE IF NOT EXISTS "+ SchemClass.LetsCode2.INDEX_TABLE2+ "(" +
                     SchemClass.LetsCode2.COLUMN_NAME_QUESTION+" TEXT )";
+    private static  MySQLliteHelper  mInstance = null;
+    public static MySQLliteHelper getInstance(Context ctx) {
 
+        // Use the application context, which will ensure that you
+        // don't accidentally leak an Activity's context.
+        // See this article for more information: http://bit.ly/6LRzfx
+        //TO SOLVE THE WARNING W/SQLiteConnectionPool: A SQLiteConnection object for database '/data/user/0/com.example.a96653.LetsCode/databases/LetsCode2.db' was leaked! Please fix your application to end transactions in progress properly and to close the database when it is no longer needed.
+        if (mInstance == null) {
+            mInstance = new  MySQLliteHelper (ctx.getApplicationContext());
+        }
+        return mInstance;
+    }
 
     public MySQLliteHelper(Context context) {
         super(context, db_name, null, db_version);
@@ -85,7 +96,7 @@ public class MySQLliteHelper extends SQLiteOpenHelper {
         contentValues.put(SchemClass.LetsCode2.COLUMN_NAME_Score, Score);
 
         long result = db.insert(SchemClass.LetsCode2.TABLE_NAME, null, contentValues);
-
+        db.close();
     }
 
 
@@ -111,7 +122,7 @@ public class MySQLliteHelper extends SQLiteOpenHelper {
             contentValues2.put(SchemClass.LetsCode2.COLUMN_NAME_LEVELSTATUS, 0);
             res = db.insert(SchemClass.LetsCode2.SECOND_TABLE, null, contentValues2);
         }
-
+        db.close();
     }
 
     public void addData(int id, String content) {
@@ -151,6 +162,7 @@ public class MySQLliteHelper extends SQLiteOpenHelper {
         } catch (SQLiteConstraintException E) {
             throw E;
         }
+        //db.close();
     }
 
     public int getNumOfLessonPassed(String levelName) {
@@ -169,6 +181,7 @@ public class MySQLliteHelper extends SQLiteOpenHelper {
             columIndex = cursor.getColumnIndexOrThrow(SchemClass.LetsCode2.COLUMN_NAME_LessonsPassed);
             lnum = cursor.getInt(columIndex);
         }
+        //DB.close();
         return lnum;
     }
 
@@ -182,7 +195,7 @@ public class MySQLliteHelper extends SQLiteOpenHelper {
         Cursor recordSet = db.rawQuery(query, null);
         recordSet.moveToFirst();
         dbString = recordSet.getString(recordSet.getColumnIndex("Name"));
-
+       // db.close();
         return dbString;
 
     }
@@ -208,7 +221,7 @@ public class MySQLliteHelper extends SQLiteOpenHelper {
             contentValues.put(SchemClass.LetsCode2.WELCOME_INTERFACE_STATUS, 0);
             res = db.insert(SchemClass.LetsCode2.WELCOME_TABLE, null, contentValues);
         }
-
+       // db.close();
     }
 
     public void UpdateWelcomingTable(String Interface_name, int status) {
@@ -216,6 +229,7 @@ public class MySQLliteHelper extends SQLiteOpenHelper {
 
         db.execSQL("UPDATE Welcome_Progress SET Status='1' WHERE InterfaceName=" + "'" + Interface_name + "'");
 
+       // db.close();
     }
 
     public String databaseToString() {
@@ -253,7 +267,9 @@ public class MySQLliteHelper extends SQLiteOpenHelper {
             contentValues2.put(SchemClass.LetsCode2.COLUMN_NAME_LevelName, Planets[i]);
 
             long result = db.insert(SchemClass.LetsCode2.Table_Quiz, null, contentValues2);
+
         }
+       // db.close();
     }//End of method add quiz
 
 
@@ -262,7 +278,7 @@ public class MySQLliteHelper extends SQLiteOpenHelper {
         ContentValues contentValues = new ContentValues();
         contentValues.put(SchemClass.LetsCode2.COLUMN_NAME_QUIZID, quiz_num);
         long result = db.insert(SchemClass.LetsCode2.TABLE_AUESTION, null, contentValues);
-
+       // db.close();
 
     }
 
@@ -275,7 +291,9 @@ public class MySQLliteHelper extends SQLiteOpenHelper {
         cv.put(SchemClass.LetsCode2.COLUMN_NAME_QANSWER , answer);
 
         db.update(SchemClass.LetsCode2.TABLE_AUESTION,cv,SchemClass.LetsCode2.COLUMN_NAME_QNUM +"="+questionid, null);
-    }
+
+       // db.close();
+        }
     //
     public void UnlockNextLevel(String lvlname){
         int num=1;
@@ -283,6 +301,7 @@ public class MySQLliteHelper extends SQLiteOpenHelper {
         ContentValues cv = new ContentValues();
         cv.put(SchemClass.LetsCode2.COLUMN_NAME_LEVELSTATUS,num);
         db.update(SchemClass.LetsCode2.SECOND_TABLE ,cv, SchemClass.LetsCode2.COLUMN_NAME_LevelName +" = '"+lvlname + "'",null );
+        //db.close();
     }
 
     //To update the score of the Child.
@@ -291,7 +310,7 @@ public class MySQLliteHelper extends SQLiteOpenHelper {
         ContentValues cv = new ContentValues();
         cv.put (SchemClass.LetsCode2.COLUMN_NAME_Score , score);
         db.update(SchemClass.LetsCode2.TABLE_NAME,cv,SchemClass.LetsCode2.COLUMN_NAME_ID +"="+1, null);
-
+//db.close();
 
     }
 
@@ -301,6 +320,7 @@ public class MySQLliteHelper extends SQLiteOpenHelper {
         int lnum=100;
         String query = "SELECT "+SchemClass.LetsCode2.COLUMN_NAME_QANSWER +" FROM "+SchemClass.LetsCode2.TABLE_AUESTION +" WHERE "+SchemClass.LetsCode2.COLUMN_NAME_QNUM +" = "+Qnum;
         Cursor recordSet=db.rawQuery(query,null);
+       // db.close();
         return recordSet ;
     }
     public int getChildScore() {
@@ -311,7 +331,7 @@ public class MySQLliteHelper extends SQLiteOpenHelper {
         Cursor recordSet = db.rawQuery(query, null);
         recordSet.moveToFirst();
         score = recordSet.getInt(recordSet.getColumnIndex("Score"));
-
+//db.close();
         return score ; }
     public boolean getLevelStatus(String levelName) {
         SQLiteDatabase DB = this.getReadableDatabase();
@@ -333,19 +353,22 @@ public class MySQLliteHelper extends SQLiteOpenHelper {
                b= true;
             }
         }
+       //DB.close();
         return b;
     }
 
     public void queryIndexData( ){
         SQLiteDatabase database=getWritableDatabase();
-        database.execSQL(SQL_CREATE_TABLE_INDEX);}
+        database.execSQL(SQL_CREATE_TABLE_INDEX);
+        //database.close();
+    }
 
     public void addIndexData( String ActivityName) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
         contentValues.put(SchemClass.LetsCode2.COLUMN_NAME_QUESTION, ActivityName);
         long result = db.insert(SchemClass.LetsCode2.INDEX_TABLE2, null, contentValues);
-
+        //db.close();
 
     }
 
@@ -354,17 +377,20 @@ public class MySQLliteHelper extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getReadableDatabase();
         String query = "SELECT "+SchemClass.LetsCode2.COLUMN_NAME_QUESTION +" FROM "+SchemClass.LetsCode2.INDEX_TABLE2 ;
         Cursor recordSet=db.rawQuery(query,null);
+        //db.close();
         return recordSet ;
     }
 
     public Integer deleteIndexData (String name) {
         SQLiteDatabase db = this.getWritableDatabase();
+       // db.close();
         return db.delete(SchemClass.LetsCode2.INDEX_TABLE2, " Question = '"+name+"'",null);
     }
     public Cursor returnLevelStatus(String levlname){
         SQLiteDatabase db = this.getReadableDatabase();
         String Query=" SELECT "+SchemClass.LetsCode2.COLUMN_NAME_LEVELSTATUS +" FROM "+SchemClass.LetsCode2.SECOND_TABLE +" WHERE "+SchemClass.LetsCode2.COLUMN_NAME_LevelName+" = '"+levlname+"'";
         Cursor recordSet=db.rawQuery(Query,null);
+      //  db.close();
         return recordSet;
     }
 
@@ -373,7 +399,18 @@ public class MySQLliteHelper extends SQLiteOpenHelper {
         ContentValues cv = new ContentValues();
         cv.put(SchemClass.LetsCode2.COLUMN_NAME_QUIZRESULT, total);
         db.update(SchemClass.LetsCode2.Table_Quiz,cv,SchemClass.LetsCode2.COLUMN_NAME_QUIZID +"="+id,null);
+       // db.close();
     }
+
+    @Override
+    protected void finalize() throws Throwable {
+        this.close();
+        super.finalize();
+    }
+
+
+
+
 
 
 

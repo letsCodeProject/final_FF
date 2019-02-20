@@ -222,10 +222,10 @@
 
     <ImageView
         android:id="@+id/imageView49"
-        android:layout_width="430dp"
-        android:layout_height="61dp"
-        android:layout_marginStart="81dp"
-        android:layout_marginTop="137dp"
+        android:layout_width="346dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="144dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/secondlevel_12_compilerex" />

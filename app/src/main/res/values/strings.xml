@@ -98,7 +98,7 @@
     <string name="secondlevel_22_2">   ماهو ناتج السطر البرمجي التالي           </string>
     <string name="secondlevel_12_1">ولكن عندما      </string>
     <string name="secondlevel_12_2">    نضع علامتي التنصيص  </string>
-    <string name="secondlevel_11_1">   لابد أنك تستغرب لماذا تمت طباعة X ولم يتم طباعة\n “لبيب” وذلك لأنه عندما نضع علامتي  التنصيص&quot;&quot;في أمر الطباعة فإننا نقوم بطباعة مابين القوسين .  </string>
+    <string name="secondlevel_11_1">   لابد أنك تستغرب لماذا تمت طباعة X ولم يتم طباعة\n “لبيب” وذلك لأنه عندما نضع علامتي  التنصيص\nفي أمر الطباعة فإننا نقوم بطباعة مابين القوسين .  </string>
 
     <string name="qots">(\"\")</string>
     <string name="secondlevel_12_3"> في أمر  الطباعة  فإنه يطبع القيمة المخزنة في المتغير        </string>
@@ -122,7 +122,7 @@
     <string name="secondlevel_14_2">المتغيرات\  </string>
     <string name="secondlevel_14_3">،في لغة بايثون بإمكانك استخدام هذه </string>
     <string name="secondlevel_14_4">المتغيرات لتطبيق عمليتي الجمع والطرح !</string>
-    <string name="secondlevel_17_1">ّوالان، لكي تجمع ألماسات هذا الكوكب عليك ان تجتاز التحدي التالي:</string>
+    <string name="secondlevel_17_1">ّوالآن، لكي تجمع ألماسات هذا الكوكب عليك أن تجتاز التحدي التالي:</string>
     <string name="secondlevel_18_boxes">حاول وضع المتغيرات التالية في الصندوق المناسب :</string>
     <string name="secondlevel_20_1">إذا أردنا الاحتفاظ بالرقم 18  في المتغير X  \n  فهل بإمكانك ترتيب المربعات التالية \n  لفعل ذلك بالشكل الصحيح ؟</string>
     <string name="secondlevel_20_2">حاول وضع القيمة المناسبة في الفراغ   \n لتحصل على النتيجة : سأجمع ألماسات    كوكب نبتون !</string>
