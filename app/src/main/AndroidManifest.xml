@@ -12,6 +12,15 @@
         <activity android:name=".thirdlevel_18"></activity>
         <activity android:name=".thirdlevel_19" />
         <activity android:name=".thirdlevel_9" />
+        <activity android:name=".thirdlevel_24"
+            android:screenOrientation="landscape"
+            />
+        <activity android:name=".thirdlevel_23"
+            android:screenOrientation="landscape"
+            />
+        <activity
+            android:name=".thirdlevel_21"
+            android:screenOrientation="landscape" />
         <activity
             android:name=".thirdlevel_8"
             android:screenOrientation="landscape" />

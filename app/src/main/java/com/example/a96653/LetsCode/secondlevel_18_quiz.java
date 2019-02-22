@@ -362,7 +362,7 @@ public class secondlevel_18_quiz extends AppCompatActivity implements View.OnDra
             // sqLiteHelper.UpdateQuestionAnswer(1,1);
 
 
-        Intent intent = new Intent(this, secondlevel_20.class);
+        Intent intent = new Intent(this,secondlevel_20.class);
         startActivity(intent);
 
 

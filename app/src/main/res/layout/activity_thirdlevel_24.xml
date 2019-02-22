@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="@drawable/back"
+    tools:context=".thirdlevel_24"
+
+    >
+
+
+    <ImageButton
+        android:id="@+id/homebtn_secondLeve"
+        android:layout_width="54dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="532dp"
+        android:background="@drawable/back"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/h" />
+
+    <ImageView
+
+        android:id="@+id/nextquiz3_"
+        android:layout_width="85dp"
+        android:layout_height="38dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="292dp"
+        android:layout_marginEnd="16dp"
+
+        android:contentDescription="@string/desc"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/newnext" />
+
+    <ImageView
+        android:id="@+id/imageView92"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="76dp"
+        android:layout_marginEnd="508dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/bulb" />
+
+    <ImageView
+        android:id="@+id/help3"
+        android:layout_width="166dp"
+        android:layout_height="332dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="404dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/robotquiz1_2" />
+
+    <ImageView
+        android:id="@+id/help"
+        android:layout_width="146dp"
+        android:layout_height="88dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="376dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/helpask" />
+
+    <ImageView
+
+
+        android:id="@+id/choiceTwo"
+        android:layout_width="92dp"
+        android:layout_height="33dp"
+        android:layout_marginTop="236dp"
+        android:layout_marginEnd="324dp"
+        android:background="@drawable/choiceshapee"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/scorebox"
+        android:layout_width="43dp"
+        android:layout_height="31dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="16dp"
+
+        android:background="@drawable/textviewborder"
+
+        android:gravity="center"
+        android:textColor="@android:color/background_light"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView62"
+        android:layout_width="34dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="64dp"
+        android:src="@drawable/diamond22"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView50"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/jannalt_regular"
+        android:text="@string/mission5"
+        android:textColor="@color/colorPrimary"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView55"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textView50"
+        android:layout_alignParentEnd="true"
+
+        android:layout_marginTop="92dp"
+        android:layout_marginEnd="28dp"
+        android:fontFamily="@font/jannalt_regular"
+        android:text="@string/thirdlevel_24_quiz3_5text"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <RadioButton
+        android:id="@+id/radio1"
+        android:layout_width="144dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="244dp"
+        android:layout_marginEnd="16dp"
+        android:layout_weight="0.5"
+        android:backgroundTint="@color/white"
+        android:buttonTint="@color/white"
+        android:shadowColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioButton
+        android:id="@+id/radio2"
+        android:layout_width="89dp"
+        android:layout_height="26dp"
+
+
+        android:layout_marginTop="244dp"
+        android:layout_marginEnd="220dp"
+        android:layout_weight="0.5"
+        android:backgroundTint="@color/white"
+        android:buttonTint="@color/white"
+        android:shadowColor="@color/white"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageView
+
+
+        android:id="@+id/choiceOne"
+        android:layout_width="82dp"
+        android:layout_height="31dp"
+        android:layout_marginTop="240dp"
+        android:layout_marginEnd="172dp"
+        android:background="@drawable/choiceshapee"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView104"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="244dp"
+        android:layout_marginEnd="200dp"
+        android:text="True"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView105"
+        android:layout_width="42dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="244dp"
+        android:layout_marginEnd="348dp"
+        android:text="False"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/imageView93"
+        android:layout_width="328dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="132dp"
+        android:layout_marginEnd="64dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/thirdlevel_24_quiz3_5compiler" />
+
+</android.support.constraint.ConstraintLayout>
