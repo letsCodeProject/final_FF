@@ -51,7 +51,7 @@ public class thirdlevel_19 extends AppCompatActivity {
             }
         });
 
-        ImageView previous3=(ImageView)findViewById(R.id.previous_thirdlevel_9);
+        ImageView previous3=(ImageView)findViewById(R.id.previous_thirdlevel_19);
         previous3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
