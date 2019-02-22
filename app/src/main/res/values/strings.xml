@@ -142,6 +142,8 @@
     <string name="thirdlevel_3_1">سيكون من الرائع لو كان حاسوبك يحقق لك ماتريد وفق الشروط التي أنت تحددها ..  بالتأكيد ستستطيع تحقيق ذلك باستخدام الجمل الشرطية</string>
     <string name="thirdlevel_4_1">الجمل الشرطية تتيح لك فعل أمر كالطباعة مثلاً وفقاً لشروط أنت تحددها ..</string>
 
+    <string name="thirdlevel_23_text"> اختر ما تراه مناسباً لتكوين جملة شرطية صحيحة :</string>
+    <string name="thirdlevel_24_quiz3_5text">ما هو ناتج المقارنة التالية : </string>
     <string name="thirdlevel_1">في لغة بايثون تستخدم العلامة \ </string>
     <string name="thirdlevel_1_continu">للتحقق من تساوي قيمتين </string>
     <string name="thirdlevel_2">فمثلاً:إذا اردنا المقارنة بين التفاحة والبرتقالة فإنهما غير متساويتين!</string>
