@@ -77,7 +77,7 @@ public class secondlevel_7_feedback2 extends AppCompatActivity {
     }//END onCREATE
     public void openSecondActivity() {
 
-        Intent intent = new Intent(this, seconlevel_8.class);
+        Intent intent = new Intent(this,seconlevel_8.class);
         startActivity(intent);
 
     }
