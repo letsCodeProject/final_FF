@@ -9,9 +9,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
-        <activity android:name=".thirdlevel_18"></activity>
-        <activity android:name=".thirdlevel_19" />
-        <activity android:name=".thirdlevel_9" />
+        <activity android:name=".thirdlevel_resultsheet"
+            android:screenOrientation="landscape"/>
+        <activity android:name=".thirdlevel_4"
+            android:screenOrientation="landscape"/>
+        <activity android:name=".thirdlevel_3"
+            android:screenOrientation="landscape"/>
+        <activity android:name=".thirdlevel_18"
+            android:screenOrientation="landscape"></activity>
+        <activity android:name=".thirdlevel_19"
+            android:screenOrientation="landscape"/>
+        <activity android:name=".thirdlevel_9"
+            android:screenOrientation="landscape"/>
         <activity android:name=".thirdlevel_24"
             android:screenOrientation="landscape"
             />
