@@ -105,7 +105,7 @@
     <string name="tryit">  (جرب بنفسك )   </string>
     <string name="secondlevel_15_1">      بإمكاننا أن نجري عمليات الجمع و الطرح التي تعرفها  على المتغيرات  فمثلاً :    </string>
 
-  <string name="secondlevel_15_3">    إذا كان المتغير   </string>
+    <string name="secondlevel_15_3">    إذا كان المتغير   </string>
     <string name="x">    X=5</string>
     <string name="var">و المتغير </string>
     <string name="y"> Y=1   </string>
@@ -135,6 +135,12 @@
     <string name="UnderMinimum">جيد جدا</string>
     <string name="ButtonCorrect">انطلق للكوكب التالي</string>
     <string name="ButtonWrong">الرجوع إلى المهمة</string>
+    <string name="thirdlevel_1_1">أهلاً وسهلاً بك في كوكب زحل .. </string>
+    <string name="thirdlevel_1_2">لتتمكن من جمع ألماسات هذا الكوكب  عليك  التعرف على مفهوم الجمل الشرطية أولاً</string>
+    <string name="thirdlevel_2_1">تخيل أنك ستذهب في رحلة إلى الشمس، قبل أن تقوم بذلك عليك التحقق من توافر بعض الشروط، </string>
+    <string name="thirdlevel_2_2">مثل أن تكون المركبة خالية من الأعطال  !</string>
+    <string name="thirdlevel_3_1">سيكون من الرائع لو كان حاسوبك يحقق لك ماتريد وفق الشروط التي أنت تحددها ..  بالتأكيد ستستطيع تحقيق ذلك باستخدام الجمل الشرطية</string>
+    <string name="thirdlevel_4_1">الجمل الشرطية تتيح لك فعل أمر كالطباعة مثلاً وفقاً لشروط أنت تحددها ..</string>
 
 
 </resources>
