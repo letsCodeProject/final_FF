@@ -4,6 +4,7 @@ package com.example.a96653.LetsCode;
 import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.Color;
+import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -20,6 +21,9 @@ public class secondlevel_resultsheet extends AppCompatActivity {
     int score_1,score_2,score_3,score_4,score_5;
     int  totalscoreQuiz2;
     int minimum=20;
+    MediaPlayer rightAnswerVoice;
+    MediaPlayer wrongAnswerVoice;
+    voice resultsheet;
 
 
 
@@ -29,6 +33,10 @@ public class secondlevel_resultsheet extends AppCompatActivity {
         setContentView(R.layout.activity_secondlevel_resultsheet);
 
         m=new MySQLliteHelper(this);
+        //create MediaPLayer to play the voice
+        rightAnswerVoice=MediaPlayer.create(secondlevel_resultsheet.this,R.raw.rightanswerfeedbackvoice);
+        wrongAnswerVoice=MediaPlayer.create(secondlevel_resultsheet.this,R.raw.wronganswerfeedbackvoice);
+
 
 //scoreBox display
         TextView scoredisplay=(TextView) findViewById(R.id.quiz1Score2);
@@ -176,11 +184,15 @@ public class secondlevel_resultsheet extends AppCompatActivity {
             happy.setVisibility(View.VISIBLE);
             feedback2.setText(R.string.AboveMinimmum);
             feedback2.setTextColor(Color.parseColor("#0E932E"));
+            resultsheet = new voice(rightAnswerVoice);
+            resultsheet.play();
         }
         else {
             sad.setVisibility(View.VISIBLE);
             feedback2.setText(R.string.UnderMinimum);
             feedback2.setTextColor(Color.parseColor("#2340B7"));
+            resultsheet=new voice(wrongAnswerVoice);
+            resultsheet.play();
 
         }
     }//End of the method
