@@ -224,18 +224,20 @@
         app:layout_constraintVertical_bias="0.833" />
 
     <TextView
-        android:id="@+id/textView2_secondlevel_15"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="260dp"
-        android:layout_marginTop="132dp"
+        android:id="@+id/textView88"
+        android:layout_width="190dp"
+        android:layout_height="79dp"
+        android:layout_marginStart="76dp"
+        android:layout_marginEnd="224dp"
         android:fontFamily="@font/jannalt_regular"
         android:text="@string/try_it_yourself"
         android:textColor="@color/yellow1"
         android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button10"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.519" />
 
     <TextView
         android:id="@+id/ResultBox_thirdlevel_15"
@@ -258,18 +260,28 @@
         app:layout_constraintVertical_bias="0.972" />
 
     <Button
-        android:id="@+id/ShowMeResultButton_thirdlevel_15"
+
+        android:id="@+id/showMeResult_thirdlevel_15"
         android:layout_width="82dp"
         android:layout_height="33dp"
         android:layout_alignParentBottom="true"
+        android:layout_marginStart="8dp"
 
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:layout_toStartOf="@+id/textView72"
         android:background="@drawable/custom_button"
         android:fontFamily="@font/jannalt_regular"
         android:text="أرني النتيجة"
         android:textColor="@color/white"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="255dp"
-        tools:layout_editor_absoluteY="235dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.443"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.758" />
     <TextView
         android:id="@+id/showMeResultTextView_thirdlevel_15"
         android:layout_width="67dp"
@@ -298,8 +310,9 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/ShowMeResultButton_thirdlevel_15"
+        app:layout_constraintBottom_toTopOf="@+id/showMeResult_thirdlevel_15"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.399"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView1_secondlevel_6"
         app:srcCompat="@drawable/thirdlevel_15_editor" />

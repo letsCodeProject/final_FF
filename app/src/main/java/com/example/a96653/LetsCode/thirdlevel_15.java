@@ -18,7 +18,7 @@ public class thirdlevel_15 extends AppCompatActivity {
         //Try by yourself
         //TRY ME YOURSELF BUTTON .
         final String text="False";
-        Button Runbutton=(Button) findViewById(R.id.ShowMeResultButton_thirdlevel_15);
+        Button Runbutton=(Button) findViewById(R.id.showMeResult_thirdlevel_15);
         Runbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -69,8 +69,8 @@ public class thirdlevel_15 extends AppCompatActivity {
     }
 
     public void GoNext(){
-       // Intent gonext=new Intent(getApplicationContext(),thirdlevel_16.class);
-      //  startActivity(gonext);
+        Intent gonext=new Intent(getApplicationContext(),thirdlevel_16.class);
+      startActivity(gonext);
     }
 
 }
