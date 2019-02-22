@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back"
+    tools:context=".thirdlevel_23">
+
+
+    <RadioButton
+        android:id="@+id/radio2"
+        android:layout_width="54dp"
+        android:layout_height="28dp"
+
+
+        android:layout_marginTop="284dp"
+        android:layout_marginEnd="132dp"
+        android:layout_weight="0.5"
+        android:backgroundTint="@color/white"
+        android:buttonTint="@color/white"
+        android:shadowColor="@color/white"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioButton
+        android:id="@+id/radio1"
+        android:layout_width="41dp"
+        android:layout_height="27dp"
+        android:layout_marginTop="236dp"
+        android:layout_marginEnd="148dp"
+        android:layout_weight="0.5"
+        android:backgroundTint="@color/white"
+        android:buttonTint="@color/white"
+        android:shadowColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView94"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="72dp"
+        android:layout_marginEnd="36dp"
+        android:text="@string/secondlevel_24_1"
+        android:textColor="@color/colorPrimary"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/scorebox"
+        android:layout_width="43dp"
+        android:layout_height="31dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="16dp"
+
+        android:background="@drawable/textviewborder"
+
+        android:gravity="center"
+        android:textColor="@android:color/background_light"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView62"
+        android:layout_width="34dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="68dp"
+        android:src="@drawable/diamond22"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/home"
+        android:layout_width="54dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="532dp"
+        android:background="@drawable/back"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/h" />
+
+    <ImageView
+        android:id="@+id/help2"
+        android:layout_width="149dp"
+        android:layout_height="302dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+
+        android:layout_marginEnd="436dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/robotquiz1_2" />
+
+    <ImageView
+        android:id="@+id/help1"
+        android:layout_width="146dp"
+        android:layout_height="88dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="352dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/helpask" />
+
+    <TextView
+        android:id="@+id/textView55"
+        android:layout_width="wrap_content"
+        android:layout_height="47dp"
+        android:layout_alignTop="@+id/textView50"
+        android:layout_alignParentEnd="true"
+
+        android:layout_marginTop="84dp"
+        android:layout_marginEnd="40dp"
+        android:fontFamily="@font/jannalt_regular"
+        android:text="@string/thirdlevel_23_text"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView44"
+        android:layout_width="18dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="556dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/bulb" />
+
+
+    <ImageView
+
+
+        android:id="@+id/choiceTwo"
+        android:layout_width="97dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="280dp"
+        android:layout_marginEnd="200dp"
+        android:background="@drawable/choiceshapee"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageView
+
+
+        android:id="@+id/choiceThree"
+        android:layout_width="97dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="232dp"
+        android:layout_marginEnd="364dp"
+        android:background="@drawable/choiceshapee"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView106"
+        android:layout_width="19dp"
+        android:layout_height="18dp"
+
+        android:layout_marginTop="240dp"
+        android:layout_marginEnd="412dp"
+        android:text=">"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioButton
+        android:id="@+id/radio3"
+        android:layout_width="38dp"
+        android:layout_height="31dp"
+        android:layout_marginTop="236dp"
+        android:layout_marginEnd="316dp"
+        android:layout_weight="0.5"
+        android:backgroundTint="@color/white"
+        android:buttonTint="@color/white"
+        android:shadowColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioButton
+        android:id="@+id/radio4"
+        android:layout_width="60dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="284dp"
+        android:layout_marginEnd="292dp"
+        android:layout_weight="0.5"
+        android:backgroundTint="@color/white"
+        android:buttonTint="@color/white"
+        android:shadowColor="@color/white"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+
+
+        android:id="@+id/choiceOne"
+        android:layout_width="97dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="232dp"
+        android:layout_marginEnd="200dp"
+        android:background="@drawable/choiceshapee"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+
+
+        android:id="@+id/choiceFour"
+        android:layout_width="97dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="284dp"
+        android:layout_marginEnd="364dp"
+        android:background="@drawable/choiceshapee"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageView
+
+        android:id="@+id/nextquiz3_1"
+        android:layout_width="85dp"
+        android:layout_height="38dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="292dp"
+        android:layout_marginEnd="16dp"
+
+        android:contentDescription="@string/desc"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/newnext" />
+
+    <TextView
+        android:id="@+id/textView105"
+        android:layout_width="30dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="292dp"
+        android:layout_marginEnd="228dp"
+        android:text=":"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/imageView91"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="124dp"
+        android:layout_marginEnd="104dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/thirdlevel_23_quiz3_4" />
+
+
+    <TextView
+        android:id="@+id/textView107"
+        android:layout_width="23dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="292dp"
+        android:layout_marginEnd="408dp"
+        android:text="if"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView104"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="240dp"
+        android:layout_marginEnd="248dp"
+        android:text="1"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView100"
+        android:layout_width="43dp"
+        android:layout_height="22dp"
+        android:layout_marginTop="124dp"
+        android:layout_marginEnd="274dp"
+        android:background="@drawable/custom_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/custom_edittext" />
+
+
+</android.support.constraint.ConstraintLayout>

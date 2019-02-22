@@ -113,8 +113,6 @@ public class MainActivity extends AppCompatActivity {
                 }
                 );
        //OPENING NEPTON LEVEL
-        //END IF
-
         if( levelStatus=m.getLevelStatus("Nepton")==true) {
 
             nepton.setOnClickListener(new Button.OnClickListener() {
@@ -131,8 +129,25 @@ public class MainActivity extends AppCompatActivity {
 
                                       }
             );
-        }
+        } //END IF
+        //OPENING zuhal LEVEL
+        if( levelStatus=m.getLevelStatus("Saturn")==true) {
 
+            Saturn.setOnClickListener(new Button.OnClickListener() {
+
+                                          public void onClick(View v) {
+
+
+                                              try {
+                                                  openZuhalActivity(m, finalLnum);
+                                              } catch (ClassNotFoundException e) {
+                                                  e.printStackTrace();
+                                              }
+                                          }
+
+                                      }
+            );
+        } //END IF
        /* if (m.getLevelStatus("Nepton")==true){
 
             nepton.setOnClickListener(new View.OnClickListener() {
@@ -200,7 +215,36 @@ public class MainActivity extends AppCompatActivity {
         catch (Exception e){e.printStackTrace();}
 
     }
+    //OPENING ZUHAL ACTIVITY .
+    public void openZuhalActivity(MySQLliteHelper M,int lnum2) throws ClassNotFoundException {
+      /*  Intent  intent = new Intent(this,secondlevel_6.class);
+        startActivity(intent);*/
+        SharedPreferences prefs = getSharedPreferences("FIRSTSTARTOFZUHAL", MODE_PRIVATE);
+        boolean firstStart = prefs.getBoolean("firstStart", true);
+        if (firstStart){
+            M.UpdateNumOfLesson(9,"Nepton");//MUST BE CHANGED TO FIRST INTERFACE IN ZUHAL
+            SharedPreferences pref = getSharedPreferences("FIRSTSTARTOFZUHAL", MODE_PRIVATE);
+            SharedPreferences.Editor editor = prefs.edit();
+            editor.putBoolean("firstStart", false);
+            editor.apply();}
+        lnum2=M.getNumOfLessonPassed("Saturn");
+        TextView t=(TextView)findViewById(R.id.textView47);
+      /* if (){
+           M.UpdateNumOfLesson(1,"Ploto");
+       }*/
+        Lesson l=new Lesson();
+        String name=l.getName(M.getNumOfLessonPassed("Saturn"));
+        t.setText(name);
+        Class c;
+        try{
+            c = Class.forName("com.example.a96653.LetsCode."+name);
 
+           // Intent  intent = new Intent(this,c);
+            Intent  intent = new Intent(this,thirdlevel_5.class);
+            startActivity(intent);}
+        catch (Exception e){e.printStackTrace();}
+
+    }
 
     public void launchSecondActivity() {
        MySQLliteHelper mySqliteOpenHelper=new MySQLliteHelper(this);

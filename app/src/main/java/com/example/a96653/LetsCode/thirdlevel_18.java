@@ -10,25 +10,25 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class secondlevel_2 extends AppCompatActivity {
+public class thirdlevel_18 extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_secondlevel_2);
+        setContentView(R.layout.activity_thirdlevel_18);
         //NEXT BUTTON
         final MySQLliteHelper m=new MySQLliteHelper(this);
-        ImageView goButton=(ImageView) findViewById(R.id.next3);
+        ImageView goButton=(ImageView) findViewById(R.id.next_thirdlevel_18);
 
         goButton.setOnClickListener(
                 new Button.OnClickListener(){
                     public void onClick(View v){
                         openSecondActivity();
-                        SharedPreferences prefs = getSharedPreferences("pref_secondLevel_2", MODE_PRIVATE);
+                        SharedPreferences prefs = getSharedPreferences("pref_thirdLevel_18", MODE_PRIVATE);
                         boolean firstStart = prefs.getBoolean("firstStart", true);
                         if (firstStart){
-                            m.UpdateNumOfLesson(11,"Nepton");
-                            SharedPreferences pref = getSharedPreferences("pref_secondLevel_2", MODE_PRIVATE);
+                            m.UpdateNumOfLesson(11,"Nepton");//MOST BE CHANGED TO THE WRITE ONES
+                            SharedPreferences pref = getSharedPreferences("pref_thirdLevel_18", MODE_PRIVATE);
                             SharedPreferences.Editor editor = prefs.edit();
                             editor.putBoolean("firstStart", false);
                             editor.apply();}
@@ -38,11 +38,11 @@ public class secondlevel_2 extends AppCompatActivity {
 
         );
         //scoreBox display
-        TextView scoredisplay=(TextView) findViewById(R.id.scoreBox_firstlevel2);
+        TextView scoredisplay=(TextView) findViewById(R.id.ScoreBox_thirdlevel_18);
         scoredisplay.setText(m.getChildScore()+"" );
 
         //HOME BUTTON
-        ImageButton homebtn9=(ImageButton)findViewById(R.id.homebtn9);
+        ImageButton homebtn9=(ImageButton)findViewById(R.id.homebtn_thirdlevel_18);
         homebtn9.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -51,23 +51,35 @@ public class secondlevel_2 extends AppCompatActivity {
             }
         });
 
-        ImageView previous3=(ImageView)findViewById(R.id.previous3);
+        ImageView previous3=(ImageView)findViewById(R.id.previous_thirdlevel_18);
         previous3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 GoToprevious();
             }
         });
+        //SHOW ME RESULT BUTTON
+      final   TextView ResultBox=(TextView) findViewById(R.id.ResultBox_thirdlevel_18);
+        Button showMeResult=(Button)findViewById(R.id.showMeResult_thirdlevel_18);
+        showMeResult.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                ResultBox.setText("True");
+
+            }
+        });
 
     }
     public void openSecondActivity() {
 
-        Intent intent = new Intent(this, secondlevel_1.class);
+        Intent intent = new Intent(this, thirdlevel_19.class);
         startActivity(intent);
 
     }
     public void GoToprevious(){
-        Intent goBack=new Intent(getApplicationContext(),secondlevel_4.class);
+        Intent goBack=new Intent(getApplicationContext(),thirdlevel_18.class);//most be changed to thirdlevel_17
         startActivity(goBack);
     }
-}
+    }
+
