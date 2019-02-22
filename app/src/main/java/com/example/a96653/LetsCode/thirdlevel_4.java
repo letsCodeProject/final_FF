@@ -57,10 +57,10 @@ public class thirdlevel_4 extends AppCompatActivity {
         Intent goBack=new Intent(getApplicationContext(),thirdlevel_3.class);
         startActivity(goBack);
     }
-
+//Small change
     public void GoNext(){
-        //Intent gonext=new Intent(getApplicationContext(),thirdlevel_5.class);
-        // startActivity(gonext);
+        Intent gonext=new Intent(getApplicationContext(),thirdlevel_5.class);
+        startActivity(gonext);
     }
 
 
