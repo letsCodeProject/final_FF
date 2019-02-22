@@ -62,12 +62,12 @@ public class secondlevel_2 extends AppCompatActivity {
     }
     public void openSecondActivity() {
 
-        Intent intent = new Intent(this, secondlevel_1.class);
+        Intent intent = new Intent(this, secondlevel_3.class);
         startActivity(intent);
 
     }
     public void GoToprevious(){
-        Intent goBack=new Intent(getApplicationContext(),secondlevel_4.class);
+        Intent goBack=new Intent(getApplicationContext(),secondlevel_1.class);
         startActivity(goBack);
     }
 }

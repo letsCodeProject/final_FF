@@ -9,24 +9,31 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
-        <activity android:name=".thirdlevel_resultsheet"
-            android:screenOrientation="landscape"/>
-        <activity android:name=".thirdlevel_4"
-            android:screenOrientation="landscape"/>
-        <activity android:name=".thirdlevel_3"
-            android:screenOrientation="landscape"/>
-        <activity android:name=".thirdlevel_18"
-            android:screenOrientation="landscape"></activity>
-        <activity android:name=".thirdlevel_19"
-            android:screenOrientation="landscape"/>
-        <activity android:name=".thirdlevel_9"
-            android:screenOrientation="landscape"/>
-        <activity android:name=".thirdlevel_24"
-            android:screenOrientation="landscape"
-            />
-        <activity android:name=".thirdlevel_23"
-            android:screenOrientation="landscape"
-            />
+
+        <activity
+            android:name=".thirdlevel_resultsheet"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".thirdlevel_4"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".thirdlevel_3"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".thirdlevel_18"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".thirdlevel_19"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".thirdlevel_9"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".thirdlevel_24"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".thirdlevel_23"
+            android:screenOrientation="landscape" />
         <activity
             android:name=".thirdlevel_21"
             android:screenOrientation="landscape" />
@@ -191,6 +198,19 @@
         <activity
             android:name=".secondlevel_resultsheet"
             android:screenOrientation="landscape" />
+
+        <activity android:name=".thirdlevel_14"
+            android:screenOrientation="landscape"/>
+
+        <activity android:name=".thirdlevel_15"
+            android:screenOrientation="landscape"/>
+        <activity android:name=".thirdlevel_16"
+            android:screenOrientation="landscape"/>
+        <activity android:name=".thirdlevel_17"
+            android:screenOrientation="landscape"/>
+
+
+
     </application>
 
 </manifest>
