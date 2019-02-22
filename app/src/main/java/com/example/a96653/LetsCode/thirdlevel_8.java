@@ -38,7 +38,7 @@ public class thirdlevel_8 extends AppCompatActivity {
 
         );
         //scoreBox display
-        TextView scoredisplay=(TextView) findViewById(R.id.scoreBox__thirdlevel_8);
+        TextView scoredisplay=(TextView) findViewById(R.id.scoreBox_thirdlevel_8);
         scoredisplay.setText(m.getChildScore()+"" );
 
         //HOME BUTTON
