@@ -154,6 +154,12 @@
     <string name="thirdlevel5_5"> ستكون نتيجة السطر البرمجي التالي خاطئة \ False ،وذلك لأن كلمة</string>
     <string name="thirdlevel5_6"> تفاح لاتماثل كلمة برتقال!</string>
     <string name="thirdlevel5_equals">==</string>
+    <string name="thirdlevel16_1">لاحظ اننا قمنا بإستخدام علامتي مساواة == من اجل ان نقارن،بينما</string>
+    <string name="thirdlevel16_2">تعلمنا سابقاً ان علامة مساواة واحدة = تستخدم لتخزين المتغيرات</string>
+    <string name="thirdlevel16_3">\ مقارنة</string>
+    <string name="thirdlevel16_4">\ ==</string>
+    <string name="thirdlevel16_5">تخزين المتغيرات</string>
+    <string name="thirdlevel16_6">=</string>
 
 
 
