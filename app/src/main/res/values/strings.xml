@@ -105,7 +105,7 @@
     <string name="tryit">  (جرب بنفسك )   </string>
     <string name="secondlevel_15_1">      بإمكاننا أن نجري عمليات الجمع و الطرح التي تعرفها  على المتغيرات  فمثلاً :    </string>
 
-  <string name="secondlevel_15_3">    إذا كان المتغير   </string>
+    <string name="secondlevel_15_3">    إذا كان المتغير   </string>
     <string name="x">    X=5</string>
     <string name="var">و المتغير </string>
     <string name="y"> Y=1   </string>
@@ -135,6 +135,10 @@
     <string name="UnderMinimum">جيد جدا</string>
     <string name="ButtonCorrect">انطلق للكوكب التالي</string>
     <string name="ButtonWrong">الرجوع إلى المهمة</string>
-
+    <string name="thirdlevel_5">تتعامل الجمل الشرطية مع نوع من المتغيرات يسمى  (Boolean) أي:\n (القيم المنطقية) وهذا النوع من المتغيرات يحتوي إحدى القيمتين التاليتين: </string>
+    <string name="thirdlevel_6">إذا تحقق الشرط فهذا يعني أنه\   \    \ \   \ \ \ \ \ \     \   \وسوف ينفذ الأمر ،\n إذا لم يتحقق الشرط فهذا يعني أنه\   \    \ \   \ \ \ \ \ \     \   \ولن ينفذ الأمر.</string>
+    <string name="thirdlevel_7"> من خلال لغة بايثون ،يمكنك كتابة الشروط باستخدام الأمر : (if) كما في \nالمثال التالي :</string>
+    <string name="thirdlevel_8_1">     في الأمر السابق يتضح لنا أنه إذا كان العدد 5 أكبر من 2 فهذا يعني \nأن الشرط صحيح وسيتم تنفيذ أمر الطباعة . </string>
+    <string name="thirdlevel_8_2">    تذكر: نستخدم علامة\ \ \  \    \إذا أردنا التحقق ما إذا كان أحد العددين أكبر من الآخر ،بينما علامة\ \ \ \  \      إذا أردنا التحقق ما إذا كان أحد العددين أصغر من الآخر .</string>
 
 </resources>
