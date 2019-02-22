@@ -238,4 +238,8 @@ public class firstlevel_6 extends AppCompatActivity {
         myDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
         myDialog.show();
     }
+    /*protected void onPause () {
+        super.onPause();
+        mySqliteOpenHelper.close();
+    }*/
 }
