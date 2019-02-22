@@ -52,6 +52,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 public class welcome_2 extends AppCompatActivity {
+    //dfgmsrbgjbjb
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

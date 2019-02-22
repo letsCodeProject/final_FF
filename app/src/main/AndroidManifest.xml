@@ -13,6 +13,18 @@
         <activity android:name=".thirdlevel_7" />
         <activity android:name=".thirdlevel_6" />
         <activity android:name=".thirdlevel_5" />
+        <activity android:name=".thirdlevel_resultsheet"
+            android:screenOrientation="landscape"/>
+        <activity android:name=".thirdlevel_4"
+            android:screenOrientation="landscape"/>
+        <activity android:name=".thirdlevel_3"
+            android:screenOrientation="landscape"/>
+        <activity
+            android:name=".thirdlevel_2"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".thirdlevel_1"
+            android:screenOrientation="landscape" />
         <activity
             android:name=".MainActivity_Loading"
             android:screenOrientation="landscape">
@@ -147,6 +159,7 @@
         <activity
             android:name=".secondlevel_resultsheet"
             android:screenOrientation="landscape" />
+
     </application>
 
 </manifest>
