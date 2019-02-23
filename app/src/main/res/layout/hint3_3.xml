@@ -11,7 +11,7 @@
 
 
     <ImageView
-        android:id="@+id/homebtn18"
+        android:id="@+id/homebtn17"
         android:layout_width="189dp"
         android:layout_height="300dp"
         android:layout_alignParentStart="true"
@@ -31,8 +31,8 @@
 
     <TextView
         android:id="@+id/textView47"
-        android:layout_width="284dp"
-        android:layout_height="214dp"
+        android:layout_width="288dp"
+        android:layout_height="207dp"
         android:layout_marginStart="8dp"
 
         android:layout_marginTop="8dp"
@@ -48,20 +48,20 @@
 
     <TextView
         android:id="@+id/textView59"
-        android:layout_width="231dp"
-        android:layout_height="73dp"
-        android:layout_marginStart="216dp"
+        android:layout_width="250dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="208dp"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
-        android:fontFamily="@font/lemon"
-        android:text="ناتج السطور البرمجية التالية هو : أهلا كوكب نبتون! "
-        android:textAlignment="textStart"
+        android:fontFamily="@font/jannalt_regular"
+        android:text="@string/thirdlevel_22_hint3_3"
+        android:textAlignment="center"
         android:textColor="#6100ED"
-        android:textSize="18sp"
+        android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.187" />
+        app:layout_constraintVertical_bias="0.317" />
 
     <Button
         android:id="@+id/okaybtn"
@@ -80,24 +80,24 @@
         android:textSize="18dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.739"
+        app:layout_constraintHorizontal_bias="0.704"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.711" />
+        app:layout_constraintVertical_bias="0.678" />
 
     <ImageView
-        android:id="@+id/imageView58"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
+        android:id="@+id/imageView52"
+        android:layout_width="236dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="212dp"
+        android:layout_marginTop="120dp"
         android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.922"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.501"
-        app:srcCompat="@drawable/secondlevel_activity26_hint2_5" />
+        app:layout_constraintVertical_bias="0.094"
+        app:srcCompat="@drawable/thirdlevel_22_hint3_3" />
 </android.support.constraint.ConstraintLayout>
+
+
+

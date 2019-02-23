@@ -52,8 +52,8 @@ public class thirdlevel_14 extends AppCompatActivity {
 
 
     public void GoToprevious(){
-       // Intent goBack=new Intent(getApplicationContext(),thirdlevel_13.class);
-      //  startActivity(goBack);
+        Intent goBack=new Intent(getApplicationContext(),thirdlevel_13_feedback.class);
+       startActivity(goBack);
     }
 
     public void GoNext(){
