@@ -8,23 +8,23 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class thirdlevel_14 extends AppCompatActivity {
+public class thirdlevel_17 extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_thirdlevel_14);
+        setContentView(R.layout.activity_thirdlevel_17);
 
 
         //scoreBox
         final MySQLliteHelper m=new MySQLliteHelper(this);
 
         //scoreBox display
-        TextView scoredisplay=(TextView) findViewById(R.id.ScoreBox_thirdlevel_14);
+        TextView scoredisplay=(TextView) findViewById(R.id.ScoreBox_thirdlevel_17);
         scoredisplay.setText(m.getChildScore()+"" );
 
         //HOME BUTTON
-        ImageButton homebtn6=(ImageButton)findViewById(R.id.homebtn_thirdlevel14);
+        ImageButton homebtn6=(ImageButton)findViewById(R.id.homebtn_thirdlevel17);
         homebtn6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -33,7 +33,7 @@ public class thirdlevel_14 extends AppCompatActivity {
 
             }
         });
-        ImageView previous3=(ImageView)findViewById(R.id.previous_thirdlevel14);
+        ImageView previous3=(ImageView)findViewById(R.id.previous_thirdlevel17);
         previous3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -41,7 +41,7 @@ public class thirdlevel_14 extends AppCompatActivity {
             }
         });
 
-        ImageView next3=(ImageView)findViewById(R.id.nextBTN_thirdlevel14);
+        ImageView next3=(ImageView)findViewById(R.id.nextBTN_thirdlevel17);
         next3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -52,15 +52,13 @@ public class thirdlevel_14 extends AppCompatActivity {
 
 
     public void GoToprevious(){
-        Intent goBack=new Intent(getApplicationContext(),thirdlevel_13_feedback.class);
-       startActivity(goBack);
+        Intent goBack=new Intent(getApplicationContext(),thirdlevel_16.class);
+        startActivity(goBack);
     }
 
     public void GoNext(){
-       Intent gonext=new Intent(getApplicationContext(),thirdlevel_15.class);
-       startActivity(gonext);
+         Intent gonext=new Intent(getApplicationContext(),thirdlevel_18.class);
+         startActivity(gonext);
     }
 
 }
-
-

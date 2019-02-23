@@ -70,7 +70,7 @@ public class secondlevel_3 extends AppCompatActivity {
     }
 
     public void GoToprevious (){
-        Intent gonext=new Intent(getApplicationContext(),secondlevel_5.class);
+        Intent gonext=new Intent(getApplicationContext(),secondlevel_2.class);
         startActivity(gonext);
     }
 }

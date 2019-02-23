@@ -21,15 +21,27 @@
             android:screenOrientation="landscape"/>
         <activity android:name=".thirdlevel_9"
             android:screenOrientation="landscape"/>
-       <!-- <activity android:name=".thirdlevel_24"
+        <activity android:name=".thirdlevel_24"
             android:screenOrientation="landscape"
             />
         <activity android:name=".thirdlevel_23"
             android:screenOrientation="landscape"
             />
+        <activity android:name=".thirdlevel_22" />
+        <activity
+            android:name=".thirdlevel_13_feedback"
+            android:screenOrientation="landscape" />
+        <activity android:name=".thirdlevel_12" />
+        <activity
+            android:name=".thirdlevel_11"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".thirdlevel_10"
+            android:screenOrientation="landscape" />
+        <activity
         <activity
             android:name=".thirdlevel_21"
-            android:screenOrientation="landscape" />-->
+            android:screenOrientation="landscape" />
         <activity
             android:name=".thirdlevel_8"
             android:screenOrientation="landscape" />
@@ -65,9 +77,9 @@
             android:name=".firstlevel_1"
             android:screenOrientation="landscape" />
 
-      <!--  <meta-data
+        <meta-data
             android:name="preloaded_fonts"
-            android:resource="@array/preloaded_fonts" />-->
+            android:resource="@array/preloaded_fonts" />
 
         <activity
             android:name=".welcome_1"
@@ -182,6 +194,18 @@
             android:screenOrientation="landscape" />
         <activity
             android:name=".secondlevel_resultsheet"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".thirdlevel_14"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".thirdlevel_15"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".thirdlevel_16"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".thirdlevel_17"
             android:screenOrientation="landscape" />
     </application>
 

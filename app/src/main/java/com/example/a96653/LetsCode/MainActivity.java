@@ -210,7 +210,7 @@ public class MainActivity extends AppCompatActivity {
             c = Class.forName("com.example.a96653.LetsCode."+name);
 
           Intent  intent = new Intent(this,c);
-          // Intent  intent = new Intent(this,secondlevel_5.class);
+           //Intent  intent = new Intent(this,secondlevel_20.class);
             startActivity(intent);}
         catch (Exception e){e.printStackTrace();}
 
@@ -240,7 +240,7 @@ public class MainActivity extends AppCompatActivity {
             c = Class.forName("com.example.a96653.LetsCode."+name);
 
            // Intent  intent = new Intent(this,c);
-            Intent  intent = new Intent(this,thirdlevel_18.class);
+            Intent  intent = new Intent(this,thirdlevel_14.class);
             startActivity(intent);}
         catch (Exception e){e.printStackTrace();}
 

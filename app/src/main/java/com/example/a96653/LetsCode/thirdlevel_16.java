@@ -57,8 +57,8 @@ public class thirdlevel_16 extends AppCompatActivity {
     }
 
     public void GoNext(){
-       // Intent gonext=new Intent(getApplicationContext(),thirdlevel_17.class);
-      //  startActivity(gonext);
+        Intent gonext=new Intent(getApplicationContext(),thirdlevel_17.class);
+      startActivity(gonext);
     }
 
 }
