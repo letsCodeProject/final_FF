@@ -176,8 +176,7 @@
     <string name="thirdlevel17_2">غير متساويتين؟</string>
     <string name="thirdlevel17_3">في بايثون نستخدم العلامة</string>
     <string name="thirdlevel17_4">!=</string>
-    <string name="thirdlevel17_5">للتأكد من أن إحدى القيمتين لاتساوي </string>
+    <string name="thirdlevel17_5">للتأكد من ان إحدى القيمتين لاتساوي </string>
     <string name="thirdlevel17_6">الأخرى.</string>
-    <string name="thirdlevel_quiz1">"7&lt;1"</string>
 
 </resources>

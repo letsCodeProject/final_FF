@@ -62,7 +62,7 @@ public class thirdlevel_9 extends AppCompatActivity {
     }
     public void openSecondActivity() {
 
-        Intent intent = new Intent(this, thirdlevel_8.class);//most be changed to thirdlevel_10
+        Intent intent = new Intent(this, thirdlevel_10.class);//most be changed to thirdlevel_10
         startActivity(intent);
 
     }
