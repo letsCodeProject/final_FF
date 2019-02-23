@@ -135,14 +135,14 @@ public class thirdlevel_24 extends AppCompatActivity {
             public void onClick(View v) {
 
                 if(radio1.isChecked()) {
-                    startActivity(new Intent(thirdlevel_24.this,thirdlevel_24.class));
+                    startActivity(new Intent(thirdlevel_24.this,thirdlevel_resultsheet.class));
                     mySqliteOpenHelper.UpdateQuestionAnswer(12, 0);
 
                 }
                 if(radio2.isChecked()){
 
                     mySqliteOpenHelper.UpdateQuestionAnswer(12,1);
-                    startActivity(new Intent(thirdlevel_24.this,thirdlevel_24.class));
+                    startActivity(new Intent(thirdlevel_24.this,thirdlevel_resultsheet.class));
                 }
 
 
