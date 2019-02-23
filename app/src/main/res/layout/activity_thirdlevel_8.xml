@@ -165,7 +165,7 @@
     <TextView
         android:id="@+id/textView65"
         android:layout_width="316dp"
-        android:layout_height="157dp"
+        android:layout_height="181dp"
         android:layout_marginStart="24dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
@@ -178,10 +178,10 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/imageView58"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.021"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.802" />
+        app:layout_constraintVertical_bias="0.949" />
 
     <TextView
         android:id="@+id/textView95"
@@ -189,35 +189,35 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="176dp"
+        android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
-        android:text="--"
+        android:text="&lt;"
         android:textColor="@color/yellow1"
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/previous_thirdlevel_8"
-        app:layout_constraintEnd_toEndOf="@+id/textView65"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintEnd_toEndOf="@+id/imageView58"
+        app:layout_constraintHorizontal_bias="0.305"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/homebtn_thirdlevel_8"
         app:layout_constraintVertical_bias="0.446" />
     <TextView
         android:id="@+id/textView97"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="34dp"
+        android:layout_height="40dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
-        android:text="---"
-
+        android:rotation="180"
+        android:text="&lt;"
         android:textColor="@color/yellow1"
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/textView65"
         app:layout_constraintEnd_toEndOf="@+id/textView65"
-        app:layout_constraintHorizontal_bias="0.588"
+        app:layout_constraintHorizontal_bias="0.899"
         app:layout_constraintStart_toStartOf="@+id/imageView99"
         app:layout_constraintTop_toBottomOf="@+id/textView63"
-        app:layout_constraintVertical_bias="0.594" />
+        app:layout_constraintVertical_bias="0.492" />
 
 </android.support.constraint.ConstraintLayout>
