@@ -21,7 +21,7 @@
             android:screenOrientation="landscape"/>
         <activity android:name=".thirdlevel_9"
             android:screenOrientation="landscape"/>
-        <activity android:name=".thirdlevel_24"
+       <!-- <activity android:name=".thirdlevel_24"
             android:screenOrientation="landscape"
             />
         <activity android:name=".thirdlevel_23"
@@ -29,7 +29,7 @@
             />
         <activity
             android:name=".thirdlevel_21"
-            android:screenOrientation="landscape" />
+            android:screenOrientation="landscape" />-->
         <activity
             android:name=".thirdlevel_8"
             android:screenOrientation="landscape" />
@@ -42,15 +42,7 @@
         <activity
             android:name=".thirdlevel_5"
             android:screenOrientation="landscape" />
-        <activity
-            android:name=".thirdlevel_resultsheet"
-            android:screenOrientation="landscape" />
-        <activity
-            android:name=".thirdlevel_4"
-            android:screenOrientation="landscape" />
-        <activity
-            android:name=".thirdlevel_3"
-            android:screenOrientation="landscape" />
+
         <activity
             android:name=".thirdlevel_2"
             android:screenOrientation="landscape" />
@@ -73,9 +65,9 @@
             android:name=".firstlevel_1"
             android:screenOrientation="landscape" />
 
-        <meta-data
+      <!--  <meta-data
             android:name="preloaded_fonts"
-            android:resource="@array/preloaded_fonts" />
+            android:resource="@array/preloaded_fonts" />-->
 
         <activity
             android:name=".welcome_1"
