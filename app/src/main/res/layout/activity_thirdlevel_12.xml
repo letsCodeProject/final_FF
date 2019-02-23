@@ -160,8 +160,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/thirdlevel_12_progressbar" />
-
-    <TextView
+   <!-- <TextView
         android:id="@+id/textView66"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -172,7 +171,7 @@
         android:textColor="@color/light_font"
         android:textSize="21sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent" />-->
 
     <ImageView
         android:id="@+id/imageView49"

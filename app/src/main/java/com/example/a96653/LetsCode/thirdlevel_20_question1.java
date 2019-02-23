@@ -19,11 +19,11 @@ public class thirdlevel_20_question1 extends AppCompatActivity {
         final MySQLliteHelper m=new MySQLliteHelper(this);
 
         //scoreBox display
-        TextView scoredisplay=(TextView) findViewById(R.id.ScoreBox_thirdlevel_20);
-        scoredisplay.setText(m.getChildScore()+"" );
+        //TextView scoredisplay=(TextView) findViewById(R.id.ScoreBox_thirdlevel_20);
+       /* scoredisplay.setText(m.getChildScore()+"" );
 
         //HOME BUTTON
-        ImageButton homebtn6=(ImageButton)findViewById(R.id.homebtn_thirdleve20);
+       // ImageButton homebtn6=(ImageButton)findViewById(R.id.homebtn_thirdleve20);
         homebtn6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -31,16 +31,15 @@ public class thirdlevel_20_question1 extends AppCompatActivity {
                 startActivity(gohome);
 
             }
-        });
+        });*/
 
-
-        ImageView next3=(ImageView)findViewById(R.id.next_thirdlevel_20);
+       /* ImageView next3=(ImageView)findViewById(R.id.next_thirdlevel_20);
         next3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 GoNext();
             }
-        });
+        });*/
     }//End of Oncreate
 
 
