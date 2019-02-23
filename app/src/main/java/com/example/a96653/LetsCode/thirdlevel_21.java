@@ -201,25 +201,25 @@ public class thirdlevel_21 extends AppCompatActivity {
             public void onClick(View v) {
                 //   startActivity(new Intent(MainActivity.this,secondlevel_22.class));
                 if(radio1.isChecked()) {
-                    startActivity(new Intent(thirdlevel_21.this,secondlevel_22.class));
+                    startActivity(new Intent(thirdlevel_21.this,thirdlevel_22.class));
                     mySqliteOpenHelper.UpdateQuestionAnswer(9, 0);
 
                 }
                 if(radio2.isChecked()){
 
                     mySqliteOpenHelper.UpdateQuestionAnswer(9,1);
-                    startActivity(new Intent(thirdlevel_21.this,secondlevel_22.class));
+                    startActivity(new Intent(thirdlevel_21.this,thirdlevel_22.class));
                 }
 
 
                 if(radio3.isChecked()){
 
                     mySqliteOpenHelper.UpdateQuestionAnswer(9,0);
-                    startActivity(new Intent(thirdlevel_21.this,secondlevel_22.class));
+                    startActivity(new Intent(thirdlevel_21.this,thirdlevel_22.class));
                 }
                 if(radio4.isChecked()){
                     mySqliteOpenHelper.UpdateQuestionAnswer(9,0);
-                    startActivity(new Intent(thirdlevel_21.this,secondlevel_22.class));
+                    startActivity(new Intent(thirdlevel_21.this,thirdlevel_22.class));
                 }
                 if(!radio1.isChecked()&&!radio2.isChecked()&&!radio3.isChecked()&&!radio4.isChecked()){
                     ShowPopupSolve();}
