@@ -171,6 +171,9 @@
     <string name="thirdlevel16_4">\ ==</string>
     <string name="thirdlevel16_5">تخزين المتغيرات</string>
     <string name="thirdlevel16_6">=</string>
+    <string name="hint3_5">   تذكر ناتج السطر البرمجي التالي هو : False</string>
+    <string name="hint3_4">تذكر الترتيب الصحيح للجملة الشرطية هو كالتالي :  </string>
+    <string name="hint3_2"> تذكر ناتج السطر البرمجي التالي هو جملة : الشرط صحيح  </string>
 
     <string name="thirdlevel17_1">ماذا لو أردنا التحقق من ان القيمتين</string>
     <string name="thirdlevel17_2">غير متساويتين؟</string>

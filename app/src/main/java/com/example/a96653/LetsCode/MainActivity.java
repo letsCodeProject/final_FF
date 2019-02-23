@@ -160,9 +160,38 @@ public class MainActivity extends AppCompatActivity {
 
         }//end if*/
 
+
+        ImageView zohal = (ImageView)findViewById(R.id.imageView13);
+
+        zohal.setOnClickListener(
+
+                new ImageView.OnClickListener(){
+
+
+                    public void onClick(View v){
+
+                        Intent openz=new Intent (MainActivity.this, thirdlevel_23.class);
+                        startActivity( openz);
+
+                    }
+
+                }
+        );
+
+
+
+
+
+
+
+
+
+
     }//END ONcreate
 
 ////
+
+
 
 
     public void openPlotoActivity(MySQLliteHelper M,int lnum2) throws ClassNotFoundException {
