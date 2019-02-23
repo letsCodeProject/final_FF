@@ -2,11 +2,13 @@
 package com.example.a96653.LetsCode;
 
         import android.content.Intent;
+        import android.content.SharedPreferences;
         import android.support.v7.app.AppCompatActivity;
         import android.os.Bundle;
         import android.view.View;
         import android.widget.Button;
         import android.widget.ImageButton;
+        import android.widget.ImageView;
         import android.widget.TextView;
 
 public class thirdlevel_1 extends AppCompatActivity {
@@ -34,19 +36,31 @@ public class thirdlevel_1 extends AppCompatActivity {
             }
         });
 
-
-        //TALI BUTTON
+//NEXT BUTTON
         Button talibutton=(Button)findViewById(R.id.talibutton4);
-        talibutton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                GoNext();
-            }
-        });
+
+        talibutton.setOnClickListener(
+                new Button.OnClickListener(){
+                    public void onClick(View v){
+                        openSecondActivity();
+                        SharedPreferences prefs = getSharedPreferences("pref_thirdLevel_1", MODE_PRIVATE);
+                        boolean firstStart = prefs.getBoolean("firstStart", true);
+                        if (firstStart){
+                            m.UpdateNumOfLesson(30,"Saturn");
+                            SharedPreferences pref = getSharedPreferences("pref_thirdLevel_1", MODE_PRIVATE);
+                            SharedPreferences.Editor editor = prefs.edit();
+                            editor.putBoolean("firstStart", false);
+                            editor.apply();}
+                    }//end onClick
+
+                }//end onClickListner
+
+        );
+
     }//oncreate method closing.
 
     //METHOD FOR TALI
-    public void GoNext(){
+    public void    openSecondActivity(){
         Intent gonext=new Intent(getApplicationContext(),thirdlevel_2.class);
         startActivity(gonext);
     }

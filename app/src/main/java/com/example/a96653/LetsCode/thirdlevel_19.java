@@ -27,7 +27,7 @@ public class thirdlevel_19 extends AppCompatActivity {
                         SharedPreferences prefs = getSharedPreferences("pref_thirdLevel_19", MODE_PRIVATE);
                         boolean firstStart = prefs.getBoolean("firstStart", true);
                         if (firstStart){
-                            m.UpdateNumOfLesson(11,"Nepton");//MOST BE CHANGED TO THE WRITE ONES
+                            m.UpdateNumOfLesson(47,"Saturn");
                             SharedPreferences pref = getSharedPreferences("pref_thirdLevel_19", MODE_PRIVATE);
                             SharedPreferences.Editor editor = prefs.edit();
                             editor.putBoolean("firstStart", false);
@@ -62,7 +62,7 @@ public class thirdlevel_19 extends AppCompatActivity {
     }
     public void openSecondActivity() {
 
-        Intent intent = new Intent(this, thirdlevel_8.class);//most be changed to thirdlevel_20
+        Intent intent = new Intent(this, thirdlevel_21.class);
         startActivity(intent);
 
     }

@@ -27,7 +27,7 @@ public class thirdlevel_5 extends AppCompatActivity {
                         SharedPreferences prefs = getSharedPreferences("pref_thirdLevel_5", MODE_PRIVATE);
                         boolean firstStart = prefs.getBoolean("firstStart", true);
                         if (firstStart){
-                            m.UpdateNumOfLesson(11,"Nepton");//MOST BE CHANGED TO THE WRITE ONES
+                            m.UpdateNumOfLesson(34,"Saturn");
                             SharedPreferences pref = getSharedPreferences("pref_thirdLevel_5", MODE_PRIVATE);
                             SharedPreferences.Editor editor = prefs.edit();
                             editor.putBoolean("firstStart", false);
@@ -67,7 +67,7 @@ public class thirdlevel_5 extends AppCompatActivity {
 
     }
     public void GoToprevious(){
-        Intent goBack=new Intent(getApplicationContext(),thirdlevel_5.class); //most be changed to thirdlevel_4
+        Intent goBack=new Intent(getApplicationContext(),thirdlevel_4.class);
         startActivity(goBack);
     }
     }

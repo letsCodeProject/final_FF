@@ -260,7 +260,6 @@
         app:layout_constraintVertical_bias="0.972" />
 
     <Button
-
         android:id="@+id/showMeResult_thirdlevel_15"
         android:layout_width="82dp"
         android:layout_height="33dp"

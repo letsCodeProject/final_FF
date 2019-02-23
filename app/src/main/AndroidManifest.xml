@@ -19,6 +19,8 @@
             android:screenOrientation="landscape"></activity>
         <activity android:name=".thirdlevel_19"
             android:screenOrientation="landscape"/>
+        <activity android:name=".thirdlevel_15"
+            android:screenOrientation="landscape"/>
         <activity android:name=".thirdlevel_9"
             android:screenOrientation="landscape"/>
         <activity android:name=".thirdlevel_24"
@@ -31,14 +33,14 @@
         <activity
             android:name=".thirdlevel_13_feedback"
             android:screenOrientation="landscape" />
-        <activity android:name=".thirdlevel_12" />
+        <activity android:name=".thirdlevel_12"
+            android:screenOrientation="landscape"/>
         <activity
             android:name=".thirdlevel_11"
             android:screenOrientation="landscape" />
         <activity
             android:name=".thirdlevel_10"
             android:screenOrientation="landscape" />
-        <activity
         <activity
             android:name=".thirdlevel_21"
             android:screenOrientation="landscape" />
@@ -197,9 +199,6 @@
             android:screenOrientation="landscape" />
         <activity
             android:name=".thirdlevel_14"
-            android:screenOrientation="landscape" />
-        <activity
-            android:name=".thirdlevel_15"
             android:screenOrientation="landscape" />
         <activity
             android:name=".thirdlevel_16"

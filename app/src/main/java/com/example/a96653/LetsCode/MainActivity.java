@@ -222,7 +222,7 @@ public class MainActivity extends AppCompatActivity {
         SharedPreferences prefs = getSharedPreferences("FIRSTSTARTOFZUHAL", MODE_PRIVATE);
         boolean firstStart = prefs.getBoolean("firstStart", true);
         if (firstStart){
-            M.UpdateNumOfLesson(9,"Nepton");//MUST BE CHANGED TO FIRST INTERFACE IN ZUHAL
+            M.UpdateNumOfLesson(29,"Saturn");//MUST BE CHANGED TO FIRST INTERFACE IN ZUHAL
             SharedPreferences pref = getSharedPreferences("FIRSTSTARTOFZUHAL", MODE_PRIVATE);
             SharedPreferences.Editor editor = prefs.edit();
             editor.putBoolean("firstStart", false);
@@ -239,8 +239,8 @@ public class MainActivity extends AppCompatActivity {
         try{
             c = Class.forName("com.example.a96653.LetsCode."+name);
 
-           // Intent  intent = new Intent(this,c);
-            Intent  intent = new Intent(this,thirdlevel_14.class);
+            Intent  intent = new Intent(this,c);
+           // Intent  intent = new Intent(this,thirdlevel_14.class);
             startActivity(intent);}
         catch (Exception e){e.printStackTrace();}
 

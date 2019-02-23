@@ -27,7 +27,7 @@ public class thirdlevel_18 extends AppCompatActivity {
                         SharedPreferences prefs = getSharedPreferences("pref_thirdLevel_18", MODE_PRIVATE);
                         boolean firstStart = prefs.getBoolean("firstStart", true);
                         if (firstStart){
-                            m.UpdateNumOfLesson(11,"Nepton");//MOST BE CHANGED TO THE WRITE ONES
+                            m.UpdateNumOfLesson(46,"Saturn");
                             SharedPreferences pref = getSharedPreferences("pref_thirdLevel_18", MODE_PRIVATE);
                             SharedPreferences.Editor editor = prefs.edit();
                             editor.putBoolean("firstStart", false);
@@ -50,7 +50,7 @@ public class thirdlevel_18 extends AppCompatActivity {
                 startActivity(gohome);
             }
         });
-
+///PREVIOUS BUTTON
         ImageView previous3=(ImageView)findViewById(R.id.previous_thirdlevel_18);
         previous3.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -78,7 +78,7 @@ public class thirdlevel_18 extends AppCompatActivity {
 
     }
     public void GoToprevious(){
-        Intent goBack=new Intent(getApplicationContext(),thirdlevel_18.class);//most be changed to thirdlevel_17
+        Intent goBack=new Intent(getApplicationContext(),thirdlevel_17.class);
         startActivity(goBack);
     }
     }

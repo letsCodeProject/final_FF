@@ -1,6 +1,7 @@
 package com.example.a96653.LetsCode;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -22,8 +23,6 @@ public class thirdlevel_12 extends AppCompatActivity {
         textView.setText(mySqliteOpenHelper.getChildScore()+"" );
 
 
-
-
         prevoius = (ImageView)findViewById(R.id.previous_thirslevel_12);
         prevoius.setOnClickListener(
                 new ImageView.OnClickListener(){
@@ -43,8 +42,16 @@ public class thirdlevel_12 extends AppCompatActivity {
 
         Intent feedback=new Intent(getApplicationContext(),thirdlevel_13_feedback.class);
         startActivity(feedback);
-
+        SharedPreferences prefs = getSharedPreferences("pref_thirdLevel_12", MODE_PRIVATE);
+        boolean firstStart = prefs.getBoolean("firstStart", true);
+        if (firstStart){
+            mySqliteOpenHelper.UpdateNumOfLesson(41,"Saturn");
+            SharedPreferences pref = getSharedPreferences("pref_thirdLevel_12", MODE_PRIVATE);
+            SharedPreferences.Editor editor = prefs.edit();
+            editor.putBoolean("firstStart", false);
+            editor.apply();}
     }
+
 
     public void openPreviousActivity(){
 
