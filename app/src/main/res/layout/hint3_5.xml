@@ -6,7 +6,7 @@
     android:layout_height="350dp"
     android:layout_gravity="center"
     android:layout_marginEnd="50dp"
-    android:orientation="vertical"
+    android:orientation="horizontal"
     android:padding="5dp">
 
 
@@ -22,7 +22,7 @@
         android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.062"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/robotquiz1_2" />
