@@ -155,34 +155,32 @@
     <string name="thirdlevel_24_quiz3_5text">ما هو ناتج المقارنة التالية : </string>
     <string name="thirdlevel_1">في لغة بايثون تستخدم العلامة \ </string>
     <string name="thirdlevel_1_continu">للتحقق من تساوي قيمتين </string>
-    <string name="thirdlevel_2">فمثلاً:إذا اردنا المقارنة بين التفاحة والبرتقالة فإنهما غير متساويتين!</string>
+    <string name="thirdlevel_2">فمثلاً:إذا أردنا المقارنة بين التفاحة والبرتقالة فإنهما غير متساويتين!</string>
     <string name="thirdlevel_3">فلونهما مختلف وشكلهما مختلف.</string>
 
-    <string name="thirdlevel5_1">الأمر نفسه لو اردنا المقارنة بين كلمتي :</string>
+    <string name="thirdlevel5_1">الأمر نفسه لو أردنا المقارنة بين كلمتي :</string>
     <string name="thirdlevel5_2">تفاح</string>
     <string name="thirdlevel5_3">و</string>
     <string name="thirdlevel5_4">برتقال</string>
     <string name="thirdlevel5_5"> ستكون نتيجة السطر البرمجي التالي خاطئة \ False ،وذلك لأن كلمة</string>
     <string name="thirdlevel5_6"> تفاح لاتماثل كلمة برتقال!</string>
     <string name="thirdlevel5_equals">==</string>
-    <string name="thirdlevel16_1">لاحظ اننا قمنا بإستخدام علامتي مساواة == من اجل ان نقارن،بينما</string>
-    <string name="thirdlevel16_2">تعلمنا سابقاً ان علامة مساواة واحدة = تستخدم لتخزين المتغيرات</string>
+    <string name="thirdlevel16_1">لاحظ أننا قمنا بإستخدام علامتي مساواة == من أجل أن نقارن،بينما</string>
+    <string name="thirdlevel16_2">تعلمنا سابقاً أن علامة مساواة واحدة = تستخدم لتخزين المتغيرات</string>
     <string name="thirdlevel16_3">\ مقارنة</string>
     <string name="thirdlevel16_4">\ ==</string>
     <string name="thirdlevel16_5">تخزين المتغيرات</string>
     <string name="thirdlevel16_6">=</string>
+    <string name="hint3_5">   تذكر ناتج السطر البرمجي التالي هو : False</string>
+    <string name="hint3_4">تذكر الترتيب الصحيح للجملة الشرطية هو كالتالي :  </string>
+    <string name="hint3_2"> تذكر ناتج السطر البرمجي التالي هو جملة : الشرط صحيح  </string>
 
-    <string name="thirdlevel17_1">ماذا لو أردنا التحقق من ان القيمتين</string>
+    <string name="thirdlevel17_1">ماذا لو أردنا التحقق من أن القيمتين</string>
     <string name="thirdlevel17_2">غير متساويتين؟</string>
     <string name="thirdlevel17_3">في بايثون نستخدم العلامة</string>
     <string name="thirdlevel17_4">!=</string>
     <string name="thirdlevel17_5">للتأكد من ان إحدى القيمتين لاتساوي </string>
     <string name="thirdlevel17_6">الأخرى.</string>
-    <string name="thirdlevel_10_1">على المثال السابق مال الذي سيحدث إذا أضفنا الأمر Else ، \n وقمنا بتغيير الشرط ليكون </string>
-    <string name="thirdlevel_10_2">2>5</string>
-    <string name="thirdlevel_10_3">؟</string>
-    <string name="thirdlevel_11_1">لاحظ معي في المثال السابق ،الشرط الذي\n وضع في جملة if خاطئ لأن 2 أصغر من 5 \nولذلك سوف يقوم الحاسوب بتنفيذ ما\n بداخل Else وهو طباعة“ كوكب الأرض“\n بدلاً من طباعة“ كوكب زحل“ . </string>
-    <string name="thirdlevel_12">في المثال التالي سيتم تنفيذ أمر الطباعة وذلك لأن 5 أكبر من 1 \n هو شرط صحيح …</string>
-    <string name="thirdlevel_22_hint3_3">الترتيب الصحيح للجملة الشرطية هو كالتالي : </string>
+
 
 </resources>
