@@ -28,11 +28,7 @@ public class thirdlevel_19 extends AppCompatActivity {
                         boolean firstStart = prefs.getBoolean("firstStart", true);
                         if (firstStart){
                             m.UpdateNumOfLesson(47,"Saturn");
-                            m.addQuestion(3);
-                            m.addQuestion(3);
-                            m.addQuestion(3);
-                            m.addQuestion(3);
-                            m.addQuestion(3);
+
                             SharedPreferences pref = getSharedPreferences("pref_thirdLevel_19", MODE_PRIVATE);
                             SharedPreferences.Editor editor = prefs.edit();
                             editor.putBoolean("firstStart", false);
@@ -66,6 +62,20 @@ public class thirdlevel_19 extends AppCompatActivity {
                 GoToprevious();
             }
         });
+
+        SharedPreferences prefs = getSharedPreferences("pre5fs_for_question_Thirdlevel", MODE_PRIVATE);
+        boolean firstStart = prefs.getBoolean("firstStart", true);
+        if (firstStart){
+            m.addQuestion(3);
+            m.addQuestion(3);
+            m.addQuestion(3);
+            m.addQuestion(3);
+            m.addQuestion(3);
+            SharedPreferences pref = getSharedPreferences("pre5fs_for_question_Thirdlevel", MODE_PRIVATE);
+            SharedPreferences.Editor editor = prefs.edit();
+            editor.putBoolean("firstStart", false);
+            editor.apply();
+        }
 
     }
     public void openSecondActivity() {
