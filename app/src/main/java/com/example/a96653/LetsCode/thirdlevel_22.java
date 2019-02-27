@@ -120,12 +120,7 @@ public class thirdlevel_22 extends AppCompatActivity {
                         CHECK=tt1+tt2+tt3+tt4+tt5;
                         if(CHECK==5){
 
-
-
-                            Toast.makeText(getApplicationContext(),
-                                    Integer.toString(result),
-                                    Toast.LENGTH_SHORT).show();
-                            //updatedata();
+                            updatedata();
                             Intent  intent = new Intent(getApplicationContext(),thirdlevel_23.class);
 
 
@@ -499,7 +494,7 @@ public class thirdlevel_22 extends AppCompatActivity {
         startActivity(HomePage);
 
     }
-   /* public void updatedata() {
+    public void updatedata() {
         result = res1 + res2 + res3+res4+res5 ;
         // sqLiteHelper.UpdateQuestionAnswer(1,1);
         if (result == 5) {
@@ -509,7 +504,7 @@ public class thirdlevel_22 extends AppCompatActivity {
             sqLiteHelper.UpdateQuestionAnswer(10,0);
 
 
-    }*/
+    }
 
     public void ShowPopupSolve() {
 

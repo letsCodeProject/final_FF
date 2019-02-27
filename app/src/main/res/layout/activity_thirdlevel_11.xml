@@ -7,7 +7,7 @@
     android:background="@drawable/back"
     tools:context=".thirdlevel_11">
 
-   <!-- <TextView
+     <TextView
         android:id="@+id/textView69"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -24,30 +24,14 @@
         app:layout_constraintHorizontal_bias="0.904"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.35" />-->
+        app:layout_constraintVertical_bias="0.35" /><![CDATA[-->
 
-   <!-- <TextView
-        android:id="@+id/textView71"
-        android:layout_width="77dp"
-        android:layout_height="51dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:fontFamily="@font/jannalt_regular"
-        android:text="@string/thirdlevel_19_2"
-        android:textAlignment="textStart"
-        android:textColor="@android:color/white"
-        android:textSize="28sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.585"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.272" />-->
+   -->
 
 
-    <ImageView
+    ]]>
+
+ <ImageView
 
         android:id="@+id/previous_thirslevel_11"
         android:layout_width="85dp"
