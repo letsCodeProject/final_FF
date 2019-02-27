@@ -80,7 +80,7 @@ public class thirdlevel_19 extends AppCompatActivity {
     }
     public void openSecondActivity() {
 
-        Intent intent = new Intent(this, thirdlevel_21.class);
+        Intent intent = new Intent(this, thirdlevel_20_question1.class);
         startActivity(intent);
 
     }
