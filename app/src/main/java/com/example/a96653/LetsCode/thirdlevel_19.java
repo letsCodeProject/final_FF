@@ -20,7 +20,7 @@ public class thirdlevel_19 extends AppCompatActivity {
         final MySQLliteHelper m=new MySQLliteHelper(this);
         Button goButton=(Button) findViewById(R.id.GoToquize_thirdlevel_19);
 
-        goButton.setOnClickListener(
+        goButton.setOnClickListener(//
                 new Button.OnClickListener(){
                     public void onClick(View v){
                         openSecondActivity();
