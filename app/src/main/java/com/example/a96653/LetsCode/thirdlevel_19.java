@@ -28,6 +28,11 @@ public class thirdlevel_19 extends AppCompatActivity {
                         boolean firstStart = prefs.getBoolean("firstStart", true);
                         if (firstStart){
                             m.UpdateNumOfLesson(47,"Saturn");
+                            m.addQuestion(3);
+                            m.addQuestion(3);
+                            m.addQuestion(3);
+                            m.addQuestion(3);
+                            m.addQuestion(3);
                             SharedPreferences pref = getSharedPreferences("pref_thirdLevel_19", MODE_PRIVATE);
                             SharedPreferences.Editor editor = prefs.edit();
                             editor.putBoolean("firstStart", false);
@@ -35,6 +40,9 @@ public class thirdlevel_19 extends AppCompatActivity {
                     }//end onClick
 
                 }//end onClickListner
+
+
+
 
         );
         //scoreBox display
