@@ -181,7 +181,7 @@
     <string name="thirdlevel17_4">!=</string>
     <string name="thirdlevel17_5">للتأكد من ان إحدى القيمتين لاتساوي </string>
     <string name="thirdlevel17_6">الأخرى.</string>
-    <string name="thirdlevel_10_1">على المثال السابق مال الذي سيحدث إذا أضفنا الأمر Else ، \n وقمنا بتغيير الشرط ليكون </string>
+    <string name="thirdlevel_10_1">تبعاً للمثال السابق ما الذي سيحدث إذا أضفنا الأمر Else ، \n وقمنا بتغيير الشرط ليكون </string>
     <string name="thirdlevel_10_2">2>5</string>
     <string name="thirdlevel_10_3">؟</string>
     <string name="thirdlevel_11_1">لاحظ معي في المثال السابق ،الشرط الذي\n وضع في جملة if خاطئ لأن 2 أصغر من 5 \nولذلك سوف يقوم الحاسوب بتنفيذ ما\n بداخل Else وهو طباعة“ كوكب الأرض“\n بدلاً من طباعة“ كوكب زحل“ . </string>
