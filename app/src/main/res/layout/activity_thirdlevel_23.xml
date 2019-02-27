@@ -92,12 +92,13 @@
 
     <ImageView
         android:id="@+id/help2"
-        android:layout_width="149dp"
-        android:layout_height="302dp"
+        android:layout_width="140dp"
+        android:layout_height="274dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
 
-        android:layout_marginEnd="436dp"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="444dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/robotquiz1_2" />
@@ -109,8 +110,8 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
 
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="352dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="364dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/helpask" />
