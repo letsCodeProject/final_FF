@@ -13,13 +13,19 @@ import android.widget.TextView;
 public class thirdlevel_13_feedback extends AppCompatActivity {
     ImageView next ,prevoius;
     MySQLliteHelper mySqliteOpenHelper;
-
+    MediaPlayer thirdlevel_13;
+    voice voice13_thirdlevel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_thirdlevel_13_feedback);
         mySqliteOpenHelper=new MySQLliteHelper(this);
+
+        //create MediaPLayer to play the voice
+        thirdlevel_13= MediaPlayer.create(thirdlevel_13_feedback.this,R.raw.thirdlevel_13);
+        voice13_thirdlevel=new voice( thirdlevel_13);
+        voice13_thirdlevel.play();
 
         //TO VIEW SCORE ON BOX
         TextView textView = (TextView)findViewById(R.id.scoreBox_thirdlevel_13);
@@ -77,6 +83,16 @@ public class thirdlevel_13_feedback extends AppCompatActivity {
         startActivity(HomePage);
 
     }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        voice13_thirdlevel.pause();
+    }
+
+    public void play(View view) {
+        voice13_thirdlevel.play();
+    }//end play method
 
 
 }
