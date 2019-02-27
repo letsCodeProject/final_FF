@@ -2,6 +2,7 @@ package com.example.a96653.LetsCode;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -12,6 +13,8 @@ import android.widget.TextView;
 public class thirdlevel_10 extends AppCompatActivity {
     ImageView next ,prevoius;
     MySQLliteHelper mySqliteOpenHelper;
+    MediaPlayer thirdlevel_10;
+    voice voice10_thirdlevel;
 
 
     @Override
@@ -19,6 +22,11 @@ public class thirdlevel_10 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_thirdlevel_10);
         mySqliteOpenHelper=new MySQLliteHelper(this);
+
+        //create MediaPLayer to play the voice
+        thirdlevel_10= MediaPlayer.create(thirdlevel_10.this,R.raw.thirdlevel_10);
+        voice10_thirdlevel=new voice( thirdlevel_10);
+        voice10_thirdlevel.play();
 
 
         //TO VIEW SCORE ON BOX
@@ -81,5 +89,13 @@ public class thirdlevel_10 extends AppCompatActivity {
         startActivity(HomePage);
 
     }
+    @Override
+    protected void onPause() {
+        super.onPause();
+        voice10_thirdlevel.pause();
+    }
 
+    public void play(View view) {
+        voice10_thirdlevel.play();
+    }//end play method
 }

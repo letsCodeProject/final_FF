@@ -2,6 +2,7 @@ package com.example.a96653.LetsCode;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -11,11 +12,19 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 public class thirdlevel_8 extends AppCompatActivity {
+    MediaPlayer thirdlevel_8;
+    voice voice8_thirdlevel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_thirdlevel_8);
+
+        //create MediaPLayer to play the voice
+        thirdlevel_8= MediaPlayer.create(thirdlevel_8.this,R.raw.thirdlevel_8);
+        voice8_thirdlevel=new voice( thirdlevel_8);
+        voice8_thirdlevel.play();
+
         //NEXT BUTTON
         final MySQLliteHelper m=new MySQLliteHelper(this);
         ImageView goButton=(ImageView) findViewById(R.id.next_thirdlevel_8);
@@ -70,4 +79,13 @@ public class thirdlevel_8 extends AppCompatActivity {
         Intent goBack=new Intent(getApplicationContext(),thirdlevel_7.class);
         startActivity(goBack);
     }
+    @Override
+    protected void onPause() {
+        super.onPause();
+        voice8_thirdlevel.pause();
+    }
+
+    public void play(View view) {
+        voice8_thirdlevel.play();
+    }//end play method
 }

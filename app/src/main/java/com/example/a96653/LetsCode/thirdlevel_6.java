@@ -2,6 +2,7 @@ package com.example.a96653.LetsCode;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -16,6 +17,7 @@ public class thirdlevel_6 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_thirdlevel_6);
+
         //NEXT BUTTON
         final MySQLliteHelper m=new MySQLliteHelper(this);
         ImageView goButton=(ImageView) findViewById(R.id.next_thirdlevel_6);
@@ -70,4 +72,6 @@ public class thirdlevel_6 extends AppCompatActivity {
         Intent goBack=new Intent(getApplicationContext(),thirdlevel_5.class);
         startActivity(goBack);
     }
+
+
 }

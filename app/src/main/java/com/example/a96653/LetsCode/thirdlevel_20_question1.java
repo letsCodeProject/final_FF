@@ -85,9 +85,21 @@ public class thirdlevel_20_question1 extends AppCompatActivity
             public void onClick(View v) {
                 updatedata();
                 GoNext();
+                SharedPreferences prefs = getSharedPreferences("pref_thirdLevel_20", MODE_PRIVATE);
+                boolean firstStart = prefs.getBoolean("firstStart", true);
+                if (firstStart){
+                    m.UpdateNumOfLesson(48,"Saturn");
+                    SharedPreferences pref = getSharedPreferences("pref_thirdLevel_20", MODE_PRIVATE);
+                    SharedPreferences.Editor editor = prefs.edit();
+                    editor.putBoolean("firstStart", false);
+                    editor.apply();}
             }
         });
     }
+
+
+
+
 
 
 

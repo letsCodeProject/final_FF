@@ -240,7 +240,7 @@ public class MainActivity extends AppCompatActivity {
             c = Class.forName("com.example.a96653.LetsCode."+name);
 
            // Intent  intent = new Intent(this,c);
-            Intent  intent = new Intent(this,thirdlevel_10.class);
+            Intent  intent = new Intent(this,thirdlevel_12.class);
             startActivity(intent);}
         catch (Exception e){e.printStackTrace();}
 
