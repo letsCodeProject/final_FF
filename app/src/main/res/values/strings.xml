@@ -191,5 +191,10 @@
 
     <string name="thirdlevel_quiz1">"7&lt;1"</string>
 
+    <string name="fourthlevel_4_firstQuestion">حاول ملء الفراغ باختيار الإجابة الصحيحة ,لإتمام الأمر Loop </string>
+    <string name="fourthlevel_4_secondQuestion"> إذا اردنا تكرار جملة “أهلاً بدرب التبانة “ ٣ مرات  فعلينا وضع رقم :</string>
+    <string name="hint4_1">تذكر لتنفيذ حلقة while التكرارية نستخدم \nالأمر كما في المثال التالي: </string>
+
+    <string name="hint4_2"> إذا أردنا تكرار الجملة 4 مرات سنضع رقم 4 في الشرط </string>
 
 </resources>
