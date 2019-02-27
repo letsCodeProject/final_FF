@@ -9,16 +9,24 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme.NoActionBar"
-        >
+        android:theme="@style/AppTheme.NoActionBar">
 
-        <activity android:name=".thirdlevel_22"
-            android:screenOrientation="landscape"/>
+        <activity android:name=".fourthlevel_5"
+            android:screenOrientation="landscape"
+            />
+        <activity
+            android:name=".fourthlevel_4"
+            android:screenOrientation="landscape" />
+        <activity
+        android:name=".thirdlevel_22"
+        android:screenOrientation="landscape" />
+
         <activity
             android:name=".thirdlevel_13_feedback"
             android:screenOrientation="landscape" />
+
         <activity android:name=".thirdlevel_12"
-            android:screenOrientation="landscape"/>
+            android:screenOrientation="landscape" />
         <activity
             android:name=".thirdlevel_11"
             android:screenOrientation="landscape" />
