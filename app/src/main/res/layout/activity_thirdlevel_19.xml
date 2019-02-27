@@ -8,10 +8,9 @@
     android:background="@drawable/back">
 
 
-
     <TextView
         android:id="@+id/textView103"
-        android:layout_width="255dp"
+        android:layout_width="297dp"
         android:layout_height="161dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
@@ -19,8 +18,9 @@
         android:layout_marginBottom="8dp"
         android:fontFamily="@font/jannalt_regular"
         android:text="@string/thirdlevel_19"
-        android:textColor="@android:color/white"
-        android:textSize="19sp"
+        android:textColor="@color/light_blue"
+        android:textSize="24sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.858"
@@ -131,8 +131,8 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <ImageView
-        android:layout_width="227dp"
-        android:layout_height="204dp"
+        android:layout_width="248dp"
+        android:layout_height="294dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"

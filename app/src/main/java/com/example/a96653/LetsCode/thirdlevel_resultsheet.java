@@ -182,12 +182,19 @@ public class thirdlevel_resultsheet extends AppCompatActivity {
 
             }
             btn.setText(R.string.ButtonCorrect);
+            btn.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent gobacktoMain=new Intent (getApplicationContext(),MainActivity.class);
+                    startActivity(gobacktoMain);
+                }
+            });
         } else {
             btn.setText(R.string.ButtonWrong);
             btn.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent gobacktoSolveQuiz = new Intent(getApplicationContext(), thirdlevel_1.class);
+                    Intent gobacktoSolveQuiz = new Intent(getApplicationContext(), thirdlevel_20_question1.class);
                     startActivity(gobacktoSolveQuiz);
                 }
             });
