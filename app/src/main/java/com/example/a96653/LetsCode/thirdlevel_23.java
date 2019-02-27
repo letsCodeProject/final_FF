@@ -2,6 +2,7 @@ package com.example.a96653.LetsCode;
 
 import android.app.Dialog;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.support.v7.app.AppCompatActivity;
@@ -207,23 +208,53 @@ public class thirdlevel_23 extends AppCompatActivity {
             public void onClick(View v) {
 
                 if(radio1.isChecked()) {
+                    SharedPreferences prefs = getSharedPreferences("pref_thirdLevel_23", MODE_PRIVATE);
+                    boolean firstStart = prefs.getBoolean("firstStart", true);
+                    if (firstStart){
+                        mySqliteOpenHelper.UpdateNumOfLesson(51,"Saturn");
+                        SharedPreferences pref = getSharedPreferences("pref_thirdLevel_23", MODE_PRIVATE);
+                        SharedPreferences.Editor editor = prefs.edit();
+                        editor.putBoolean("firstStart", false);
+                        editor.apply();}
                     startActivity(new Intent(thirdlevel_23.this,thirdlevel_24.class));
                     mySqliteOpenHelper.UpdateQuestionAnswer(11, 0);
 
                 }
                 if(radio2.isChecked()){
-
+                    SharedPreferences prefs = getSharedPreferences("pref_thirdLevel_23", MODE_PRIVATE);
+                    boolean firstStart = prefs.getBoolean("firstStart", true);
+                    if (firstStart){
+                        mySqliteOpenHelper.UpdateNumOfLesson(51,"Saturn");
+                        SharedPreferences pref = getSharedPreferences("pref_thirdLevel_23", MODE_PRIVATE);
+                        SharedPreferences.Editor editor = prefs.edit();
+                        editor.putBoolean("firstStart", false);
+                        editor.apply();}
                     mySqliteOpenHelper.UpdateQuestionAnswer(11,1);
                     startActivity(new Intent(thirdlevel_23.this,thirdlevel_24.class));
                 }
 
 
                 if(radio3.isChecked()){
-
+                    SharedPreferences prefs = getSharedPreferences("pref_thirdLevel_23", MODE_PRIVATE);
+                    boolean firstStart = prefs.getBoolean("firstStart", true);
+                    if (firstStart){
+                        mySqliteOpenHelper.UpdateNumOfLesson(51,"Saturn");
+                        SharedPreferences pref = getSharedPreferences("pref_thirdLevel_23", MODE_PRIVATE);
+                        SharedPreferences.Editor editor = prefs.edit();
+                        editor.putBoolean("firstStart", false);
+                        editor.apply();}
                     mySqliteOpenHelper.UpdateQuestionAnswer(11,0);
                     startActivity(new Intent(thirdlevel_23.this,thirdlevel_24.class));
                 }
                 if(radio4.isChecked()){
+                    SharedPreferences prefs = getSharedPreferences("pref_thirdLevel_23", MODE_PRIVATE);
+                    boolean firstStart = prefs.getBoolean("firstStart", true);
+                    if (firstStart){
+                        mySqliteOpenHelper.UpdateNumOfLesson(51,"Saturn");
+                        SharedPreferences pref = getSharedPreferences("pref_thirdLevel_23", MODE_PRIVATE);
+                        SharedPreferences.Editor editor = prefs.edit();
+                        editor.putBoolean("firstStart", false);
+                        editor.apply();}
                     mySqliteOpenHelper.UpdateQuestionAnswer(11,0);
                     startActivity(new Intent(thirdlevel_23.this,thirdlevel_24.class));
                 }
