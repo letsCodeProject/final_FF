@@ -28,20 +28,20 @@ public class secondlevel_17 extends AppCompatActivity {
             public void onClick(View v) {
                 Intent HomePage=new Intent(getApplicationContext(),MainActivity.class);
                 startActivity(HomePage);
-                //PREVIOUS BUTTON
-                ImageView previous = (ImageView)findViewById(R.id.previous_seconlevel_17);
-                previous .setOnClickListener(
-                        new ImageView.OnClickListener(){
-                            public void onClick(View v){
-
-                                openPreviousActivity();
-                            }
-
-                        }
-
-                );
             }
         });
+        //PREVIOUS BUTTON
+        ImageView previous = (ImageView)findViewById(R.id.previous_seconlevel_17);
+        previous .setOnClickListener(
+                new ImageView.OnClickListener(){
+                    public void onClick(View v){
+
+                        openPreviousActivity();
+                    }
+
+                }
+
+        );
         //NEXT BUTTON
       Button goButton=(Button) findViewById(R.id.NEXT_17);
 
