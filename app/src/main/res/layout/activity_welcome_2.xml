@@ -10,23 +10,27 @@
 
     <TextView
         android:id="@+id/textView8"
-        android:layout_width="147dp"
-        android:layout_height="wrap_content"
+        android:layout_width="141dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="16dp"
+        android:layout_marginEnd="32dp"
         android:layout_marginBottom="8dp"
         android:fontFamily="@font/jannalt_regular"
         android:text="@string/Hi2"
         android:textColor="@android:color/background_light"
         android:textSize="25sp"
-        app:layout_constraintBottom_toBottomOf="@+id/NameDisplaytextView"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/NameDisplaytextView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.03" />
 
     <TextView
         android:id="@+id/NameDisplaytextView"
-        android:layout_width="275dp"
-        android:layout_height="72dp"
+        android:layout_width="208dp"
+        android:layout_height="69dp"
         android:layout_alignBaseline="@+id/textView8"
         android:layout_alignParentEnd="true"
         android:layout_marginStart="8dp"
@@ -34,14 +38,14 @@
         android:fontFamily="@font/jannalt_regular"
         android:textAlignment="textEnd"
         android:textColor="@color/yellow1"
-        android:textSize="40sp"
+        android:textSize="35sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/textView8"
-        app:layout_constraintLeft_toLeftOf="@id/textView8"
-        app:layout_constraintHorizontal_bias="0.663"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.804"
+        app:layout_constraintRight_toRightOf="@id/textView8"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.003" />
 
     <TextView
         android:id="@+id/textView13"
@@ -69,7 +73,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="128dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="44dp"
         android:text="@string/num"
         android:textColor="@color/yellow1"
         android:textSize="18sp"
