@@ -245,4 +245,13 @@ public class secondlevel_resultsheet extends AppCompatActivity {
         textView.setText(m.getChildScore()+"" );
 
     }
+    @Override
+    protected void onPause() {
+        super.onPause();
+        resultsheet.pause();
+    }
+
+    public void play(View view) {
+        resultsheet.play();
+    }
 }
