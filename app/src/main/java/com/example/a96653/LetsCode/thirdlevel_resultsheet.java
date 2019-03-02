@@ -4,6 +4,7 @@ package com.example.a96653.LetsCode;
         import android.content.Intent;
         import android.database.Cursor;
         import android.graphics.Color;
+        import android.media.MediaPlayer;
         import android.support.v7.app.AppCompatActivity;
         import android.os.Bundle;
         import android.view.View;
@@ -19,11 +20,20 @@ public class thirdlevel_resultsheet extends AppCompatActivity {
     int score_13, score_23, score_33, score_43, score_53;
     int totalscoreQuiz3;
     int minimum = 20;
+    MediaPlayer rightAnswerVoice;
+    MediaPlayer wrongAnswerVoice;
+    voice resultsheet;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_thirdlevel_resultsheet);
+
+        m=new MySQLliteHelper(this);
+        //create MediaPLayer to play the voice
+        rightAnswerVoice=MediaPlayer.create(thirdlevel_resultsheet.this,R.raw.rightanswerfeedbackvoice);
+        wrongAnswerVoice=MediaPlayer.create(thirdlevel_resultsheet.this,R.raw.wronganswerfeedbackvoice);
+
 
 
         m = new MySQLliteHelper(this);
@@ -166,10 +176,14 @@ public class thirdlevel_resultsheet extends AppCompatActivity {
             happy.setVisibility(View.VISIBLE);
             feedback3.setText(R.string.AboveMinimmum);
             feedback3.setTextColor(Color.parseColor("#0E932E"));
+            resultsheet = new voice(rightAnswerVoice);
+            resultsheet.play();
         } else {
             sad.setVisibility(View.VISIBLE);
             feedback3.setText(R.string.UnderMinimum);
             feedback3.setTextColor(Color.parseColor("#2340B7"));
+            resultsheet=new voice(wrongAnswerVoice);
+            resultsheet.play();
 
         }
     }//End of the method
@@ -179,15 +193,23 @@ public class thirdlevel_resultsheet extends AppCompatActivity {
             if (status == false) {
                 CallUnlockMethod();
                 updateScore(total);
+                m.UpdateNumOfLesson(29, "Saturn");
 
             }
             btn.setText(R.string.ButtonCorrect);
+            btn.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent gobacktoMain=new Intent (getApplicationContext(),MainActivity.class);
+                    startActivity(gobacktoMain);
+                }
+            });
         } else {
             btn.setText(R.string.ButtonWrong);
             btn.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent gobacktoSolveQuiz = new Intent(getApplicationContext(), thirdlevel_1.class);
+                    Intent gobacktoSolveQuiz = new Intent(getApplicationContext(), thirdlevel_20_question1.class);
                     startActivity(gobacktoSolveQuiz);
                 }
             });
@@ -208,6 +230,15 @@ public class thirdlevel_resultsheet extends AppCompatActivity {
         TextView textView = (TextView) findViewById(R.id.quiz1Score3);
         textView.setText(m.getChildScore() + "");
 
+    }
+    @Override
+    protected void onPause() {
+        super.onPause();
+        resultsheet.pause();
+    }
+
+    public void play(View view) {
+        resultsheet.play();
     }
 
 }
