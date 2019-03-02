@@ -179,6 +179,7 @@ public class thirdlevel_resultsheet extends AppCompatActivity {
             if (status == false) {
                 CallUnlockMethod();
                 updateScore(total);
+                m.UpdateNumOfLesson(29, "Saturn");
 
             }
             btn.setText(R.string.ButtonCorrect);
