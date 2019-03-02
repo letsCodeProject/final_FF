@@ -32,9 +32,10 @@
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
         android:fontFamily="@font/jannalt_regular"
-        android:textAlignment="textEnd"
+
         android:textColor="@color/yellow1"
         android:textSize="40sp"
+        android:gravity="right"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/textView8"
         app:layout_constraintLeft_toLeftOf="@id/textView8"
