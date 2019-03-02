@@ -5,7 +5,7 @@ import java.util.List;
 public class Lesson {
     private int num;
     private String name;
-    ArrayList<Lesson> l=new  ArrayList<Lesson>();
+    private ArrayList<Lesson> l=new  ArrayList<>();
 
     public Lesson() {
     Lesson l0 = new Lesson(0, "firstlevel_1");
@@ -63,8 +63,15 @@ public class Lesson {
         Lesson l50 = new Lesson(50, "thirdlevel_23");
         Lesson l51 = new Lesson(51, "thirdlevel_24");
         Lesson l52 = new Lesson(52, "thirdlevel_resultsheet");
+        ///FOURTH LEVEL LESSSONS
+        Lesson l53 = new Lesson(53, "fourthlevel_1");
+        Lesson l54 = new Lesson(54, "fourthlevel_2");
+        Lesson l55 = new Lesson(55, "fourthlevel_3");
+        Lesson l56= new Lesson(56, "fourthlevel_4");
+        Lesson l57 = new Lesson(57, "fourthlevel_5");
 
-      l=new  ArrayList<Lesson>();
+
+      l=new  ArrayList<>();
       l.add(l0);
         l.add(l1);
         l.add(l2);
@@ -118,6 +125,11 @@ public class Lesson {
         l.add(l50);
         l.add(l51);
         l.add(l52);
+        l.add(l53);
+        l.add(l54);
+        l.add(l55);
+        l.add(l56);
+        l.add(l57);
     }
 
 
@@ -125,7 +137,6 @@ public class Lesson {
     public Lesson(int num,String name) {
         this.num = num;
         this.name=name;
-
     }
 
     public int getNum() {
@@ -143,7 +154,7 @@ public class Lesson {
         this.name = name;
     }
 public String getName(int lnumber) {
-        Lesson n=(Lesson)l.get(lnumber);
+        Lesson n=l.get(lnumber);
         return n.getName();
 
 }
