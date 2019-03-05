@@ -39,6 +39,8 @@ public final class SchemClass {
         public static final String INDEX_TABLE2="QUESINDEX2";
         public static final String COLUMN_NAME_QUESTION="Question";
 
+        public static final String TABLE_IMAGE= "PIC"; //كود جديد
+
 
     }
 }
