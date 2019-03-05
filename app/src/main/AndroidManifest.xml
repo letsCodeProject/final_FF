@@ -228,6 +228,8 @@
         <activity
             android:name=".thirdlevel_20_question1"
             android:screenOrientation="landscape" />
-    </application>
 
+    </application>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 </manifest>

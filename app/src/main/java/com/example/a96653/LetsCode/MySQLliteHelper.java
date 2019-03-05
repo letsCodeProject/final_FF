@@ -6,6 +6,8 @@ import android.database.sqlite.SQLiteOpenHelper;
 import android.content.Context;
 import android.content.ContentValues;
 import android.database.sqlite.SQLiteConstraintException;
+import android.database.sqlite.SQLiteStatement;
+
 public class MySQLliteHelper extends SQLiteOpenHelper {
 
 
@@ -407,7 +409,19 @@ public class MySQLliteHelper extends SQLiteOpenHelper {
         this.close();
         super.finalize();
     }
+//FOR IMAGE
+public void queryData(String sql){
+    SQLiteDatabase database=getWritableDatabase();
+    database.execSQL(sql);
+}
 
+    public void insertData(byte[] image){
+        SQLiteDatabase database=getWritableDatabase();
+        String sql ="INSERT INTO PIC (pic) VALUES(?) ";
+        SQLiteStatement statement=database.compileStatement(sql);
+        statement.bindBlob(1,image);
+        statement.executeInsert();
+    }
 
 
 

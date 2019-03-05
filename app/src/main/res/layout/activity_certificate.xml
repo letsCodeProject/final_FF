@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/root_content"
     tools:context=".certificate"
     android:background="@drawable/back">
 
@@ -72,7 +73,7 @@
         app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="@+id/imageView117" />
     <ImageButton
-        android:id="@+id/homebtn_thirdlevel_8"
+        android:id="@+id/homebtn_certificate"
         android:layout_width="36dp"
         android:layout_height="29dp"
         android:layout_marginStart="8dp"
@@ -101,6 +102,7 @@
         app:layout_constraintTop_toTopOf="@+id/textView47"
         app:layout_constraintVertical_bias="0.329" />
     <ImageView
+        android:id="@+id/SHARE_certificate"
         android:layout_width="28dp"
         android:layout_height="27dp"
         android:layout_marginTop="292dp"
@@ -259,6 +261,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.947" />
     <ImageView
+        android:id="@+id/stamp"
         android:layout_width="83dp"
         android:layout_height="79dp"
         android:background="@drawable/stamp"
@@ -268,4 +271,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/textView47"
         app:layout_constraintVertical_bias="1.0" />
+
+    <ImageView
+        android:id="@+id/BACK"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/resultsheet"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp"
+        tools:ignore="MissingConstraints" />
+
 </android.support.constraint.ConstraintLayout>
