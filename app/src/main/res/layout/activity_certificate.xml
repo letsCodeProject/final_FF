@@ -109,7 +109,7 @@
         android:background="@drawable/share_sign"
         android:tooltipText="شارك الشهادة"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.014"
+         app:layout_constraintHorizontal_bias="0.014"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/textView47" />
     <TextView
@@ -280,5 +280,19 @@
     tools:layout_editor_absoluteX="0dp"
     tools:layout_editor_absoluteY="0dp"
     tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/BACK2"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.798"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/resultsheet"
+        tools:ignore="MissingConstraints" />
 
 </android.support.constraint.ConstraintLayout>

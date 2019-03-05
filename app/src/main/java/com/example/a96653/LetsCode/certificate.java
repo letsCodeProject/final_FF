@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.BitmapFactory;
 import android.graphics.Color;
+import android.os.Environment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -14,6 +15,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.io.ByteArrayOutputStream;
+import java.io.File;
+import java.io.FileOutputStream;
 import java.util.Date;
 import java.util.Calendar;
 import java.text.SimpleDateFormat;
@@ -24,9 +27,10 @@ public class certificate extends AppCompatActivity {
     ImageButton homebtn9;
     ImageView SHARE_certificate;
     static MySQLliteHelper mySqliteOpenHelper;
-    static Bitmap bm;
+    static Bitmap bm,bmp2;
     ImageView imageView2 ;
     ImageView A;//فقط للتشييك
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -83,7 +87,7 @@ public class certificate extends AppCompatActivity {
                layout.setSystemUiVisibility(View.VISIBLE);
                 layout.setBackgroundResource(R.drawable.back);
                 if (bm != null) {
-                    showScreenShotImage(bm);//show bitmap over imageview
+                    retrieveImage( );//show bitmap over imageview
 
                 } else {
                t= findViewById(R.id.textView26);
@@ -97,7 +101,7 @@ public class certificate extends AppCompatActivity {
     }//end of onCreate .
 
     /*  Show screenshot Bitmap */
-    private void showScreenShotImage(Bitmap b) {
+    private void retrieveImage( ) {
         try{
 
             Cursor cursor=mySqliteOpenHelper.getData();
@@ -105,6 +109,7 @@ public class certificate extends AppCompatActivity {
             byte[] image= cursor.getBlob(cursor.getColumnIndex("pic"));
 
             Bitmap bmp = BitmapFactory.decodeByteArray(image, 0, image.length);
+            bmp2=bmp;
             imageView2.setImageBitmap(bmp);
 
             Toast.makeText(getApplicationContext(),"added",Toast.LENGTH_SHORT).show();
