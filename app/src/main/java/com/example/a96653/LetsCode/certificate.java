@@ -1,6 +1,8 @@
 package com.example.a96653.LetsCode;
 
 import android.content.Intent;
+import android.database.Cursor;
+import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -9,6 +11,9 @@ import android.graphics.Bitmap;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import java.io.ByteArrayOutputStream;
 import java.util.Date;
 import java.util.Calendar;
 import java.text.SimpleDateFormat;
@@ -73,7 +78,7 @@ public class certificate extends AppCompatActivity {
                 homebtn9.setVisibility(View.INVISIBLE);
                 SHARE_certificate.setVisibility(View.INVISIBLE);
                 bm=getScreenShot(layout);
-                homebtn9.setVisibility(View.VISIBLE);
+                 homebtn9.setVisibility(View.VISIBLE);
                 SHARE_certificate.setVisibility(View.VISIBLE);
                layout.setSystemUiVisibility(View.VISIBLE);
                 layout.setBackgroundResource(R.drawable.back);
@@ -93,10 +98,25 @@ public class certificate extends AppCompatActivity {
 
     /*  Show screenshot Bitmap */
     private void showScreenShotImage(Bitmap b) {
-       // A.setVisibility(View.VISIBLE);
-        imageView2.setImageBitmap(b);
+        try{
+
+            Cursor cursor=mySqliteOpenHelper.getData();
+            cursor.moveToLast();
+            byte[] image= cursor.getBlob(cursor.getColumnIndex("pic"));
+
+            Bitmap bmp = BitmapFactory.decodeByteArray(image, 0, image.length);
+            imageView2.setImageBitmap(bmp);
+
+            Toast.makeText(getApplicationContext(),"added",Toast.LENGTH_SHORT).show();
+
+        }catch (Exception e){e.printStackTrace();   Toast.makeText(getApplicationContext(),"not added",Toast.LENGTH_SHORT).show();}
+
+
+
 
     }
+
+
 
 
 public static Bitmap getScreenShot(View view){
@@ -105,9 +125,26 @@ public static Bitmap getScreenShot(View view){
         Bitmap bitmap=Bitmap.createBitmap(screenView.getDrawingCache());
         screenView.setDrawingCacheEnabled(false);
 
-        return bitmap;
+    bm=bitmap;
+    try{mySqliteOpenHelper.insertData(ImageToByte());
+
+    } catch (Exception e){e.printStackTrace();}
+    return bitmap;
 
     }
+
+
+    private static byte[] ImageToByte(){
+
+
+        Bitmap icon = bm;
+
+        ByteArrayOutputStream stream= new ByteArrayOutputStream();
+        icon.compress(Bitmap.CompressFormat.PNG,100,stream);
+        byte[] byteArray=stream.toByteArray();
+        return byteArray;
+    }
+
 
 
 }

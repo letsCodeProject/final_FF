@@ -423,6 +423,13 @@ public void queryData(String sql){
         statement.executeInsert();
     }
 
+    public Cursor getData( ){
+        SQLiteDatabase database=getReadableDatabase();
+
+
+        return database.rawQuery("SELECT pic FROM  PIC",null);
+    }
+
 
 
 
