@@ -12,8 +12,6 @@ import android.widget.TextView;
 import java.util.Date;
 import java.util.Calendar;
 import java.text.SimpleDateFormat;
-
-
 public class certificate extends AppCompatActivity {
     TextView t ;
     ImageButton homebtn9;
