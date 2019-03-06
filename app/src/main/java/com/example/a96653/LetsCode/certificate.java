@@ -1,7 +1,10 @@
 package com.example.a96653.LetsCode;
 
 import android.content.Intent;
+import android.database.Cursor;
+import android.graphics.BitmapFactory;
 import android.graphics.Color;
+import android.os.Environment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -9,6 +12,11 @@ import android.graphics.Bitmap;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import java.io.ByteArrayOutputStream;
+import java.io.File;
+import java.io.FileOutputStream;
 import java.util.Date;
 import java.util.Calendar;
 import java.text.SimpleDateFormat;
@@ -17,9 +25,10 @@ public class certificate extends AppCompatActivity {
     ImageButton homebtn9;
     ImageView SHARE_certificate;
     static MySQLliteHelper mySqliteOpenHelper;
-    static Bitmap bm;
+    static Bitmap bm,bmp2;
     ImageView imageView2 ;
     ImageView A;//فقط للتشييك
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -71,12 +80,12 @@ public class certificate extends AppCompatActivity {
                 homebtn9.setVisibility(View.INVISIBLE);
                 SHARE_certificate.setVisibility(View.INVISIBLE);
                 bm=getScreenShot(layout);
-                homebtn9.setVisibility(View.VISIBLE);
+                 homebtn9.setVisibility(View.VISIBLE);
                 SHARE_certificate.setVisibility(View.VISIBLE);
                layout.setSystemUiVisibility(View.VISIBLE);
                 layout.setBackgroundResource(R.drawable.back);
                 if (bm != null) {
-                    showScreenShotImage(bm);//show bitmap over imageview
+                    retrieveImage( );//show bitmap over imageview
 
                 } else {
                t= findViewById(R.id.textView26);
@@ -90,11 +99,27 @@ public class certificate extends AppCompatActivity {
     }//end of onCreate .
 
     /*  Show screenshot Bitmap */
-    private void showScreenShotImage(Bitmap b) {
-       // A.setVisibility(View.VISIBLE);
-        imageView2.setImageBitmap(b);
+    private void retrieveImage( ) {
+        try{
+
+            Cursor cursor=mySqliteOpenHelper.getData();
+            cursor.moveToLast();
+            byte[] image= cursor.getBlob(cursor.getColumnIndex("pic"));
+
+            Bitmap bmp = BitmapFactory.decodeByteArray(image, 0, image.length);
+            bmp2=bmp;
+            imageView2.setImageBitmap(bmp);
+
+            Toast.makeText(getApplicationContext(),"added",Toast.LENGTH_SHORT).show();
+
+        }catch (Exception e){e.printStackTrace();   Toast.makeText(getApplicationContext(),"not added",Toast.LENGTH_SHORT).show();}
+
+
+
 
     }
+
+
 
 
 public static Bitmap getScreenShot(View view){
@@ -103,9 +128,26 @@ public static Bitmap getScreenShot(View view){
         Bitmap bitmap=Bitmap.createBitmap(screenView.getDrawingCache());
         screenView.setDrawingCacheEnabled(false);
 
-        return bitmap;
+    bm=bitmap;
+    try{mySqliteOpenHelper.insertData(ImageToByte());
+
+    } catch (Exception e){e.printStackTrace();}
+    return bitmap;
 
     }
+
+
+    private static byte[] ImageToByte(){
+
+
+        Bitmap icon = bm;
+
+        ByteArrayOutputStream stream= new ByteArrayOutputStream();
+        icon.compress(Bitmap.CompressFormat.PNG,100,stream);
+        byte[] byteArray=stream.toByteArray();
+        return byteArray;
+    }
+
 
 
 }
