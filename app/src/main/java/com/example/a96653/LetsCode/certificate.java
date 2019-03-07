@@ -1,15 +1,18 @@
 package com.example.a96653.LetsCode;
 
+import android.app.Dialog;
 import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.BitmapFactory;
 import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
 import android.os.Environment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.graphics.Bitmap;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -32,6 +35,7 @@ public class certificate extends AppCompatActivity {
     static Bitmap bm,bmp2;
     ImageView imageView2 ;
     ImageView A;//فقط للتشييك
+    Dialog mydialog;
     public static Intent shareintent=new Intent (Intent.ACTION_SEND);
     public static Intent shareintent2=new Intent (Intent.ACTION_SEND);
     @Override
@@ -100,10 +104,45 @@ public class certificate extends AppCompatActivity {
         });
 
 
-        //Onclick for Share
-        shareintent2=ShareCertificare();
+        SHARE_certificate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Button save =(Button)findViewById(R.id.savebutton);
+                Button sharebtn =(Button)findViewById(R.id.sharebutton);
+                Button back =(Button)findViewById(R.id.backbutton);
+                mydialog.setContentView(R.layout.optiondialog);
+                 //Save will be added .
+               // save.setOnClickListener(new View.OnClickListener() {
+                 //   @Override
+                  //  public void onClick(View v) {
 
-        startActivity(Intent.createChooser(shareintent2,"مشاركة الشهادة مع : "));
+                //    }
+               // });
+
+                //Share
+                sharebtn.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        shareintent2=ShareCertificare();
+
+                        startActivity(Intent.createChooser(shareintent2,"مشاركة الشهادة مع : "));
+                    }
+                });
+
+back.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View v) {
+        mydialog.dismiss();
+    }
+});
+                mydialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+                mydialog.show();
+            }//Parent button
+        });//Parent
+
+
+        //Onclick for Share
+
 
 
     }//end of onCreate .
