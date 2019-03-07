@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.BitmapFactory;
 import android.graphics.Color;
+import android.net.Uri;
 import android.os.Environment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -17,6 +18,7 @@ import android.widget.Toast;
 import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileOutputStream;
+import java.io.IOException;
 import java.util.Date;
 import java.util.Calendar;
 import java.text.SimpleDateFormat;
@@ -30,7 +32,8 @@ public class certificate extends AppCompatActivity {
     static Bitmap bm,bmp2;
     ImageView imageView2 ;
     ImageView A;//فقط للتشييك
-
+    public static Intent shareintent=new Intent (Intent.ACTION_SEND);
+    public static Intent shareintent2=new Intent (Intent.ACTION_SEND);
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -97,6 +100,11 @@ public class certificate extends AppCompatActivity {
         });
 
 
+        //Onclick for Share
+        shareintent2=ShareCertificare();
+
+        startActivity(Intent.createChooser(shareintent2,"مشاركة الشهادة مع : "));
+
 
     }//end of onCreate .
 
@@ -151,5 +159,26 @@ public static Bitmap getScreenShot(View view){
     }
 
 
+public static Intent ShareCertificare (){
 
+
+    shareintent.setType("image/jpg");
+    ByteArrayOutputStream byteArrayOutputStream=new ByteArrayOutputStream();
+    bmp2.compress(Bitmap.CompressFormat.JPEG,100,byteArrayOutputStream);
+    File file =new File(Environment.getExternalStorageDirectory()+File.separator+"ImageDemo.jpg");
+    //File file =new File(Environment.getExternalStorageDirectory().toString() + "/" +"Hey.jpg");
+    try{
+        file.createNewFile();
+        FileOutputStream fileOutputStream=new FileOutputStream(file);
+        fileOutputStream.write(byteArrayOutputStream.toByteArray());
+        bmp2.compress(Bitmap.CompressFormat.JPEG,90,fileOutputStream);
+    }catch (IOException e) {
+        e.printStackTrace();
+    }
+    shareintent.putExtra(Intent.EXTRA_TEXT,"لقد أتممت جميع مهماتي مع تطبيق هيا نبرمج .");
+    shareintent.putExtra(Intent.EXTRA_STREAM, Uri.parse("file://"+file.getAbsolutePath()));
+    shareintent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+    return shareintent ;
+
+}
 }
