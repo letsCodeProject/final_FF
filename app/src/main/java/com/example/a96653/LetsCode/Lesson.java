@@ -8,10 +8,10 @@ public class Lesson {
     private ArrayList<Lesson> l=new  ArrayList<>();
 
     public Lesson() {
-    Lesson l0 = new Lesson(0, "firstlevel_1");
-    Lesson l1 = new Lesson(1, "firstlevel_1");
-    Lesson l2 = new Lesson(2, "firstlevel_2");
-    Lesson l3 = new Lesson(3, "firstlevel_3");
+        Lesson l0 = new Lesson(0, "firstlevel_1");
+        Lesson l1 = new Lesson(1, "firstlevel_1");
+        Lesson l2 = new Lesson(2, "firstlevel_2");
+        Lesson l3 = new Lesson(3, "firstlevel_3");
         Lesson l4 = new Lesson(4, "firstlevel_4");
         Lesson l5 = new Lesson(5, "firstlevel_5");
         Lesson l6 = new Lesson(6, "firstlevel_6");
@@ -66,15 +66,17 @@ public class Lesson {
         ///FOURTH LEVEL LESSSONS
         Lesson l53 = new Lesson(53, "fourthlevel_1");
         Lesson l54 = new Lesson(54, "fourthlevel_2");
-        Lesson l55 = new Lesson(55, "fourthlevel_3");
-        Lesson l56= new Lesson(56, "fourthlevel_4");
-        Lesson l57 = new Lesson(57, "fourthlevel_5");
-        Lesson l58 = new Lesson(58, "fourthlevel_6_quiz");
-        Lesson l59 = new Lesson(59, "Fourthlevel_resultsheet");
+        Lesson l55 = new Lesson(55, "fourthlevel_video");
+        Lesson l56 = new Lesson(56, "fourthlevel_3");
+        Lesson l57= new Lesson(57, "fourthlevel_4");
+        Lesson l58 = new Lesson(58, "fourthlevel_5");
+        Lesson l59 = new Lesson(59, "fourthlevel_6_quiz");
+        Lesson l60 = new Lesson(60, "Fourthlevel_resultsheet");
 
 
-      l=new  ArrayList<>();
-      l.add(l0);
+
+        l=new  ArrayList<>();
+        l.add(l0);
         l.add(l1);
         l.add(l2);
         l.add(l3);
@@ -157,9 +159,9 @@ public class Lesson {
     public void setName(String name) {
         this.name = name;
     }
-public String getName(int lnumber) {
+    public String getName(int lnumber) {
         Lesson n=l.get(lnumber);
         return n.getName();
 
-}
+    }
 }
