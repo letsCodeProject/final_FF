@@ -172,19 +172,19 @@ public class fourthlevel_5 extends AppCompatActivity {
             public void onClick(View v) {
 
                 if(radio1.isChecked()) {
-                    startActivity(new Intent(fourthlevel_5.this,thirdlevel_resultsheet.class));
+                    startActivity(new Intent(fourthlevel_5.this,fourthlevel_6_quiz.class));
                     mySqliteOpenHelper.UpdateQuestionAnswer(14, 0);
 
                 }
                 if(radio2.isChecked()){
 
                     mySqliteOpenHelper.UpdateQuestionAnswer(14,1);
-                    startActivity(new Intent(fourthlevel_5.this,thirdlevel_resultsheet.class));
+                    startActivity(new Intent(fourthlevel_5.this,fourthlevel_6_quiz.class));
                 }
                 if(radio3.isChecked()){
 
                     mySqliteOpenHelper.UpdateQuestionAnswer(14,0);
-                    startActivity(new Intent(fourthlevel_5.this,thirdlevel_resultsheet.class));
+                    startActivity(new Intent(fourthlevel_5.this,fourthlevel_6_quiz.class));
                 }
 
 

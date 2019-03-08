@@ -25,6 +25,9 @@ public class thirdlevel_24 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_thirdlevel_24);
 
+
+
+
         mySqliteOpenHelper=new MySQLliteHelper(this);
 
         TextView scoreBox=(TextView )findViewById(R.id.scorebox);

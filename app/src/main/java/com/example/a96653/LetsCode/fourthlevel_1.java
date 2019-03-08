@@ -17,6 +17,10 @@ public class fourthlevel_1 extends AppCompatActivity {
         setContentView(R.layout.activity_fourthlevel_1);
        m = new MySQLliteHelper(this);
 
+
+        m.addQuestion(4);
+        m.addQuestion(4);
+        m.addQuestion(4);
        //HOME BUTTON
         ImageButton homebtn= (ImageButton) findViewById(R.id.homebtn_fourthlevel_1);
         homebtn.setOnClickListener(new View.OnClickListener() {
