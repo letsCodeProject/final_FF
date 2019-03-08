@@ -1,6 +1,8 @@
 package com.example.a96653.LetsCode;
 
+import android.app.Activity;
 import android.app.Dialog;
+import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.BitmapFactory;
@@ -8,6 +10,7 @@ import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
 import android.os.Environment;
+import android.os.StrictMode;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -32,17 +35,29 @@ public class certificate extends AppCompatActivity {
     ImageButton homebtn9;
     ImageView SHARE_certificate;
     static MySQLliteHelper mySqliteOpenHelper;
-    static Bitmap bm,bmp2;
+    static Bitmap bm , bmp2;
     ImageView imageView2 ;
     ImageView A;//فقط للتشييك
-    Dialog mydialog;
-    public static Intent shareintent=new Intent (Intent.ACTION_SEND);
+     Dialog mydialog ;
+Context mcontex;
+
+
     public static Intent shareintent2=new Intent (Intent.ACTION_SEND);
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_certificate);
         mySqliteOpenHelper=new MySQLliteHelper(this);
+mcontex=getApplication();
+
+
+
+
+
+
+
+
+
         //HOME BUTTON
        homebtn9=(ImageButton)findViewById(R.id.homebtn_certificate);
         homebtn9.setOnClickListener(new View.OnClickListener() {
@@ -104,35 +119,66 @@ public class certificate extends AppCompatActivity {
         });
 
 
+
+        mydialog = new Dialog(this);
         SHARE_certificate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Button save =(Button)findViewById(R.id.savebutton);
-                Button sharebtn =(Button)findViewById(R.id.sharebutton);
-                Button back =(Button)findViewById(R.id.backbutton);
-                mydialog.setContentView(R.layout.optiondialog);
+
+               mydialog.setContentView(R.layout.optiondialog);
+
+                mydialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+                mydialog.show();
+                Button save=(Button)mydialog.findViewById(R.id.savebutton);
+                 Button sharebtn =(Button)mydialog.findViewById(R.id.sharebutton);
+                Button back =(Button)mydialog.findViewById(R.id.backbutton);
+
                  //Save will be added .
-               // save.setOnClickListener(new View.OnClickListener() {
-                 //   @Override
-                  //  public void onClick(View v) {
-
-                //    }
-               // });
-
-                //Share
-                sharebtn.setOnClickListener(new View.OnClickListener() {
+                save.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        shareintent2=ShareCertificare();
 
-                        startActivity(Intent.createChooser(shareintent2,"مشاركة الشهادة مع : "));
-                    }
+                  }
                 });
 
+                //Share
+               sharebtn.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        StrictMode.VmPolicy.Builder builder = new StrictMode.VmPolicy.Builder();
+                        StrictMode.setVmPolicy(builder.build());
+                Cursor cursor=mySqliteOpenHelper.getData();
+                cursor.moveToLast();
+                byte[] image= cursor.getBlob(cursor.getColumnIndex("pic"));
+
+                Bitmap bmp = BitmapFactory.decodeByteArray(image, 0, image.length);
+                Intent shareintent=new Intent (Intent.ACTION_SEND);
+                        shareintent.setType("image/jpg");
+                        ByteArrayOutputStream byteArrayOutputStream=new ByteArrayOutputStream();
+                bmp.compress(Bitmap.CompressFormat.JPEG,100,byteArrayOutputStream);
+                        File file =new File(Environment.getExternalStorageDirectory()+File.separator+"ImageDemo.jpg");
+                        //File file =new File(Environment.getExternalStorageDirectory().toString() + "/" +"Hey.jpg");
+                        try{
+                            file.createNewFile();
+                            FileOutputStream fileOutputStream=new FileOutputStream(file);
+                            fileOutputStream.write(byteArrayOutputStream.toByteArray());
+                            bmp.compress(Bitmap.CompressFormat.JPEG,90,fileOutputStream);
+                        }catch (IOException e) {
+                            e.printStackTrace();
+                        }
+                        shareintent.putExtra(Intent.EXTRA_TEXT,"لقد أتممت جميع مهماتي مع تطبيق هيا نبرمج   @Letscode_App.");
+                        shareintent.putExtra(Intent.EXTRA_STREAM,Uri.parse("file://"+file.getAbsolutePath()));
+                         shareintent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+                         shareintent.addFlags(Intent.FLAG_GRANT_WRITE_URI_PERMISSION);
+                        startActivity(Intent.createChooser(shareintent,"مشاركة الشهادة مع : "));
+
+                  }
+        });
+
 back.setOnClickListener(new View.OnClickListener() {
-    @Override
-    public void onClick(View v) {
-        mydialog.dismiss();
+   @Override
+   public void onClick(View v) {
+       mydialog.dismiss();
     }
 });
                 mydialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
@@ -198,7 +244,7 @@ public static Bitmap getScreenShot(View view){
     }
 
 
-public static Intent ShareCertificare (){
+/*public static void ShareCertificare (Context mContext,Intent shareintent){
 
 
     shareintent.setType("image/jpg");
@@ -216,8 +262,18 @@ public static Intent ShareCertificare (){
     }
     shareintent.putExtra(Intent.EXTRA_TEXT,"لقد أتممت جميع مهماتي مع تطبيق هيا نبرمج .");
     shareintent.putExtra(Intent.EXTRA_STREAM, Uri.parse("file://"+file.getAbsolutePath()));
-    shareintent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
-    return shareintent ;
+   // shareintent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
 
+    shareintent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+
+   mContext.startActivity(Intent.createChooser(shareintent,"مشاركة الشهادة مع : "));
+
+}*/
+
+/*public static void optiondialog(Dialog mydialog){
+
+    mydialog.setContentView(R.layout.optiondialog);
+    mydialog.show();
 }
+*/
 }
