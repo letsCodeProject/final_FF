@@ -45,6 +45,25 @@ public class MainActivity extends AppCompatActivity {
          labeb_Earth.setVisibility(View.INVISIBLE);
      }
 
+
+     ImageView g= findViewById(R.id.imageView17);
+
+        g.setOnClickListener(new  ImageView.OnClickListener() {
+
+                                      public void onClick(View v) {
+
+
+                                          startActivity(new Intent(MainActivity.this,fourthlevel_video.class));
+                                      }
+
+                                  }
+        );
+
+
+
+
+
+
         if( levelStatus=m.getLevelStatus("Saturn")==true)
             Saturn.setAlpha(1000);
         else {

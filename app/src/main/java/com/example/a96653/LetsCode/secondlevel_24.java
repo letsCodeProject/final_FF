@@ -67,11 +67,12 @@ public class secondlevel_24 extends AppCompatActivity {
         });
 
 
+        final RadioButton radio1 = ( RadioButton) findViewById(R.id.radio1);
         final RadioButton radio2 = ( RadioButton) findViewById(R.id.radio2);
         final   RadioButton radio3 = ( RadioButton) findViewById(R.id.radio3);
         final   RadioButton radio4 = ( RadioButton) findViewById(R.id.radio4);
 
-        final RadioButton radio1 = ( RadioButton) findViewById(R.id.radio1);
+
 
         radio1.setOnClickListener(new RadioButton.OnClickListener(){
 

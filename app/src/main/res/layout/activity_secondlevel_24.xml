@@ -183,8 +183,8 @@
         android:id="@+id/radio1"
         android:layout_width="152dp"
         android:layout_height="0dp"
-        android:layout_marginStart="340dp"
-        android:layout_marginTop="240dp"
+        android:layout_marginStart="344dp"
+        android:layout_marginTop="236dp"
         android:layout_weight="0.5"
         android:backgroundTint="@color/white"
         android:buttonTint="@color/white"
@@ -215,7 +215,7 @@
 
     <RadioButton
         android:id="@+id/radio3"
-        android:layout_width="148dp"
+        android:layout_width="92dp"
         android:layout_height="28dp"
         android:layout_marginStart="168dp"
         android:layout_marginTop="32dp"
@@ -231,7 +231,7 @@
 
     <RadioButton
         android:id="@+id/radio4"
-        android:layout_width="150dp"
+        android:layout_width="92dp"
         android:layout_height="21dp"
 
         android:layout_marginStart="168dp"
