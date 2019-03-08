@@ -2,62 +2,54 @@ package com.example.a96653.LetsCode;
 
 import android.app.Dialog;
 import android.content.ClipData;
-import android.content.ClipDescription;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
+import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.DragEvent;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class fourthlevel_6_quiz extends AppCompatActivity
-        implements View.OnDragListener, View.OnLongClickListener {
+import java.util.List;
+
+public class fourthlevel_6_quiz extends AppCompatActivity  {
+    //Lesson l1=new Lesson(1);
+    //dgergfrgerg
+//testing the bush
+    MediaPlayer firstlevel1Voice;
+    voice voicepluto1;
+
     public static MySQLliteHelper sqLiteHelper;
-    public static MySQLliteHelper m;
-    private static final String TAG = fourthlevel_6_quiz.class.getSimpleName();
+    TextView target1, target2, target3, target4, textviewwhile, textviewprint, textviewincrment, textviewassign, pinwhile, pinprint, pinincrement, pinassign;
+    int res1 = 0, res2 = 0, res3 = 0, res4 = 0, result, CHECK = 0, tt1, tt2, tt3, tt4;
+    static int questionResult, tg1 = 0, tg2 = 0, tg3 = 0, tg4 = 0;
+    static TextView x1, x2, x3, x4;
+    static View vt1, vt2, vt3, vt4;
 
-    private ImageButton btn_true1;
-    private ImageButton btn_true2;
-    private ImageButton btn_false;
-    private ImageButton btn_true3;
-
-    private static final String BUTTON_VIEW_TAG1 = "True";
-    private static final String BUTTON_VIEW_TAG2 = "True";
-    private static final String BUTTON_VIEW_TAG3 = "False";
-    private static final String BUTTON_VIEW_TAG4 = "True";
-
-    int counter = 0;
-    int result = 0;
-
-    private static final String TEXT_VIEW_TAG = "DRAG TEXT";
-
-    View mview;
-
-    ImageView iv_next;
     Dialog myDialog;
+    ImageView next;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fourthlevel_6);
-        m = new MySQLliteHelper(this);
-        sqLiteHelper = new MySQLliteHelper(this);
-        //TO VIEW SCORE ON BOX
-        TextView textView = (TextView) findViewById(R.id.ScoreBox_fourthlevel_5);
-        textView.setText(m.getChildScore() + "");
 
+        sqLiteHelper = new MySQLliteHelper(this);
+
+        //TO VIEW SCORE ON BOX
+        TextView textView = (TextView)findViewById(R.id.scoreBox_fourthlevel_6);
+        textView.setText(sqLiteHelper.getChildScore()+"" );
 
         //HOME BUTTON
-        ImageButton homebtn3 = (ImageButton) findViewById(R.id.homebtn_fourthlevel5);
+        ImageButton homebtn3 = (ImageButton) findViewById(R.id.homebtn_fourthlevel6);
         homebtn3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -66,477 +58,342 @@ public class fourthlevel_6_quiz extends AppCompatActivity
             }
         });
 
-        btn_true1 = (ImageButton) findViewById(R.id.button101);
-        btn_true1.setTag(BUTTON_VIEW_TAG1);
-        btn_true2 = (ImageButton) findViewById(R.id.button88);
-        btn_true2.setTag(BUTTON_VIEW_TAG2);
-        btn_false = (ImageButton) findViewById(R.id.button99);
-        btn_false.setTag(BUTTON_VIEW_TAG3);
-        btn_true3=(ImageButton)findViewById(R.id.button111);
-        btn_true3.setTag(BUTTON_VIEW_TAG4);
 
 
-        iv_next = (ImageView) findViewById(R.id.fourthlevel_5_next);
-        iv_next.setVisibility(View.INVISIBLE);
-
-        implementEvents();
-
+        tt1 = 0;
+        tt2 = 0;
+        tt3 = 0;
+        tt4 = 0;
         myDialog = new Dialog(this);
+        CHECK = 0;
 
-        ImageView next3 = (ImageView) findViewById(R.id.fourthlevel_5_next);
-        next3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                updatedata();
-                GoNext();
-            }
-        });
-    }
+        target1 = (TextView) findViewById(R.id.target1);
+        target2 = (TextView) findViewById(R.id.target2);
+        target3 = (TextView) findViewById(R.id.target3);
+        target4 = (TextView) findViewById(R.id.target4);
 
+        textviewassign = (TextView) findViewById(R.id.assign_statment);
+        textviewwhile = (TextView) findViewById(R.id.loop_statment);
+        textviewprint = (TextView) findViewById(R.id.print_statment);
+        textviewincrment = (TextView) findViewById(R.id.increment_statment);
 
-    //Implement long click and drag listener
-    private void implementEvents() {
-        //add or remove any view that you don't want to be dragged
-        btn_true1.setOnLongClickListener(this);
-        btn_true2.setOnLongClickListener(this);
-        btn_false.setOnLongClickListener(this);
-        btn_true3.setOnLongClickListener(this);
-
-        //add or remove any layout view that you don't want to accept dragged view
-        findViewById(R.id.false_answer).setOnDragListener(this);
-        findViewById(R.id.true_answer).setOnDragListener(this);
-        findViewById(R.id.true_answer1).setOnDragListener(this);
-        findViewById(R.id.true_answer2).setOnDragListener(this);
-
-    }
+        //Pin
+        pinassign = (TextView) findViewById(R.id.pinassign);
+        pinwhile = (TextView) findViewById(R.id.pinloop);
+        pinprint = (TextView) findViewById(R.id.pinprint);
+        pinincrement = (TextView) findViewById(R.id.pinincrement);
 
 
-    @Override
-    public boolean onLongClick(View view) {
-
-        ClipData.Item item = new ClipData.Item((CharSequence) view.getTag());
-
-        String[] mimeTypes = {ClipDescription.MIMETYPE_TEXT_PLAIN};
-
-        ClipData data = new ClipData(view.getTag().toString(), mimeTypes, item);
-        View.DragShadowBuilder shadowBuilder = new View.DragShadowBuilder(view);
+        textviewassign.setOnLongClickListener(longClickListener);
+        textviewwhile.setOnLongClickListener(longClickListener);
+        textviewprint.setOnLongClickListener(longClickListener);
+        textviewincrment.setOnLongClickListener(longClickListener);
 
 
-        view.startDrag(data//data to be dragged
-                , shadowBuilder //drag shadow
-                , view//local data about the drag and drop operation
-                , 0//no needed flags
+        target1.setOnDragListener(dragListener);
+        target2.setOnDragListener(dragListener);
+        target3.setOnDragListener(dragListener);
+        target4.setOnDragListener(dragListener);
+
+        next = (ImageView) findViewById(R.id.fourthlevel_5_next);
+
+        next.setOnClickListener(
+                new ImageView.OnClickListener(){
+                    public void onClick(View v){
+                        tt1=0;tt2=0;tt3=0;tt4=0;
+                        if(textviewassign.getX()==target1.getX())  tt1=1;
+                        if(textviewassign.getX()==target2.getX())  tt1=1;
+                        if(textviewassign.getX()==target3.getX())  tt1=1;
+                        if(textviewassign.getX()==target4.getX())  tt1=1;
+
+
+                        if(textviewincrment.getX()==target1.getX())  tt4=1;
+                        if(textviewincrment.getX()==target2.getX())  tt4=1;
+                        if(textviewincrment.getX()==target3.getX())  tt4=1;
+                        if(textviewincrment.getX()==target4.getX())  tt4=1;
+
+
+                        if(textviewwhile.getX()==target1.getX())  tt2=1;
+                        if(textviewwhile.getX()==target2.getX())  tt2=1;
+                        if(textviewwhile.getX()==target3.getX())  tt2=1;
+                        if(textviewwhile.getX()==target4.getX())  tt2=1;
+
+
+
+                        if(textviewprint.getX()==target1.getX())  tt3=1;
+                        if(textviewprint.getX()==target2.getX())  tt3=1;
+                        if(textviewprint.getX()==target3.getX())  tt3=1;
+                        if(textviewprint.getX()==target4.getX())  tt3=1;
+
+                        CHECK=tt1+tt2+tt3+tt4;
+                        if(CHECK==4) {
+
+                            updatedata();
+                            Intent  intent = new Intent(getApplicationContext(),Fourthlevel_resultsheet.class);
+                            startActivity(intent);
+
+                        }//end if check==4
+                        else{
+
+                            ShowPopupSolve();
+                        }
+                        /*SharedPreferences prefs = getSharedPreferences("pref12", MODE_PRIVATE);
+                        boolean firstStart = prefs.getBoolean("firstStart", true);
+                        if (firstStart) {
+                            sqLiteHelper.UpdateNumOfLesson(1, "Ploto");
+                            SharedPreferences pref = getSharedPreferences("prefs12", MODE_PRIVATE);
+                            SharedPreferences.Editor editor = prefs.edit();
+                            editor.putBoolean("firstStart", false);
+                            editor.apply();
+                        }*/
+
+
+
+                    }
+
+                }
+
         );
 
-        view.setVisibility(View.INVISIBLE);
-        mview = view;
 
-        return true;
+
     }
 
-    @Override
-    public boolean onDrag(View view, DragEvent event) {
 
-        int linear_id = view.getId();
-        int action = event.getAction();
+    View.OnLongClickListener longClickListener = new View.OnLongClickListener() {
+        @Override
+        public boolean onLongClick(View v) {
+            ClipData data = ClipData.newPlainText("", "");
+            View.DragShadowBuilder myShadowBuilder = new View.DragShadowBuilder(v);
+            v.startDrag(data, myShadowBuilder, v, 0);
 
-        switch (linear_id) {
-            case R.id.false_answer:
+            return true;
+        }
+    };
 
-                switch (action) {
-                    case DragEvent.ACTION_DRAG_STARTED:
-                        // Determines if this View can accept the dragged data
-                        if (event.getClipDescription().hasMimeType(ClipDescription.MIMETYPE_TEXT_PLAIN)) {
+    View.OnDragListener dragListener = new View.OnDragListener() {
+        @Override
+        public boolean onDrag(View v, DragEvent event) {
+            questionResult = 0;
+            int dragEvent = event.getAction();
+            final View view = (View) event.getLocalState();
 
-                            return true;
-
-                        }
-
-                        return false;
-
-
-                    case DragEvent.ACTION_DRAG_EXITED:
-
-                        view.getBackground().clearColorFilter();
-
-                        view.invalidate();
-
-                        return true;
-
-                    case DragEvent.ACTION_DROP:
-
-                        String mimType = event.getClipDescription().toString();
-                        // String mimType = item.getText().toString();
-                        Log.d(TAG, mimType);
-
-                        // Gets the item containing the dragged data
-                        ClipData.Item item = event.getClipData().getItemAt(0);
-
-                        // Gets the text data from the item.
-                        String dragData = item.getText().toString();
-
-                        // Displays a message containing the dragged data.
-                        Toast.makeText(this, "Dragged data is " + dragData, Toast.LENGTH_SHORT).show();
-
-                        // Turns off any color tints
-                        view.getBackground().clearColorFilter();
-
-                        // Invalidates the view to force a redraw
-                        view.invalidate();
-
-                        View v = (View) event.getLocalState();
-                        ViewGroup owner = (ViewGroup) v.getParent();
-                        owner.removeView(v);//remove the dragged view
-                        LinearLayout container = (LinearLayout) view;//caste the view into LinearLayout as our drag acceptable layout is LinearLayout
-                        container.addView(v);//Add the dragged view
-                        v.setVisibility(View.VISIBLE);//finally set Visibility to VISIBLE
-                        if (mimType.contains(BUTTON_VIEW_TAG2)) {
-                            result++;
-                            if (result >= 4)
-                                Toast.makeText(fourthlevel_6_quiz.this, "all answers right", Toast.LENGTH_SHORT).show();
-                            Log.d(TAG, "Result: " + result);
-                        }
-
-                        counter++;
-                        if (counter == 4) {
-                            iv_next.setVisibility(View.VISIBLE);
-                            Toast.makeText(fourthlevel_6_quiz.this, "neeext", Toast.LENGTH_SHORT).show();
-                            // set next view visible
-                        }
+            switch (dragEvent) {//
 
 
-                        return true;
+                case DragEvent.ACTION_DROP:
+
+                    //start target
+                    if (v.getId() == R.id.target1) {
 
 
-                    // Returns true. DragEvent.getResult() will return true.
-
-                    case DragEvent.ACTION_DRAG_ENDED:
-                        // Turns off any color tinting
-                        view.getBackground().clearColorFilter();
-
-                        // Invalidates the view to force a redraw
-                        view.invalidate();
-
-                        // Does a getResult(), and displays what happened.
-                        if (event.getResult())
-                            Toast.makeText(this, "The drop was handled.", Toast.LENGTH_SHORT).show();
-                        else {
-                            Toast.makeText(this, "The drop didn't work.", Toast.LENGTH_SHORT).show();
-                            mview.setVisibility(View.VISIBLE);
-                        }
-                        // returns true; the value is ignored.
-                        return true;
-                    // An unknown action type was received.
-
-                }
-
-                break;
-
-
-            case R.id.true_answer1:
-                // Handles each of the expected events
-
-                switch (action) {
-                    case DragEvent.ACTION_DRAG_STARTED:
-                        // Determines if this View can accept the dragged data
-                        if (event.getClipDescription().hasMimeType(ClipDescription.MIMETYPE_TEXT_PLAIN)) {
-
-                            return true;
+                        if (v.getId() == R.id.target1 && tg1 > 0) {
+                            tg1 = 0;
+                            if (vt1.getX() == v.getX()) {
+                                vt1.animate().x(x1.getX()).y(x1.getY()).setDuration(80).start();
+                            }
 
                         }
 
-                        return false;
+                        if (view.getId() == R.id.assign_statment && v.getId() == R.id.target1 && tg1 == 0) {
+                            view.animate().x(target1.getX()).y(target1.getY()).setDuration(80).start();
+                            vt1 = view;
+                            x1 = pinassign;
+                            tg1 = 1;
+                            res1 = 1;
 
-                    case DragEvent.ACTION_DRAG_EXITED:
-
-                        view.getBackground().clearColorFilter();
-
-                        // Invalidate the view to force a redraw in the new tint
-                        view.invalidate();
-
-                        return true;
-
-                    case DragEvent.ACTION_DROP:
-
-                        String mimType = event.getClipDescription().toString();
-                        // String mimType = item.getText().toString();
-                        Log.d(TAG, mimType);
-
-                        // Gets the item containing the dragged data
-                        ClipData.Item item = event.getClipData().getItemAt(0);
-
-                        // Gets the text data from the item.
-                        String dragData = item.getText().toString();
-
-                        // Displays a message containing the dragged data.
-                        Toast.makeText(this, "Dragged data is " + dragData, Toast.LENGTH_SHORT).show();
-
-                        // Turns off any color tints
-                        view.getBackground().clearColorFilter();
-
-                        // Invalidates the view to force a redraw
-                        view.invalidate();
-
-                        View v = (View) event.getLocalState();
-                        ViewGroup owner = (ViewGroup) v.getParent();
-                        owner.removeView(v);//remove the dragged view
-                        LinearLayout container = (LinearLayout) view;//caste the view into LinearLayout as our drag acceptable layout is LinearLayout
-                        container.addView(v);//Add the dragged view
-                        v.setVisibility(View.VISIBLE);//finally set Visibility to VISIBLE
-
-                        if ( mimType.contains(BUTTON_VIEW_TAG1)) {
-                            result ++;
-                            if (result >= 4) Toast.makeText(fourthlevel_6_quiz.this, "all answers right", Toast.LENGTH_SHORT).show();
-                            Log.d(TAG, "Result: "+result);
                         }
+                        if (view.getId() == R.id.loop_statment && v.getId() == R.id.target1 && tg1 == 0) {
+                            view.animate().x(target1.getX()).y(target1.getY()).setDuration(80).start();
+                            vt1 = view;
+                            tg1 = 1;
+                            x1 = pinwhile;
+                            res1 = 0;
 
-                        counter ++;
-                        if(counter == 4) {
-                            iv_next.setVisibility(View.VISIBLE);
-                            Toast.makeText(fourthlevel_6_quiz.this, "neeext", Toast.LENGTH_SHORT).show();
-                            // set next view visible
                         }
+                        if (view.getId() == R.id.print_statment && v.getId() == R.id.target1 && tg1 == 0) {
+                            view.animate().x(target1.getX()).y(target1.getY()).setDuration(80).start();
+                            vt1 = view;
+                            tg1 = 1;
+                            x1 = pinprint;
+                            res1 = 0;
 
-
-                        return true;
-
-
-                    // Returns true. DragEvent.getResult() will return true.
-
-                    case DragEvent.ACTION_DRAG_ENDED:
-                        // Turns off any color tinting
-                        view.getBackground().clearColorFilter();
-
-                        // Invalidates the view to force a redraw
-                        view.invalidate();
-
-                        // Does a getResult(), and displays what happened.
-                        if (event.getResult())
-                            Toast.makeText(this, "The drop was handled.", Toast.LENGTH_SHORT).show();
-                        else {
-                            Toast.makeText(this, "The drop didn't work.", Toast.LENGTH_SHORT).show();
-                            mview.setVisibility(View.VISIBLE);
                         }
-                        // returns true; the value is ignored.
-                        return true;
-                    // An unknown action type was received.
-
-                }
-
-                break;
-
-            default:
-                Log.e("DragDrop Example", "Unknown action type received by OnDragListener.");
-                break;
-
-
-            case R.id.true_answer:
-                // Handles each of the expected events
-
-                switch (action) {
-                    case DragEvent.ACTION_DRAG_STARTED:
-                        // Determines if this View can accept the dragged data
-                        if (event.getClipDescription().hasMimeType(ClipDescription.MIMETYPE_TEXT_PLAIN)) {
-
-                            return true;
+                        if (view.getId() == R.id.increment_statment && v.getId() == R.id.target1 && tg1 == 0) {
+                            view.animate().x(target1.getX()).y(target1.getY()).setDuration(80).start();
+                            vt1 = view;
+                            tg1 = 1;
+                            x1 = pinincrement;
+                            res1 = 0;
 
                         }
 
-                        return false;
-
-                    case DragEvent.ACTION_DRAG_EXITED:
-
-                        view.getBackground().clearColorFilter();
-
-                        // Invalidate the view to force a redraw in the new tint
-                        view.invalidate();
-
-                        return true;
-
-                    case DragEvent.ACTION_DROP:
-
-                        String mimType = event.getClipDescription().toString();
-                        // String mimType = item.getText().toString();
-                        Log.d(TAG, mimType);
-
-                        // Gets the item containing the dragged data
-                        ClipData.Item item = event.getClipData().getItemAt(0);
-
-                        // Gets the text data from the item.
-                        String dragData = item.getText().toString();
-
-                        // Displays a message containing the dragged data.
-                        Toast.makeText(this, "Dragged data is " + dragData, Toast.LENGTH_SHORT).show();
-
-                        // Turns off any color tints
-                        view.getBackground().clearColorFilter();
-
-                        // Invalidates the view to force a redraw
-                        view.invalidate();
-
-                        View v = (View) event.getLocalState();
-                        ViewGroup owner = (ViewGroup) v.getParent();
-                        owner.removeView(v);//remove the dragged view
-                        LinearLayout container = (LinearLayout) view;//caste the view into LinearLayout as our drag acceptable layout is LinearLayout
-                        container.addView(v);//Add the dragged view
-                        v.setVisibility(View.VISIBLE);//finally set Visibility to VISIBLE
-
-                        if (mimType.contains(BUTTON_VIEW_TAG3) ) {
-                            result ++;
-                            if (result >= 4) Toast.makeText(fourthlevel_6_quiz.this, "all answers right", Toast.LENGTH_SHORT).show();
-                            Log.d(TAG, "Result: "+result);
-                        }
-
-                        counter ++;
-                        if(counter == 4) {
-                            iv_next.setVisibility(View.VISIBLE);
-                            Toast.makeText(fourthlevel_6_quiz.this, "neeext", Toast.LENGTH_SHORT).show();
-                            // set next view visible
-                        }
+                    }
 
 
-                        return true;
+                    //start target2
+
+                    else if (v.getId() == R.id.target2) {
 
 
-                    // Returns true. DragEvent.getResult() will return true.
-
-                    case DragEvent.ACTION_DRAG_ENDED:
-                        // Turns off any color tinting
-                        view.getBackground().clearColorFilter();
-
-                        // Invalidates the view to force a redraw
-                        view.invalidate();
-
-                        // Does a getResult(), and displays what happened.
-                        if (event.getResult())
-                            Toast.makeText(this, "The drop was handled.", Toast.LENGTH_SHORT).show();
-                        else {
-                            Toast.makeText(this, "The drop didn't work.", Toast.LENGTH_SHORT).show();
-                            mview.setVisibility(View.VISIBLE);
-                        }
-                        // returns true; the value is ignored.
-                        return true;
-                    // An unknown action type was received.
-
-                }
-
-                break;
-
-
-            case R.id.true_answer2:
-                // Handles each of the expected events
-
-                switch (action) {
-                    case DragEvent.ACTION_DRAG_STARTED:
-                        // Determines if this View can accept the dragged data
-                        if (event.getClipDescription().hasMimeType(ClipDescription.MIMETYPE_TEXT_PLAIN)) {
-
-                            return true;
+                        if (v.getId() == R.id.target2 & tg2 > 0) {
+                            tg2 = 0;
+                            if (vt2.getX() == v.getX()) {
+                                vt2.animate().x(x2.getX()).y(x2.getY()).setDuration(80).start();
+                            }
 
                         }
 
-                        return false;
+                        if (view.getId() == R.id.loop_statment && v.getId() == R.id.target2 && tg2 == 0) {
+                            view.animate().x(target2.getX()).y(target2.getY()).setDuration(80).start();
+                            vt2 = view;
+                            tg2 = 1;
+                            x2 = pinwhile;
+                            res2 = 1;
 
-
-                    case DragEvent.ACTION_DRAG_EXITED:
-                        view.invalidate();
-
-                        return true;
-
-                    case DragEvent.ACTION_DROP:
-
-                        String mimType = event.getClipDescription().toString();
-                        // String mimType = item.getText().toString();
-                        Log.d(TAG, mimType);
-
-                        // Gets the item containing the dragged data
-                        ClipData.Item item = event.getClipData().getItemAt(0);
-
-                        // Gets the text data from the item.
-                        String dragData = item.getText().toString();
-
-                        // Displays a message containing the dragged data.
-                        Toast.makeText(this, "Dragged data is " + dragData, Toast.LENGTH_SHORT).show();
-
-                        // Turns off any color tints
-                        view.getBackground().clearColorFilter();
-
-                        // Invalidates the view to force a redraw
-                        view.invalidate();
-
-                        View v = (View) event.getLocalState();
-                        ViewGroup owner = (ViewGroup) v.getParent();
-                        owner.removeView(v);//remove the dragged view
-                        LinearLayout container = (LinearLayout) view;//caste the view into LinearLayout as our drag acceptable layout is LinearLayout
-                        container.addView(v);//Add the dragged view
-                        v.setVisibility(View.VISIBLE);//finally set Visibility to VISIBLE
-
-                        if (mimType.contains(BUTTON_VIEW_TAG4)) {
-                            result++;
-                            if (result >= 4)
-                                Toast.makeText(fourthlevel_6_quiz.this, "all answers right", Toast.LENGTH_SHORT).show();
-                            Log.d(TAG, "Result: " + result);
                         }
 
-                        //*    v.setVisibility(View.VISIBLE);//finally set Visibility to VISIBLE
-                        counter++;
-                        if (counter == 4) {
-                            iv_next.setVisibility(View.VISIBLE);
-                            Toast.makeText(fourthlevel_6_quiz.this, "neeext", Toast.LENGTH_SHORT).show();
-                            // set next view visible
+                        if (view.getId() == R.id.print_statment && v.getId() == R.id.target2 && tg2 == 0) {
+                            view.animate().x(target2.getX()).y(target2.getY()).setDuration(80).start();
+                            vt2 = view;
+                            tg2 = 1;
+                            x2 = pinprint;
+                            res2 = 0;
+
+
                         }
 
-                        return true;
+                        if (view.getId() == R.id.increment_statment && v.getId() == R.id.target2 && tg2 == 0) {
+                            view.animate().x(target2.getX()).y(target2.getY()).setDuration(80).start();
+                            vt2 = view;
+                            tg2 = 1;
+                            x2 = pinincrement;
+                            res2 = 0;
 
-                    // Returns true. DragEvent.getResult() will return true.
-
-                    case DragEvent.ACTION_DRAG_ENDED:
-                        // Turns off any color tinting
-                        view.getBackground().clearColorFilter();
-
-                        // Invalidates the view to force a redraw
-                        view.invalidate();
-
-                        // Does a getResult(), and displays what happened.
-                        if (event.getResult())
-                            Toast.makeText(this, "The drop was handled.", Toast.LENGTH_SHORT).show();
-                        else {
-                            Toast.makeText(this, "The drop didn't work.", Toast.LENGTH_SHORT).show();
-                            mview.setVisibility(View.VISIBLE);
                         }
-                        // returns true; the value is ignored.
-                        return true;
-                    // An unknown action type was received.
+                        if (view.getId() == R.id.assign_statment && v.getId() == R.id.target2 && tg2 == 0) {
+                            view.animate().x(target2.getX()).y(target2.getY()).setDuration(80).start();
+                            vt2 = view;
+                            tg2 = 1;
+                            x2 = pinassign;
+                            res2 = 0;
 
-                }
+                        }
 
-                break;
+                    }
+
+
+                    //start target3
+
+
+                    else if (v.getId() == R.id.target3) {
+
+
+                        if (v.getId() == R.id.target3 & tg3 > 0) {
+                            tg3 = 0;
+                            if (vt3.getX() == v.getX()) {
+                                vt3.animate().x(x3.getX()).y(x3.getY()).setDuration(80).start();
+                            }
+                        }
+
+                        if (view.getId() == R.id.print_statment && v.getId() == R.id.target3 && tg3 == 0) {
+                            view.animate().x(target3.getX()).y(target3.getY()).setDuration(80).start();
+                            vt3 = view;
+                            tg3 = 1;
+                            x3 = pinprint;
+                            res3 = 1;
+
+                        }
+
+                        if (view.getId() == R.id.assign_statment && v.getId() == R.id.target3 && tg3 == 0) {
+                            view.animate().x(target3.getX()).y(target3.getY()).setDuration(80).start();
+                            vt3 = view;
+                            tg3 = 1;
+                            x3 = pinassign;
+                            res3 = 0;
+                        }
+
+                        if (view.getId() == R.id.loop_statment && v.getId() == R.id.target3 && tg3 == 0) {
+                            view.animate().x(target3.getX()).y(target3.getY()).setDuration(80).start();
+                            vt3 = view;
+                            tg3 = 1;
+                            x3 = pinwhile;
+                            res3 = 0;
+
+                        }
+                        if (view.getId() == R.id.increment_statment && v.getId() == R.id.target3 && tg3 == 0) {
+                            view.animate().x(target3.getX()).y(target3.getY()).setDuration(80).start();
+                            vt3 = view;
+                            tg3 = 1;
+                            x3 = pinincrement;
+                            res3 = 0;
+
+                        }
+
+                    }
+
+
+                    //start target4
+
+
+                    else if (v.getId() == R.id.target4) {
+
+
+                        if (v.getId() == R.id.target4 & tg4 > 0) {
+                            tg4 = 0;
+                            if (vt4.getX() == v.getX()) {
+                                vt4.animate().x(x4.getX()).y(x4.getY()).setDuration(80).start();
+                            }
+                        }
+
+                        if (view.getId() == R.id.increment_statment && v.getId() == R.id.target4 && tg4 == 0) {
+                            view.animate().x(target4.getX()).y(target4.getY()).setDuration(80).start();
+                            vt4 = view;
+                            tg4 = 1;
+                            x4 = pinincrement;
+                            res4 = 1;
+
+                        }
+
+                        if (view.getId() == R.id.loop_statment && v.getId() == R.id.target4 && tg4 == 0) {
+                            view.animate().x(target4.getX()).y(target4.getY()).setDuration(80).start();
+                            vt4 = view;
+                            tg4 = 1;
+                            x4 = pinwhile;
+                            res4 = 0;
+                        }
+
+                        if (view.getId() == R.id.print_statment && v.getId() == R.id.target4 && tg4 == 0) {
+                            view.animate().x(target4.getX()).y(target4.getY()).setDuration(80).start();
+                            vt4 = view;
+                            tg4 = 1;
+                            x4 = pinprint;
+                            res4 = 0;
+
+                        }
+                        if (view.getId() == R.id.assign_statment && v.getId() == R.id.target4 && tg4 == 0) {
+                            view.animate().x(target4.getX()).y(target4.getY()).setDuration(80).start();
+                            vt4 = view;
+                            tg4 = 1;
+                            x4 = pinassign;
+                            res4 = 0;
+
+
+                        }
+                    }
+
+            }
+            return true;
         }
 
-        return false;
-
-    }
-
-
-
-
-
-    public void updatedata() {
-
-        // sqLiteHelper.UpdateQuestionAnswer(1,1);
-        if (result == 4) {
-            sqLiteHelper.UpdateQuestionAnswer(15,1);
-        }
-        else
-            sqLiteHelper.UpdateQuestionAnswer(15,0);
-
-
-    }
-    public void ShowPopup(View v) {
+    };
+    public void ShowPopupSolve() {
 
         Button btnClose;
-        myDialog.setContentView(R.layout.hint4_3);
+        myDialog.setContentView(R.layout.solve_it);
         btnClose =(Button) myDialog.findViewById(R.id.okaybtn);
+
+
         btnClose.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -546,10 +403,36 @@ public class fourthlevel_6_quiz extends AppCompatActivity
         myDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
         myDialog.show();
     }
-    public void GoNext(){
-       // Intent intent = new Intent(this,welcome_1.class);
 
-       // startActivity(intent);
 
+    public void updatedata() {
+        result = res1 + res2 + res3 + res4;
+        Toast.makeText(fourthlevel_6_quiz.this, "result: "+result,
+                Toast.LENGTH_SHORT).show();
+        if (result == 4) {
+            sqLiteHelper.UpdateQuestionAnswer(15,1);
+        }
+        else {
+            sqLiteHelper.UpdateQuestionAnswer(15,0);
+        }
+
+
+    }
+
+    public void ShowPopup(View v) {
+
+        Button btnClose;
+        myDialog.setContentView(R.layout.hint4_3);
+        btnClose =(Button) myDialog.findViewById(R.id.okaybtn);
+
+
+        btnClose.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                myDialog.dismiss();
+            }
+        });
+        myDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        myDialog.show();
     }
 }
