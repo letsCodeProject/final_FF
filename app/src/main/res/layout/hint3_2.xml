@@ -12,7 +12,7 @@
 
     <ImageView
         android:id="@+id/homebtn8"
-        android:layout_width="197dp"
+        android:layout_width="201dp"
         android:layout_height="300dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
