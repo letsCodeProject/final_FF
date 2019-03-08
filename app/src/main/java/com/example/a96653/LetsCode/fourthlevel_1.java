@@ -1,6 +1,7 @@
 package com.example.a96653.LetsCode;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -15,9 +16,9 @@ public class fourthlevel_1 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fourthlevel_1);
-       m = new MySQLliteHelper(this);
+        m = new MySQLliteHelper(this);
 
-       //HOME BUTTON
+        //HOME BUTTON
         ImageButton homebtn= (ImageButton) findViewById(R.id.homebtn_fourthlevel_1);
         homebtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -37,9 +38,17 @@ public class fourthlevel_1 extends AppCompatActivity {
         next.setOnClickListener(
                 new ImageView.OnClickListener() {
                     public void onClick(View v) {
-
                         openSecondActivity();
+                        SharedPreferences prefs = getSharedPreferences("pref_fourthLevel_1", MODE_PRIVATE);
+                        boolean firstStart = prefs.getBoolean("firstStart", true);
+                        if (firstStart){
+                            m.UpdateNumOfLesson(54,"Jupiter");
+                            SharedPreferences pref = getSharedPreferences("pref_fourthLevel_1", MODE_PRIVATE);
+                            SharedPreferences.Editor editor = prefs.edit();
+                            editor.putBoolean("firstStart", false);
+                            editor.apply();}
                     }
+
 
                 }
 

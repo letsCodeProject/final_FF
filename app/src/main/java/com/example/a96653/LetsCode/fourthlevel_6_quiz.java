@@ -3,6 +3,7 @@ package com.example.a96653.LetsCode;
 import android.app.Dialog;
 import android.content.ClipData;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.media.MediaPlayer;
@@ -15,6 +16,7 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
 
 public class fourthlevel_6_quiz extends AppCompatActivity  {
     //Lesson l1=new Lesson(1);
@@ -123,6 +125,59 @@ public class fourthlevel_6_quiz extends AppCompatActivity  {
 
                         CHECK=tt1+tt2+tt3+tt4;
                         if(CHECK==4) {
+                            SharedPreferences prefs = getSharedPreferences("pref_forthlevel_6", MODE_PRIVATE);
+                            boolean firstStart = prefs.getBoolean("firstStart", true);
+                            if (firstStart){
+                                sqLiteHelper.UpdateNumOfLesson(60,"Jupiter");
+                                SharedPreferences pref = getSharedPreferences("pref_forthlevel_6", MODE_PRIVATE);
+                                SharedPreferences.Editor editor = prefs.edit();
+                                editor.putBoolean("firstStart", false);
+                                editor.apply();}
+////
+                            ////CLEARING PREFRENCES
+                            SharedPreferences preferences = getSharedPreferences("pref_fourthLevel_1", MODE_PRIVATE);
+                            SharedPreferences.Editor editor = preferences.edit();
+                            editor.clear();
+                            editor.commit();
+                            finish();
+                            ////
+                            SharedPreferences preferences2 = getSharedPreferences("fourthLevel_2", MODE_PRIVATE);
+                            SharedPreferences.Editor editor2 = preferences2.edit();
+                            editor2.clear();
+                            editor2.commit();
+                            finish();
+                            ////
+                            SharedPreferences preferences3 = getSharedPreferences("fourthLevel_3", MODE_PRIVATE);
+                            SharedPreferences.Editor editor3 = preferences3.edit();
+                            editor3.clear();
+                            editor3.commit();
+                            finish();
+                            ////
+                            SharedPreferences preferences4 = getSharedPreferences("fourthLevel_video", MODE_PRIVATE);
+                            SharedPreferences.Editor editor4 = preferences4.edit();
+                            editor4.clear();
+                            editor4.commit();
+                            finish();
+                            ////
+                            SharedPreferences preferences5 = getSharedPreferences("pref_forthlevel_4", MODE_PRIVATE);
+                            SharedPreferences.Editor editor5 = preferences5.edit();
+                            editor5.clear();
+                            editor5.commit();
+                            finish();
+                            ///////////////
+                            SharedPreferences preferences6 = getSharedPreferences("pref_forthlevel_5", MODE_PRIVATE);
+                            SharedPreferences.Editor editor6 = preferences6.edit();
+                            editor6.clear();
+                            editor6.commit();
+                            finish();
+                            /////////////////
+                            SharedPreferences preferences7 = getSharedPreferences("pref_forthlevel_6", MODE_PRIVATE);
+                            SharedPreferences.Editor editor7 = preferences7.edit();
+                            editor7.clear();
+                            editor7.commit();
+                            finish();
+
+
 
                             updatedata();
                             Intent  intent = new Intent(getApplicationContext(),Fourthlevel_resultsheet.class);

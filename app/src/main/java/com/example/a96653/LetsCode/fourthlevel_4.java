@@ -2,6 +2,7 @@ package com.example.a96653.LetsCode;
 
 import android.app.Dialog;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.support.v7.app.AppCompatActivity;
@@ -140,11 +141,27 @@ public class fourthlevel_4 extends AppCompatActivity {
             public void onClick(View v) {
 
                 if(radio1.isChecked()) {
+                    SharedPreferences prefs = getSharedPreferences("pref_forthlevel_4", MODE_PRIVATE);
+                    boolean firstStart = prefs.getBoolean("firstStart", true);
+                    if (firstStart){
+                        mySqliteOpenHelper.UpdateNumOfLesson(58,"Jupiter");
+                        SharedPreferences pref = getSharedPreferences("pref_forthlevel_4", MODE_PRIVATE);
+                        SharedPreferences.Editor editor = prefs.edit();
+                        editor.putBoolean("firstStart", false);
+                        editor.apply();}
                     startActivity(new Intent(fourthlevel_4.this,fourthlevel_5.class));
                     mySqliteOpenHelper.UpdateQuestionAnswer(13, 0);
 
                 }
                 if(radio2.isChecked()){
+                    SharedPreferences prefs = getSharedPreferences("pref_forthlevel_4", MODE_PRIVATE);
+                    boolean firstStart = prefs.getBoolean("firstStart", true);
+                    if (firstStart){
+                        mySqliteOpenHelper.UpdateNumOfLesson(58,"Jupiter");
+                        SharedPreferences pref = getSharedPreferences("pref_forthlevel_4", MODE_PRIVATE);
+                        SharedPreferences.Editor editor = prefs.edit();
+                        editor.putBoolean("firstStart", false);
+                        editor.apply();}
 
                     mySqliteOpenHelper.UpdateQuestionAnswer(13,1);
                     startActivity(new Intent(fourthlevel_4.this,fourthlevel_5.class));
