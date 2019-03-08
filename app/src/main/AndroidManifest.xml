@@ -237,6 +237,9 @@
         <activity
             android:name=".certificate"
             android:screenOrientation="landscape" />
+
+        <activity android:name=".fourthlevel_6_quiz"
+            android:screenOrientation="landscape"/>
     </application>
 
 </manifest>

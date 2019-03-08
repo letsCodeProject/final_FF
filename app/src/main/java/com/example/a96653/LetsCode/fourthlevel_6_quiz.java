@@ -2,9 +2,7 @@ package com.example.a96653.LetsCode;
 
 import android.app.Dialog;
 import android.content.ClipData;
-import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.media.MediaPlayer;
@@ -17,8 +15,6 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import java.util.List;
 
 public class fourthlevel_6_quiz extends AppCompatActivity  {
     //Lesson l1=new Lesson(1);
@@ -40,7 +36,7 @@ public class fourthlevel_6_quiz extends AppCompatActivity  {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_fourthlevel_6);
+        setContentView(R.layout.fourthlevel_6_quiz);
 
         sqLiteHelper = new MySQLliteHelper(this);
 
