@@ -1,45 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.a96653.LetsCode">
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-
-
 
     <application
-        android:largeHeap="true"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme.NoActionBar"
+        android:theme="@style/AppTheme.NoActionBar">
 
-    >
 
-        <activity android:name=".Fourthlevel_resultsheet"></activity>
+        <activity android:name=".fourthlevel_video"
+            android:screenOrientation="landscape"
+            />
 
+        <activity
+            android:name=".fourthlevel_3"
+            android:screenOrientation="landscape" />
         <activity
             android:name=".fourthlevel_5"
             android:screenOrientation="landscape" />
-
-        <activity android:name=".certificate"
-            android:screenOrientation="landscape"></activity>
-        <activity android:name=".fourthlevel_3" />
-
         <activity
             android:name=".fourthlevel_4"
             android:screenOrientation="landscape" />
         <activity
-        android:name=".thirdlevel_22"
-        android:screenOrientation="landscape" />
-
+            android:name=".thirdlevel_22"
+            android:screenOrientation="landscape" />
         <activity
             android:name=".thirdlevel_13_feedback"
             android:screenOrientation="landscape" />
-
-        <activity android:name=".thirdlevel_12"
+        <activity
+            android:name=".thirdlevel_12"
             android:screenOrientation="landscape" />
         <activity
             android:name=".thirdlevel_11"
@@ -241,10 +234,12 @@
         <activity
             android:name=".thirdlevel_20_question1"
             android:screenOrientation="landscape" />
+        <activity
+            android:name=".certificate"
+            android:screenOrientation="landscape" />
 
-
-
+        <activity android:name=".fourthlevel_6_quiz"
+            android:screenOrientation="landscape"/>
     </application>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
 </manifest>

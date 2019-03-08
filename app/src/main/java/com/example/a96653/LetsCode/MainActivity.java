@@ -45,6 +45,25 @@ public class MainActivity extends AppCompatActivity {
          labeb_Earth.setVisibility(View.INVISIBLE);
      }
 
+
+     ImageView g= findViewById(R.id.imageView17);
+
+        g.setOnClickListener(new  ImageView.OnClickListener() {
+
+                                      public void onClick(View v) {
+
+
+                                          startActivity(new Intent(MainActivity.this,fourthlevel_video.class));
+                                      }
+
+                                  }
+        );
+
+
+
+
+
+
         if( levelStatus=m.getLevelStatus("Saturn")==true)
             Saturn.setAlpha(1000);
         else {
@@ -90,9 +109,9 @@ public class MainActivity extends AppCompatActivity {
         //TO VIEW SCORE IN SCORE BOX
         TextView textView = (TextView)findViewById(R.id.ScoreBox_main);
         textView.setText(m.getChildScore()+"" );
-          /////
 
 
+//OPENING PLOTO
         ImageView ploto = (ImageView)findViewById(R.id.imageView3);
 
         final int finalLnum = lnum;
@@ -130,6 +149,7 @@ public class MainActivity extends AppCompatActivity {
                                       }
             );
         } //END IF
+
         //OPENING zuhal LEVEL
         if( levelStatus=m.getLevelStatus("Saturn")==true) {
 
@@ -148,17 +168,26 @@ public class MainActivity extends AppCompatActivity {
                                       }
             );
         } //END IF
-       /* if (m.getLevelStatus("Nepton")==true){
+        //OPENING JUPITER LEVEL
+        if( levelStatus=m.getLevelStatus("Jupiter")==true) {
 
-            nepton.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Intent gotoneptonlessons=new Intent (getApplicationContext(),secondlevel_1.class);
-                    startActivity(gotoneptonlessons);
-                }
-            });
+            Jupiter.setOnClickListener(new Button.OnClickListener() {
 
-        }//end if*/
+                                          public void onClick(View v) {
+
+
+                                              try {
+                                                  openJupiterActivity(m, finalLnum);
+                                              } catch (ClassNotFoundException e) {
+                                                  e.printStackTrace();
+                                              }
+                                          }
+
+                                      }
+            );
+        } //END IF
+
+
 
     }//END ONcreate
 
@@ -239,8 +268,36 @@ public class MainActivity extends AppCompatActivity {
         try{
             c = Class.forName("com.example.a96653.LetsCode."+name);
 
-           //Intent  intent = new Intent(this,c);
-           Intent  intent = new Intent(this,certificate.class);
+            Intent  intent = new Intent(this,c);
+            //Intent  intent = new Intent(this,certificate.class);
+            startActivity(intent);}
+        catch (Exception e){e.printStackTrace();}
+
+    }
+    //OPENING Jupiter ACTIVITY .
+    public void openJupiterActivity(MySQLliteHelper M,int lnum2) throws ClassNotFoundException {
+
+        SharedPreferences prefs = getSharedPreferences("FIRSTSTARTOFJupiter", MODE_PRIVATE);
+        boolean firstStart = prefs.getBoolean("firstStart", true);
+        if (firstStart){
+            M.UpdateNumOfLesson(53,"Jupiter");
+            SharedPreferences pref = getSharedPreferences("FIRSTSTARTOFJupiter", MODE_PRIVATE);
+            SharedPreferences.Editor editor = prefs.edit();
+            editor.putBoolean("firstStart", false);
+            editor.apply();}
+
+        lnum2=M.getNumOfLessonPassed("Jupiter");
+        TextView t=(TextView)findViewById(R.id.textView47);
+
+        Lesson l=new Lesson();
+        String name=l.getName(M.getNumOfLessonPassed("Jupiter"));
+        t.setText(name);
+        Class c;
+        try{
+            c = Class.forName("com.example.a96653.LetsCode."+name);
+
+            // Intent  intent = new Intent(this,c);
+            Intent  intent = new Intent(this,certificate.class);
             startActivity(intent);}
         catch (Exception e){e.printStackTrace();}
 

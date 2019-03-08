@@ -74,12 +74,7 @@ public class welcome_2 extends AppCompatActivity {
         });
 
         nameView.setText(  mySqliteOpenHelper. getChildName());
-       if (getIntent().hasExtra("com.example.a96653.LetsCode")){
-            String t=getIntent().getExtras().getString("com.example.a96653.LetsCode");
-            nameView.setText(t);
 
-
-        }
 
 
     }

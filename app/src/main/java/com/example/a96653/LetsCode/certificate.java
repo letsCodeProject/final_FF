@@ -1,16 +1,20 @@
 package com.example.a96653.LetsCode;
 
+import android.Manifest;
 import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Environment;
 import android.os.StrictMode;
+import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -28,8 +32,6 @@ import java.io.IOException;
 import java.util.Date;
 import java.util.Calendar;
 import java.text.SimpleDateFormat;
-
-
 public class certificate extends AppCompatActivity {
     TextView t ;
     ImageButton homebtn9;
@@ -137,11 +139,21 @@ mcontex=getApplication();
                 save.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
+                        retrieveImage();
+
+                        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.M && checkCallingOrSelfPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE)!= PackageManager.PERMISSION_GRANTED){
+                            requestPermissions(new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},0);
+
+                        }else {
+                            store(bmp2,"certificate.png");
+                    }
 
 
-                        //Here shaima's work
 
-                  }
+
+
+
+                    }
                 });
 
                 //Share
@@ -208,7 +220,6 @@ back.setOnClickListener(new View.OnClickListener() {
             bmp2=bmp;
             imageView2.setImageBitmap(bmp);
 
-            Toast.makeText(getApplicationContext(),"added",Toast.LENGTH_SHORT).show();
 
         }catch (Exception e){e.printStackTrace();   Toast.makeText(getApplicationContext(),"not added",Toast.LENGTH_SHORT).show();}
 
@@ -279,4 +290,38 @@ public static Bitmap getScreenShot(View view){
     mydialog.show();
 }
 */
+
+    public void store(Bitmap bm,String filename){
+
+        String dirPath= Environment.getExternalStorageDirectory().getAbsolutePath()+"/LetsCode";
+        File dir=new File(dirPath);
+        if(!dir.exists()){
+            dir.mkdir();
+        }
+        File file=new File(dirPath,filename);
+        try {
+            FileOutputStream fos=new FileOutputStream(file);
+            bm.compress(Bitmap.CompressFormat.PNG,100,fos);
+            fos.flush();
+            fos.close();
+
+
+        }catch (Exception e){
+            e.printStackTrace();
+            Toast.makeText(this," theres an error",Toast.LENGTH_SHORT).show();
+
+        }
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        if(requestCode==0){
+            if(grantResults[0]==PackageManager.PERMISSION_GRANTED){   store(bmp2,"certificate.png");
+             }else{
+                Toast.makeText(this,"premission granted",Toast.LENGTH_SHORT).show();
+                finish();
+            }
+        }
+    }
+
 }

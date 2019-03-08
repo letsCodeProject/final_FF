@@ -90,7 +90,7 @@ public class firstlevel_1 extends AppCompatActivity  {
 
     public void openSecondActivity() {
 
-        Intent intent = new Intent(this, firstlevel_2.class);
+        Intent intent = new Intent(this,firstlevel_2.class);
         startActivity(intent);
 
     }
