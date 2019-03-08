@@ -10,6 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
 
+
         <activity android:name=".fourthlevel_video"
             android:screenOrientation="landscape"
             />
