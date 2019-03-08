@@ -18,6 +18,18 @@ public class fourthlevel_1 extends AppCompatActivity {
         setContentView(R.layout.activity_fourthlevel_1);
         m = new MySQLliteHelper(this);
 
+        SharedPreferences prefs = getSharedPreferences("pref_creating_db_questions", MODE_PRIVATE);
+        boolean firstStart = prefs.getBoolean("firstStart", true);
+        if (firstStart){
+            m.addQuestion(4);
+            m.addQuestion(4);
+            m.addQuestion(4);
+            SharedPreferences pref = getSharedPreferences("pref_creating_db_questions", MODE_PRIVATE);
+            SharedPreferences.Editor editor = prefs.edit();
+            editor.putBoolean("firstStart", false);
+            editor.apply();}
+
+
         //HOME BUTTON
         ImageButton homebtn= (ImageButton) findViewById(R.id.homebtn_fourthlevel_1);
         homebtn.setOnClickListener(new View.OnClickListener() {

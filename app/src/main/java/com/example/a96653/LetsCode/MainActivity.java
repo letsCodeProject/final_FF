@@ -169,7 +169,7 @@ public class MainActivity extends AppCompatActivity {
             );
         } //END IF
         //OPENING JUPITER LEVEL
-        if( levelStatus=m.getLevelStatus("Jupiter")==true) {
+        if(levelStatus=m.getLevelStatus("Jupiter")==true) {
 
             Jupiter.setOnClickListener(new Button.OnClickListener() {
 
@@ -296,8 +296,8 @@ public class MainActivity extends AppCompatActivity {
         try{
             c = Class.forName("com.example.a96653.LetsCode."+name);
 
-            // Intent  intent = new Intent(this,c);
-            Intent  intent = new Intent(this,certificate.class);
+             Intent  intent = new Intent(this,c);
+           // Intent  intent = new Intent(this,certificate.class);
             startActivity(intent);}
         catch (Exception e){e.printStackTrace();}
 
