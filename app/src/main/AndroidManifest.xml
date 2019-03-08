@@ -9,9 +9,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
+
         <activity android:name=".fourthlevel_video"
             android:screenOrientation="landscape"
             />
+
+        <activity
+            android:name=".fourthlevel_3"
+            android:screenOrientation="landscape" />
         <activity
             android:name=".fourthlevel_5"
             android:screenOrientation="landscape" />
