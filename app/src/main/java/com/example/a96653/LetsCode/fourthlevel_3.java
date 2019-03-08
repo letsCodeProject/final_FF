@@ -51,7 +51,7 @@ public class fourthlevel_3 extends AppCompatActivity {
                         SharedPreferences prefs = getSharedPreferences("pref_forthlevel_3", MODE_PRIVATE);
                         boolean firstStart = prefs.getBoolean("firstStart", true);
                         if (firstStart){
-                           // m.UpdateNumOfLesson(23,"Nepton");//MUST BE CHANGED
+                            m.UpdateNumOfLesson(57,"Jupiter");
                             SharedPreferences pref = getSharedPreferences("pref_forthlevel_3", MODE_PRIVATE);
                             SharedPreferences.Editor editor = prefs.edit();
                             editor.putBoolean("firstStart", false);
@@ -64,8 +64,8 @@ public class fourthlevel_3 extends AppCompatActivity {
     }
     public void openPreviousActivity(){
 
-        //Intent intent=new Intent(this,foryh.class); //MUST GO BACK TO WHAT ?
-       // startActivity(intent);
+        Intent intent=new Intent(this,fourthlevel_video.class); //MUST GO BACK TO WHAT ?
+        startActivity(intent);
 
     }
     public void openSecondActivity() {

@@ -1,6 +1,7 @@
 package com.example.a96653.LetsCode;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -39,7 +40,15 @@ public class fourthlevel_2 extends AppCompatActivity {
                 new ImageView.OnClickListener() {
                     public void onClick(View v) {
 
-                       openSecondActivity();
+                        openSecondActivity();
+                        SharedPreferences prefs = getSharedPreferences("fourthLevel_2", MODE_PRIVATE);
+                        boolean firstStart = prefs.getBoolean("firstStart", true);
+                        if (firstStart){
+                            m.UpdateNumOfLesson(55,"Jupiter");
+                            SharedPreferences pref = getSharedPreferences("fourthLevel_2", MODE_PRIVATE);
+                            SharedPreferences.Editor editor = prefs.edit();
+                            editor.putBoolean("firstStart", false);
+                            editor.apply();}
                     }
 
                 }
@@ -50,7 +59,7 @@ public class fourthlevel_2 extends AppCompatActivity {
     }
 
     public void openSecondActivity() {
-        Intent intent = new Intent(this, fourthlevel_3.class);
+        Intent intent = new Intent(this, fourthlevel_video.class);
         startActivity(intent);
     }
 
