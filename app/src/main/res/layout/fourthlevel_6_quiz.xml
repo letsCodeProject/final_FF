@@ -272,6 +272,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        android:onClick="ShowPopup"
         app:layout_constraintVertical_bias="0.95"
         app:srcCompat="@drawable/quiz1_1robot" />
 
@@ -280,6 +281,7 @@
         android:layout_width="117dp"
         android:layout_height="108dp"
         android:layout_marginStart="28dp"
+        android:onClick="ShowPopup"
         android:layout_marginLeft="28dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
