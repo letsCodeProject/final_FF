@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.a96653.LetsCode">
+
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
@@ -10,11 +11,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
-
-
-        <activity android:name=".fourthlevel_video"
-            android:screenOrientation="landscape"
-            />
+        <activity
+            android:name=".fourthlevel_video"
+            android:screenOrientation="landscape" />
         <activity
             android:name=".fourthlevel_1"
             android:screenOrientation="landscape" />
@@ -29,9 +28,6 @@
             android:screenOrientation="landscape" />
         <activity
             android:name=".fourthlevel_4"
-            android:screenOrientation="landscape" />
-        <activity
-            android:name=".fourthlevel_6_quiz"
             android:screenOrientation="landscape" />
         <activity
             android:name=".thirdlevel_22"
@@ -242,13 +238,14 @@
         <activity
             android:name=".thirdlevel_20_question1"
             android:screenOrientation="landscape" />
-
         <activity
             android:name=".certificate"
             android:screenOrientation="landscape" />
+        <activity
+            android:name=".Fourthlevel_resultsheet"
+            android:screenOrientation="landscape" />
 
-
-        <activity android:name=".Fourthlevel_resultsheet"
+        <activity android:name=".fourthlevel_6"
             android:screenOrientation="landscape"/>
     </application>
 
