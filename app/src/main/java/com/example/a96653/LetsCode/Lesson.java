@@ -136,6 +136,7 @@ public class Lesson {
         l.add(l57);
         l.add(l58);
         l.add(l59);
+        l.add(l60);
     }
 
 

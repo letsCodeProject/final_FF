@@ -165,12 +165,14 @@ public class Fourthlevel_resultsheet extends AppCompatActivity {
             if (status == false) {
                 CallUnlockMethod();
                 updateScore(total);
+                m.UpdateNumOfLesson(53,"Jupiter");
 
             }
             btn.setText(R.string.ButtonCorrect);
             btn.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    m.UpdateNumOfLesson(53,"Jupiter");
                     Intent gobacktoMain=new Intent (getApplicationContext(),MainActivity.class);
                     startActivity(gobacktoMain);
                 }
@@ -180,7 +182,7 @@ public class Fourthlevel_resultsheet extends AppCompatActivity {
             btn.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent gobacktoSolveQuiz = new Intent(getApplicationContext(), thirdlevel_20_question1.class);
+                    Intent gobacktoSolveQuiz = new Intent(getApplicationContext(), fourthlevel_4.class);
                     startActivity(gobacktoSolveQuiz);
                 }
             });

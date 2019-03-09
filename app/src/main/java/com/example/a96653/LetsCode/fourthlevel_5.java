@@ -181,7 +181,7 @@ public class fourthlevel_5 extends AppCompatActivity {
                         SharedPreferences.Editor editor = prefs.edit();
                         editor.putBoolean("firstStart", false);
                         editor.apply();}
-                    startActivity(new Intent(fourthlevel_5.this,thirdlevel_resultsheet.class));
+                    startActivity(new Intent(fourthlevel_5.this,fourthlevel_6_quiz.class));
                     mySqliteOpenHelper.UpdateQuestionAnswer(14, 0);
 
                 }
@@ -196,7 +196,7 @@ public class fourthlevel_5 extends AppCompatActivity {
                         editor.apply();}
 
                     mySqliteOpenHelper.UpdateQuestionAnswer(14,1);
-                    startActivity(new Intent(fourthlevel_5.this,thirdlevel_resultsheet.class));
+                    startActivity(new Intent(fourthlevel_5.this,fourthlevel_6_quiz.class));
                 }
                 if(radio3.isChecked()){
                     SharedPreferences prefs = getSharedPreferences("pref_forthlevel_5", MODE_PRIVATE);
@@ -209,7 +209,7 @@ public class fourthlevel_5 extends AppCompatActivity {
                         editor.apply();}
 
                     mySqliteOpenHelper.UpdateQuestionAnswer(14,0);
-                    startActivity(new Intent(fourthlevel_5.this,thirdlevel_resultsheet.class));
+                    startActivity(new Intent(fourthlevel_5.this,fourthlevel_6_quiz.class));
                 }
 
 
