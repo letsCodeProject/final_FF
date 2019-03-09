@@ -74,7 +74,7 @@ public class Fourthlevel_resultsheet extends AppCompatActivity {
         Cursor resreturned2= m.returnQuestionAnswer(14);
         resreturned2.moveToFirst();
         int index2 = resreturned2.getColumnIndexOrThrow("Q_ANSWER");
-        int answer4_2 = resreturned1.getInt(index2);
+        int answer4_2 = resreturned2.getInt(index2);
         result_42 = answer4_2;
         score_424 = GiveScore(result_42);
         //display the score

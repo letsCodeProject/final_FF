@@ -116,7 +116,7 @@ public class thirdlevel_20_question1 extends AppCompatActivity{
                         if(CHECK==3){
 
                             updatedata();
-                            Intent intent = new Intent(getApplicationContext(),thirdlevel_22.class);
+                            Intent intent = new Intent(getApplicationContext(),thirdlevel_21.class);
                             startActivity(intent);
                             SharedPreferences prefs = getSharedPreferences("pref_thirdLevel_22", MODE_PRIVATE);
                             boolean firstStart = prefs.getBoolean("firstStart", true);
