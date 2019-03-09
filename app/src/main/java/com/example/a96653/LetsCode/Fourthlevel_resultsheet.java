@@ -14,7 +14,7 @@ import android.widget.TextView;
 public class Fourthlevel_resultsheet extends AppCompatActivity {
     MySQLliteHelper m;
     int result_41, result_42, result_43;
-    int score_41, score_42, score_43;
+    int score_41, score_424, score_43;
     int totalscoreQuiz4;
     int minimum = 20;
     @Override
@@ -76,9 +76,9 @@ public class Fourthlevel_resultsheet extends AppCompatActivity {
         int index2 = resreturned2.getColumnIndexOrThrow("Q_ANSWER");
         int answer4_2 = resreturned1.getInt(index2);
         result_42 = answer4_2;
-        score_42 = GiveScore(result_42);
+        score_424 = GiveScore(result_42);
         //display the score
-        ScoreDisplay4_2.setText(String.valueOf(score_42));
+        ScoreDisplay4_2.setText(String.valueOf(score_424));
 
 
          //exctract q3
@@ -95,10 +95,10 @@ public class Fourthlevel_resultsheet extends AppCompatActivity {
         //Feedback for each question :
         /////////
         QuestionFeedback(question4_1, score_41);
-        QuestionFeedback(question4_2, score_42);
+        QuestionFeedback(question4_2, score_424);
         QuestionFeedback(question4_3, score_43);
 
-        totalscoreQuiz4 = score_41+score_42+score_43;
+        totalscoreQuiz4 = score_41+score_424+score_43;
         totalQuizResult4.setText(String.valueOf(totalscoreQuiz4));
 
         //Save quiz result  in db
@@ -180,7 +180,7 @@ public class Fourthlevel_resultsheet extends AppCompatActivity {
             btn.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent gobacktoSolveQuiz = new Intent(getApplicationContext(), thirdlevel_20_question1.class);
+                    Intent gobacktoSolveQuiz = new Intent(getApplicationContext(), fourthlevel_4.class);
                     startActivity(gobacktoSolveQuiz);
                 }
             });

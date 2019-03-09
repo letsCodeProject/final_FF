@@ -209,7 +209,7 @@ public class fourthlevel_5 extends AppCompatActivity {
                         editor.apply();}
 
                     mySqliteOpenHelper.UpdateQuestionAnswer(14,0);
-                    startActivity(new Intent(fourthlevel_5.this,thirdlevel_resultsheet.class));
+                    startActivity(new Intent(fourthlevel_5.this,fourthlevel_6_quiz.class));
                 }
 
 
