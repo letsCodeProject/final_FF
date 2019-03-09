@@ -169,7 +169,7 @@ public class MainActivity extends AppCompatActivity {
             );
         } //END IF
         //OPENING JUPITER LEVEL
-        if(levelStatus=m.getLevelStatus("Jupiter")==true) {
+        if( levelStatus=m.getLevelStatus("Jupiter")==true) {
 
             Jupiter.setOnClickListener(new Button.OnClickListener() {
 

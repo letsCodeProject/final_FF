@@ -242,11 +242,13 @@
         <activity
             android:name=".thirdlevel_20_question1"
             android:screenOrientation="landscape" />
+
         <activity
             android:name=".certificate"
             android:screenOrientation="landscape" />
 
-        <activity android:name=".fourthlevel_6_quiz"
+
+        <activity android:name=".Fourthlevel_resultsheet"
             android:screenOrientation="landscape"/>
     </application>
 
