@@ -3,6 +3,7 @@ package com.example.a96653.LetsCode;
 import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.Color;
+import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -17,6 +18,9 @@ public class Fourthlevel_resultsheet extends AppCompatActivity {
     int score_41, score_42, score_43;
     int totalscoreQuiz4;
     int minimum = 20;
+    MediaPlayer rightAnswerVoice;
+    MediaPlayer wrongAnswerVoice;
+    voice resultsheet;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,6 +28,12 @@ public class Fourthlevel_resultsheet extends AppCompatActivity {
 
 
         m = new MySQLliteHelper(this);
+
+        //create MediaPLayer to play the voice
+        rightAnswerVoice=MediaPlayer.create(Fourthlevel_resultsheet.this,R.raw.rightanswerfeedbackvoice);
+        wrongAnswerVoice=MediaPlayer.create(Fourthlevel_resultsheet.this,R.raw.wronganswerfeedbackvoice);
+
+
 
         //scoreBox display
         TextView scoredisplay = (TextView) findViewById(R.id.quiz4Scoredisplay);
@@ -151,10 +161,14 @@ public class Fourthlevel_resultsheet extends AppCompatActivity {
             happy.setVisibility(View.VISIBLE);
             feedback3.setText(R.string.AboveMinimmum);
             feedback3.setTextColor(Color.parseColor("#0E932E"));
+            resultsheet = new voice(rightAnswerVoice);
+            resultsheet.play();
         } else {
             sad.setVisibility(View.VISIBLE);
             feedback3.setText(R.string.UnderMinimum);
             feedback3.setTextColor(Color.parseColor("#2340B7"));
+            resultsheet=new voice(wrongAnswerVoice);
+            resultsheet.play();
 
         }
     }//End of the method
@@ -204,7 +218,15 @@ public class Fourthlevel_resultsheet extends AppCompatActivity {
     }
 
 
+    @Override
+    protected void onPause() {
+        super.onPause();
+        resultsheet.pause();
+    }
 
+    public void play(View view) {
+        resultsheet.play();
+    }
 
 
 
