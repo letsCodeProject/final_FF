@@ -252,7 +252,7 @@ public class thirdlevel_20_question1 extends AppCompatActivity{
                             vt2 = view;
                             tg2 = 1;
                             x2 = pintarget3;
-                            res2 = 0;
+                            res2 = 1;
 
                         }
 
@@ -286,7 +286,7 @@ public class thirdlevel_20_question1 extends AppCompatActivity{
                             vt3 = view;
                             tg3 = 1;
                             x3 = pintarget2;
-                            res3 = 0;
+                            res3 = 1;
                         }
 
                         if (view.getId() == R.id.false_answer && v.getId() == R.id.target3 && tg3 == 0) {
