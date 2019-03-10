@@ -118,11 +118,11 @@ public class thirdlevel_20_question1 extends AppCompatActivity{
                             updatedata();
                             Intent intent = new Intent(getApplicationContext(),thirdlevel_21.class);
                             startActivity(intent);
-                            SharedPreferences prefs = getSharedPreferences("pref_thirdLevel_22", MODE_PRIVATE);
+                            SharedPreferences prefs = getSharedPreferences("pref_thirdLevel_20", MODE_PRIVATE);
                             boolean firstStart = prefs.getBoolean("firstStart", true);
                             if (firstStart){
-                                sqLiteHelper.UpdateNumOfLesson(50,"Saturn");
-                                SharedPreferences pref = getSharedPreferences("pref_thirdLevel_22", MODE_PRIVATE);
+                                sqLiteHelper.UpdateNumOfLesson(48,"Saturn");
+                                SharedPreferences pref = getSharedPreferences("pref_thirdLevel_20", MODE_PRIVATE);
                                 SharedPreferences.Editor editor = prefs.edit();
                                 editor.putBoolean("firstStart", false);
                                 editor.apply();}
