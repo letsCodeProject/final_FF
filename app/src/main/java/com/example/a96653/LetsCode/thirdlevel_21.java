@@ -200,7 +200,7 @@ public class thirdlevel_21 extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-                //   startActivity(new Intent(MainActivity.this,secondlevel_22.class));
+               //  startActivity(new Intent(thirdlevel_21.this,secondlevel_22.class));
                 if(radio1.isChecked()) {
                     SharedPreferences prefs = getSharedPreferences("pref_thirdLevel_21", MODE_PRIVATE);
                     boolean firstStart = prefs.getBoolean("firstStart", true);

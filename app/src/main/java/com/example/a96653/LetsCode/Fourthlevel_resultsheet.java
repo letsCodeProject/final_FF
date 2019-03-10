@@ -3,6 +3,7 @@ package com.example.a96653.LetsCode;
 import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.Color;
+import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -14,9 +15,12 @@ import android.widget.TextView;
 public class Fourthlevel_resultsheet extends AppCompatActivity {
     MySQLliteHelper m;
     int result_41, result_42, result_43;
-    int score_41, score_42, score_43;
+    int score_41, score_424, score_43;
     int totalscoreQuiz4;
     int minimum = 20;
+    MediaPlayer rightAnswerVoice;
+    MediaPlayer wrongAnswerVoice;
+    voice resultsheet;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,6 +28,12 @@ public class Fourthlevel_resultsheet extends AppCompatActivity {
 
 
         m = new MySQLliteHelper(this);
+
+        //create MediaPLayer to play the voice
+        rightAnswerVoice=MediaPlayer.create(Fourthlevel_resultsheet.this,R.raw.rightanswerfeedbackvoice);
+        wrongAnswerVoice=MediaPlayer.create(Fourthlevel_resultsheet.this,R.raw.wronganswerfeedbackvoice);
+
+
 
         //scoreBox display
         TextView scoredisplay = (TextView) findViewById(R.id.quiz4Scoredisplay);
@@ -74,11 +84,11 @@ public class Fourthlevel_resultsheet extends AppCompatActivity {
         Cursor resreturned2= m.returnQuestionAnswer(14);
         resreturned2.moveToFirst();
         int index2 = resreturned2.getColumnIndexOrThrow("Q_ANSWER");
-        int answer4_2 = resreturned1.getInt(index2);
+        int answer4_2 = resreturned2.getInt(index2);
         result_42 = answer4_2;
-        score_42 = GiveScore(result_42);
+        score_424 = GiveScore(result_42);
         //display the score
-        ScoreDisplay4_2.setText(String.valueOf(score_42));
+        ScoreDisplay4_2.setText(String.valueOf(score_424));
 
 
          //exctract q3
@@ -95,10 +105,10 @@ public class Fourthlevel_resultsheet extends AppCompatActivity {
         //Feedback for each question :
         /////////
         QuestionFeedback(question4_1, score_41);
-        QuestionFeedback(question4_2, score_42);
+        QuestionFeedback(question4_2, score_424);
         QuestionFeedback(question4_3, score_43);
 
-        totalscoreQuiz4 = score_41+score_42+score_43;
+        totalscoreQuiz4 = score_41+score_424+score_43;
         totalQuizResult4.setText(String.valueOf(totalscoreQuiz4));
 
         //Save quiz result  in db
@@ -151,10 +161,14 @@ public class Fourthlevel_resultsheet extends AppCompatActivity {
             happy.setVisibility(View.VISIBLE);
             feedback3.setText(R.string.AboveMinimmum);
             feedback3.setTextColor(Color.parseColor("#0E932E"));
+            resultsheet = new voice(rightAnswerVoice);
+            resultsheet.play();
         } else {
             sad.setVisibility(View.VISIBLE);
             feedback3.setText(R.string.UnderMinimum);
             feedback3.setTextColor(Color.parseColor("#2340B7"));
+            resultsheet=new voice(wrongAnswerVoice);
+            resultsheet.play();
 
         }
     }//End of the method
@@ -206,7 +220,15 @@ public class Fourthlevel_resultsheet extends AppCompatActivity {
     }
 
 
+    @Override
+    protected void onPause() {
+        super.onPause();
+        resultsheet.pause();
+    }
 
+    public void play(View view) {
+        resultsheet.play();
+    }
 
 
 

@@ -148,6 +148,7 @@
         <activity
             android:name=".firstlevel_7"
             android:screenOrientation="landscape" />
+
         <activity
             android:name=".firstlevel_resultsheet"
             android:screenOrientation="landscape" />
