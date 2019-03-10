@@ -222,7 +222,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.334"
-        app:srcCompat="@drawable/surprisedMark" />
+        app:srcCompat="@drawable/surprisedmark" />
 
     <ImageView
         android:id="@+id/imageView121"
@@ -240,7 +240,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.366"
-        app:srcCompat="@drawable/questionMark" />
+        app:srcCompat="@drawable/questionmark" />
 
 
 </android.support.constraint.ConstraintLayout>
