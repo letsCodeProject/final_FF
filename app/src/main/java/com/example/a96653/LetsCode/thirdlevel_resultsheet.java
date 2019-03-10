@@ -191,9 +191,10 @@ public class thirdlevel_resultsheet extends AppCompatActivity {
     public void ChangeButtonText(int total, int min, boolean status, Button btn) {
         if (total > min) {
             if (status == false) {
+                m.UpdateNumOfLesson(29, "Saturn");
                 CallUnlockMethod();
                 updateScore(total);
-                m.UpdateNumOfLesson(29, "Saturn");
+
 
             }
             btn.setText(R.string.ButtonCorrect);
