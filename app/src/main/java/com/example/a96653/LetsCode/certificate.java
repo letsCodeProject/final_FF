@@ -218,7 +218,7 @@ back.setOnClickListener(new View.OnClickListener() {
 
             Bitmap bmp = BitmapFactory.decodeByteArray(image, 0, image.length);
             bmp2=bmp;
-            imageView2.setImageBitmap(bmp);
+          //  imageView2.setImageBitmap(bmp);
 
 
         }catch (Exception e){e.printStackTrace();   Toast.makeText(getApplicationContext(),"not added",Toast.LENGTH_SHORT).show();}

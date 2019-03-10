@@ -186,6 +186,25 @@ public class MainActivity extends AppCompatActivity {
                                       }
             );
         } //END IF
+        //OPENING EARTH LEVEL
+        if( levelStatus=m.getLevelStatus("Earth")==true) {
+
+            Earth.setOnClickListener(new Button.OnClickListener() {
+
+                                           public void onClick(View v) {
+
+
+                                               try {
+                                                   openEarthActivity(m, finalLnum);
+                                               } catch (ClassNotFoundException e) {
+                                                   e.printStackTrace();
+                                               }
+                                           }
+
+                                       }
+            );
+        } //END IF
+
 
 
 
@@ -298,6 +317,35 @@ public class MainActivity extends AppCompatActivity {
 
              Intent  intent = new Intent(this,c);
            // Intent  intent = new Intent(this,certificate.class);
+            startActivity(intent);}
+        catch (Exception e){e.printStackTrace();}
+
+    }
+
+    //OPENING Earth ACTIVITY .
+    public void openEarthActivity(MySQLliteHelper M,int lnum2) throws ClassNotFoundException {
+
+       /* SharedPreferences prefs = getSharedPreferences("FIRSTSTARTOFJupiter", MODE_PRIVATE);
+        boolean firstStart = prefs.getBoolean("firstStart", true);
+        if (firstStart){
+            M.UpdateNumOfLesson(53,"Jupiter");
+            SharedPreferences pref = getSharedPreferences("FIRSTSTARTOFJupiter", MODE_PRIVATE);
+            SharedPreferences.Editor editor = prefs.edit();
+            editor.putBoolean("firstStart", false);
+            editor.apply();}*/
+
+      /*  lnum2=M.getNumOfLessonPassed("Jupiter");
+        TextView t=(TextView)findViewById(R.id.textView47);*/
+
+      //  Lesson l=new Lesson();
+       // String name=l.getName(M.getNumOfLessonPassed("Jupiter"));
+        //t.setText(name);
+        Class c;
+        try{
+           // c = Class.forName("com.example.a96653.LetsCode."+name);
+
+           // Intent  intent = new Intent(this,c);
+            Intent  intent = new Intent(this,certificate.class);
             startActivity(intent);}
         catch (Exception e){e.printStackTrace();}
 
