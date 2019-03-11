@@ -182,7 +182,7 @@ public class fourthlevel_5 extends AppCompatActivity {
                         editor.putBoolean("firstStart", false);
                         editor.apply();}
                     startActivity(new Intent(fourthlevel_5.this,fourthlevel_6.class));
-                    mySqliteOpenHelper.UpdateQuestionAnswer(14, 0);
+                    mySqliteOpenHelper.UpdateQuestionAnswer(14, 1);
 
                 }
                 if(radio2.isChecked()){
@@ -195,7 +195,7 @@ public class fourthlevel_5 extends AppCompatActivity {
                         editor.putBoolean("firstStart", false);
                         editor.apply();}
 
-                    mySqliteOpenHelper.UpdateQuestionAnswer(14,1);
+                    mySqliteOpenHelper.UpdateQuestionAnswer(14,0);
                     startActivity(new Intent(fourthlevel_5.this,fourthlevel_6.class));
                 }
                 if(radio3.isChecked()){
