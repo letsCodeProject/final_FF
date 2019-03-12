@@ -40,7 +40,6 @@ public class certificate extends AppCompatActivity {
     static MySQLliteHelper mySqliteOpenHelper;
     static Bitmap bm , bmp2;
     ImageView imageView2 ;
-    ImageView A;//فقط للتشييك
      Dialog mydialog ;
 Context mcontex;
 
@@ -52,13 +51,6 @@ Context mcontex;
         setContentView(R.layout.activity_certificate);
         mySqliteOpenHelper=new MySQLliteHelper(this);
 mcontex=getApplication();
-
-
-
-
-
-
-
 
 
         //HOME BUTTON
@@ -92,9 +84,6 @@ mcontex=getApplication();
        String sql="CREATE TABLE IF NOT EXISTS PIC( pic MEDIUMBLOB )";
         mySqliteOpenHelper.queryData(sql);
         //TAKING SCREENSHOT .
-
-        A=findViewById(R.id.BACK);
-        A.setVisibility(View.INVISIBLE);
         SHARE_certificate=findViewById(R.id.SHARE_certificate);
         final View layout= findViewById(R.id.root_content);
         layout.setSystemUiVisibility(View.SYSTEM_UI_FLAG_HIDE_NAVIGATION | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY| View.SYSTEM_UI_FLAG_FULLSCREEN );
