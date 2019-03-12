@@ -216,18 +216,15 @@ public class MainActivity extends AppCompatActivity {
     public void openPlotoActivity(MySQLliteHelper M,int lnum2) throws ClassNotFoundException {
        lnum2=M.getNumOfLessonPassed("Ploto");
        TextView t=(TextView)findViewById(R.id.textView47);
-      /* if (){
-           M.UpdateNumOfLesson(1,"Ploto");
-       }*/
         Lesson l=new Lesson();
         String name=l.getName(M.getNumOfLessonPassed("Ploto"));
-        t.setText(name);
+       // t.setText(name);
         Class c;
         try{
         c = Class.forName("com.example.a96653.LetsCode."+name);
 
          Intent  intent = new Intent(this,c);
-            //Intent  intent = new Intent(this,firstlevel_5.class);
+
 
         startActivity(intent);}
         catch (Exception e){e.printStackTrace();}
@@ -235,8 +232,6 @@ public class MainActivity extends AppCompatActivity {
     }
     //OPENING NEPTON ACTIVITY .
     public void openNeptonActivity(MySQLliteHelper M,int lnum2) throws ClassNotFoundException {
-      /*  Intent  intent = new Intent(this,secondlevel_6.class);
-        startActivity(intent);*/
         SharedPreferences prefs = getSharedPreferences("FIRSTSTARTOFNEPTON", MODE_PRIVATE);
         boolean firstStart = prefs.getBoolean("firstStart", true);
         if (firstStart){
@@ -247,26 +242,21 @@ public class MainActivity extends AppCompatActivity {
             editor.apply();}
         lnum2=M.getNumOfLessonPassed("Nepton");
         TextView t=(TextView)findViewById(R.id.textView47);
-      /* if (){
-           M.UpdateNumOfLesson(1,"Ploto");
-       }*/
         Lesson l=new Lesson();
         String name=l.getName(M.getNumOfLessonPassed("Nepton"));
-        t.setText(name);
+        //t.setText(name);
         Class c;
         try{
             c = Class.forName("com.example.a96653.LetsCode."+name);
 
           Intent  intent = new Intent(this,c);
-           //Intent  intent = new Intent(this,secondlevel_20.class);
             startActivity(intent);}
         catch (Exception e){e.printStackTrace();}
 
     }
     //OPENING ZUHAL ACTIVITY .
     public void openZuhalActivity(MySQLliteHelper M,int lnum2) throws ClassNotFoundException {
-      /*  Intent  intent = new Intent(this,secondlevel_6.class);
-        startActivity(intent);*/
+
         SharedPreferences prefs = getSharedPreferences("FIRSTSTARTOFZUHAL", MODE_PRIVATE);
         boolean firstStart = prefs.getBoolean("firstStart", true);
         if (firstStart){
@@ -277,18 +267,14 @@ public class MainActivity extends AppCompatActivity {
             editor.apply();}
         lnum2=M.getNumOfLessonPassed("Saturn");
         TextView t=(TextView)findViewById(R.id.textView47);
-      /* if (){
-           M.UpdateNumOfLesson(1,"Ploto");
-       }*/
         Lesson l=new Lesson();
         String name=l.getName(M.getNumOfLessonPassed("Saturn"));
-        t.setText(name);
+       // t.setText(name);
         Class c;
         try{
             c = Class.forName("com.example.a96653.LetsCode."+name);
 
             Intent  intent = new Intent(this,c);
-            //Intent  intent = new Intent(this,certificate.class);
             startActivity(intent);}
         catch (Exception e){e.printStackTrace();}
 
@@ -310,13 +296,12 @@ public class MainActivity extends AppCompatActivity {
 
         Lesson l=new Lesson();
         String name=l.getName(M.getNumOfLessonPassed("Jupiter"));
-        t.setText(name);
+        //t.setText(name);
         Class c;
         try{
             c = Class.forName("com.example.a96653.LetsCode."+name);
 
              Intent  intent = new Intent(this,c);
-           // Intent  intent = new Intent(this,certificate.class);
             startActivity(intent);}
         catch (Exception e){e.printStackTrace();}
 
@@ -325,26 +310,8 @@ public class MainActivity extends AppCompatActivity {
     //OPENING Earth ACTIVITY .
     public void openEarthActivity(MySQLliteHelper M,int lnum2) throws ClassNotFoundException {
 
-       /* SharedPreferences prefs = getSharedPreferences("FIRSTSTARTOFJupiter", MODE_PRIVATE);
-        boolean firstStart = prefs.getBoolean("firstStart", true);
-        if (firstStart){
-            M.UpdateNumOfLesson(53,"Jupiter");
-            SharedPreferences pref = getSharedPreferences("FIRSTSTARTOFJupiter", MODE_PRIVATE);
-            SharedPreferences.Editor editor = prefs.edit();
-            editor.putBoolean("firstStart", false);
-            editor.apply();}*/
-
-      /*  lnum2=M.getNumOfLessonPassed("Jupiter");
-        TextView t=(TextView)findViewById(R.id.textView47);*/
-
-      //  Lesson l=new Lesson();
-       // String name=l.getName(M.getNumOfLessonPassed("Jupiter"));
-        //t.setText(name);
         Class c;
         try{
-           // c = Class.forName("com.example.a96653.LetsCode."+name);
-
-           // Intent  intent = new Intent(this,c);
             Intent  intent = new Intent(this,certificate.class);
             startActivity(intent);}
         catch (Exception e){e.printStackTrace();}
