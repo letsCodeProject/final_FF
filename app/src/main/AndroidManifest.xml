@@ -11,6 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
+        <activity android:name=".EndOfLevels"
+            android:screenOrientation="landscape"></activity>
         <activity
             android:name=".fourthlevel_video"
             android:screenOrientation="landscape" />
@@ -148,7 +150,6 @@
         <activity
             android:name=".firstlevel_7"
             android:screenOrientation="landscape" />
-
         <activity
             android:name=".firstlevel_resultsheet"
             android:screenOrientation="landscape" />
@@ -245,9 +246,9 @@
         <activity
             android:name=".Fourthlevel_resultsheet"
             android:screenOrientation="landscape" />
-
-        <activity android:name=".fourthlevel_6"
-            android:screenOrientation="landscape"/>
+        <activity
+            android:name=".fourthlevel_6"
+            android:screenOrientation="landscape" />
     </application>
 
 </manifest>

@@ -187,7 +187,7 @@ public class Fourthlevel_resultsheet extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     m.UpdateNumOfLesson(53,"Jupiter");
-                    Intent gobacktoMain=new Intent (getApplicationContext(),MainActivity.class);
+                    Intent gobacktoMain=new Intent (getApplicationContext(),EndOfLevels.class);
                     startActivity(gobacktoMain);
                 }
             });

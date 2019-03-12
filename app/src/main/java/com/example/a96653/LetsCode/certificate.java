@@ -5,6 +5,7 @@ import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.graphics.BitmapFactory;
@@ -91,6 +92,7 @@ mcontex=getApplication();
        String sql="CREATE TABLE IF NOT EXISTS PIC( pic MEDIUMBLOB )";
         mySqliteOpenHelper.queryData(sql);
         //TAKING SCREENSHOT .
+
         A=findViewById(R.id.BACK);
         A.setVisibility(View.INVISIBLE);
         SHARE_certificate=findViewById(R.id.SHARE_certificate);
@@ -105,17 +107,21 @@ mcontex=getApplication();
                 layout.setBackgroundColor(Color.TRANSPARENT);
                 homebtn9.setVisibility(View.INVISIBLE);
                 SHARE_certificate.setVisibility(View.INVISIBLE);
+                SharedPreferences prefs = getSharedPreferences("TakingScreenShot", MODE_PRIVATE);
+                boolean firstStart = prefs.getBoolean("firstStart", true);
+                if (firstStart){
                 bm=getScreenShot(layout);
+                SharedPreferences pref = getSharedPreferences("TakingScreenShot", MODE_PRIVATE);
+                SharedPreferences.Editor editor = prefs.edit();
+                editor.putBoolean("firstStart", false);
+                editor.apply();}
                  homebtn9.setVisibility(View.VISIBLE);
                 SHARE_certificate.setVisibility(View.VISIBLE);
                layout.setSystemUiVisibility(View.VISIBLE);
                 layout.setBackgroundResource(R.drawable.back);
-                if (bm != null) {
+              /*  if (bm != null) {
                     retrieveImage( );//show bitmap over imageview
-
-                } else {
-               t= findViewById(R.id.textView26);
-                    t.setText("NONO");}
+                }*/
 
             }
         });
@@ -257,39 +263,6 @@ public static Bitmap getScreenShot(View view){
         return byteArray;
     }
 
-
-/*public static void ShareCertificare (Context mContext,Intent shareintent){
-
-
-    shareintent.setType("image/jpg");
-    ByteArrayOutputStream byteArrayOutputStream=new ByteArrayOutputStream();
-    bmp2.compress(Bitmap.CompressFormat.JPEG,100,byteArrayOutputStream);
-    File file =new File(Environment.getExternalStorageDirectory()+File.separator+"ImageDemo.jpg");
-    //File file =new File(Environment.getExternalStorageDirectory().toString() + "/" +"Hey.jpg");
-    try{
-        file.createNewFile();
-        FileOutputStream fileOutputStream=new FileOutputStream(file);
-        fileOutputStream.write(byteArrayOutputStream.toByteArray());
-        bmp2.compress(Bitmap.CompressFormat.JPEG,90,fileOutputStream);
-    }catch (IOException e) {
-        e.printStackTrace();
-    }
-    shareintent.putExtra(Intent.EXTRA_TEXT,"لقد أتممت جميع مهماتي مع تطبيق هيا نبرمج .");
-    shareintent.putExtra(Intent.EXTRA_STREAM, Uri.parse("file://"+file.getAbsolutePath()));
-   // shareintent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
-
-    shareintent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-
-   mContext.startActivity(Intent.createChooser(shareintent,"مشاركة الشهادة مع : "));
-
-}*/
-
-/*public static void optiondialog(Dialog mydialog){
-
-    mydialog.setContentView(R.layout.optiondialog);
-    mydialog.show();
-}
-*/
 
     public void store(Bitmap bm,String filename){
 
