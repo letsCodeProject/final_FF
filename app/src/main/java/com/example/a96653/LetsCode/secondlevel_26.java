@@ -257,9 +257,8 @@ public class secondlevel_26 extends AppCompatActivity {
                             //////
 
 
-                            Toast.makeText(getApplicationContext(),
-                                    Integer.toString(result),
-                                    Toast.LENGTH_SHORT).show();
+
+
                             updatedata();
                             Intent  intent = new Intent(getApplicationContext(),secondlevel_resultsheet.class);
 
