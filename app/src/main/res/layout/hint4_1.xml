@@ -31,8 +31,8 @@
 
     <TextView
         android:id="@+id/textView47"
-        android:layout_width="284dp"
-        android:layout_height="214dp"
+        android:layout_width="291dp"
+        android:layout_height="213dp"
         android:layout_marginStart="8dp"
 
         android:layout_marginTop="8dp"
@@ -48,9 +48,10 @@
 
     <TextView
         android:id="@+id/textView59"
-        android:layout_width="240dp"
-        android:layout_height="73dp"
-        android:layout_marginStart="208dp"
+        android:layout_width="289dp"
+        android:layout_height="81dp"
+        android:layout_marginStart="180dp"
+        android:layout_marginLeft="180dp"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
         android:fontFamily="@font/lemon"
@@ -61,7 +62,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.187" />
+        app:layout_constraintVertical_bias="0.233" />
 
     <Button
         android:id="@+id/okaybtn"
@@ -99,5 +100,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.501"
-        app:srcCompat="@drawable/secondlevel_activity26_hint2_5" />
+        app:srcCompat="@drawable/hint4_1" />
 </android.support.constraint.ConstraintLayout>
