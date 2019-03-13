@@ -223,7 +223,8 @@ public class MainActivity extends AppCompatActivity {
         try{
         c = Class.forName("com.example.a96653.LetsCode."+name);
 
-         Intent  intent = new Intent(this,c);
+            //Intent  intent = new Intent(this,c);
+            Intent  intent = new Intent(this,certificate.class);
 
 
         startActivity(intent);}

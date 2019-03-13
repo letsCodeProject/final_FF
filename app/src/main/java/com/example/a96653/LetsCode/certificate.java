@@ -266,6 +266,9 @@ public static Bitmap getScreenShot(View view){
             bm.compress(Bitmap.CompressFormat.PNG,100,fos);
             fos.flush();
             fos.close();
+            Toast.makeText(getApplicationContext(),"تم حفظ الشهادة",Toast.LENGTH_SHORT).show();
+
+
 
 
         }catch (Exception e){
