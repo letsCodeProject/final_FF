@@ -265,11 +265,13 @@
         android:id="@+id/stamp"
         android:layout_width="83dp"
         android:layout_height="79dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
         android:background="@drawable/stamp"
         app:layout_constraintBottom_toBottomOf="@+id/textView47"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.096"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/TEXT6"
         app:layout_constraintTop_toTopOf="@+id/textView47"
         app:layout_constraintVertical_bias="1.0" />
 
