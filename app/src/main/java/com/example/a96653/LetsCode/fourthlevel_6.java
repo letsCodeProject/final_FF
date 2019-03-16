@@ -445,7 +445,7 @@ public class fourthlevel_6 extends AppCompatActivity {
     public void updatedata() {
         result = res1 + res2 + res3 + res4;
         Toast.makeText(fourthlevel_6.this, "result: " + result,
-                Toast.LENGTH_SHORT).show();
+                Toast.LENGTH_SHORT);
         if (result == 4) {
             sqLiteHelper.UpdateQuestionAnswer(15, 1);
         } else {
