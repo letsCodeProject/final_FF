@@ -140,7 +140,9 @@ mcontex=getApplication();
                             requestPermissions(new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},0);
 
                         }else {
-                            store(bmp2,"certificate.png");
+                            double random1 = Math.random() * 7;
+                            double random2 = Math.random() * 4;
+                            store(bmp2,"certificate"+random1+"_"+random2+".png");
                     }
 
 
@@ -281,7 +283,10 @@ public static Bitmap getScreenShot(View view){
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         if(requestCode==0){
-            if(grantResults[0]==PackageManager.PERMISSION_GRANTED){   store(bmp2,"certificate.png");
+            if(grantResults[0]==PackageManager.PERMISSION_GRANTED){
+                double random1 = Math.random() * 7;
+                double random2 = Math.random() * 4;
+                store(bmp2,"certificate"+random1+"_"+random2+".png");
              }else{
                 Toast.makeText(this,"premission granted",Toast.LENGTH_SHORT).show();
                 finish();

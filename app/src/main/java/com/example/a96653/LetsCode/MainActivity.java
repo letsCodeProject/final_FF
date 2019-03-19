@@ -226,7 +226,8 @@ public class MainActivity extends AppCompatActivity {
          Intent  intent = new Intent(this,c);
 
 
-        startActivity(intent);}
+
+            startActivity(intent);}
         catch (Exception e){e.printStackTrace();}
 
     }
