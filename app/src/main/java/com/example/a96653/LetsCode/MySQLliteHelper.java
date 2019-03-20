@@ -44,9 +44,9 @@ public class MySQLliteHelper extends SQLiteOpenHelper {
             + " REFERENCES " + SchemClass.LetsCode2.Table_Quiz + "(" + SchemClass.LetsCode2.COLUMN_NAME_QUIZID + ")" + " ON UPDATE SET NULL);";
 
 
-    private static final String SQL_CREATE_TABLE_LESSON =
+/*    private static final String SQL_CREATE_TABLE_LESSON =
             "CREATE TABLE " + SchemClass.LetsCode2.THIRD_TABLE + "(" +
-                    SchemClass.LetsCode2.COLUMN_NAME_LESSON_NUM + " INTEGER )";
+                    SchemClass.LetsCode2.COLUMN_NAME_LESSON_NUM + " INTEGER )";*/
 
     private static final String Welcome_Interface_Table =
             "CREATE TABLE " + SchemClass.LetsCode2.WELCOME_TABLE + "(" +
@@ -78,7 +78,7 @@ public class MySQLliteHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
         sqLiteDatabase.execSQL(SQL_CREATE_ENTRIES);
         sqLiteDatabase.execSQL(SQL_CREATE_TABLE_LEVEL);
-        sqLiteDatabase.execSQL(SQL_CREATE_TABLE_LESSON);
+        //sqLiteDatabase.execSQL(SQL_CREATE_TABLE_LESSON);
         sqLiteDatabase.execSQL(Welcome_Interface_Table);
         sqLiteDatabase.execSQL(SQL_CREATE_TABLE_QUIZ);
         sqLiteDatabase.execSQL(SQL_CREATE_TABLE_QUESTION);
@@ -127,14 +127,14 @@ public class MySQLliteHelper extends SQLiteOpenHelper {
         db.close();
     }
 
-    public void addData(int id, String content) {
+   /* public void addData(int id, String content) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
         contentValues.put(SchemClass.LetsCode2.COLUMN_NAME_LESSON_NUM, id);
         //contentValues.put(SchemClass.LetsCode2.COLUMN_NAME_CONTENT,content);
         long result = db.insert(SchemClass.LetsCode2.THIRD_TABLE, null, contentValues);
 
-    }
+    }*/
 
     public void fillLessonContent(int num, String cont) {
         // Lesson l1=new Lesson(1);
@@ -142,7 +142,7 @@ public class MySQLliteHelper extends SQLiteOpenHelper {
 
     }
 
-    public void addLesson(Lesson l) {
+/*    public void addLesson(Lesson l) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues cv = new ContentValues();
         cv.put(SchemClass.LetsCode2.COLUMN_NAME_LESSON_NUM, l.getNum());
@@ -152,7 +152,7 @@ public class MySQLliteHelper extends SQLiteOpenHelper {
         } catch (SQLiteConstraintException e) {
             throw e;
         }
-    }
+    }*/
 
     public void UpdateNumOfLesson(int lnum, String levelName) {
         SQLiteDatabase db = this.getWritableDatabase();
