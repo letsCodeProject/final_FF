@@ -29,7 +29,7 @@ public class firstlevel_6 extends AppCompatActivity {
         setContentView(R.layout.activity_firstlevel_6);
        //inititing INDEX TABLE.
         mySqliteOpenHelper=new MySQLliteHelper(this);
-        mySqliteOpenHelper.queryIndexData();
+       // mySqliteOpenHelper.queryIndexData();
         myDialog = new Dialog(this);
 
         //HOME BUTTON
@@ -151,7 +151,7 @@ public class firstlevel_6 extends AppCompatActivity {
         myDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
         myDialog.show();
     }
-    public void check(){
+    /*public void check(){
 
         Cursor cursor=mySqliteOpenHelper.returnWrongQuestionIndex();
 
@@ -181,9 +181,9 @@ public class firstlevel_6 extends AppCompatActivity {
 
     }
 
+*/
 
-
-    public void openPlotoActivity(MySQLliteHelper M ) throws ClassNotFoundException {
+    /*public void openPlotoActivity(MySQLliteHelper M ) throws ClassNotFoundException {
 
         Cursor cursor=mySqliteOpenHelper.returnWrongQuestionIndex();
 
@@ -200,7 +200,7 @@ public class firstlevel_6 extends AppCompatActivity {
                 startActivity(intent);}
             catch (Exception e){e.printStackTrace();}}
 
-    }
+    }*/
 
 
     public void btn1(View view) {

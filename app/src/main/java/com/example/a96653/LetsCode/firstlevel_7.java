@@ -588,7 +588,7 @@ public class firstlevel_7 extends AppCompatActivity {
 
 
 
-    public void openPlotoActivity(MySQLliteHelper M ) throws ClassNotFoundException {
+   /* public void openPlotoActivity(MySQLliteHelper M ) throws ClassNotFoundException {
 
         Cursor cursor=sqLiteHelper.returnWrongQuestionIndex();
 
@@ -605,7 +605,7 @@ public class firstlevel_7 extends AppCompatActivity {
                 startActivity(intent);}
             catch (Exception e){e.printStackTrace();}}
 
-    }
+    }*/
 
 
 }

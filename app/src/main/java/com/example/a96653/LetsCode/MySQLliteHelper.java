@@ -53,9 +53,9 @@ public class MySQLliteHelper extends SQLiteOpenHelper {
                     SchemClass.LetsCode2.WELCOME_INTERFACE_NAME + " TEXT primary key," +
                     SchemClass.LetsCode2.WELCOME_INTERFACE_STATUS + " TEXT)";
 
-    private static final String SQL_CREATE_TABLE_INDEX =
+   /* private static final String SQL_CREATE_TABLE_INDEX =
             "CREATE TABLE IF NOT EXISTS "+ SchemClass.LetsCode2.INDEX_TABLE2+ "(" +
-                    SchemClass.LetsCode2.COLUMN_NAME_QUESTION+" TEXT )";
+                    SchemClass.LetsCode2.COLUMN_NAME_QUESTION+" TEXT )";*/
     private static  MySQLliteHelper  mInstance = null;
     public static MySQLliteHelper getInstance(Context ctx) {
 
@@ -359,13 +359,13 @@ public class MySQLliteHelper extends SQLiteOpenHelper {
         return b;
     }
 
-    public void queryIndexData( ){
+  /*  public void queryIndexData( ){
         SQLiteDatabase database=getWritableDatabase();
         database.execSQL(SQL_CREATE_TABLE_INDEX);
         //database.close();
-    }
+    }*/
 
-    public void addIndexData( String ActivityName) {
+    /*public void addIndexData( String ActivityName) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
         contentValues.put(SchemClass.LetsCode2.COLUMN_NAME_QUESTION, ActivityName);
@@ -381,13 +381,13 @@ public class MySQLliteHelper extends SQLiteOpenHelper {
         Cursor recordSet=db.rawQuery(query,null);
         //db.close();
         return recordSet ;
-    }
+    }*/
 
-    public Integer deleteIndexData (String name) {
+    /*public Integer deleteIndexData (String name) {
         SQLiteDatabase db = this.getWritableDatabase();
        // db.close();
         return db.delete(SchemClass.LetsCode2.INDEX_TABLE2, " Question = '"+name+"'",null);
-    }
+    }*/
     public Cursor returnLevelStatus(String levlname){
         SQLiteDatabase db = this.getReadableDatabase();
         String Query=" SELECT "+SchemClass.LetsCode2.COLUMN_NAME_LEVELSTATUS +" FROM "+SchemClass.LetsCode2.SECOND_TABLE +" WHERE "+SchemClass.LetsCode2.COLUMN_NAME_LevelName+" = '"+levlname+"'";

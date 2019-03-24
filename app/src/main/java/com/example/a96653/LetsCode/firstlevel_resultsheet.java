@@ -282,7 +282,7 @@ public class firstlevel_resultsheet extends AppCompatActivity {
     }
 
 
-    public void openPlotoActivity(MySQLliteHelper M) throws ClassNotFoundException {
+/*    public void openPlotoActivity(MySQLliteHelper M) throws ClassNotFoundException {
         Cursor cursor=M.returnWrongQuestionIndex();
         cursor.moveToFirst();
         if(cursor.getCount()>=0){
@@ -298,7 +298,7 @@ public class firstlevel_resultsheet extends AppCompatActivity {
                 startActivity(intent);}
             catch (Exception e){e.printStackTrace();}}
 
-    }
+    }*/
 
 
     public void Changelabebstatus( int total ,int minimum){
