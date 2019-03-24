@@ -64,35 +64,36 @@ public class secondlevel_20 extends AppCompatActivity {
         target2.setOnDragListener(dragListener);
         target3.setOnDragListener(dragListener);
 
+//________________________________________ DRAG AND DROP ____________________________________________
 
-
-
+//___________Go to the next Question
         next = (ImageButton)findViewById(R.id.nextBTN_secondlevel_20);
 
         next.setOnClickListener(
                 new ImageView.OnClickListener(){
                     public void onClick(View v){
 
+//___________ Ensure all of the Blocks are in place
+//________________ Ensure Block X is being placed in one of 3 targets .
                         tt1=0;tt2=0;tt3=0;
                         if(textviewX.getX()==target1.getX())  tt1=1;
                         if(textviewX.getX()==target2.getX())  tt1=1;
                         if(textviewX.getX()==target3.getX())  tt1=1;
-
-
+//________________ Ensure Block 18 is being placed in one of 3 targets .
                         if(textview18.getX()==target1.getX())  tt3=1;
                         if(textview18.getX()==target2.getX())  tt3=1;
                         if(textview18.getX()==target3.getX())  tt3=1;
-
-
+//________________ Ensure Block 18 is being placed in one of 3 targets
                         if(textviewEqual.getX()==target1.getX())  tt2=1;
                         if(textviewEqual.getX()==target2.getX())  tt2=1;
                         if(textviewEqual.getX()==target3.getX())  tt2=1;
 
-
+//________________ Ensure the question is solved
                         result=res1+res2+res3;
-
                         CHECK=tt1+tt2+tt3;
+
                         if(CHECK==3){
+//________________ Shared Preferences
                             SharedPreferences prefs = getSharedPreferences("pref_secondlevel_20", MODE_PRIVATE);
                             boolean firstStart = prefs.getBoolean("firstStart", true);
                             if (firstStart) {
@@ -112,7 +113,7 @@ public class secondlevel_20 extends AppCompatActivity {
 
                         }
                         else{
-
+//________________ if the question is not complete Show error message
                             ShowPopupSolve();
                         }
 
@@ -142,62 +143,45 @@ public class secondlevel_20 extends AppCompatActivity {
 
             return true;
         }};
-
+//________________________________________ DRAG AND DROP ___________________________________________
     View.OnDragListener dragListener= new View.OnDragListener() {
         @Override
         public boolean onDrag(View v, DragEvent event) {
             questionResult = 0;
             int dragEvent = event.getAction();
             final View view = (View) event.getLocalState();
-
-            switch (dragEvent) {//
-
-
-
-
-
+            switch (dragEvent) {
                 case DragEvent.ACTION_DROP:
+//________________ Check target 1
 
-                    //start target
                     if (v.getId() == R.id.target1) {
 
-
+//___If target already has a block and child is attempting to drag another block in the same target.
+//return the first block back
                         if (v.getId() == R.id.target1 && tg1 > 0) {  tg1=0;
                             if(vt1.getX()==v.getX()){
-                                vt1.animate().x(x1.getX()).y(x1.getY()).setDuration(80).start();
-                            }
-
-                        }
-
+                                vt1.animate().x(x1.getX()).y(x1.getY()).setDuration(80).start(); }}
+//___If the block is dragged to the right target assign result to 1 .
                         if (view.getId() == R.id.textviewX && v.getId() == R.id.target1 && tg1 == 0) {
                             view.animate().x(target1.getX()).y(target1.getY()).setDuration(80).start();
                             vt1 = view;
                             x1 = pinX;
                             tg1=1;
-                            res1=1;
-
-                        }
+                            res1=1;}
+//___If the block is dragged to the wrong target assign result to 0 .
                         if (view.getId() == R.id.textview18 && v.getId() == R.id.target1 && tg1 == 0) {
                             view.animate().x(target1.getX()).y(target1.getY()).setDuration(80).start();
                             vt1 = view;
                             tg1=1;
                             x1 = pin18;
-                            res1=0;
-
-
-
-                        }
+                            res1=0; }
+//___If the block is dragged to the wrong target assign result to 0 .
                         if (view.getId() == R.id.textviewEqual && v.getId() == R.id.target1 && tg1 == 0) {
                             view.animate().x(target1.getX()).y(target1.getY()).setDuration(80).start();
                             vt1 = view;
                             tg1=1;
                             x1 = pinEqual;
-                            res1=0;
-
-                        }
-
-
-                    }
+                            res1=0; } }
 
 
                     //start target2

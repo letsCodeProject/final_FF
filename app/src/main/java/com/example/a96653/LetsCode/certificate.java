@@ -156,23 +156,34 @@ mcontex=getApplication();
                     }
                 });
 
-                //Share
+//__________________________________Share____________________________________________________________________
                sharebtn.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
+//_________________ to detect memory leak in android
                         StrictMode.VmPolicy.Builder builder = new StrictMode.VmPolicy.Builder();
                         StrictMode.setVmPolicy(builder.build());
+//_________________ retrive certificate from DB
                 Cursor cursor=mySqliteOpenHelper.getData();
                 cursor.moveToLast();
                 byte[] image= cursor.getBlob(cursor.getColumnIndex("pic"));
 
+//_________________ convert from Byte to bitmap
                 Bitmap bmp = BitmapFactory.decodeByteArray(image, 0, image.length);
+
+//_________________ identify an intent and set the type to image/ipg
                 Intent shareintent=new Intent (Intent.ACTION_SEND);
                         shareintent.setType("image/jpg");
+
+//_________________ identify arrayoutputstream
                         ByteArrayOutputStream byteArrayOutputStream=new ByteArrayOutputStream();
+
+//_________________Write a compressed version of the bitmap to the specified outputstream.
                 bmp.compress(Bitmap.CompressFormat.JPEG,100,byteArrayOutputStream);
+
+//_________________identify file to write in the ByteArrayOutputStream
                         File file =new File(Environment.getExternalStorageDirectory()+File.separator+"ImageDemo.jpg");
-                        //File file =new File(Environment.getExternalStorageDirectory().toString() + "/" +"Hey.jpg");
+
                         try{
                             file.createNewFile();
                             FileOutputStream fileOutputStream=new FileOutputStream(file);
@@ -181,10 +192,16 @@ mcontex=getApplication();
                         }catch (IOException e) {
                             e.printStackTrace();
                         }
+//____________________put text in share intent along with the certificate when processing the share option
                         shareintent.putExtra(Intent.EXTRA_TEXT,"لقد أتممت جميع مهماتي مع تطبيق هيا نبرمج   @Letscode_App.");
+
+//____________________put the certificate in the share intent
                         shareintent.putExtra(Intent.EXTRA_STREAM,Uri.parse("file://"+file.getAbsolutePath()));
+
+//____________________Ensure of Share permition
                          shareintent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
                          shareintent.addFlags(Intent.FLAG_GRANT_WRITE_URI_PERMISSION);
+ //____________________start the share intent
                         startActivity(Intent.createChooser(shareintent,"مشاركة الشهادة مع : "));
 
                   }

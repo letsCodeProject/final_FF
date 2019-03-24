@@ -18,10 +18,12 @@ public class thirdlevel_5 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_thirdlevel_5);
-
-        //create MediaPLayer to play the voice
+//_________________________________________Voice function____________________________________
+//______create MediaPLayer object to play the voice
+//______ send to the voice class constructer media player object
         thirdlevel_5= MediaPlayer.create(thirdlevel_5.this,R.raw.thirdlevel_5);
         voice5_thirdlevel=new voice( thirdlevel_5);
+//______ start play
         voice5_thirdlevel.play();
         //NEXT BUTTON
         final MySQLliteHelper m=new MySQLliteHelper(this);

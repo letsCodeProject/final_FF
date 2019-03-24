@@ -66,7 +66,8 @@ public class secondlevel_resultsheet extends AppCompatActivity {
 
 
         TextView totalQuizResult=(TextView) findViewById(R.id.totalquizresult3);
-//Extract question 1 answer
+//______________________________ RESULT SHEET______________________________
+//Extract question 1 answer from DB
 
         Cursor resreturned1=m.returnQuestionAnswer(3);
         resreturned1.moveToFirst();
@@ -76,7 +77,7 @@ public class secondlevel_resultsheet extends AppCompatActivity {
         score_1=GiveScore (result_1);
         //display the score
         ScoreDisplay1.setText(String.valueOf(score_1));
-//Extract  question 2 answer
+//Extract  question 2 answer from DB
 
         Cursor resreturned2=m.returnQuestionAnswer(4);
         resreturned2.moveToFirst();
@@ -86,7 +87,7 @@ public class secondlevel_resultsheet extends AppCompatActivity {
         score_2=GiveScore(result_2);
         //display the score
         ScoreDisplay2.setText(String.valueOf(score_2));
-//Extract  question 3 answer
+//Extract  question 3 answer from DB
 
         Cursor resreturned3=m.returnQuestionAnswer(5);
         resreturned3.moveToFirst();
@@ -97,7 +98,7 @@ public class secondlevel_resultsheet extends AppCompatActivity {
         //display the score
         ScoreDisplay3.setText(String.valueOf(score_3));
 
-//Extract  question 4 answer
+//Extract  question 4 answer from DB
 
         Cursor resreturned4=m.returnQuestionAnswer(6);
         resreturned4.moveToFirst();
@@ -108,20 +109,22 @@ public class secondlevel_resultsheet extends AppCompatActivity {
         //display the score
         ScoreDisplay4.setText(String.valueOf(score_4));
 
-//Extract  question 5 answer
+//Extract  question 5 answer from DB
 
         Cursor resreturned5=m.returnQuestionAnswer(7);
         resreturned5.moveToFirst();
         int index5=resreturned5.getColumnIndexOrThrow("Q_ANSWER");
         int answer5_2=resreturned5.getInt(index5);
         result_5=answer5_2;
+
+        //Call give score method to give score to each question
         score_5=GiveScore(result_5);
-        //display the scoree
+        //display the score in the uper left box
         ScoreDisplay5.setText(String.valueOf(score_5));
+//_____Calculate the total score
 
-        //To check next level status عشان بس يخزن اول مره .
 
-/////////
+//_____ Call feedback method
         QuestionFeedback(question1,score_1);
         QuestionFeedback(question2,score_2);
         QuestionFeedback(question3,score_3);
@@ -149,7 +152,7 @@ public class secondlevel_resultsheet extends AppCompatActivity {
 
 /////////////METHODS/////////METHODS///////////////
 
-    //Takes 0 or 1 and return 10 or 0
+    //Takes 0 or 1 and return 0 or 10
     public int GiveScore(int result){
         int givenScore=0;
         if (result==1)
@@ -170,12 +173,12 @@ public class secondlevel_resultsheet extends AppCompatActivity {
             quesresult.setText(R.string.AnswerWrong);
             quesresult.setTextColor(Color.parseColor("#FF6B6B"));
         }
-    }//Close the method
+    }
 
-
+//Based on the total labeb appearance will change either sad or happy
     public void Changelabebstatus(int total , int min){
         ImageView happy,sad;
-        happy=(ImageView) findViewById(R.id.labebholdingsheet2);
+        happy=(ImageView) findViewById(R.id.happylabeb33);
         sad=(ImageView) findViewById(R.id.sadlabeb2);
         TextView feedback2=(TextView) findViewById(R.id.feedback2);
         happy.setVisibility(View.INVISIBLE);
@@ -185,6 +188,7 @@ public class secondlevel_resultsheet extends AppCompatActivity {
             feedback2.setText(R.string.AboveMinimmum);
             feedback2.setTextColor(Color.parseColor("#0E932E"));
             resultsheet = new voice(rightAnswerVoice);
+            //Play chearing sound
             resultsheet.play();
         }
         else {
@@ -192,10 +196,11 @@ public class secondlevel_resultsheet extends AppCompatActivity {
             feedback2.setText(R.string.UnderMinimum);
             feedback2.setTextColor(Color.parseColor("#2340B7"));
             resultsheet=new voice(wrongAnswerVoice);
+            //Play sad sound
             resultsheet.play();
 
         }
-    }//End of the method
+    }
 
 
 
