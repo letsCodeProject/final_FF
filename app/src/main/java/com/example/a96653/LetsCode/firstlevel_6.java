@@ -151,56 +151,7 @@ public class firstlevel_6 extends AppCompatActivity {
         myDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
         myDialog.show();
     }
-    /*public void check(){
 
-        Cursor cursor=mySqliteOpenHelper.returnWrongQuestionIndex();
-
-        if(cursor.getCount()>0){
-
-
-            cursor.moveToFirst();
-
-            int index=cursor.getColumnIndexOrThrow("Question");
-            String name =cursor.getString(index);
-            Toast.makeText(firstlevel_6.this, name,
-                    Toast.LENGTH_LONG).show();
-            if(name.equals("firstlevel_6")){mySqliteOpenHelper.deleteIndexData(name);}
-            cursor=mySqliteOpenHelper.returnWrongQuestionIndex();
-            if(cursor.getCount()>0){
-                try { openPlotoActivity(mySqliteOpenHelper );
-                } catch (ClassNotFoundException e) {
-                    e.printStackTrace();
-                }
-            }else {  Intent intent= new Intent(getApplicationContext(),firstlevel_resultsheet.class);
-                startActivity(intent);}
-
-
-
-        }else {  Intent intent= new Intent(getApplicationContext(),firstlevel_7.class);
-            startActivity(intent);}
-
-    }
-
-*/
-
-    /*public void openPlotoActivity(MySQLliteHelper M ) throws ClassNotFoundException {
-
-        Cursor cursor=mySqliteOpenHelper.returnWrongQuestionIndex();
-
-        if(cursor.getCount()>0){ cursor.moveToFirst();
-            int index=cursor.getColumnIndexOrThrow("Question");
-            String name =cursor.getString(index);
-            Class c;
-            try{
-                c = Class.forName("com.example.a96653.LetsCode."+name);
-
-                Intent  intent = new Intent(this,c);
-
-
-                startActivity(intent);}
-            catch (Exception e){e.printStackTrace();}}
-
-    }*/
 
 
     public void btn1(View view) {
@@ -238,8 +189,5 @@ public class firstlevel_6 extends AppCompatActivity {
         myDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
         myDialog.show();
     }
-    /*protected void onPause () {
-        super.onPause();
-        mySqliteOpenHelper.close();
-    }*/
+
 }

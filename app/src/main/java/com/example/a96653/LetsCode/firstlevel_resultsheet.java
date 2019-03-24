@@ -177,49 +177,7 @@ public class firstlevel_resultsheet extends AppCompatActivity {
                 updateScore(total);
                 btn7.setText(btntextcorrect);
                 mySqliteOpenHelper23.UpdateNumOfLesson(1, "Ploto");
-               /* ///CLEARING PREFRENCES
-                            SharedPreferences preferences = getSharedPreferences("pref2", MODE_PRIVATE);
-                            SharedPreferences.Editor editor = preferences.edit();
-                            editor.clear();
-                            editor.commit();
-                            finish();
-                            //////
-                            SharedPreferences preferences2 = getSharedPreferences("pref4", MODE_PRIVATE);
-                            SharedPreferences.Editor editor2 = preferences2.edit();
-                            editor2.clear();
-                            editor2.commit();
-                            finish();
-                            //////////
-                            SharedPreferences preferences3 = getSharedPreferences("pref7", MODE_PRIVATE);
-                            SharedPreferences.Editor editor3 = preferences3.edit();
-                            editor3.clear();
-                            editor3.commit();
-                            finish();
-                            ////////
-                            SharedPreferences preferences4 = getSharedPreferences("pref8", MODE_PRIVATE);
-                            SharedPreferences.Editor editor4 = preferences4.edit();
-                            editor4.clear();
-                            editor4.commit();
-                            finish();
-                            /////
-                            SharedPreferences preferences5 = getSharedPreferences("pref10", MODE_PRIVATE);
-                            SharedPreferences.Editor editor5 = preferences5.edit();
-                            editor5.clear();
-                            editor5.commit();
-                            finish();
-                            //////
-                            SharedPreferences preferences6 = getSharedPreferences("pref11", MODE_PRIVATE);
-                            SharedPreferences.Editor editor6 = preferences6.edit();
-                            editor6.clear();
-                            editor6.commit();
-                            finish();
-                            //////
-                            SharedPreferences preferences7 = getSharedPreferences("pref12", MODE_PRIVATE);
-                            SharedPreferences.Editor editor7 = preferences7.edit();
-                            editor7.clear();
-                            editor7.commit();
-                            finish();
-*/
+
 
 
                 //play the voice for right answer
@@ -244,18 +202,7 @@ public class firstlevel_resultsheet extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     Intent intent=new Intent (getApplicationContext(),firstlevel_6.class);
-                    //mySqliteOpenHelper23.updateChildScore(totalscore);
-                    //mySqliteOpenHelper23.UnlockNextLevel("nepton" );
-                    startActivity(intent);
-                    /*//I AM IN DOOUGT OF THIS CODE
-                    SharedPreferences prefs = getSharedPreferences("pref200", MODE_PRIVATE);
-                    boolean firstStart = prefs.getBoolean("firstStart", true);
-                    if (firstStart){
-                        mySqliteOpenHelper23.UpdateNumOfLesson(6,"Ploto");
-                        SharedPreferences pref = getSharedPreferences("prefs200", MODE_PRIVATE);
-                        SharedPreferences.Editor editor = prefs.edit();
-                        editor.putBoolean("firstStart", false);
-                        editor.apply();}//////DOUGHT*/
+
                 }
 
             });
@@ -282,23 +229,7 @@ public class firstlevel_resultsheet extends AppCompatActivity {
     }
 
 
-/*    public void openPlotoActivity(MySQLliteHelper M) throws ClassNotFoundException {
-        Cursor cursor=M.returnWrongQuestionIndex();
-        cursor.moveToFirst();
-        if(cursor.getCount()>=0){
-            int index=cursor.getColumnIndexOrThrow("Question");
-            String name =cursor.getString(index);
-            Class c;
-            try{
-                c = Class.forName("com.example.a96653.LetsCode."+name);
 
-                Intent  intent = new Intent(this,c);
-
-
-                startActivity(intent);}
-            catch (Exception e){e.printStackTrace();}}
-
-    }*/
 
 
     public void Changelabebstatus( int total ,int minimum){
