@@ -73,7 +73,7 @@
     <string name="try_it_yourself"> (جرّب بنفسك)</string>
 
     <string name="labeb_withQoutes">&quot;لبيب&quot;</string>
-    <string name="neptonentry">أهلاً بك في كوكب نيبتون .</string>
+    <string name="neptonentry">أهلاً بك في كوكب نبتون .</string>
     <string name="neptonentry1">تتميز ألماسات هذا الكوكب  بأنها ذات أنواع مختلفة ، ولكي تتمكن من جمعها عليك أولاً معرفة بعض الأساسيات المتعلقة بالمتغيرات و العمليات الحسابية.</string>
     <string name="talibutton">التالي</string>
     <string name="secondlevel_interface2">في البرمجة ، المتغيرات هي كالصناديق لحفظ الأشياء</string>
@@ -197,11 +197,11 @@
     <string name="fourthlevel_4_secondQuestion"> إذا اردنا تكرار جملة “أهلاً بدرب التبانة “ ٣ مرات  فعلينا وضع رقم :</string>
     <string name="hint4_1">تذكر: لتنفيذ حلقة while التكرارية نستخدم \nالأمر كما في المثال التالي: </string>
 
-    <string name="hint4_2">   تذكر إذا أردنا تكرار الجملة 4 مرات سنضع رقم 4 في الشرط </string>
+    <string name="hint4_2">   تذكر: إذا أردنا تكرار الجملة التالية 4 مرات،\n فإننا سنضع رقم 4 في الشرط. </string>
     <string name="fourthlevel_3">  لقد شارفنا على الوصول ! هل أنت مستعد لخوض آخر المهمات في رحلتنا ؟ </string>
     <string name="fourthlevel_1">أهلا بك في كوكب المشتري !\n لحسن الحظ يحمل هذا الكوكب أخباراً سارّة!\n لقد شارفنا على إتمام المهمة بنجاح !  </string>
     <string name="fourthlevel_2">يود لبيب أن يرسل رسالة لأهل الأرض ليخبرهم بأنه شارف على \nالوصول، فكيف سيفعل ذلك يا ترى؟! </string>
-    <string name="EndOfLevels">  لقد أتممت مهمة رقم 1793 بنجاح ! تود وكالة “هيا نبرمج “بشكرك على مساعدتك  في جمع الألماسات </string>
+    <string name="EndOfLevels">  لقد أتممت مهمة رقم 1793 بنجاح ! يود فريق “هيا نبرمج “بشكرك على مساعدتك  في جمع الألماسات </string>
 
 
 </resources>

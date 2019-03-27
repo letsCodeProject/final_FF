@@ -171,16 +171,17 @@
 
     <TextView
         android:id="@+id/textView50"
-        android:layout_width="86dp"
-        android:layout_height="37dp"
+        android:layout_width="181dp"
+        android:layout_height="52dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
         android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="28dp"
         android:layout_marginRight="28dp"
         android:layout_marginBottom="8dp"
+        android:fontFamily="@font/jannalt_regular"
         android:gravity="center"
-        android:text="مهمة رقم 3:"
+        android:text="مهمة رقم 3 من 3 :"
         android:textColor="@color/colorPrimary"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -188,7 +189,7 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.119" />
+        app:layout_constraintVertical_bias="0.082" />
     <TextView
         android:id="@+id/text_thirdlevelQ1"
         android:layout_width="wrap_content"
@@ -199,6 +200,7 @@
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
         android:layout_marginBottom="8dp"
+        android:fontFamily="@font/jannalt_regular"
         android:text="حاول ترتيب المربعات التالية لكي تحصل على نتيجة صحيحة:"
         android:textColor="@color/white"
         android:textSize="20sp"
@@ -207,7 +209,7 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.215" />
+        app:layout_constraintVertical_bias="0.195" />
 
     <ImageView
         android:id="@+id/fourthlevel_6_next"
