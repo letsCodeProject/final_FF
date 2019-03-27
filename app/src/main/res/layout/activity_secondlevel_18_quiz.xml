@@ -70,12 +70,14 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="487dp"
         android:layout_marginEnd="28dp"
-        android:layout_marginBottom="267dp"
-        android:text="@string/mission1"
+        android:layout_marginBottom="260dp"
+        android:fontFamily="@font/jannalt_regular"
+        android:text="مهمة رقم 1 من 5:"
         android:textColor="@color/colorPrimary"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.948"
         app:layout_constraintStart_toStartOf="parent" />
 
 
@@ -136,11 +138,13 @@
         android:id="@+id/textView54"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="74dp"
+        android:layout_marginTop="64dp"
         android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:fontFamily="@font/jannalt_regular"
         android:text="@string/secondlevel_18_boxes"
         android:textColor="@color/white"
-        android:textSize="20sp"
+        android:textSize="19sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

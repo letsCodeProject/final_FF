@@ -126,7 +126,7 @@
         android:layout_marginTop="52dp"
         android:layout_marginEnd="24dp"
         android:fontFamily="@font/jannalt_regular"
-        android:text="@string/mission2"
+        android:text="مهمة رقم 2 من 5 :"
         android:textColor="@color/colorPrimary"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"

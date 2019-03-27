@@ -46,21 +46,40 @@
 
     <TextView
         android:id="@+id/textView59"
-        android:layout_width="276dp"
+        android:layout_width="286dp"
         android:layout_height="79dp"
-        android:layout_marginStart="208dp"
+        android:layout_marginStart="192dp"
+        android:layout_marginLeft="192dp"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
         android:fontFamily="@font/jannalt_regular"
-        android:text="تذكر:إذا كانت العبارة المنطقية صحيحة نستخدمTrue"
+        android:text="إذا كانت العبارة المنطقية صحيحة نستخدمTrue"
         android:textAlignment="center"
         android:textColor="#6100ED"
         android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.172" />
+        app:layout_constraintVertical_bias="0.247" />
 
+
+    <TextView
+        android:id="@+id/textView120"
+        android:layout_width="286dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="196dp"
+        android:layout_marginLeft="196dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="@font/jannalt_regular"
+        android:text="تذكر :"
+        android:textAlignment="center"
+        android:textColor="#6100ED"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.097" />
 
     <TextView
         android:id="@+id/textView60"
