@@ -23,7 +23,7 @@
     <string name="labeb">لبيب</string>
     <string name="beforestart">قبل البدء بالمهمة، يجب عليك التعرف أولاً على ماذا تعني </string>
     <string name="programming">البرمجة؟</string>
-    <string name="welcome_4text"> حسناً, لنفترض أن لديك روبوت وتريد منه تنفيذ أوامرك ! \n  كالتقدم خطوة للأمام، أو التوقف عن الحركة ؛ليقوم بذلك، عليك تزويده ببعض\n </string>
+    <string name="welcome_4text"> حسنا، لنفترض أن لديك روبوت وتريد منه تنفيذ أوامرك ! \n  كالتقدم خطوة للأمام، أو التوقف عن الحركة ؛ليقوم بذلك، عليك تزويده ببعض\n </string>
     <string name="welcome5_1text">أليس من الرائع لو كان بإمكان الجهاز الذي بين يديك تنفيذ أوامرك ؟</string>
     <string name="welcome5_2text">الأمر ليس مستحيلاً !</string>
 
@@ -45,7 +45,7 @@
     <string name="fist_level_3_1"> مثلاً:بإمكانك أن تطبع جملة    </string>
 
     <string name="fist_level_3_2">  \"أهلاً بدرب التبانة!\". </string>
-    <string name="result"> النتيحة</string>
+    <string name="result"> النتيجة</string>
 
     <string name="fist_level_3_3">  جرّب سحب مربع    </string>
 
@@ -58,9 +58,9 @@
 
     <string name="fist_level_5_1"> الآن وبعد أن تعرفت على مكونات كوكب بلوتو </string>
     <string name="fist_level_5_2"> أنت جاهز لجمع الألماسات!  \nفلنجمعها معاً! </string>
-    <string name="mission1">مهمة رقم 1: </string>
-    <string name="mission2">مهمة رقم 2: </string>
-    <string name="mission5">مهمة رقم 5: </string>
+    <string name="mission1">مهمة رقم1 من 2: </string>
+    <string name="mission2">مهمة رقم2 من 2 : </string>
+    <string name="mission5">مهمة رقم3: </string>
     <string name="quiz1_1">  اختر الإجابة الصحيحة : نستخدم لغة بايثون في : </string>
     <string name="answer1">  صناعة التطبيقات </string>
     <string name="answer2">  التواصل مع البشر </string>
@@ -74,12 +74,12 @@
 
     <string name="labeb_withQoutes">&quot;لبيب&quot;</string>
     <string name="neptonentry">أهلاً بك في كوكب نيبتون .</string>
-    <string name="neptonentry1">تتميز ألماسات هذا الكوكب  بإنها ذات أنواع مختلفة , ولكي تتمكن من جمعها عليك اولاً معرفة بعض الأساسيات المتعلقه بالمتغيرات و العمليات الحسابية .</string>
+    <string name="neptonentry1">تتميز ألماسات هذا الكوكب  بأنها ذات أنواع مختلفة ، ولكي تتمكن من جمعها عليك أولاً معرفة بعض الأساسيات المتعلقه بالمتغيرات و العمليات الحسابية.</string>
     <string name="talibutton">التالي</string>
     <string name="secondlevel_interface2">في البرمجة ، المتغيرات هي كالصناديق لحفظ الأشياء</string>
     <string name="secondlevel_interface3">بالإمكان أن نصنف هذه الصناديق لحفظ أشياء معينة ، فمثلاً الصندوق الأحمر لحفظ الألعاب و الأزرق لحفظ الكتب </string>
     <string name="secondlevel_interface4_1">ولكي نميز كل صندوق ،لابد أن نطلق عليه اسماً مميزاً .</string>
-    <string name="secondlevel_interface4_2">ببساطة هذه هي المتغيرات بالنسبة للحاسوب ! هي منطقة لتخزين قيمة معينة نقوم بتخزين القيمة فيها بحيث إذا ما احتجنا لهذه القيمة نقوم فوراً بمناداتها باسمها و استخدامها </string>
+    <string name="secondlevel_interface4_2">ببساطة، هذه هي المتغيرات بالنسبة للحاسوب ! هي منطقة لتخزين قيمة معينة نقوم بتخزين القيمة فيها بحيث إذا احتجنا لهذه القيمة نقوم فوراً بمناداتها باسمها و استخدامها </string>
     <string name="secondlevel_interface4_3">الألعاب</string>
     <string name="secondlevel_interface4_4">الكتب</string>
     <string name="secondlevel_5_1">سوف نتعرف على أشهر أنواع المتغيرات  ، ألا وهي :  </string>
