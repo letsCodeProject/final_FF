@@ -6,6 +6,9 @@
     android:background="@drawable/back"
     android:layout_height="match_parent"
     tools:context=".secondlevel_10_feedback">
+
+
+
     <ImageView
         android:id="@+id/imageView38"
         android:layout_width="407dp"
@@ -16,23 +19,37 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/newnepton" />
+    <ImageView
+        android:layout_width="370dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:src="@drawable/secondlevel_progress10_new"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.544"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <ImageButton
         android:id="@+id/homebtn_secondlevel10"
         android:layout_width="54dp"
         android:layout_height="40dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:background="@drawable/back"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.044"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.028"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/h" />
 
     <TextView
@@ -67,7 +84,7 @@
         app:layout_constraintHorizontal_bias="0.902"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.023" />
+        app:layout_constraintVertical_bias="0.008" />
 
     <TextView
         android:id="@+id/showMeResultTextView_secondlevel_10"
@@ -217,35 +234,27 @@
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/secondlevel_9_print" />
 
-    <ImageView
-        android:layout_width="330dp"
-        android:layout_height="80dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="256dp"
-        android:src="@drawable/secondlevel_10_feedback"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+
+
+
     <ImageView
         android:id="@+id/soundOn_secondleve_10"
-        android:layout_width="30dp"
-        android:layout_height="28dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="69dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="493dp"
+        android:layout_marginRight="493dp"
+        android:layout_marginBottom="286dp"
         android:onClick="play"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.127"
+        app:layout_constraintHorizontal_bias="0.083"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.061"
+        app:layout_constraintVertical_bias="0.301"
         app:srcCompat="@drawable/soundon" />
+
 
 </android.support.constraint.ConstraintLayout>

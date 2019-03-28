@@ -178,7 +178,7 @@ public class secondlevel_resultsheet extends AppCompatActivity {
 //Based on the total labeb appearance will change either sad or happy
     public void Changelabebstatus(int total , int min){
         ImageView happy,sad;
-        happy=(ImageView) findViewById(R.id.happylabeb33);
+        happy=(ImageView) findViewById(R.id.labebholdingsheet2);
         sad=(ImageView) findViewById(R.id.sadlabeb2);
         TextView feedback2=(TextView) findViewById(R.id.feedback2);
         happy.setVisibility(View.INVISIBLE);

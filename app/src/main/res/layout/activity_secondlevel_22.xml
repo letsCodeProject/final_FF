@@ -68,7 +68,7 @@
         app:layout_constraintHorizontal_bias="0.902"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.023" />
+        app:layout_constraintVertical_bias="0.008" />
 
     <ImageButton
         android:id="@+id/homebtn_secondLeve19"
@@ -82,10 +82,10 @@
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.011"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.025"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/h" />
 
     <ImageView

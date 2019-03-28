@@ -9,20 +9,21 @@
 
     <ImageView
         android:id="@+id/soundOn_thirdlevel_3_7"
-        android:layout_width="31dp"
-        android:layout_height="25dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="69dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="493dp"
+        android:layout_marginBottom="286dp"
         android:onClick="play"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.014"
+        app:layout_constraintHorizontal_bias="0.083"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.159"
+        app:layout_constraintVertical_bias="0.301"
         app:srcCompat="@drawable/soundon" />
+
 
     <ImageView
 
@@ -148,14 +149,14 @@
         app:layout_constraintHorizontal_bias="0.902"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.023" />
+        app:layout_constraintVertical_bias="0.008" />
 
     <ImageButton
         android:id="@+id/homebtn_thirdlevel_13"
         android:layout_width="54dp"
         android:layout_height="40dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:background="@drawable/back"
@@ -189,14 +190,20 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <ImageView
-        android:id="@+id/imageView58"
-        android:layout_width="468dp"
-        android:layout_height="27dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="28dp"
+        android:layout_width="370dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:src="@drawable/thirdlevel_progress13_neww"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.544"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/thirdlevel_13_progressbar" />
+        app:layout_constraintVertical_bias="0.0" />
+
     <TextView
         android:id="@+id/textViewاحسنت2"
         android:layout_width="wrap_content"

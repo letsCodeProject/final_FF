@@ -130,14 +130,15 @@
         app:layout_constraintHorizontal_bias="0.902"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.023" />
+        app:layout_constraintVertical_bias="0.008" />
+
 
     <ImageButton
         android:id="@+id/homebtn_thirdlevel_23"
         android:layout_width="54dp"
         android:layout_height="40dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:background="@drawable/back"
@@ -156,10 +157,12 @@
         android:layout_width="43dp"
         android:layout_height="31dp"
         android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
 
         android:layout_marginTop="14dp"
         android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
         android:background="@drawable/textviewborder"
         android:gravity="center"
 
@@ -171,26 +174,32 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <ImageView
-        android:id="@+id/imageView58"
-        android:layout_width="468dp"
-        android:layout_height="27dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="370dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:src="@drawable/thirdlevel_progress12_neww"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.544"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/thirdlevel_12_progressbar" />
-   <!-- <TextView
-        android:id="@+id/textView66"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="52dp"
-        android:layout_marginTop="52dp"
-        android:fontFamily="@font/jannalt_regular"
-        android:text="@string/thirdlevel_12"
-        android:textColor="@color/light_font"
-        android:textSize="21sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />-->
+        app:layout_constraintVertical_bias="0.0" />
+
+    <!-- <TextView
+         android:id="@+id/textView66"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_marginStart="52dp"
+         android:layout_marginTop="52dp"
+         android:fontFamily="@font/jannalt_regular"
+         android:text="@string/thirdlevel_12"
+         android:textColor="@color/light_font"
+         android:textSize="21sp"
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintTop_toTopOf="parent" />-->
 
     <ImageView
         android:id="@+id/imageView49"

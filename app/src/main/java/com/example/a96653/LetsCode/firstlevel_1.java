@@ -54,14 +54,15 @@ public class firstlevel_1 extends AppCompatActivity  {
         //  t.setText((name.get(0)));
 
         Button goButton = (Button)findViewById(R.id.button3);
-        //home button
-        ImageButton homebtn=(ImageButton)findViewById(R.id.homebtn);
 
-        homebtn.setOnClickListener(new View.OnClickListener() {
+        //HOME BUTTON
+        ImageButton homebtn66=(ImageButton)findViewById(R.id.homebtn131);
+        homebtn66.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent HomePage=new Intent(getApplicationContext(),MainActivity.class);
-                startActivity(HomePage);
+                Intent gohome=new Intent (getApplicationContext(),MainActivity.class);
+                startActivity(gohome);
+
             }
         });
 

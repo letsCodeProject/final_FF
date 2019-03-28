@@ -11,8 +11,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
-        <activity android:name=".EndOfLevels"
+        <activity android:name=".thirdlevel_18feedback"
             android:screenOrientation="landscape"></activity>
+        <activity
+            android:name=".EndOfLevels"
+            android:screenOrientation="landscape" />
         <activity
             android:name=".fourthlevel_video"
             android:screenOrientation="landscape" />

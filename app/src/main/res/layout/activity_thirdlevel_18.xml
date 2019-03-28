@@ -6,20 +6,23 @@
     android:layout_height="match_parent"
     android:background="@drawable/back"
     tools:context=".thirdlevel_18">
+
     <ImageView
         android:id="@+id/imageView58"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="368dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
-        android:src="@drawable/thirdlevel_zuhal"
         android:alpha="0.2"
+        android:src="@drawable/thirdlevel_zuhal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
 
     <ImageButton
         android:id="@+id/next_thirdlevel_18"
@@ -134,29 +137,18 @@
         android:layout_width="54dp"
         android:layout_height="40dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:background="@drawable/back"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.011"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.025"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/h" />
-
-    <ImageView
-        android:id="@+id/imageView75"
-        android:layout_width="34dp"
-        android:layout_height="34dp"
-
-        android:layout_marginStart="500dp"
-        android:layout_marginTop="9dp"
-        android:src="@drawable/diamond22"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/ScoreBox_thirdlevel_18"
@@ -178,25 +170,37 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <ImageView
-        android:id="@+id/imageView72"
-        android:layout_width="468dp"
-        android:layout_height="27dp"
-        android:layout_marginStart="53dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="370dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:src="@drawable/thirdlevel_progress18_neww"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.544"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/thirdlevel_18_progress" />
+        app:layout_constraintVertical_bias="0.0" />
+
 
     <ImageView
         android:id="@+id/imageView73"
         android:layout_width="34dp"
         android:layout_height="34dp"
-
-        android:layout_marginStart="500dp"
-        android:layout_marginTop="9dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
         android:src="@drawable/diamond22"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.902"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.008" />
+
 
     <TextView
         android:id="@+id/textView82"

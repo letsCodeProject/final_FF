@@ -8,24 +8,21 @@
 
 
     <ImageView
-
-        android:id="@+id/imageView63"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/imageView37"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
+        android:id="@+id/imageView86"
+        android:layout_width="34dp"
+        android:layout_height="34dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
-        android:src="@drawable/diamond"
+        android:src="@drawable/diamond22"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.897"
+        app:layout_constraintHorizontal_bias="0.902"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.008" />
+
     <TextView
 
         android:id="@+id/ScoreBox_secondlevel_26"
@@ -35,7 +32,7 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="14dp"
 
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
@@ -175,16 +172,17 @@
     <ImageButton
 
         android:id="@+id/homebtn_secondlevel_26"
-        android:layout_width="36dp"
-        android:layout_height="36dp"
+        android:layout_width="54dp"
+        android:layout_height="40dp"
         android:layout_alignTop="@+id/imageView37"
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="3dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="299dp"
+        android:layout_marginBottom="8dp"
         android:layout_toStartOf="@drawable/h"
+        android:layout_toLeftOf="@drawable/h"
         android:background="@drawable/back"
         android:scaleType="fitCenter"
         android:src="@drawable/h"

@@ -43,7 +43,7 @@ public class firstlevel_6 extends AppCompatActivity {
         });
 
         //for taking the answer of quesion 1 .
-        TextView textView = (TextView)findViewById(R.id.quiz_score1_1);
+        TextView textView = (TextView)findViewById(R.id.scoreBox_firstlevel66);
         textView.setText(mySqliteOpenHelper.getChildScore()+"" );
 
         final RadioButton radio1 = ( RadioButton) findViewById(R.id.radio_one);

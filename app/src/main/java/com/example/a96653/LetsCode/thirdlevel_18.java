@@ -18,8 +18,8 @@ public class thirdlevel_18 extends AppCompatActivity {
         setContentView(R.layout.activity_thirdlevel_18);
         //NEXT BUTTON
         final MySQLliteHelper m=new MySQLliteHelper(this);
-        ImageView goButton=(ImageView) findViewById(R.id.next_thirdlevel_18);
-
+       final ImageView goButton=(ImageView) findViewById(R.id.next_thirdlevel_18);
+goButton.setVisibility(View.INVISIBLE);
         goButton.setOnClickListener(
                 new Button.OnClickListener(){
                     public void onClick(View v){
@@ -67,13 +67,15 @@ public class thirdlevel_18 extends AppCompatActivity {
 
                 ResultBox.setText("True");
 
+                goButton.setVisibility(View.VISIBLE);
+
             }
         });
 
     }
     public void openSecondActivity() {
 
-        Intent intent = new Intent(this, thirdlevel_19.class);
+        Intent intent = new Intent(this, thirdlevel_18feedback.class);
         startActivity(intent);
 
     }

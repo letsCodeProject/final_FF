@@ -34,17 +34,17 @@
         android:layout_width="54dp"
         android:layout_height="40dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:background="@drawable/back"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.079"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.024"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/h" />
 
     <TextView
@@ -82,7 +82,7 @@
         app:layout_constraintHorizontal_bias="0.902"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.023" />
+        app:layout_constraintVertical_bias="0.008" />
 
     <TextView
         android:id="@+id/textView35"
@@ -90,6 +90,7 @@
         android:layout_height="44dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
+
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
@@ -254,6 +255,7 @@
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/textView43"
         android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
@@ -287,19 +289,22 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.637"
         app:srcCompat="@drawable/hellosentence" />
+
+
     <ImageView
-        android:layout_width="330dp"
-        android:layout_height="80dp"
+
+        android:layout_width="394dp"
+        android:layout_height="33dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="13dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="256dp"
+        android:layout_marginBottom="8dp"
         android:src="@drawable/progress3_lvl1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
 
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.0" />
 
 </android.support.constraint.ConstraintLayout>

@@ -117,19 +117,19 @@
 
     <ImageView
         android:id="@+id/soundOn_secondlevel_13"
-        android:layout_width="30dp"
-        android:layout_height="28dp"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
         android:layout_marginStart="69dp"
-        android:layout_marginTop="21dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="493dp"
         android:layout_marginBottom="286dp"
         android:onClick="play"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.02"
+        app:layout_constraintHorizontal_bias="0.083"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintVertical_bias="0.301"
         app:srcCompat="@drawable/soundon" />
 
     <ImageButton
@@ -137,29 +137,35 @@
         android:layout_width="54dp"
         android:layout_height="40dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:background="@drawable/back"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.011"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.025"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/h" />
 
     <ImageView
-        android:id="@+id/imageView75"
+        android:id="@+id/imageView86"
         android:layout_width="34dp"
         android:layout_height="34dp"
-
-        android:layout_marginStart="500dp"
-        android:layout_marginTop="9dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
         android:src="@drawable/diamond22"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.902"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.008" />
+
 
     <TextView
         android:id="@+id/ScoreBox_secondlevel_16"
@@ -181,25 +187,20 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <ImageView
-        android:id="@+id/imageView72"
-        android:layout_width="468dp"
-        android:layout_height="27dp"
-        android:layout_marginStart="53dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="370dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:src="@drawable/secondlevel_progress16_neww"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.544"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/secondlevel_16_progressbar" />
+        app:layout_constraintVertical_bias="0.0" />
 
-    <ImageView
-        android:id="@+id/imageView73"
-        android:layout_width="34dp"
-        android:layout_height="34dp"
-
-        android:layout_marginStart="500dp"
-        android:layout_marginTop="9dp"
-        android:src="@drawable/diamond22"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView82"

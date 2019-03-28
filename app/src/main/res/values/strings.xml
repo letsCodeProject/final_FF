@@ -131,8 +131,8 @@
     <string name="hint2_4">ناتج السطر البرمجي التالي هو : نبتون </string>
     <string name="AnswerCorrect">تم إتمام المهمة بنجاح</string>
     <string name="AnswerWrong">لقد حدث أمر خاطئ</string>
-    <string name="AboveMinimmum">أحسنت </string>
-    <string name="UnderMinimum">جيد جدا</string>
+    <string name="AboveMinimmum">ممتاز </string>
+    <string name="UnderMinimum">حاول مرة أخرى</string>
     <string name="ButtonCorrect">انطلق للكوكب التالي</string>
     <string name="ButtonWrong">الرجوع إلى المهمات</string>
     <string name="thirdlevel_1_1">أهلاً وسهلاً بك في كوكب زحل .. </string>

@@ -52,14 +52,20 @@
         app:layout_constraintVertical_bias="0.96" />
 
     <ImageView
-        android:id="@+id/imageView58"
-        android:layout_width="468dp"
-        android:layout_height="27dp"
-        android:layout_marginStart="53dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="370dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:src="@drawable/secondlevel_progress17_neww"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.544"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/secondlevel_17_prograssbar"/>
+        app:layout_constraintVertical_bias="0.0" />
+
 
     <TextView
         android:id="@+id/textView67"
@@ -112,17 +118,17 @@
         android:layout_width="54dp"
         android:layout_height="40dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:background="@drawable/back"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.044"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.028"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/h" />
     <ImageView
         android:id="@+id/imageView52"
@@ -138,7 +144,7 @@
         app:layout_constraintHorizontal_bias="0.902"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.023" />
+        app:layout_constraintVertical_bias="0.008" />
 
     <TextView
         android:id="@+id/scoreBox_secondleve_l7"

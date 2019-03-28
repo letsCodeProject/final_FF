@@ -137,22 +137,23 @@
         app:layout_constraintVertical_bias="0.971" />
 
     <ImageButton
-        android:id="@+id/homebtn"
+        android:id="@+id/homebtn131"
         android:layout_width="54dp"
         android:layout_height="40dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:background="@drawable/back"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.015"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.025"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/h" />
+
 
     <ImageView
         android:layout_width="34dp"
@@ -167,38 +168,39 @@
         app:layout_constraintHorizontal_bias="0.902"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.023" />
+        app:layout_constraintVertical_bias="0.008" />
 
     <ImageView
 
-        android:layout_width="330dp"
-        android:layout_height="80dp"
+        android:layout_width="394dp"
+        android:layout_height="33dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="13dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="256dp"
+        android:layout_marginBottom="8dp"
         android:src="@drawable/progres3"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-
+        app:layout_constraintHorizontal_bias="0.544"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.0" />
+
     <ImageView
         android:id="@+id/soundOn"
-        android:layout_width="30dp"
-        android:layout_height="28dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="69dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="493dp"
+        android:layout_marginBottom="286dp"
         android:onClick="play"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.128"
+        app:layout_constraintHorizontal_bias="0.083"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.044"
+        app:layout_constraintVertical_bias="0.301"
         app:srcCompat="@drawable/soundon" />
 
     <TextView

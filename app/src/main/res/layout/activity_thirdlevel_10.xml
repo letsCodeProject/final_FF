@@ -48,22 +48,23 @@
 
  <ImageView
      android:id="@+id/soundOn_thirdlevel_3_6"
-     android:layout_width="30dp"
-     android:layout_height="28dp"
+     android:layout_width="40dp"
+     android:layout_height="40dp"
      android:layout_marginStart="69dp"
-     android:layout_marginTop="21dp"
+     android:layout_marginTop="10dp"
      android:layout_marginEnd="493dp"
      android:layout_marginBottom="286dp"
      android:onClick="play"
      app:layout_constraintBottom_toBottomOf="parent"
      app:layout_constraintEnd_toEndOf="parent"
-     app:layout_constraintHorizontal_bias="0.02"
+     app:layout_constraintHorizontal_bias="0.083"
      app:layout_constraintStart_toStartOf="parent"
      app:layout_constraintTop_toTopOf="parent"
-     app:layout_constraintVertical_bias="0.0"
+     app:layout_constraintVertical_bias="0.301"
      app:srcCompat="@drawable/soundon" />
 
- <TextView
+
+    <TextView
         android:id="@+id/textView72"
         android:layout_width="20dp"
         android:layout_height="45dp"
@@ -106,27 +107,27 @@
         app:srcCompat="@drawable/newpre" />
 
     <ImageView
-        android:id="@+id/imageView73"
         android:layout_width="370dp"
         android:layout_height="45dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
-        android:src="@drawable/thirdlevel_10_progresssbar"
+        android:src="@drawable/thirdlevel_progress10_neww"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.533"
+        app:layout_constraintHorizontal_bias="0.544"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
+
 
     <ImageButton
         android:id="@+id/homebtn_thirdlevel_10"
         android:layout_width="54dp"
         android:layout_height="40dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:background="@drawable/back"
@@ -134,10 +135,10 @@
         android:onClick="btnHome"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.011"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.025"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/h" />
 
     <ImageView
@@ -154,7 +155,8 @@
         app:layout_constraintHorizontal_bias="0.902"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.023" />
+        app:layout_constraintVertical_bias="0.008" />
+
 
     <TextView
         android:id="@+id/scoreBox_thirdlevel_10"

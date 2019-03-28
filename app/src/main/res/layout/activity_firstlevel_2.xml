@@ -42,24 +42,24 @@
         app:layout_constraintHorizontal_bias="0.902"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.023" />
+        app:layout_constraintVertical_bias="0.008" />
 
     <ImageButton
         android:id="@+id/homebtn3"
         android:layout_width="54dp"
         android:layout_height="40dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:background="@drawable/back"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.079"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.024"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/h" />
 
     <ImageView
@@ -140,19 +140,19 @@
         app:srcCompat="@drawable/lelel1_2robot" />
     <ImageView
 
-    android:layout_width="330dp"
-    android:layout_height="80dp"
+    android:layout_width="394dp"
+    android:layout_height="33dp"
     android:layout_marginStart="8dp"
-    android:layout_marginTop="8dp"
+    android:layout_marginTop="13dp"
     android:layout_marginEnd="8dp"
-    android:layout_marginBottom="256dp"
+    android:layout_marginBottom="8dp"
     android:src="@drawable/progress2_lvl1"
     app:layout_constraintBottom_toBottomOf="parent"
     app:layout_constraintEnd_toEndOf="parent"
 
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toTopOf="parent"
-    app:layout_constraintVertical_bias="1.0" />
+    app:layout_constraintVertical_bias="0.0" />
 
 
 </android.support.constraint.ConstraintLayout>

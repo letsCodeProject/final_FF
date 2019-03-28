@@ -56,13 +56,7 @@ public class thirdlevel_19 extends AppCompatActivity {
             }
         });
 
-        ImageView previous3=(ImageView)findViewById(R.id.previous_thirdlevel_19);
-        previous3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                GoToprevious();
-            }
-        });
+
 
         SharedPreferences prefs = getSharedPreferences("pre5fs_for_question_Thirdlevel", MODE_PRIVATE);
         boolean firstStart = prefs.getBoolean("firstStart", true);

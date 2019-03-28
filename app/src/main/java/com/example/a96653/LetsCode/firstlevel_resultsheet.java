@@ -21,9 +21,9 @@ public class firstlevel_resultsheet extends AppCompatActivity {
 
     String btntextwrong="الرجوع إلى المهمة";
 
-    public String feedbackcorrect=" أحسنت ";
+    public String feedbackcorrect=" ممتاز ";
 
-    public   String feedbackwrong="جيد جداً";
+    public   String feedbackwrong="حاول مرة أخرى";
 
 
     int result ,result2;
@@ -115,34 +115,34 @@ public class firstlevel_resultsheet extends AppCompatActivity {
 
 
         if ((result==1) && (result2==1)) {
-            t1.setText(correct);
+            t1.setText(R.string.AnswerCorrect);
             t1.setTextColor(Color.parseColor("#0E932E"));
-            t2.setText(correct);
+            t2.setText(R.string.AnswerCorrect);
             t2.setTextColor(Color.parseColor("#0E932E"));
             q1score =10;
             q2score=10;}
 
         else if ((result==0) && (result2==1)){
-            t1.setText(wrong);
+            t1.setText(R.string.UnderMinimum);
             t1.setTextColor(Color.parseColor("#FF6B6B"));
-            t2.setText(correct);
+            t2.setText(R.string.AnswerCorrect);
             t2.setTextColor(Color.parseColor("#0E932E"));
             q1score =0;
             q2score=10;
         }
         else if ((result==1) && (result2==0)){
-            t1.setText(correct);
+            t1.setText(R.string.AnswerCorrect);
             t1.setTextColor(Color.parseColor("#0E932E"));
-            t2.setText(wrong);
+            t2.setText(R.string.AnswerWrong);
             t2.setTextColor(Color.parseColor("#FF6B6B"));
             q1score =10;
             q2score=0;
 
         }
         else {
-            t1.setText(wrong);
+            t1.setText(R.string.AnswerWrong);
             t1.setTextColor(Color.parseColor("#FF6B6B"));
-            t2.setText(wrong);
+            t2.setText(R.string.AnswerWrong);
             t2.setTextColor(Color.parseColor("#FF6B6B"));
             q1score =0;
             q2score=0;
