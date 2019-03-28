@@ -116,8 +116,8 @@
 
     <TextView
         android:id="@+id/textView1_secondlevel_6"
-        android:layout_width="600dp"
-        android:layout_height="115dp"
+        android:layout_width="574dp"
+        android:layout_height="114dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:fontFamily="@font/jannalt_regular"
@@ -126,19 +126,19 @@
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.111"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.263"
-        tools:layout_editor_absoluteX="116dp" />
+        app:layout_constraintVertical_bias="0.298" />
 
     <TextView
         android:id="@+id/textView2_secondlevel_6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
-        android:layout_marginStart="336dp"
-        android:layout_marginTop="132dp"
+        android:layout_marginStart="332dp"
+        android:layout_marginLeft="332dp"
+        android:layout_marginTop="136dp"
         android:fontFamily="@font/jannalt_regular"
         android:text="@string/try_it_yourself"
         android:textColor="@color/yellow1"

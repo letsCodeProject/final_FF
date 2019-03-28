@@ -72,7 +72,7 @@
         android:layout_marginBottom="8dp"
         android:background="@drawable/custom_button"
         android:fontFamily="cursive"
-        android:text="حسنا"
+        android:text="حسناً"
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="18dp"

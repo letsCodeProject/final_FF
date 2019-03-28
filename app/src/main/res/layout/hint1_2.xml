@@ -49,17 +49,18 @@
         android:layout_width="231dp"
         android:layout_height="73dp"
         android:layout_marginStart="216dp"
+        android:layout_marginLeft="216dp"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
-        android:fontFamily="@font/lemon"
-        android:text="تذكر: أن الترتيب الصحيح لجملة درب التبانة هو: "
+        android:fontFamily="@font/jannalt_regular"
+        android:text="تذكر: الترتيب الصحيح لجملة الطباعة هو: "
         android:textAlignment="textStart"
         android:textColor="#6100ED"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.34" />
+        app:layout_constraintVertical_bias="0.268" />
 
     <TextView
         android:id="@+id/textView60"

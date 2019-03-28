@@ -44,18 +44,12 @@ public class MySQLliteHelper extends SQLiteOpenHelper {
             + " REFERENCES " + SchemClass.LetsCode2.Table_Quiz + "(" + SchemClass.LetsCode2.COLUMN_NAME_QUIZID + ")" + " ON UPDATE SET NULL);";
 
 
-    private static final String SQL_CREATE_TABLE_LESSON =
-            "CREATE TABLE " + SchemClass.LetsCode2.THIRD_TABLE + "(" +
-                    SchemClass.LetsCode2.COLUMN_NAME_LESSON_NUM + " INTEGER )";
 
     private static final String Welcome_Interface_Table =
             "CREATE TABLE " + SchemClass.LetsCode2.WELCOME_TABLE + "(" +
                     SchemClass.LetsCode2.WELCOME_INTERFACE_NAME + " TEXT primary key," +
                     SchemClass.LetsCode2.WELCOME_INTERFACE_STATUS + " TEXT)";
 
-    private static final String SQL_CREATE_TABLE_INDEX =
-            "CREATE TABLE IF NOT EXISTS "+ SchemClass.LetsCode2.INDEX_TABLE2+ "(" +
-                    SchemClass.LetsCode2.COLUMN_NAME_QUESTION+" TEXT )";
     private static  MySQLliteHelper  mInstance = null;
     public static MySQLliteHelper getInstance(Context ctx) {
 
@@ -78,7 +72,7 @@ public class MySQLliteHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
         sqLiteDatabase.execSQL(SQL_CREATE_ENTRIES);
         sqLiteDatabase.execSQL(SQL_CREATE_TABLE_LEVEL);
-        sqLiteDatabase.execSQL(SQL_CREATE_TABLE_LESSON);
+        //sqLiteDatabase.execSQL(SQL_CREATE_TABLE_LESSON);
         sqLiteDatabase.execSQL(Welcome_Interface_Table);
         sqLiteDatabase.execSQL(SQL_CREATE_TABLE_QUIZ);
         sqLiteDatabase.execSQL(SQL_CREATE_TABLE_QUESTION);
@@ -127,32 +121,10 @@ public class MySQLliteHelper extends SQLiteOpenHelper {
         db.close();
     }
 
-    public void addData(int id, String content) {
-        SQLiteDatabase db = this.getWritableDatabase();
-        ContentValues contentValues = new ContentValues();
-        contentValues.put(SchemClass.LetsCode2.COLUMN_NAME_LESSON_NUM, id);
-        //contentValues.put(SchemClass.LetsCode2.COLUMN_NAME_CONTENT,content);
-        long result = db.insert(SchemClass.LetsCode2.THIRD_TABLE, null, contentValues);
 
-    }
 
-    public void fillLessonContent(int num, String cont) {
-        // Lesson l1=new Lesson(1);
-        //addLesson(l1);
 
-    }
 
-    public void addLesson(Lesson l) {
-        SQLiteDatabase db = this.getWritableDatabase();
-        ContentValues cv = new ContentValues();
-        cv.put(SchemClass.LetsCode2.COLUMN_NAME_LESSON_NUM, l.getNum());
-        //cv.put(SchemClass.LetsCode2.COLUMN_NAME_CONTENT,l.getContent());
-        try {
-            long result = db.insert(SchemClass.LetsCode2.THIRD_TABLE, null, cv);
-        } catch (SQLiteConstraintException e) {
-            throw e;
-        }
-    }
 
     public void UpdateNumOfLesson(int lnum, String levelName) {
         SQLiteDatabase db = this.getWritableDatabase();
@@ -359,35 +331,9 @@ public class MySQLliteHelper extends SQLiteOpenHelper {
         return b;
     }
 
-    public void queryIndexData( ){
-        SQLiteDatabase database=getWritableDatabase();
-        database.execSQL(SQL_CREATE_TABLE_INDEX);
-        //database.close();
-    }
 
-    public void addIndexData( String ActivityName) {
-        SQLiteDatabase db = this.getWritableDatabase();
-        ContentValues contentValues = new ContentValues();
-        contentValues.put(SchemClass.LetsCode2.COLUMN_NAME_QUESTION, ActivityName);
-        long result = db.insert(SchemClass.LetsCode2.INDEX_TABLE2, null, contentValues);
-        //db.close();
 
-    }
 
-    public Cursor returnWrongQuestionIndex ( ){
-
-        SQLiteDatabase db = this.getReadableDatabase();
-        String query = "SELECT "+SchemClass.LetsCode2.COLUMN_NAME_QUESTION +" FROM "+SchemClass.LetsCode2.INDEX_TABLE2 ;
-        Cursor recordSet=db.rawQuery(query,null);
-        //db.close();
-        return recordSet ;
-    }
-
-    public Integer deleteIndexData (String name) {
-        SQLiteDatabase db = this.getWritableDatabase();
-       // db.close();
-        return db.delete(SchemClass.LetsCode2.INDEX_TABLE2, " Question = '"+name+"'",null);
-    }
     public Cursor returnLevelStatus(String levlname){
         SQLiteDatabase db = this.getReadableDatabase();
         String Query=" SELECT "+SchemClass.LetsCode2.COLUMN_NAME_LEVELSTATUS +" FROM "+SchemClass.LetsCode2.SECOND_TABLE +" WHERE "+SchemClass.LetsCode2.COLUMN_NAME_LevelName+" = '"+levlname+"'";

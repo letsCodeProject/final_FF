@@ -18,15 +18,16 @@
         app:layout_constraintVertical_bias="0.44" />
 
     <ImageView
-        android:layout_width="264dp"
-        android:layout_height="243dp"
+        android:layout_width="327dp"
+        android:layout_height="248dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="288dp"
-        android:src="@drawable/firstlevel_5robot"
+        android:layout_marginEnd="248dp"
+        android:layout_marginRight="248dp"
+        android:src="@drawable/secondlevel_17_redlabeb"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.571" />
+        app:layout_constraintVertical_bias="0.607" />
 
     <Button
         android:id="@+id/forthlevel_3_next"

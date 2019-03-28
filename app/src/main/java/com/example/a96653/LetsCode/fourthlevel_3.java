@@ -64,7 +64,7 @@ public class fourthlevel_3 extends AppCompatActivity {
     }
     public void openPreviousActivity(){
 
-        Intent intent=new Intent(this,fourthlevel_video.class); //MUST GO BACK TO WHAT ?
+        Intent intent=new Intent(this,fourthlevel_video.class);
         startActivity(intent);
 
     }

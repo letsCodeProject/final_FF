@@ -70,7 +70,7 @@ public class Lesson {
         Lesson l56 = new Lesson(56, "fourthlevel_3");
         Lesson l57= new Lesson(57, "fourthlevel_4");
         Lesson l58 = new Lesson(58, "fourthlevel_5");
-        Lesson l59 = new Lesson(59, "fourthlevel_6_quiz");
+        Lesson l59 = new Lesson(59, "fourthlevel_6");
         Lesson l60 = new Lesson(60, "Fourthlevel_resultsheet");
 
 

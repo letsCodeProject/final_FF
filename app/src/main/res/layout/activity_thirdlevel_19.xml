@@ -18,8 +18,8 @@
         android:layout_marginBottom="8dp"
         android:fontFamily="@font/jannalt_regular"
         android:text="@string/thirdlevel_19"
-        android:textColor="@color/light_blue"
-        android:textSize="24sp"
+        android:textColor="@color/white"
+        android:textSize="20dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -123,24 +123,24 @@
         android:src="@drawable/thirdlevel_zuhal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.089"
+        app:layout_constraintHorizontal_bias="0.125"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
 
     <ImageView
-        android:layout_width="248dp"
-        android:layout_height="294dp"
+        android:layout_width="294dp"
+        android:layout_height="268dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:src="@drawable/firstlevel_5robot"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.022"
+        app:layout_constraintHorizontal_bias="0.021"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.463" />
+        app:layout_constraintVertical_bias="1.0" />
     <Button
         android:id="@+id/GoToquize_thirdlevel_19"
         android:layout_width="92dp"
