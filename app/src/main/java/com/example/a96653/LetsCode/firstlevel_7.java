@@ -587,38 +587,6 @@ public class firstlevel_7 extends AppCompatActivity {
     }
 
 
-    public void check(){
-
-        Cursor cursor=sqLiteHelper.returnWrongQuestionIndex();
-
-        if(cursor.getCount()>0){
-
-
-            cursor.moveToFirst();
-
-            int index=cursor.getColumnIndexOrThrow("Question");
-            String name =cursor.getString(index);
-            Toast.makeText(firstlevel_7.this, name,
-                    Toast.LENGTH_LONG).show();
-            if(name.equals("firstlevel_7")){sqLiteHelper.deleteIndexData(name);}
-            cursor=sqLiteHelper.returnWrongQuestionIndex();
-            if(cursor.getCount()>0){
-                try { openPlotoActivity(sqLiteHelper );
-                } catch (ClassNotFoundException e) {
-                    e.printStackTrace();
-                }
-            }else {  Intent intent= new Intent(getApplicationContext(),firstlevel_resultsheet.class);
-                startActivity(intent);}
-
-
-
-        }else {  Intent intent= new Intent(getApplicationContext(),firstlevel_resultsheet.class);
-            startActivity(intent);}
-
-
-    }
-
-
 
     public void openPlotoActivity(MySQLliteHelper M ) throws ClassNotFoundException {
 

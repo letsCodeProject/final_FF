@@ -5,6 +5,7 @@ import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.graphics.BitmapFactory;
@@ -39,7 +40,6 @@ public class certificate extends AppCompatActivity {
     static MySQLliteHelper mySqliteOpenHelper;
     static Bitmap bm , bmp2;
     ImageView imageView2 ;
-    ImageView A;//فقط للتشييك
      Dialog mydialog ;
 Context mcontex;
 
@@ -51,13 +51,6 @@ Context mcontex;
         setContentView(R.layout.activity_certificate);
         mySqliteOpenHelper=new MySQLliteHelper(this);
 mcontex=getApplication();
-
-
-
-
-
-
-
 
 
         //HOME BUTTON
@@ -91,8 +84,6 @@ mcontex=getApplication();
        String sql="CREATE TABLE IF NOT EXISTS PIC( pic MEDIUMBLOB )";
         mySqliteOpenHelper.queryData(sql);
         //TAKING SCREENSHOT .
-        A=findViewById(R.id.BACK);
-        A.setVisibility(View.INVISIBLE);
         SHARE_certificate=findViewById(R.id.SHARE_certificate);
         final View layout= findViewById(R.id.root_content);
         layout.setSystemUiVisibility(View.SYSTEM_UI_FLAG_HIDE_NAVIGATION | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY| View.SYSTEM_UI_FLAG_FULLSCREEN );
@@ -105,17 +96,21 @@ mcontex=getApplication();
                 layout.setBackgroundColor(Color.TRANSPARENT);
                 homebtn9.setVisibility(View.INVISIBLE);
                 SHARE_certificate.setVisibility(View.INVISIBLE);
+                SharedPreferences prefs = getSharedPreferences("TakingScreenShot", MODE_PRIVATE);
+                boolean firstStart = prefs.getBoolean("firstStart", true);
+                if (firstStart){
                 bm=getScreenShot(layout);
+                SharedPreferences pref = getSharedPreferences("TakingScreenShot", MODE_PRIVATE);
+                SharedPreferences.Editor editor = prefs.edit();
+                editor.putBoolean("firstStart", false);
+                editor.apply();}
                  homebtn9.setVisibility(View.VISIBLE);
                 SHARE_certificate.setVisibility(View.VISIBLE);
                layout.setSystemUiVisibility(View.VISIBLE);
                 layout.setBackgroundResource(R.drawable.back);
-                if (bm != null) {
+              /*  if (bm != null) {
                     retrieveImage( );//show bitmap over imageview
-
-                } else {
-               t= findViewById(R.id.textView26);
-                    t.setText("NONO");}
+                }*/
 
             }
         });
@@ -145,7 +140,9 @@ mcontex=getApplication();
                             requestPermissions(new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},0);
 
                         }else {
-                            store(bmp2,"certificate.png");
+                            double random1 = Math.random() * 7;
+                            double random2 = Math.random() * 4;
+                            store(bmp2,"certificate"+random1+"_"+random2+".png");
                     }
 
 
@@ -275,39 +272,6 @@ public static Bitmap getScreenShot(View view){
     }
 
 
-/*public static void ShareCertificare (Context mContext,Intent shareintent){
-
-
-    shareintent.setType("image/jpg");
-    ByteArrayOutputStream byteArrayOutputStream=new ByteArrayOutputStream();
-    bmp2.compress(Bitmap.CompressFormat.JPEG,100,byteArrayOutputStream);
-    File file =new File(Environment.getExternalStorageDirectory()+File.separator+"ImageDemo.jpg");
-    //File file =new File(Environment.getExternalStorageDirectory().toString() + "/" +"Hey.jpg");
-    try{
-        file.createNewFile();
-        FileOutputStream fileOutputStream=new FileOutputStream(file);
-        fileOutputStream.write(byteArrayOutputStream.toByteArray());
-        bmp2.compress(Bitmap.CompressFormat.JPEG,90,fileOutputStream);
-    }catch (IOException e) {
-        e.printStackTrace();
-    }
-    shareintent.putExtra(Intent.EXTRA_TEXT,"لقد أتممت جميع مهماتي مع تطبيق هيا نبرمج .");
-    shareintent.putExtra(Intent.EXTRA_STREAM, Uri.parse("file://"+file.getAbsolutePath()));
-   // shareintent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
-
-    shareintent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-
-   mContext.startActivity(Intent.createChooser(shareintent,"مشاركة الشهادة مع : "));
-
-}*/
-
-/*public static void optiondialog(Dialog mydialog){
-
-    mydialog.setContentView(R.layout.optiondialog);
-    mydialog.show();
-}
-*/
-
     public void store(Bitmap bm,String filename){
 
         String dirPath= Environment.getExternalStorageDirectory().getAbsolutePath()+"/LetsCode";
@@ -321,6 +285,9 @@ public static Bitmap getScreenShot(View view){
             bm.compress(Bitmap.CompressFormat.PNG,100,fos);
             fos.flush();
             fos.close();
+            Toast.makeText(getApplicationContext(),"تم حفظ الشهادة",Toast.LENGTH_SHORT).show();
+
+
 
 
         }catch (Exception e){
@@ -333,7 +300,10 @@ public static Bitmap getScreenShot(View view){
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         if(requestCode==0){
-            if(grantResults[0]==PackageManager.PERMISSION_GRANTED){   store(bmp2,"certificate.png");
+            if(grantResults[0]==PackageManager.PERMISSION_GRANTED){
+                double random1 = Math.random() * 7;
+                double random2 = Math.random() * 4;
+                store(bmp2,"certificate"+random1+"_"+random2+".png");
              }else{
                 Toast.makeText(this,"premission granted",Toast.LENGTH_SHORT).show();
                 finish();

@@ -102,9 +102,7 @@ public class secondlevel_20 extends AppCompatActivity {
                                 SharedPreferences.Editor editor = prefs.edit();
                                 editor.putBoolean("firstStart", false);
                                 editor.apply(); }
-                            Toast.makeText(getApplicationContext(),
-                                    Integer.toString(result),
-                                    Toast.LENGTH_SHORT).show();
+
                             updatedata();
                             Intent  intent = new Intent(getApplicationContext(),secondlevel_22.class);
 
