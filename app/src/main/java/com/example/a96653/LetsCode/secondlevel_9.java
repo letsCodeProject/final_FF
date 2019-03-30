@@ -2,6 +2,7 @@ package com.example.a96653.LetsCode;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -58,7 +59,8 @@ public class secondlevel_9 extends AppCompatActivity {
                     editor.apply();}
                 //setting the  fixed result in resultBox
                 ResultBox.setText("X");
-                ResultBox.setTextSize(18);
+                ResultBox.setTextSize(25);
+                ResultBox.setTextColor(Color.BLACK);
                 Intent feedback=new Intent(getApplicationContext(),secondlevel_10_feedback.class);
                 startActivity(feedback);
             }

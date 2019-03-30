@@ -2,6 +2,7 @@ package com.example.a96653.LetsCode;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -24,7 +25,9 @@ public class secondlevel_13_feedback extends AppCompatActivity {
         ///to show result
         TextView ResultBox=(TextView)findViewById(R.id.ResultBox_secondlevel_13);
         ResultBox.setText("لبيب");
-        ResultBox.setTextSize(20);
+        ResultBox.setTextSize(25);
+        ResultBox.setTextColor(Color.BLACK);
+
 
         //create MediaPLayer to play the voice
         secondlevel_13= MediaPlayer.create(secondlevel_13_feedback.this,R.raw.secondlevel_exercise_feedback);

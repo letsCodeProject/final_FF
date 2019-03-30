@@ -2,6 +2,7 @@ package com.example.a96653.LetsCode;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -82,6 +83,8 @@ public class firstlevel_4 extends AppCompatActivity {
                 EditText ed1=(EditText)findViewById(R.id.editText3);
                 TextView t1=(TextView)findViewById(R.id.textView57);
                 t1.setText(ed1.getText().toString());
+                t1.setTextColor(Color.BLACK);
+                t1.setTextSize(25);
             }
         });
 

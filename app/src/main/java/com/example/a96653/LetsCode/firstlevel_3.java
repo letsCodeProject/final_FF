@@ -4,8 +4,10 @@ import android.content.ClipData;
 import android.content.ClipDescription;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
@@ -121,8 +123,9 @@ public class firstlevel_3 extends AppCompatActivity {
                         if (event.getResult()){
                            // Toast.makeText(firstlevel_3.this, "The drop was handled.", Toast.LENGTH_SHORT).show();
                             tv_output.setText("أهلاً بدرب التبانة");
-                            tv_output.setText("أهلاً بدرب التبانة");
+                            tv_output.setTextColor(Color.BLACK);
                             tv_output.setTextSize(25);
+                            tv_output.setGravity(Gravity.CENTER);
 
                             timer=new Timer();
                             timer.schedule(new TimerTask() {

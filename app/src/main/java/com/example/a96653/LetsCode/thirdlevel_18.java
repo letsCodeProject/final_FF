@@ -2,6 +2,7 @@ package com.example.a96653.LetsCode;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -66,6 +67,8 @@ goButton.setVisibility(View.INVISIBLE);
             public void onClick(View v) {
 
                 ResultBox.setText("True");
+                ResultBox.setTextColor(Color.BLACK);
+                ResultBox.setTextSize(25);
 
                 goButton.setVisibility(View.VISIBLE);
 

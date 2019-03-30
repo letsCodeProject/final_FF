@@ -3,6 +3,7 @@ package com.example.a96653.LetsCode;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -24,7 +25,8 @@ public class secondlevel_10_feedback extends AppCompatActivity {
         ///to show result
         TextView ResultBox=(TextView)findViewById(R.id.ResultBox_secondlevel_10);
         ResultBox.setText("X");
-        ResultBox.setTextColor(R.color.Shadwo_purple);
+        ResultBox.setTextColor(Color.BLACK);
+        ResultBox.setTextSize(25);
 //create MediaPLayer to play the voice
         secondlevel_10= MediaPlayer.create(secondlevel_10_feedback.this,R.raw.secondlevel_feedback2);
         voice10_secondlevel=new voice( secondlevel_10);

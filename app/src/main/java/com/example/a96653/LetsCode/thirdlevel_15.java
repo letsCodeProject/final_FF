@@ -2,6 +2,7 @@ package com.example.a96653.LetsCode;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -24,6 +25,8 @@ public class thirdlevel_15 extends AppCompatActivity {
             public void onClick(View v) {
                 TextView t1=(TextView)findViewById(R.id.ResultBox_thirdlevel_15);
                 t1.setText(text.toString());
+                t1.setTextSize(25);
+                t1.setTextColor(Color.BLACK);
             }
         });
         //scoreBox

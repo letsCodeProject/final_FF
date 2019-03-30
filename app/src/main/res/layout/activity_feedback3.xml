@@ -96,6 +96,7 @@
         android:gravity="center"
         android:text="أهلاً بدرب التبانة"
         android:textSize="25dp"
+        android:textColor="@color/black"
 
         />
 
