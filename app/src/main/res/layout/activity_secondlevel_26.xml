@@ -3,47 +3,26 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/secondlevel_background"
+    android:background="@drawable/back"
     tools:context=".secondlevel_26">
 
-
     <ImageView
-        android:id="@+id/imageView96"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/textView50"
-        android:layout_alignParentEnd="true"
+        android:id="@+id/imageView72"
+        android:layout_width="match_parent"
+        android:layout_height="368dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:onClick="ShowPopup"
+        android:layout_marginBottom="11dp"
+        android:alpha="0.4"
+        android:src="@drawable/plutobackground"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.014"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.198"
-        app:srcCompat="@drawable/bulb" />
+        app:layout_constraintVertical_bias="0.0" />
 
-    <ImageView
-        android:id="@+id/homebtn24"
-        android:layout_width="168dp"
-        android:layout_height="271dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="7dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="200dp"
-        android:layout_marginBottom="8dp"
-        android:onClick="ShowPopup"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.041"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.395"
-        app:srcCompat="@drawable/robotquiz1_2" />
 
     <ImageView
         android:id="@+id/imageView86"
@@ -93,18 +72,21 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="256dp"
         android:fontFamily="@font/jannalt_regular"
         android:text="مهمة رقم 5 من 5:"
         android:textColor="@color/colorPrimary"
         android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/redo"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.297" />
+        app:layout_constraintHorizontal_bias="0.981"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView63" />
 
     <TextView
         android:id="@+id/textView55"
@@ -128,6 +110,44 @@
         app:layout_constraintVertical_bias="0.254" />
 
     <ImageView
+        android:id="@+id/homebtn77"
+        android:layout_width="189dp"
+        android:layout_height="300dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:onClick="ShowPopup"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.421"
+        app:srcCompat="@drawable/robotquiz1_2" />
+
+    <ImageView
+        android:id="@+id/imageView54"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/textView50"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:onClick="ShowPopup"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.184"
+        app:srcCompat="@drawable/bulb" />
+
+    <ImageView
         android:id="@+id/imageView49"
         android:layout_width="146dp"
         android:layout_height="88dp"
@@ -140,11 +160,12 @@
         android:onClick="ShowPopup"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.269"
+        app:layout_constraintHorizontal_bias="0.272"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.082"
-        app:srcCompat="@drawable/helpask" />
+        app:layout_constraintVertical_bias="0.084"
+        app:srcCompat="@drawable/helpask"
+        />
 
 
     <ImageButton

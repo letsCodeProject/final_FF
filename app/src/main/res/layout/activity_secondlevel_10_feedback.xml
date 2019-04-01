@@ -10,15 +10,21 @@
 
 
     <ImageView
-        android:id="@+id/imageView38"
-        android:layout_width="407dp"
-        android:layout_height="292dp"
-        android:alpha="0.2"
+        android:id="@+id/imageView72"
+        android:layout_width="match_parent"
+        android:layout_height="368dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="11dp"
+        android:alpha="0.4"
+        android:src="@drawable/plutobackground"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.535"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/newnepton" />
+        app:layout_constraintVertical_bias="0.0" />
     <ImageView
         android:layout_width="370dp"
         android:layout_height="45dp"
