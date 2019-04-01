@@ -28,6 +28,7 @@ public class secondlevel_26 extends AppCompatActivity {
 
     Dialog myDialog;
     ImageButton next;
+    ////
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
