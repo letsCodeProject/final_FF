@@ -12,22 +12,15 @@
 
 
     <ImageView
-        android:id="@+id/homebtn8"
-        android:layout_width="197dp"
-        android:layout_height="300dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/imageView135"
+        android:layout_width="303dp"
+        android:layout_height="198dp"
+        android:layout_marginTop="120dp"
+        android:layout_marginEnd="255dp"
+        android:layout_marginRight="344dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/robotquiz1_2" />
+        app:srcCompat="@drawable/quiz1_1robot" />
 
     <ImageView
         android:id="@+id/fourthlevel_hint3"
@@ -69,4 +62,18 @@
         app:layout_constraintHorizontal_bias="0.722"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView122"
+        android:layout_width="12dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginRight="36dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/white"
+         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.165" />
 </android.support.constraint.ConstraintLayout>

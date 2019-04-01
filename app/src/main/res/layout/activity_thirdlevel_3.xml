@@ -158,19 +158,20 @@
 
     <ImageView
         android:id="@+id/imageView94"
-        android:layout_width="632dp"
-        android:layout_height="313dp"
+        android:layout_width="590dp"
+        android:layout_height="245dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
+        android:alpha="0.4"
         android:src="@drawable/thirdlevel_zuhal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.485"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.862" />
+        app:layout_constraintVertical_bias="1.0" />
 
     <ImageView
         android:id="@+id/soundOn_thirdlevel_3_"
@@ -190,11 +191,12 @@
         app:srcCompat="@drawable/soundon" />
 
     <ImageView
-        android:layout_width="227dp"
-        android:layout_height="204dp"
+        android:layout_width="218dp"
+        android:layout_height="200dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
+
         android:src="@drawable/thirdlevel_3_labeb"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
