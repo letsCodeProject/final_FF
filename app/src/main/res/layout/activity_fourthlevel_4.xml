@@ -11,6 +11,17 @@
     >
 
     <ImageView
+        android:id="@+id/help2"
+        android:layout_width="303dp"
+        android:layout_height="198dp"
+        android:layout_marginTop="120dp"
+        android:layout_marginEnd="344dp"
+        android:layout_marginRight="344dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/quiz1_1robot" />
+
+    <ImageView
         android:id="@+id/imageView101"
         android:layout_width="43dp"
         android:layout_height="22dp"
@@ -56,37 +67,15 @@
         app:srcCompat="@drawable/newnext" />
 
     <ImageView
-        android:id="@+id/imageView92"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="76dp"
-        android:layout_marginEnd="508dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/bulb" />
-
-    <ImageView
-        android:id="@+id/help2"
-        android:layout_width="162dp"
-        android:layout_height="315dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentBottom="true"
-
-        android:layout_marginTop="52dp"
-        android:layout_marginEnd="424dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/robotquiz1_2" />
-
-    <ImageView
         android:id="@+id/help1"
         android:layout_width="146dp"
         android:layout_height="88dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
 
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="388dp"
+        android:layout_marginTop="104dp"
+        android:layout_marginEnd="340dp"
+        android:layout_marginRight="340dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/helpask" />
@@ -145,8 +134,9 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginTop="52dp"
+        android:layout_marginTop="40dp"
         android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
         android:fontFamily="@font/jannalt_regular"
         android:text="مهمة رقم 1 من 3 :"
         android:textColor="@color/colorPrimary"
@@ -161,8 +151,9 @@
         android:layout_alignTop="@+id/textView50"
         android:layout_alignParentEnd="true"
 
-        android:layout_marginTop="76dp"
+        android:layout_marginTop="64dp"
         android:layout_marginEnd="4dp"
+        android:layout_marginRight="4dp"
         android:fontFamily="@font/jannalt_regular"
         android:text="@string/fourthlevel_4_firstQuestion"
         android:textColor="@color/white"

@@ -11,27 +11,27 @@
 
 
     <ImageView
-        android:id="@+id/homebtn8"
-        android:layout_width="197dp"
-        android:layout_height="300dp"
+        android:id="@+id/homebtn17"
+        android:layout_width="168dp"
+        android:layout_height="271dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="8dp"
+        android:layout_marginStart="7dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginEnd="120dp"
         android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.118"
+        app:layout_constraintHorizontal_bias="0.087"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintVertical_bias="0.895"
         app:srcCompat="@drawable/robotquiz1_2" />
 
     <TextView
         android:id="@+id/textView47"
         android:layout_width="284dp"
-        android:layout_height="214dp"
+        android:layout_height="188dp"
         android:layout_marginStart="8dp"
 
         android:layout_marginTop="8dp"
@@ -62,16 +62,17 @@
         android:textSize="18dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.739"
+        app:layout_constraintHorizontal_bias="0.732"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.711" />
+        app:layout_constraintVertical_bias="0.652" />
+
     <TextView
         android:id="@+id/textView103"
         android:layout_width="276dp"
         android:layout_height="80dp"
-        android:layout_marginStart="188dp"
-        android:layout_marginLeft="188dp"
+        android:layout_marginStart="196dp"
+        android:layout_marginLeft="196dp"
         android:layout_marginTop="60dp"
         android:fontFamily="@font/jannalt_regular"
         android:text="@string/hint3_4"

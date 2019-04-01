@@ -47,7 +47,7 @@ public class thirdlevel_24 extends AppCompatActivity {
         });
 
 
-        ImageView help1=(ImageView)findViewById(R.id.help3);
+        ImageView help1=(ImageView)findViewById(R.id.help2);
         help1.setOnClickListener( new ImageView.OnClickListener(){
 
             @Override

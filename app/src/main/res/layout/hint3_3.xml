@@ -2,32 +2,33 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="500dp"
+    android:layout_width="520dp"
     android:layout_height="350dp"
     android:layout_gravity="center"
-    android:layout_marginEnd="50dp"
+    android:layout_marginEnd="38dp"
     android:orientation="vertical"
     android:padding="5dp">
 
 
-    <ImageView
-        android:id="@+id/homebtn17"
-        android:layout_width="189dp"
-        android:layout_height="300dp"
+
+<ImageView
+        android:id="@+id/homebtn29"
+        android:layout_width="168dp"
+        android:layout_height="271dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="8dp"
+        android:layout_marginStart="7dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:onClick="ShowPopup"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginEnd="220dp"
+        android:layout_marginBottom="10dp"
+         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.041"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.421"
+        app:layout_constraintVertical_bias="0.645"
         app:srcCompat="@drawable/robotquiz1_2" />
+
 
     <TextView
         android:id="@+id/textView47"
@@ -46,11 +47,12 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.34" />
 
-   <TextView
+    <TextView
         android:id="@+id/textView59"
         android:layout_width="250dp"
         android:layout_height="86dp"
-        android:layout_marginStart="208dp"
+        android:layout_marginStart="228dp"
+        android:layout_marginLeft="228dp"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
         android:fontFamily="@font/jannalt_regular"
@@ -61,7 +63,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.317" />
+        app:layout_constraintVertical_bias="0.258" />
 
     <Button
         android:id="@+id/okaybtn"
@@ -80,22 +82,23 @@
         android:textSize="18dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.704"
+        app:layout_constraintHorizontal_bias="0.718"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.678" />
+        app:layout_constraintVertical_bias="0.639" />
 
     <ImageView
         android:id="@+id/imageView52"
         android:layout_width="236dp"
         android:layout_height="52dp"
-        android:layout_marginStart="212dp"
+        android:layout_marginStart="232dp"
+        android:layout_marginLeft="232dp"
         android:layout_marginTop="120dp"
         android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.094"
+        app:layout_constraintVertical_bias="0.029"
         app:srcCompat="@drawable/thirdlevel_22_hint3_3" />
 </android.support.constraint.ConstraintLayout>
 
