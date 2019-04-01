@@ -183,6 +183,48 @@ public class fourthlevel_6 extends AppCompatActivity {
                         else {
 
                             ShowPopupSolve();
+                            ////CLEARING PREFRENCES
+                            SharedPreferences preferences = getSharedPreferences("pref_fourthLevel_1", MODE_PRIVATE);
+                            SharedPreferences.Editor editor = preferences.edit();
+                            editor.clear();
+                            editor.commit();
+                            finish();
+                            ////
+                            SharedPreferences preferences2 = getSharedPreferences("fourthLevel_2", MODE_PRIVATE);
+                            SharedPreferences.Editor editor2 = preferences2.edit();
+                            editor2.clear();
+                            editor2.commit();
+                            finish();
+                            ////
+                            SharedPreferences preferences3 = getSharedPreferences("fourthlevel_3", MODE_PRIVATE);
+                            SharedPreferences.Editor editor3 = preferences3.edit();
+                            editor3.clear();
+                            editor3.commit();
+                            finish();
+                            ////
+                            SharedPreferences preferences4 = getSharedPreferences("fourthLevel_video", MODE_PRIVATE);
+                            SharedPreferences.Editor editor4 = preferences4.edit();
+                            editor4.clear();
+                            editor4.commit();
+                            finish();
+                            ////
+                            SharedPreferences preferences5 = getSharedPreferences("pref_forthlevel_4", MODE_PRIVATE);
+                            SharedPreferences.Editor editor5 = preferences5.edit();
+                            editor5.clear();
+                            editor5.commit();
+                            finish();
+                            ///////////////
+                            SharedPreferences preferences6 = getSharedPreferences("pref_forthlevel_5", MODE_PRIVATE);
+                            SharedPreferences.Editor editor6 = preferences6.edit();
+                            editor6.clear();
+                            editor6.commit();
+                            finish();
+                            /////////////////
+                            SharedPreferences preferences7 = getSharedPreferences("pref_forthlevel_6", MODE_PRIVATE);
+                            SharedPreferences.Editor editor7 = preferences7.edit();
+                            editor7.clear();
+                            editor7.commit();
+                            finish();
                         }
 
 
