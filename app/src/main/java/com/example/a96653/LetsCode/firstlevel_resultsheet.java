@@ -202,6 +202,7 @@ public class firstlevel_resultsheet extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     Intent intent=new Intent (getApplicationContext(),firstlevel_6.class);
+                    startActivity(intent);
 
                 }
 
