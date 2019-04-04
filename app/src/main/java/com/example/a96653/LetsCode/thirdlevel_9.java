@@ -21,7 +21,7 @@ public class thirdlevel_9 extends AppCompatActivity {
         setContentView(R.layout.activity_thirdlevel_9);
 
         //create MediaPLayer to play the voice
-        thirdlevel_9= MediaPlayer.create(thirdlevel_9.this,R.raw.thirdlevel_9);
+        thirdlevel_9= MediaPlayer.create(thirdlevel_9.this,R.raw.thirdlevel9);
         voice9_thirdlevel=new voice( thirdlevel_9);
         voice9_thirdlevel.play();
 
