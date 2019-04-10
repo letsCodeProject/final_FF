@@ -66,7 +66,7 @@ goButton.setVisibility(View.INVISIBLE);
             @Override
             public void onClick(View v) {
 
-                ResultBox.setText("True");
+               // ResultBox.setText("True");
                 ResultBox.setTextColor(Color.BLACK);
                 ResultBox.setTextSize(25);
                // goButton.setVisibility(View.VISIBLE);
