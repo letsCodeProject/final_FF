@@ -208,10 +208,11 @@
         app:layout_constraintTop_toTopOf="@+id/imageView72" />
     <TextView
         android:id="@+id/textView88"
-        android:layout_width="190dp"
-        android:layout_height="79dp"
+        android:layout_width="144dp"
+        android:layout_height="55dp"
         android:layout_marginStart="76dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginRight="28dp"
         android:fontFamily="@font/jannalt_regular"
         android:text="@string/try_it_yourself"
         android:textColor="@color/yellow1"
@@ -219,7 +220,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/button10"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.498" />
 
 
     <ImageView

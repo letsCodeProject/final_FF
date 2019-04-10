@@ -196,7 +196,7 @@ public class fourthlevel_6 extends AppCompatActivity {
                             editor2.commit();
                             finish();
                             ////
-                            SharedPreferences preferences3 = getSharedPreferences("fourthlevel_3", MODE_PRIVATE);
+                            SharedPreferences preferences3 = getSharedPreferences("pref_forthlevel_3", MODE_PRIVATE);
                             SharedPreferences.Editor editor3 = preferences3.edit();
                             editor3.clear();
                             editor3.commit();

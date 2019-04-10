@@ -215,6 +215,14 @@ public class fourthlevel_5 extends AppCompatActivity {
 
 
                 if(!radio1.isChecked()&&!radio2.isChecked() &&!radio3.isChecked()){
+                    SharedPreferences prefs = getSharedPreferences("pref_forthlevel_5", MODE_PRIVATE);
+                    boolean firstStart = prefs.getBoolean("firstStart", true);
+                    if (firstStart){
+                        mySqliteOpenHelper.UpdateNumOfLesson(59,"Jupiter");
+                        SharedPreferences pref = getSharedPreferences("pref_forthlevel_5", MODE_PRIVATE);
+                        SharedPreferences.Editor editor = prefs.edit();
+                        editor.putBoolean("firstStart", false);
+                        editor.apply();}
                     ShowPopupSolve();}
 
 

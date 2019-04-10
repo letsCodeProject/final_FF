@@ -1,6 +1,7 @@
 package com.example.a96653.LetsCode;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
@@ -18,6 +19,7 @@ public class fourthlevel_video extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        final MySQLliteHelper    m = new MySQLliteHelper(this);
         setContentView(R.layout.activity_fourthlevel_video);
         btn=findViewById(R.id.next);
         btn.setOnClickListener( new ImageButton.OnClickListener(){
@@ -57,6 +59,14 @@ public class fourthlevel_video extends AppCompatActivity {
         btn.setOnClickListener(new ImageButton.OnClickListener() {
             @Override
             public void onClick(View v) {
+                SharedPreferences prefs = getSharedPreferences("fourthLevel_video", MODE_PRIVATE);
+                boolean firstStart = prefs.getBoolean("firstStart", true);
+                if (firstStart){
+                    m.UpdateNumOfLesson(56,"Jupiter");
+                    SharedPreferences pref = getSharedPreferences("fourthLevel_video", MODE_PRIVATE);
+                    SharedPreferences.Editor editor = prefs.edit();
+                    editor.putBoolean("firstStart", false);
+                    editor.apply();}
                 Intent next=new Intent(getApplicationContext(),fourthlevel_3.class);
                 startActivity(next);
 
