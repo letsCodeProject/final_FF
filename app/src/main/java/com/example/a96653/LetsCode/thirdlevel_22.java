@@ -496,7 +496,6 @@ public class thirdlevel_22 extends AppCompatActivity {
     }
     public void btnHome(View view) {
 
-
         Intent HomePage=new Intent(getApplicationContext(),MainActivity.class);
         startActivity(HomePage);
 
