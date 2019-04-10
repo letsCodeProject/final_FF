@@ -1,6 +1,7 @@
 package com.example.a96653.LetsCode;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -31,6 +32,15 @@ public class thirdlevel_18feedback extends AppCompatActivity {
         next_thirdlevel_.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                SharedPreferences prefs = getSharedPreferences("pref_thirdLevel_18", MODE_PRIVATE);
+                boolean firstStart = prefs.getBoolean("firstStart", true);
+                if (firstStart){
+                    mySqliteOpenHelper.UpdateNumOfLesson(46,"Saturn");
+                    SharedPreferences pref = getSharedPreferences("pref_thirdLevel_18", MODE_PRIVATE);
+                    SharedPreferences.Editor editor = prefs.edit();
+                    editor.putBoolean("firstStart", false);
+                    editor.apply();}
+
                 openSecondActivity();
             }
         });

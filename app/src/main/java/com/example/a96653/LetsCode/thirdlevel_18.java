@@ -69,9 +69,8 @@ goButton.setVisibility(View.INVISIBLE);
                 ResultBox.setText("True");
                 ResultBox.setTextColor(Color.BLACK);
                 ResultBox.setTextSize(25);
-
-                goButton.setVisibility(View.VISIBLE);
-
+               // goButton.setVisibility(View.VISIBLE);
+                openSecondActivity();
             }
         });
 
