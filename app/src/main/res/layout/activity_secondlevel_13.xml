@@ -6,10 +6,11 @@
     android:layout_height="match_parent"
     android:background="@drawable/back"
     tools:context=".secondlevel_13_feedback">
+
     <ImageView
         android:id="@+id/imageView72"
         android:layout_width="match_parent"
-        android:layout_height="368dp"
+        android:layout_height="372dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
@@ -37,16 +38,22 @@
     <ImageView
         android:id="@+id/next_13"
         android:layout_width="85dp"
-        android:layout_height="38dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="291dp"
+        android:layout_marginStart="503dp"
+
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="478dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginTop="279dp"
+        android:layout_marginBottom="5dp"
+        android:layout_alignParentRight="true"
+
+        android:layout_marginLeft="503dp"
         android:contentDescription="@string/desc"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/newnext" />
+        app:srcCompat="@drawable/newnext"
+
+        />
 
 
 
@@ -89,22 +96,25 @@
 
         android:id="@+id/previous_seconlevel_13"
         android:layout_width="85dp"
-        android:layout_height="38dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="290dp"
+        android:layout_marginEnd="503dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
 
-
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
+
+        android:layout_marginBottom="5dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.013"
+
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.963"
-        app:srcCompat="@drawable/newpre" />
+
+        app:srcCompat="@drawable/newpre"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="503dp"
+        android:layout_marginLeft="8dp" />
 
     <TextView
         android:id="@+id/ResultBox_secondlevel_13"

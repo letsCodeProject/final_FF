@@ -39,28 +39,31 @@
 
     <ImageView
         android:id="@+id/imageView24"
-        android:layout_width="81dp"
-        android:layout_height="53dp"
+        android:layout_width="85dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="290dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="497dp"
+        android:layout_marginEnd="503dp"
         android:layout_marginBottom="5dp"
         app:srcCompat="@drawable/newpre"
 
-        />
+        android:layout_marginRight="503dp"
+        android:layout_alignParentRight="true" />
 
     <ImageView
         android:id="@+id/imageView30"
-        android:layout_width="113dp"
-        android:layout_height="40dp"
+        android:layout_width="85dp"
+        android:layout_height="35dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="0dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginTop="290dp"
+        android:layout_marginBottom="5dp"
         android:contentDescription="@string/desc"
         app:srcCompat="@drawable/newnext"
-
-        />
+        android:layout_marginStart="8dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="8dp" />
 
     <ImageView
         android:id="@+id/imageView27"
@@ -72,7 +75,9 @@
         android:layout_marginStart="0dp"
         android:layout_marginTop="17dp"
         android:layout_marginBottom="64dp"
-        app:srcCompat="@drawable/welcome_robot6" />
+        app:srcCompat="@drawable/welcome_robot6"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="0dp" />
 
 
     <ImageView

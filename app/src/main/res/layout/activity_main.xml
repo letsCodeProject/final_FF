@@ -9,9 +9,24 @@
     tools:context=".MainActivity" android:screenOrientation="landscape" >
 
 
-
-
-
+    <ImageView
+        android:id="@+id/imageView139"
+        android:layout_width="34dp"
+        android:layout_height="34dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="306dp"
+        android:layout_marginRight="306dp"
+        android:layout_marginBottom="8dp"
+        android:src="@drawable/diamond22"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.902"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.008" />
 
     <ImageView
         android:id="@+id/imageView8"
@@ -277,16 +292,6 @@
         app:srcCompat="@drawable/n4" />
 
     <ImageView
-        android:id="@+id/imageView10"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/imageView9"
-        android:layout_marginStart="0dp"
-        android:layout_marginBottom="-72dp"
-        android:layout_toEndOf="@+id/imageView17"
-        android:contentDescription="@string/desc"
-        app:srcCompat="@drawable/n3" />
-    <ImageView
         android:id="@+id/imageView17"
         android:layout_width="175dp"
         android:layout_height="92dp"
@@ -372,6 +377,16 @@
         android:layout_marginStart="495dp"
         android:layout_marginTop="36dp"
         app:srcCompat="@drawable/labebonearth" />
+
+    <ImageView
+        android:id="@+id/Previous"
+        android:layout_width="85dp"
+        android:layout_height="35dp"
+        android:layout_marginEnd="503dp"
+        android:layout_marginBottom="5dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="290dp"
+        app:srcCompat="@drawable/newpre" />
 
 
 </RelativeLayout>

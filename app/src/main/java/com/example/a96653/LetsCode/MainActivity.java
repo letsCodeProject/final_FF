@@ -206,6 +206,22 @@ public class MainActivity extends AppCompatActivity {
         } //END IF
 
 
+        ImageView pre=(ImageView)findViewById(R.id.Previous);
+
+        pre.setOnClickListener( new ImageView.OnClickListener(){
+
+
+            public void onClick(View v) {
+
+
+                startActivity(  new Intent(getApplicationContext(),welcome_7.class));
+
+            }
+        });
+
+
+
+
 
 
     }//END ONcreate
@@ -313,7 +329,8 @@ public class MainActivity extends AppCompatActivity {
         Class c;
         try{
             Intent  intent = new Intent(this,certificate.class);
-            startActivity(intent);}
+            startActivity(intent);
+        }
         catch (Exception e){e.printStackTrace();}
 
     }

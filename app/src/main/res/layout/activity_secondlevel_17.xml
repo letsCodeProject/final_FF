@@ -94,30 +94,18 @@
         app:layout_constraintVertical_bias="0.575" />
 
 
-
-
-
-
-
-
     <ImageView
 
         android:id="@+id/previous_seconlevel_17"
         android:layout_width="85dp"
-        android:layout_height="38dp"
+        android:layout_height="35dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:onClick="previous"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="336dp"
+        android:layout_marginEnd="580dp"
+        android:layout_marginBottom="5dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.013"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.963"
         app:srcCompat="@drawable/newpre" />
 
     <ImageButton

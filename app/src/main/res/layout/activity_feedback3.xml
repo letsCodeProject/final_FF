@@ -125,24 +125,31 @@
 
     <ImageView
         android:id="@+id/imageView41"
-        android:layout_width="98dp"
-        android:layout_height="45dp"
+        android:layout_width="85dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="290dp"
+        android:layout_marginStart="8dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="0dp"
-        android:layout_marginBottom="10dp"
+
+        android:layout_marginBottom="5dp"
         android:contentDescription="@string/desc"
-        app:srcCompat="@drawable/newnext" />
+        app:srcCompat="@drawable/newnext"
+        android:layout_marginLeft="8dp"
+        android:layout_alignParentRight="true" />
 
     <ImageView
 
         android:id="@+id/imageView40"
-        android:layout_width="124dp"
-        android:layout_height="41dp"
+        android:layout_width="85dp"
+        android:layout_height="35dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="485dp"
-        android:layout_marginBottom="11dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="290dp"
+        android:layout_marginEnd="503dp"
+        android:layout_marginRight="503dp"
+        android:layout_marginBottom="5dp"
         app:srcCompat="@drawable/newpre" />
 
 

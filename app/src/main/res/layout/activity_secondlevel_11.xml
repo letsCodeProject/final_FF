@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/back"
     tools:context=".secondlevel_11">
+
     <ImageView
         android:id="@+id/imageView72"
         android:layout_width="match_parent"
@@ -37,6 +38,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.928"
         app:srcCompat="@drawable/newnepton" />" />
+
     <ImageButton
         android:id="@+id/homebtn_secondlevel11"
         android:layout_width="54dp"
@@ -50,11 +52,11 @@
         app:layout_constraintEnd_toStartOf="@+id/imageView77"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintVertical_bias="0.0"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/h" />
 
-   <TextView
+    <TextView
         android:id="@+id/ScoreBox_secondlevel_11"
         android:layout_width="43dp"
         android:layout_height="31dp"
@@ -104,14 +106,18 @@
 
         android:id="@+id/previous_seconlevel_11"
         android:layout_width="85dp"
-        android:layout_height="38dp"
+        android:layout_height="35dp"
+
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginTop="240dp"
-        android:layout_marginEnd="112dp"
-        app:layout_constraintEnd_toEndOf="@+id/imageView59"
-        app:layout_constraintTop_toBottomOf="@+id/homebtn_secondlevel11"
-        app:srcCompat="@drawable/newpre" />
+        android:layout_marginTop="290dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginEnd="503dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/newpre"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="503dp" />
 
     <ImageView
         android:id="@+id/imageView77"
@@ -129,22 +135,22 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
+
     <ImageView
 
         android:id="@+id/next_11"
         android:layout_width="85dp"
-        android:layout_height="38dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="16dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="290dp"
+
+
         android:contentDescription="@string/desc"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.984"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@drawable/newnext" />
+        app:srcCompat="@drawable/newnext"
+        android:layout_marginLeft="8dp" />
+
     <TextView
         android:id="@+id/textView6_secondlevel_11"
         android:layout_width="574dp"
@@ -179,6 +185,7 @@
         app:layout_constraintTop_toBottomOf="@+id/homebtn_secondlevel11"
         app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/robotwelcome_5" />
+
     <ImageView
         android:id="@+id/soundOn_secondlevel_11"
         android:layout_width="40dp"

@@ -23,10 +23,11 @@
 
     <RadioButton
         android:id="@+id/radio3"
-        android:layout_width="86dp"
+        android:layout_width="45dp"
         android:layout_height="28dp"
         android:layout_marginTop="240dp"
-        android:layout_marginEnd="272dp"
+        android:layout_marginEnd="280dp"
+        android:layout_marginRight="280dp"
         android:layout_weight="0.5"
         android:backgroundTint="@color/white"
         android:buttonTint="@color/white"
@@ -68,12 +69,11 @@
 
         android:id="@+id/next"
         android:layout_width="85dp"
-        android:layout_height="38dp"
+        android:layout_height="35dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginTop="292dp"
-        android:layout_marginEnd="16dp"
-
+        android:layout_marginTop="290dp"
+        android:layout_marginBottom="5dp"
         android:contentDescription="@string/desc"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -97,10 +97,11 @@
 
 
         android:id="@+id/choiceTwo"
-        android:layout_width="92dp"
-        android:layout_height="31dp"
+        android:layout_width="60dp"
+        android:layout_height="29dp"
         android:layout_marginTop="240dp"
-        android:layout_marginEnd="228dp"
+        android:layout_marginEnd="212dp"
+        android:layout_marginRight="212dp"
         android:background="@drawable/choiceshapee"
         android:scaleType="fitCenter"
         app:layout_constraintEnd_toEndOf="parent"
@@ -176,10 +177,11 @@
 
     <RadioButton
         android:id="@+id/radio1"
-        android:layout_width="86dp"
-        android:layout_height="28dp"
+        android:layout_width="39dp"
+        android:layout_height="24dp"
         android:layout_marginTop="244dp"
-        android:layout_marginEnd="4dp"
+        android:layout_marginEnd="56dp"
+        android:layout_marginRight="56dp"
         android:layout_weight="0.5"
         android:backgroundTint="@color/white"
         android:buttonTint="@color/white"
@@ -189,12 +191,13 @@
 
     <RadioButton
         android:id="@+id/radio2"
-        android:layout_width="89dp"
-        android:layout_height="26dp"
+        android:layout_width="45dp"
+        android:layout_height="23dp"
 
 
-        android:layout_marginTop="244dp"
-        android:layout_marginEnd="132dp"
+        android:layout_marginTop="243dp"
+        android:layout_marginEnd="164dp"
+        android:layout_marginRight="164dp"
         android:layout_weight="0.5"
         android:backgroundTint="@color/white"
         android:buttonTint="@color/white"
@@ -208,8 +211,8 @@
 
 
         android:id="@+id/choiceOne"
-        android:layout_width="82dp"
-        android:layout_height="31dp"
+        android:layout_width="60dp"
+        android:layout_height="29dp"
         android:layout_marginTop="240dp"
         android:layout_marginEnd="96dp"
         android:background="@drawable/choiceshapee"
@@ -221,10 +224,11 @@
 
 
         android:id="@+id/choiceThree"
-        android:layout_width="82dp"
-        android:layout_height="31dp"
+        android:layout_width="60dp"
+        android:layout_height="29dp"
         android:layout_marginTop="240dp"
-        android:layout_marginEnd="356dp"
+        android:layout_marginEnd="328dp"
+        android:layout_marginRight="328dp"
         android:background="@drawable/choiceshapee"
         android:scaleType="fitCenter"
         app:layout_constraintEnd_toEndOf="parent"
@@ -235,7 +239,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="244dp"
-        android:layout_marginEnd="132dp"
+        android:layout_marginEnd="124dp"
+        android:layout_marginRight="124dp"
         android:text="4"
         android:textColor="@color/black"
         android:textStyle="bold"
@@ -246,7 +251,8 @@
         android:id="@+id/textView105"
         android:layout_width="42dp"
         android:layout_height="20dp"
-        android:layout_marginStart="304dp"
+        android:layout_marginStart="344dp"
+        android:layout_marginLeft="344dp"
         android:layout_marginTop="244dp"
         android:text="3"
         android:textColor="@color/black"
@@ -258,8 +264,9 @@
         android:id="@+id/textView113"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="192dp"
-        android:layout_marginTop="248dp"
+        android:layout_marginStart="228dp"
+        android:layout_marginLeft="228dp"
+        android:layout_marginTop="244dp"
         android:text="1"
         android:textColor="@color/black"
         android:textStyle="bold"
@@ -270,7 +277,7 @@
     <ImageView
         android:id="@+id/imageView103"
         android:layout_width="383dp"
-        android:layout_height="159dp"
+        android:layout_height="163dp"
 
         android:layout_marginTop="96dp"
         android:layout_marginEnd="40dp"
@@ -279,15 +286,15 @@
         app:srcCompat="@drawable/fourthlevel_5_compiler" />
 
     <ImageView
-        android:id="@+id/imageView104"
-        android:layout_width="49dp"
-        android:layout_height="24dp"
-        android:layout_marginTop="132dp"
-        android:layout_marginEnd="308dp"
-        android:background="@drawable/custom_button"
+        android:id="@+id/imageView115"
+        android:layout_width="162dp"
+        android:layout_height="63dp"
+        android:layout_marginTop="112dp"
+        android:layout_marginEnd="192dp"
+        android:layout_marginRight="192dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/custom_hint" />
+        app:srcCompat="@drawable/choiceshape" />
 
 
 </android.support.constraint.ConstraintLayout>

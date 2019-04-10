@@ -10,7 +10,7 @@
     <ImageView
         android:id="@+id/imageView72"
         android:layout_width="match_parent"
-        android:layout_height="368dp"
+        android:layout_height="374dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
@@ -35,7 +35,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
-        android:onClick="ShowPopup"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.032"
@@ -66,11 +66,11 @@
 
 
         android:id="@+id/choiceTwo"
-        android:layout_width="64dp"
-        android:layout_height="33dp"
-        android:layout_marginStart="324dp"
-        android:layout_marginLeft="324dp"
-        android:layout_marginBottom="4dp"
+        android:layout_width="63dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="368dp"
+        android:layout_marginLeft="368dp"
+        android:layout_marginBottom="40dp"
         android:background="@drawable/choiceshapee"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -81,11 +81,11 @@
 
 
         android:id="@+id/choiceThree"
-        android:layout_width="62dp"
-        android:layout_height="33dp"
-        android:layout_marginStart="180dp"
-        android:layout_marginLeft="180dp"
-        android:layout_marginBottom="56dp"
+        android:layout_width="63dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="224dp"
+        android:layout_marginLeft="224dp"
+        android:layout_marginBottom="88dp"
         android:background="@drawable/choiceshapee"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -222,11 +222,11 @@
 
     <RadioButton
         android:id="@+id/radio1"
-        android:layout_width="144dp"
-        android:layout_height="31dp"
-        android:layout_marginStart="404dp"
-        android:layout_marginLeft="404dp"
-        android:layout_marginTop="248dp"
+        android:layout_width="40dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="432dp"
+        android:layout_marginLeft="432dp"
+        android:layout_marginTop="216dp"
         android:layout_weight="0.5"
         android:backgroundTint="@color/white"
         android:buttonTint="@color/white"
@@ -236,13 +236,13 @@
 
     <RadioButton
         android:id="@+id/radio2"
-        android:layout_width="103dp"
-        android:layout_height="0dp"
+        android:layout_width="37dp"
+        android:layout_height="24dp"
 
 
-        android:layout_marginStart="404dp"
-        android:layout_marginLeft="404dp"
-        android:layout_marginTop="296dp"
+        android:layout_marginStart="432dp"
+        android:layout_marginLeft="432dp"
+        android:layout_marginTop="264dp"
         android:layout_weight="0.5"
         android:backgroundTint="@color/white"
         android:buttonTint="@color/white"
@@ -254,11 +254,11 @@
 
     <RadioButton
         android:id="@+id/radio3"
-        android:layout_width="150dp"
-        android:layout_height="31dp"
-        android:layout_marginTop="244dp"
-        android:layout_marginEnd="192dp"
-        android:layout_marginRight="192dp"
+        android:layout_width="40dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="216dp"
+        android:layout_marginEnd="264dp"
+        android:layout_marginRight="264dp"
         android:layout_weight="0.5"
         android:backgroundTint="@color/white"
         android:buttonTint="@color/white"
@@ -268,14 +268,14 @@
 
     <RadioButton
         android:id="@+id/radio4"
-        android:layout_width="93dp"
-        android:layout_height="32dp"
+        android:layout_width="42dp"
+        android:layout_height="29dp"
 
-        android:layout_marginTop="300dp"
+        android:layout_marginTop="260dp"
 
 
-        android:layout_marginEnd="252dp"
-        android:layout_marginRight="252dp"
+        android:layout_marginEnd="260dp"
+        android:layout_marginRight="260dp"
         android:layout_weight="0.5"
         android:backgroundTint="@color/white"
         android:buttonTint="@color/white"
@@ -291,9 +291,9 @@
         android:id="@+id/choiceOne"
         android:layout_width="63dp"
         android:layout_height="35dp"
-        android:layout_marginStart="324dp"
-        android:layout_marginLeft="324dp"
-        android:layout_marginBottom="56dp"
+        android:layout_marginStart="368dp"
+        android:layout_marginLeft="368dp"
+        android:layout_marginBottom="88dp"
         android:background="@drawable/choiceshapee"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -303,11 +303,11 @@
 
 
         android:id="@+id/choiceFour"
-        android:layout_width="62dp"
-        android:layout_height="34dp"
-        android:layout_marginStart="180dp"
-        android:layout_marginLeft="180dp"
-        android:layout_marginBottom="4dp"
+        android:layout_width="63dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="224dp"
+        android:layout_marginLeft="224dp"
+        android:layout_marginBottom="40dp"
         android:background="@drawable/choiceshapee"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -317,8 +317,8 @@
         android:id="@+id/textView53"
         android:layout_width="33dp"
         android:layout_height="25dp"
-        android:layout_marginStart="344dp"
-        android:layout_marginLeft="344dp"
+        android:layout_marginStart="388dp"
+        android:layout_marginLeft="388dp"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
         android:text="10"
@@ -326,15 +326,15 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.823" />
+        app:layout_constraintVertical_bias="0.721" />
 
     <TextView
         android:id="@+id/textView61"
-        android:layout_width="74dp"
-        android:layout_height="27dp"
-        android:layout_marginStart="344dp"
-        android:layout_marginLeft="344dp"
-        android:layout_marginTop="304dp"
+        android:layout_width="35dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="388dp"
+        android:layout_marginLeft="388dp"
+        android:layout_marginTop="268dp"
         android:text="12"
         android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="parent"
@@ -342,10 +342,10 @@
 
     <TextView
         android:id="@+id/textView62"
-        android:layout_width="46dp"
-        android:layout_height="27dp"
-        android:layout_marginStart="204dp"
-        android:layout_marginLeft="204dp"
+        android:layout_width="38dp"
+        android:layout_height="19dp"
+        android:layout_marginStart="248dp"
+        android:layout_marginLeft="248dp"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
         android:text="Z"
@@ -353,15 +353,15 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.845" />
+        app:layout_constraintVertical_bias="0.706" />
 
     <TextView
         android:id="@+id/textView63"
-        android:layout_width="84dp"
-        android:layout_height="31dp"
-        android:layout_marginStart="148dp"
-        android:layout_marginLeft="148dp"
-        android:layout_marginTop="300dp"
+        android:layout_width="69dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="200dp"
+        android:layout_marginLeft="200dp"
+        android:layout_marginTop="264dp"
         android:text="لا شيْ"
         android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="parent"
@@ -371,23 +371,23 @@
 
         android:id="@+id/next"
         android:layout_width="85dp"
-        android:layout_height="38dp"
+        android:layout_height="35dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
+        android:layout_marginTop="290dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="5dp"
         android:contentDescription="@string/desc"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.986"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.975"
+
         app:srcCompat="@drawable/newnext"
 
-        />
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="8dp" />
 
 </android.support.constraint.ConstraintLayout>
 

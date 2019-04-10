@@ -87,12 +87,12 @@
 
         android:id="@+id/nextquiz3_"
         android:layout_width="85dp"
-        android:layout_height="38dp"
+        android:layout_height="35dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginTop="292dp"
-        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="5dp"
 
+        android:layout_marginTop="290dp"
         android:contentDescription="@string/desc"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -118,8 +118,9 @@
         android:id="@+id/choiceTwo"
         android:layout_width="92dp"
         android:layout_height="33dp"
-        android:layout_marginTop="236dp"
-        android:layout_marginEnd="324dp"
+        android:layout_marginTop="224dp"
+        android:layout_marginEnd="304dp"
+        android:layout_marginRight="304dp"
         android:background="@drawable/choiceshapee"
         android:scaleType="fitCenter"
         app:layout_constraintEnd_toEndOf="parent"
@@ -194,10 +195,11 @@
 
     <RadioButton
         android:id="@+id/radio1"
-        android:layout_width="144dp"
-        android:layout_height="26dp"
-        android:layout_marginTop="244dp"
-        android:layout_marginEnd="16dp"
+        android:layout_width="47dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="228dp"
+        android:layout_marginEnd="80dp"
+        android:layout_marginRight="80dp"
         android:layout_weight="0.5"
         android:backgroundTint="@color/white"
         android:buttonTint="@color/white"
@@ -207,11 +209,13 @@
 
     <RadioButton
         android:id="@+id/radio2"
-        android:layout_width="89dp"
+        android:layout_width="47dp"
         android:layout_height="26dp"
 
 
-        android:layout_marginTop="244dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="228dp"
         android:layout_marginEnd="220dp"
         android:layout_weight="0.5"
         android:backgroundTint="@color/white"
@@ -219,6 +223,8 @@
         android:shadowColor="@color/white"
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.883"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
 
@@ -226,10 +232,11 @@
 
 
         android:id="@+id/choiceOne"
-        android:layout_width="82dp"
-        android:layout_height="31dp"
-        android:layout_marginTop="240dp"
-        android:layout_marginEnd="172dp"
+        android:layout_width="92dp"
+        android:layout_height="33dp"
+        android:layout_marginTop="224dp"
+        android:layout_marginEnd="128dp"
+        android:layout_marginRight="128dp"
         android:background="@drawable/choiceshapee"
         android:scaleType="fitCenter"
         app:layout_constraintEnd_toEndOf="parent"
@@ -239,8 +246,9 @@
         android:id="@+id/textView104"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="244dp"
-        android:layout_marginEnd="200dp"
+        android:layout_marginTop="228dp"
+        android:layout_marginEnd="164dp"
+        android:layout_marginRight="164dp"
         android:text="True"
         android:textColor="@color/black"
         android:textStyle="bold"
@@ -251,8 +259,9 @@
         android:id="@+id/textView105"
         android:layout_width="42dp"
         android:layout_height="20dp"
-        android:layout_marginTop="244dp"
-        android:layout_marginEnd="348dp"
+        android:layout_marginTop="228dp"
+        android:layout_marginEnd="324dp"
+        android:layout_marginRight="324dp"
         android:text="False"
         android:textColor="@color/black"
         android:textStyle="bold"

@@ -9,6 +9,7 @@
     tools:context=".thirdlevel_21"
 
     >
+
     <ImageView
         android:id="@+id/imageView58"
         android:layout_width="match_parent"
@@ -24,7 +25,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.51" />
 
     <ImageView
         android:id="@+id/help2"
@@ -41,11 +42,11 @@
 
         android:id="@+id/next"
         android:layout_width="85dp"
-        android:layout_height="38dp"
+        android:layout_height="35dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginTop="292dp"
-        android:layout_marginEnd="16dp"
+        android:layout_marginTop="290dp"
+        android:layout_marginBottom="5dp"
 
         android:contentDescription="@string/desc"
         app:layout_constraintEnd_toEndOf="parent"
@@ -197,9 +198,9 @@
         android:id="@+id/radio1"
         android:layout_width="47dp"
         android:layout_height="24dp"
-        android:layout_marginTop="228dp"
-        android:layout_marginEnd="92dp"
-        android:layout_marginRight="92dp"
+        android:layout_marginTop="224dp"
+        android:layout_marginEnd="108dp"
+        android:layout_marginRight="108dp"
         android:layout_weight="0.5"
         android:backgroundTint="@color/white"
         android:buttonTint="@color/white"
@@ -209,13 +210,13 @@
 
     <RadioButton
         android:id="@+id/radio2"
-        android:layout_width="55dp"
-        android:layout_height="25dp"
+        android:layout_width="47dp"
+        android:layout_height="24dp"
 
 
-        android:layout_marginTop="272dp"
-        android:layout_marginEnd="84dp"
-        android:layout_marginRight="84dp"
+        android:layout_marginTop="276dp"
+        android:layout_marginEnd="108dp"
+        android:layout_marginRight="108dp"
         android:layout_weight="0.5"
         android:backgroundTint="@color/white"
         android:buttonTint="@color/white"
@@ -227,25 +228,28 @@
 
     <RadioButton
         android:id="@+id/radio3"
-        android:layout_width="49dp"
+        android:layout_width="47dp"
         android:layout_height="24dp"
-        android:layout_marginTop="228dp"
-        android:layout_marginEnd="268dp"
-        android:layout_marginRight="268dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="276dp"
+        android:layout_marginRight="276dp"
+        android:layout_marginBottom="8dp"
         android:layout_weight="0.5"
         android:backgroundTint="@color/white"
         android:buttonTint="@color/white"
         android:shadowColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.732" />
 
     <RadioButton
         android:id="@+id/radio4"
-        android:layout_width="49dp"
+        android:layout_width="34dp"
         android:layout_height="23dp"
-        android:layout_marginTop="272dp"
-        android:layout_marginEnd="268dp"
-        android:layout_marginRight="268dp"
+        android:layout_marginTop="276dp"
+        android:layout_marginEnd="292dp"
+        android:layout_marginRight="292dp"
         android:layout_weight="0.5"
         android:backgroundTint="@color/white"
         android:buttonTint="@color/white"
@@ -310,8 +314,8 @@
         android:layout_width="89dp"
         android:layout_height="24dp"
         android:layout_marginTop="280dp"
-        android:layout_marginEnd="156dp"
-        android:layout_marginRight="156dp"
+        android:layout_marginEnd="164dp"
+        android:layout_marginRight="164dp"
         android:text="العددان متساويان"
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"

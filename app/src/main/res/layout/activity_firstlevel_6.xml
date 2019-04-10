@@ -32,8 +32,8 @@
         android:layout_width="43dp"
         android:layout_height="31dp"
         android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
         android:layout_marginTop="14dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
@@ -46,7 +46,6 @@
 
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
-
 
 
     <ImageView
@@ -95,9 +94,9 @@
     <ImageView
 
         android:id="@+id/choiceTwo"
-        android:layout_width="285dp"
-        android:layout_height="37dp"
-        android:layout_marginStart="218dp"
+        android:layout_width="269dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="228dp"
         android:layout_marginTop="236dp"
         android:background="@drawable/choiceshapee"
         android:scaleType="fitCenter"
@@ -138,7 +137,8 @@
         android:id="@+id/textView51"
         android:layout_width="138dp"
         android:layout_height="75dp"
-        android:layout_marginStart="304dp"
+        android:layout_marginStart="284dp"
+        android:layout_marginLeft="284dp"
         android:layout_marginTop="154dp"
         android:text="@string/answer1"
         android:textColor="@android:color/black"
@@ -146,14 +146,15 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.205" />
+        app:layout_constraintVertical_bias="0.179" />
 
     <TextView
         android:id="@+id/textView52"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="332dp"
-        android:layout_marginTop="236dp"
+        android:layout_marginStart="312dp"
+        android:layout_marginLeft="312dp"
+        android:layout_marginTop="248dp"
         android:text="@string/answer2"
         android:textColor="@android:color/black"
         android:textSize="20sp"
@@ -163,33 +164,31 @@
     <ImageView
 
         android:id="@+id/next2"
-        android:layout_width="128dp"
-        android:layout_height="51dp"
-        android:layout_marginStart="460dp"
-        android:layout_marginTop="284dp"
+        android:layout_width="85dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="290dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="5dp"
+
+        android:layout_marginLeft="8dp"
         android:contentDescription="@string/desc"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/newnext" />
 
 
-
-
-
-
     <RadioGroup
         android:id="@+id/group"
-        android:layout_width="125dp"
-        android:layout_height="138dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="550dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="48dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        android:layout_width="77dp"
+        android:layout_height="118dp"
+
+
+        android:layout_marginStart="507dp"
+        android:layout_marginLeft="507dp"
+        android:layout_marginTop="150dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
 
         <RadioButton
             android:id="@+id/radio_one"
@@ -202,7 +201,6 @@
 
             android:shadowColor="@color/white"
             android:textColorHint="@color/light_font" />
-
 
         <RadioButton
             android:id="@+id/radio_two"
@@ -221,7 +219,6 @@
 
 
     </RadioGroup>
-
 
 
     <TextView

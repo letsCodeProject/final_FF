@@ -25,26 +25,31 @@
 
     <ImageView
         android:id="@+id/imageView24"
-        android:layout_width="112dp"
-        android:layout_height="47dp"
+        android:layout_width="85dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="290dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_marginEnd="503dp"
-        android:layout_marginBottom="0dp"
+        android:layout_marginBottom="5dp"
         app:srcCompat="@drawable/newpre"
 
-        />
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="503dp" />
 
     <ImageView
         android:id="@+id/imageView25"
-        android:layout_width="94dp"
-        android:layout_height="41dp"
+        android:layout_width="85dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="290dp"
+        android:layout_marginStart="8dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="0dp"
-        android:layout_marginBottom="7dp"
+        android:layout_marginBottom="5dp"
         android:contentDescription="@string/desc"
-        app:srcCompat="@drawable/newnext" />
+        app:srcCompat="@drawable/newnext"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="8dp" />
 
     <ImageView
         android:id="@+id/imageView16"
