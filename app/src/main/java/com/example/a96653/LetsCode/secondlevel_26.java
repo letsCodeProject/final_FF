@@ -21,7 +21,7 @@ public class secondlevel_26 extends AppCompatActivity {
 
     public static MySQLliteHelper sqLiteHelper;
     TextView target1,target2,target3,textviewX,textviewY,textviewSum,pinX,pinY,pinSum;
-    int  res1=0,res2=0,res3=0 ,result, CHECK=0,tt1,tt2,tt3;
+    int  res1=0,res2=0,res3=0 ,result, CHECK=0,tt1,tt2,tt3,tt6,tt4,tt5;
     static int questionResult,tg1=0,tg2=0,tg3=0;
     static TextView x1,x2,x3;
     static View vt1 ,vt2,vt3;
@@ -78,10 +78,14 @@ public class secondlevel_26 extends AppCompatActivity {
                 new ImageView.OnClickListener(){
                     public void onClick(View v){
 
-                        tt1=0;tt2=0;tt3=0;
+                        tt1=0;tt2=0;tt3=0;tt4=0;tt5=0;tt6=0;
                         if(textviewX.getX()==target1.getX())  tt1=1;
                         if(textviewX.getX()==target2.getX())  tt1=1;
                         if(textviewX.getX()==target3.getX())  tt1=1;
+
+                        if(textviewX.getY()==target1.getY())  tt4=1;
+                        if(textviewX.getY()==target2.getY())  tt4=1;
+                        if(textviewX.getY()==target3.getY())  tt4=1;
 
 
                         if(textviewY.getX()==target1.getX())  tt3=1;
@@ -89,15 +93,22 @@ public class secondlevel_26 extends AppCompatActivity {
                         if(textviewY.getX()==target3.getX())  tt3=1;
 
 
+                        if(textviewY.getY()==target1.getY())  tt5=1;
+                        if(textviewY.getY()==target2.getY())  tt5=1;
+                        if(textviewY.getY()==target3.getY())  tt5=1;
+
+
                         if(textviewSum.getX()==target1.getX())  tt2=1;
                         if(textviewSum.getX()==target2.getX())  tt2=1;
                         if(textviewSum.getX()==target3.getX())  tt2=1;
 
-
+                        if(textviewSum.getY()==target1.getY())  tt6=1;
+                        if(textviewSum.getY()==target2.getY())  tt6=1;
+                        if(textviewSum.getY()==target3.getY())  tt6=1;
                         result=res1+res2+res3;
 
-                        CHECK=tt1+tt2+tt3;
-                        if(CHECK==3){
+                        CHECK=tt1+tt2+tt3+tt4+tt5+tt6;
+                        if(CHECK==6){
 
                             SharedPreferences prefs = getSharedPreferences("pref_secondlevel_26", MODE_PRIVATE);
                             boolean firstStart = prefs.getBoolean("firstStart", true);

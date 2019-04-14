@@ -24,6 +24,20 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
 
+    <TextView
+        android:id="@+id/textView124"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="236dp"
+        android:layout_marginLeft="236dp"
+        android:layout_marginTop="124dp"
+        android:fontFamily="@font/jannalt_regular"
+        android:text="@string/tryit"
+        android:textColor="@color/yellow1"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <ImageButton
         android:id="@+id/next_16"
         android:layout_width="85dp"
@@ -229,18 +243,15 @@
         android:id="@+id/textView83"
         android:layout_width="wrap_content"
         android:layout_height="52dp"
-        android:layout_marginStart="412dp"
-        android:layout_marginLeft="412dp"
-        android:layout_marginTop="105dp"
-        android:layout_marginBottom="203dp"
+        android:layout_marginStart="420dp"
+        android:layout_marginLeft="420dp"
+        android:layout_marginBottom="220dp"
         android:fontFamily="@font/jannalt_regular"
         android:text="@string/secondlevel_16_5"
         android:textColor="@color/light_font"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.68" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/textView84"
@@ -302,8 +313,8 @@
         android:id="@+id/textView88"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="472dp"
-        android:layout_marginLeft="472dp"
+        android:layout_marginStart="464dp"
+        android:layout_marginLeft="464dp"
         android:layout_marginTop="116dp"
         android:fontFamily="@font/jannalt_regular"
         android:text="@string/secondlevel_16_4"
@@ -330,8 +341,9 @@
         android:id="@+id/imageView76"
         android:layout_width="350dp"
         android:layout_height="54dp"
-        android:layout_marginStart="96dp"
-        android:layout_marginTop="160dp"
+        android:layout_marginStart="112dp"
+        android:layout_marginLeft="112dp"
+        android:layout_marginTop="168dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/secondlevel_16_compiler" />

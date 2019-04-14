@@ -19,7 +19,7 @@ import android.widget.Toast;
 public class secondlevel_20 extends AppCompatActivity {
     public  static  MySQLliteHelper sqLiteHelper;
     TextView target1,target2,target3,textviewX,textview18,textviewEqual,pinX,pin18,pinEqual;
-    int  res1=0,res2=0,res3=0 ,result, CHECK=0,tt1,tt2,tt3;
+    int  res1=0,res2=0,res3=0 ,result, CHECK=0,tt1,tt2,tt3,tt6,tt4,tt5;
     static int questionResult,tg1=0,tg2=0,tg3=0;
     static TextView x1,x2,x3;
     static View vt1 ,vt2,vt3;
@@ -75,24 +75,38 @@ public class secondlevel_20 extends AppCompatActivity {
 
 //___________ Ensure all of the Blocks are in place
 //________________ Ensure Block X is being placed in one of 3 targets .
-                        tt1=0;tt2=0;tt3=0;
+                        tt1=0;tt2=0;tt3=0;tt4=0;tt5=0;tt6=0;
                         if(textviewX.getX()==target1.getX())  tt1=1;
                         if(textviewX.getX()==target2.getX())  tt1=1;
                         if(textviewX.getX()==target3.getX())  tt1=1;
+
+                        if(textviewX.getY()==target1.getY())  tt4=1;
+                        if(textviewX.getY()==target2.getY())  tt4=1;
+                        if(textviewX.getY()==target3.getY())  tt4=1;
+
 //________________ Ensure Block 18 is being placed in one of 3 targets .
                         if(textview18.getX()==target1.getX())  tt3=1;
                         if(textview18.getX()==target2.getX())  tt3=1;
                         if(textview18.getX()==target3.getX())  tt3=1;
+
+
+                        if(textview18.getY()==target1.getY())  tt5=1;
+                        if(textview18.getY()==target2.getY())  tt5=1;
+                        if(textview18.getY()==target3.getY())  tt5=1;
 //________________ Ensure Block 18 is being placed in one of 3 targets
                         if(textviewEqual.getX()==target1.getX())  tt2=1;
                         if(textviewEqual.getX()==target2.getX())  tt2=1;
                         if(textviewEqual.getX()==target3.getX())  tt2=1;
 
+                        if(textviewEqual.getY()==target1.getY())  tt6=1;
+                        if(textviewEqual.getY()==target2.getY())  tt6=1;
+                        if(textviewEqual.getY()==target3.getY())  tt6=1;
+
 //________________ Ensure the question is solved
                         result=res1+res2+res3;
-                        CHECK=tt1+tt2+tt3;
+                        CHECK=tt1+tt2+tt3+tt4+tt5+tt6;
 
-                        if(CHECK==3){
+                        if(CHECK==6){
 //________________ Shared Preferences
                             SharedPreferences prefs = getSharedPreferences("pref_secondlevel_20", MODE_PRIVATE);
                             boolean firstStart = prefs.getBoolean("firstStart", true);

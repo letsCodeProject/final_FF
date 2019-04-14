@@ -100,7 +100,7 @@
     <string name="secondlevel_12_2">    نضع علامتي التنصيص  </string>
     <string name="secondlevel_11_1">   لابد أنك تستغرب لماذا تمت طباعة X ولم يتم طباعة\n “لبيب” وذلك لأنه عندما نضع علامتي  التنصيص\nفي أمر الطباعة فإننا نقوم بطباعة مابين القوسين .  </string>
 
-    <string name="qots">(\"\")</string>
+    <string name="qots">(\" \")</string>
     <string name="secondlevel_12_3"> في أمر  الطباعة ، فإن الناتج        </string>
     <string name="secondlevel_12_4">سيكون القيمة المخزنة في المتغير   </string>
 
