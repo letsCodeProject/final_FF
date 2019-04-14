@@ -5,7 +5,7 @@
     android:background="@drawable/back"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".secondlevel_6">
+    tools:context=".secondlevel_7_feedback2">
     <ImageView
         android:id="@+id/imageView72"
         android:layout_width="match_parent"

@@ -19,7 +19,7 @@ import android.widget.Toast;
 public class thirdlevel_22 extends AppCompatActivity {
     public static MySQLliteHelper sqLiteHelper;
     TextView target1,target2,target3,target4,target5,textviewCemicolon,textviewIf,textviewLessThen,textview2,textview5,pinCemicolon,pinIf,pinLessThen,pin2,pin5;
-    int  res1=0,res2=0,res3=0 ,res4=0,res5=0,result, CHECK=0,tt1,tt2,tt3,tt4,tt5;
+    int  res1=0,res2=0,res3=0 ,res4=0,res5=0,result, CHECK=0,tt1,tt2,tt3,tt4,tt5,tt6,tt7,tt8,tt9,tt10;
     static int questionResult,tg1=0,tg2=0,tg3=0,tg4=0,tg5=0;
     static TextView x1,x2,x3,x4,x5;
     static View vt1 ,vt2,vt3,vt4,vt5;
@@ -82,12 +82,18 @@ public class thirdlevel_22 extends AppCompatActivity {
                 new ImageView.OnClickListener(){
                     public void onClick(View v){
 
-                        tt1=0;tt2=0;tt3=0;tt4=0;tt5=0;
+                        tt1=0;tt2=0;tt3=0;tt4=0;tt5=0;tt6=0;tt7=0;tt8=0;tt9=0;tt10=0;
                         if(textviewCemicolon.getX()==target1.getX())  tt5=1;
                         if(textviewCemicolon.getX()==target2.getX())  tt5=1;
                         if(textviewCemicolon.getX()==target3.getX())  tt5=1;
                         if(textviewCemicolon.getX()==target4.getX())  tt5=1;
                         if(textviewCemicolon.getX()==target5.getX())  tt5=1;
+
+                        if(textviewCemicolon.getY()==target1.getY())  tt6=1;
+                        if(textviewCemicolon.getY()==target2.getY())  tt6=1;
+                        if(textviewCemicolon.getY()==target3.getY())  tt6=1;
+                        if(textviewCemicolon.getY()==target4.getY())  tt6=1;
+                        if(textviewCemicolon.getY()==target5.getY())  tt6=1;
 
 
                         if(textviewIf.getX()==target1.getX())  tt1=1;
@@ -97,11 +103,24 @@ public class thirdlevel_22 extends AppCompatActivity {
                         if(textviewIf.getX()==target5.getX())  tt1=1;
 
 
+                        if(textviewIf.getY()==target1.getY())  tt7=1;
+                        if(textviewIf.getY()==target2.getY())  tt7=1;
+                        if(textviewIf.getY()==target3.getY())  tt7=1;
+                        if(textviewIf.getY()==target4.getY())  tt7=1;
+                        if(textviewIf.getY()==target5.getY())  tt7=1;
+
+
                         if(textviewLessThen.getX()==target1.getX())  tt3=1;
                         if(textviewLessThen.getX()==target2.getX())  tt3=1;
                         if(textviewLessThen.getX()==target3.getX())  tt3=1;
                         if(textviewLessThen.getX()==target4.getX())  tt3=1;
                         if(textviewLessThen.getX()==target5.getX())  tt3=1;
+
+                        if(textviewLessThen.getY()==target1.getY())  tt8=1;
+                        if(textviewLessThen.getY()==target2.getY())  tt8=1;
+                        if(textviewLessThen.getY()==target3.getY())  tt8=1;
+                        if(textviewLessThen.getY()==target4.getY())  tt8=1;
+                        if(textviewLessThen.getY()==target5.getY())  tt8=1;
 
                         if(textview2.getX()==target1.getX())  tt2=1;
                         if(textview2.getX()==target2.getX())  tt2=1;
@@ -109,17 +128,29 @@ public class thirdlevel_22 extends AppCompatActivity {
                         if(textview2.getX()==target4.getX())  tt2=1;
                         if(textview2.getX()==target5.getX())  tt2=1;
 
+                        if(textview2.getY()==target1.getY())  tt9=1;
+                        if(textview2.getY()==target2.getY())  tt9=1;
+                        if(textview2.getY()==target3.getY())  tt9=1;
+                        if(textview2.getY()==target4.getY())  tt9=1;
+                        if(textview2.getY()==target5.getY())  tt9=1;
+
+
                         if(textview5.getX()==target1.getX())  tt4=1;
                         if(textview5.getX()==target2.getX())  tt4=1;
                         if(textview5.getX()==target3.getX())  tt4=1;
                         if(textview5.getX()==target4.getX())  tt4=1;
                         if(textview5.getX()==target5.getX())  tt4=1;
 
+                        if(textview5.getY()==target1.getY())  tt10=1;
+                        if(textview5.getY()==target2.getY())  tt10=1;
+                        if(textview5.getY()==target3.getY())  tt10=1;
+                        if(textview5.getY()==target4.getY())  tt10=1;
+                        if(textview5.getY()==target5.getY())  tt10=1;
 
                         result=res1+res2+res3+res4+res5;
 
-                        CHECK=tt1+tt2+tt3+tt4+tt5;
-                        if(CHECK==5){
+                        CHECK=tt1+tt2+tt3+tt4+tt5+tt6+tt7+tt8+tt9+tt10;
+                        if(CHECK==10){
 
                             updatedata();
                             Intent  intent = new Intent(getApplicationContext(),thirdlevel_23.class);
