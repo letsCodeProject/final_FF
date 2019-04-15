@@ -234,7 +234,7 @@ public class MainActivity extends AppCompatActivity {
        TextView t=(TextView)findViewById(R.id.textView47);
         Lesson l=new Lesson();
         String name=l.getName(M.getNumOfLessonPassed("Ploto"));
-       t.setText(name);
+       //t.setText(name);
         Class c;
         try{
         c = Class.forName("com.example.a96653.LetsCode."+name);
@@ -261,7 +261,7 @@ public class MainActivity extends AppCompatActivity {
         TextView t=(TextView)findViewById(R.id.textView47);
         Lesson l=new Lesson();
         String name=l.getName(M.getNumOfLessonPassed("Nepton"));
-        t.setText(name);
+        //t.setText(name);
         Class c;
         try{
             c = Class.forName("com.example.a96653.LetsCode."+name);
@@ -286,7 +286,7 @@ public class MainActivity extends AppCompatActivity {
         TextView t=(TextView)findViewById(R.id.textView47);
         Lesson l=new Lesson();
         String name=l.getName(M.getNumOfLessonPassed("Saturn"));
-       t.setText(name);
+      // t.setText(name);
         Class c;
         try{
             c = Class.forName("com.example.a96653.LetsCode."+name);
@@ -313,7 +313,7 @@ public class MainActivity extends AppCompatActivity {
 
         Lesson l=new Lesson();
         String name=l.getName(M.getNumOfLessonPassed("Jupiter"));
-        t.setText(name);
+        //t.setText(name);
         Class c;
         try{
             c = Class.forName("com.example.a96653.LetsCode."+name);
